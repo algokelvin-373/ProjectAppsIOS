@@ -16,6 +16,14 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        // Call person and set data
+        let person = Person()
+        person.name = "Kelvin Herwanda Tandrio"
+        person.job = "Android Developer"
+        
+        // Get data person to View Label
+        txtName.text = person.name
+        txtJob.text = person.job
         
     }
 }
