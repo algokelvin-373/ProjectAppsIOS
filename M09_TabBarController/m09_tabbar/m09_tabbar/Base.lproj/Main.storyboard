@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Profile-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="m09_tabbar" customModuleProvider="target" sceneMemberID="viewController">
@@ -26,7 +26,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="L6Q-wn-DPa"/>
+                    <tabBarItem key="tabBarItem" title="Profile" selectedImage="profile" id="L6Q-wn-DPa"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -51,7 +51,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="rEU-KO-D5r"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="Iw8-Fa-5NG"/>
+                    <tabBarItem key="tabBarItem" title="Item" image="pencil" catalog="system" id="Iw8-Fa-5NG"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pJ0-fL-gOe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -76,4 +76,8 @@
             <point key="canvasLocation" x="108.69565217391305" y="137.94642857142856"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="pencil" catalog="system" width="64" height="56"/>
+        <image name="profile" width="21" height="21"/>
+    </resources>
 </document>
