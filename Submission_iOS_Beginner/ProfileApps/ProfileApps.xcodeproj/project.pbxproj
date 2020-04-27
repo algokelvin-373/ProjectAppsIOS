@@ -13,6 +13,8 @@
 		104BBF662457436300568B10 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 104BBF642457436300568B10 /* Main.storyboard */; };
 		104BBF682457436500568B10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 104BBF672457436500568B10 /* Assets.xcassets */; };
 		104BBF6B2457436500568B10 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 104BBF692457436500568B10 /* LaunchScreen.storyboard */; };
+		104BBF73245744E400568B10 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104BBF72245744E400568B10 /* Profile.swift */; };
+		104BBF75245745A700568B10 /* ConstantsVal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104BBF74245745A700568B10 /* ConstantsVal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		104BBF672457436500568B10 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		104BBF6A2457436500568B10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		104BBF6C2457436500568B10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		104BBF72245744E400568B10 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Profile.swift; path = model/Profile.swift; sourceTree = "<group>"; };
+		104BBF74245745A700568B10 /* ConstantsVal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ConstantsVal.swift; path = utils/ConstantsVal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				104BBF672457436500568B10 /* Assets.xcassets */,
 				104BBF692457436500568B10 /* LaunchScreen.storyboard */,
 				104BBF6C2457436500568B10 /* Info.plist */,
+				104BBF72245744E400568B10 /* Profile.swift */,
+				104BBF74245745A700568B10 /* ConstantsVal.swift */,
 			);
 			path = ProfileApps;
 			sourceTree = "<group>";
@@ -139,7 +145,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				104BBF632457436300568B10 /* ViewController.swift in Sources */,
+				104BBF73245744E400568B10 /* Profile.swift in Sources */,
 				104BBF5F2457436300568B10 /* AppDelegate.swift in Sources */,
+				104BBF75245745A700568B10 /* ConstantsVal.swift in Sources */,
 				104BBF612457436300568B10 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
