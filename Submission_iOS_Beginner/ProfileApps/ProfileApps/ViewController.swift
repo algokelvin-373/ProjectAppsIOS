@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  ProfileApps
 //
-//  Created by Kelvin HT on 4/16/20.
+//  Created by Kelvin HT on 4/27/20.
 //  Copyright © 2020 Kelvin HT. All rights reserved.
 //
 
@@ -14,7 +14,5 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-
 }
 
