@@ -17,6 +17,8 @@
 		10567FD0245C4D5700B61173 /* ProgrammingLanguageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10567FCE245C4D5700B61173 /* ProgrammingLanguageTableViewCell.xib */; };
 		10567FD2245C5CA500B61173 /* LanguageProgramming.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10567FD1245C5CA500B61173 /* LanguageProgramming.swift */; };
 		10567FD4245C5CEE00B61173 /* DummyLanguageProgramming.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10567FD3245C5CEE00B61173 /* DummyLanguageProgramming.swift */; };
+		10567FD7245C711900B61173 /* DetailLanguageProgrammingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10567FD5245C711900B61173 /* DetailLanguageProgrammingViewController.swift */; };
+		10567FD8245C711900B61173 /* DetailLanguageProgrammingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10567FD6245C711900B61173 /* DetailLanguageProgrammingViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		10567FCE245C4D5700B61173 /* ProgrammingLanguageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProgrammingLanguageTableViewCell.xib; sourceTree = "<group>"; };
 		10567FD1245C5CA500B61173 /* LanguageProgramming.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LanguageProgramming.swift; path = Model/LanguageProgramming.swift; sourceTree = "<group>"; };
 		10567FD3245C5CEE00B61173 /* DummyLanguageProgramming.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DummyLanguageProgramming.swift; path = Model/DummyLanguageProgramming.swift; sourceTree = "<group>"; };
+		10567FD5245C711900B61173 /* DetailLanguageProgrammingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailLanguageProgrammingViewController.swift; sourceTree = "<group>"; };
+		10567FD6245C711900B61173 /* DetailLanguageProgrammingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailLanguageProgrammingViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +79,8 @@
 				10567FCE245C4D5700B61173 /* ProgrammingLanguageTableViewCell.xib */,
 				10567FD1245C5CA500B61173 /* LanguageProgramming.swift */,
 				10567FD3245C5CEE00B61173 /* DummyLanguageProgramming.swift */,
+				10567FD5245C711900B61173 /* DetailLanguageProgrammingViewController.swift */,
+				10567FD6245C711900B61173 /* DetailLanguageProgrammingViewController.xib */,
 			);
 			path = m13_dynamic_tableview;
 			sourceTree = "<group>";
@@ -138,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				10567FC4245C44B700B61173 /* LaunchScreen.storyboard in Resources */,
+				10567FD8245C711900B61173 /* DetailLanguageProgrammingViewController.xib in Resources */,
 				10567FC1245C44B700B61173 /* Assets.xcassets in Resources */,
 				10567FBF245C44B500B61173 /* Main.storyboard in Resources */,
 				10567FD0245C4D5700B61173 /* ProgrammingLanguageTableViewCell.xib in Resources */,
@@ -153,6 +160,7 @@
 			files = (
 				10567FBC245C44B500B61173 /* ViewController.swift in Sources */,
 				10567FB8245C44B500B61173 /* AppDelegate.swift in Sources */,
+				10567FD7245C711900B61173 /* DetailLanguageProgrammingViewController.swift in Sources */,
 				10567FD4245C5CEE00B61173 /* DummyLanguageProgramming.swift in Sources */,
 				10567FBA245C44B500B61173 /* SceneDelegate.swift in Sources */,
 				10567FD2245C5CA500B61173 /* LanguageProgramming.swift in Sources */,

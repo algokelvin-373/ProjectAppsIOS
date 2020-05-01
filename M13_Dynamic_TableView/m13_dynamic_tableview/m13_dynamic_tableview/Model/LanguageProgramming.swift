@@ -6,6 +6,7 @@
 //  Copyright © 2020 Kelvin HT. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
 struct LanguageProgramming {
