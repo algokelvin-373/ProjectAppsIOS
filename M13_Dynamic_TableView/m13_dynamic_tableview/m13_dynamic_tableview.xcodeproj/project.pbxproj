@@ -13,6 +13,8 @@
 		10567FBF245C44B500B61173 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10567FBD245C44B500B61173 /* Main.storyboard */; };
 		10567FC1245C44B700B61173 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10567FC0245C44B700B61173 /* Assets.xcassets */; };
 		10567FC4245C44B700B61173 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10567FC2245C44B700B61173 /* LaunchScreen.storyboard */; };
+		10567FCF245C4D5700B61173 /* ProgrammingLanguageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10567FCD245C4D5700B61173 /* ProgrammingLanguageTableViewCell.swift */; };
+		10567FD0245C4D5700B61173 /* ProgrammingLanguageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10567FCE245C4D5700B61173 /* ProgrammingLanguageTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		10567FC0245C44B700B61173 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		10567FC3245C44B700B61173 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		10567FC5245C44B700B61173 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		10567FCD245C4D5700B61173 /* ProgrammingLanguageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgrammingLanguageTableViewCell.swift; sourceTree = "<group>"; };
+		10567FCE245C4D5700B61173 /* ProgrammingLanguageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProgrammingLanguageTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				10567FC0245C44B700B61173 /* Assets.xcassets */,
 				10567FC2245C44B700B61173 /* LaunchScreen.storyboard */,
 				10567FC5245C44B700B61173 /* Info.plist */,
+				10567FCD245C4D5700B61173 /* ProgrammingLanguageTableViewCell.swift */,
+				10567FCE245C4D5700B61173 /* ProgrammingLanguageTableViewCell.xib */,
 			);
 			path = m13_dynamic_tableview;
 			sourceTree = "<group>";
@@ -128,6 +134,7 @@
 				10567FC4245C44B700B61173 /* LaunchScreen.storyboard in Resources */,
 				10567FC1245C44B700B61173 /* Assets.xcassets in Resources */,
 				10567FBF245C44B500B61173 /* Main.storyboard in Resources */,
+				10567FD0245C4D5700B61173 /* ProgrammingLanguageTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,6 +148,7 @@
 				10567FBC245C44B500B61173 /* ViewController.swift in Sources */,
 				10567FB8245C44B500B61173 /* AppDelegate.swift in Sources */,
 				10567FBA245C44B500B61173 /* SceneDelegate.swift in Sources */,
+				10567FCF245C4D5700B61173 /* ProgrammingLanguageTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
