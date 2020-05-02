@@ -15,7 +15,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        self.navigationController?.title = "Details"
+        self.navigationItem.title = "Details"
         
         // Menghubungkan tableViewLP dengan ke dua metode di bawah
         tableLanguageProgramming.dataSource = self
