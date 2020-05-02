@@ -10,11 +10,13 @@ import UIKit
 
 class DetailLanguageProgrammingViewController: UIViewController {
 
-    var language_programming: LanguageProgramming?
+    
     
     @IBOutlet weak var titleDetailLanguageProgramming: UILabel!
     @IBOutlet weak var imageDetailLanguageProgramming: UIImageView!
     @IBOutlet weak var descriptionDetailLanguageProgramming: UILabel!
+    
+    var language_programming: LanguageProgramming?
     
     override func viewDidLoad() {
         super.viewDidLoad()

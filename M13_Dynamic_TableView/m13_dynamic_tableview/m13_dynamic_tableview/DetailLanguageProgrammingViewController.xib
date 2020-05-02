@@ -11,7 +11,6 @@
             <connections>
                 <outlet property="descriptionDetailLanguageProgramming" destination="lKC-fR-ztl" id="GFp-bI-lIX"/>
                 <outlet property="imageDetailLanguageProgramming" destination="8iG-CG-1rn" id="GwE-FB-iGB"/>
-                <outlet property="title" destination="3m2-Ko-IKm" id="ifb-pb-NYI"/>
                 <outlet property="titleDetailLanguageProgramming" destination="3m2-Ko-IKm" id="YRd-yo-1gQ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -21,35 +20,26 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3m2-Ko-IKm" userLabel="titleDetailLP">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3m2-Ko-IKm" userLabel="titleDetailLP">
                     <rect key="frame" x="20" y="67" width="374" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8iG-CG-1rn" userLabel="imageDetailLP">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8iG-CG-1rn" userLabel="imageDetailLP">
                     <rect key="frame" x="147" y="191" width="120" height="120"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lKC-fR-ztl" userLabel="descriptionDetailLP">
-                    <rect key="frame" x="20" y="847" width="374" height="15"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lKC-fR-ztl" userLabel="descriptionDetailLP">
+                    <rect key="frame" x="20" y="363" width="374" height="499"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" name="Farah" family="Farah" pointSize="15"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-            <constraints>
-                <constraint firstItem="8iG-CG-1rn" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="147" id="08N-wF-LSf"/>
-                <constraint firstItem="lKC-fR-ztl" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="27Z-Fd-l0L"/>
-                <constraint firstItem="lKC-fR-ztl" firstAttribute="top" secondItem="8iG-CG-1rn" secondAttribute="bottom" constant="536" id="Bjk-qr-s8Z"/>
-                <constraint firstItem="3m2-Ko-IKm" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Mp0-aV-5Vn"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="8iG-CG-1rn" secondAttribute="trailing" constant="147" id="Pl6-06-bAC"/>
-                <constraint firstItem="8iG-CG-1rn" firstAttribute="top" secondItem="3m2-Ko-IKm" secondAttribute="bottom" constant="94" id="QhB-iQ-77l"/>
-                <constraint firstItem="lKC-fR-ztl" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="Z7e-j1-Dfq"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="lKC-fR-ztl" secondAttribute="trailing" constant="20" id="e4V-ys-IDn"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="3m2-Ko-IKm" secondAttribute="trailing" constant="20" id="mwX-W3-3EQ"/>
-                <constraint firstItem="3m2-Ko-IKm" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="23" id="x4b-Qb-cbO"/>
-            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="131.8840579710145" y="126.5625"/>
         </view>
