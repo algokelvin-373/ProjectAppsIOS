@@ -15,8 +15,12 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        self.navigationController?.title = "Details"
+        
         // Menghubungkan tableViewLP dengan ke dua metode di bawah
         tableLanguageProgramming.dataSource = self
+        
+        tableLanguageProgramming.delegate = self
         
         tableLanguageProgramming.register(
             UINib(
@@ -47,3 +51,19 @@ extension ViewController: UITableViewDataSource {
     }
 }
 
+extension ViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // Memanggil View Controller dengan berkas NIB/XIB di dalamnya
+        let detail = DetailLanguageProgrammingViewController(
+            nibName: "DetailLanguageProgrammingViewController",
+            bundle: nil
+        )
+        
+        // Mengirim data language programming
+        detail.language_programming = languageProgramming[indexPath.row]
+        
+        // Push/mendorong view controller lain
+    
+        self.navigationController?.pushViewController(detail, animated: true)
+    }
+}
