@@ -22,7 +22,7 @@ class HomeViewController: UIViewController {
     }
 }
 
-extension ViewController: UITableViewDataSource {
+extension HomeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         statusPhotos.count
     }
@@ -39,6 +39,3 @@ extension ViewController: UITableViewDataSource {
     }
 }
 
-extension ViewController: UITableViewDelegate {
-    
-}
