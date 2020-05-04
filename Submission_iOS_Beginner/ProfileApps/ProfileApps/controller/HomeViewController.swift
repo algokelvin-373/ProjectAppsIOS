@@ -16,7 +16,7 @@ class HomeViewController: UIViewController {
 
         tableStatusPhotos.dataSource = self
         tableStatusPhotos.register(
-            UINib(nibName: "StatusPhotosViewCell", bundle: nil),
+            UINib(nibName: "StatusPhotosTableViewCell", bundle: nil),
             forCellReuseIdentifier: "StatusPhotosCell"
         )
     }
