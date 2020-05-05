@@ -167,7 +167,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="XOc-MY-9Yb"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" selectedImage="house.fill" catalog="system" id="HcX-qk-DCo"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="home" id="HcX-qk-DCo"/>
                     <connections>
                         <outlet property="tableStatusPhotos" destination="jXA-xZ-Gzz" id="gKq-i1-eeE"/>
                     </connections>
