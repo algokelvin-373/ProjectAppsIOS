@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		102885152462A540002E95E6 /* DetailStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102885132462A540002E95E6 /* DetailStatusViewController.swift */; };
+		102885162462A540002E95E6 /* DetailStatusViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 102885142462A540002E95E6 /* DetailStatusViewController.xib */; };
 		104BBF5F2457436300568B10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104BBF5E2457436300568B10 /* AppDelegate.swift */; };
 		104BBF612457436300568B10 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104BBF602457436300568B10 /* SceneDelegate.swift */; };
 		104BBF632457436300568B10 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104BBF622457436300568B10 /* ViewController.swift */; };
@@ -22,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		102885132462A540002E95E6 /* DetailStatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailStatusViewController.swift; sourceTree = "<group>"; };
+		102885142462A540002E95E6 /* DetailStatusViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailStatusViewController.xib; sourceTree = "<group>"; };
 		104BBF5B2457436300568B10 /* ProfileApps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProfileApps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		104BBF5E2457436300568B10 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		104BBF602457436300568B10 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +85,8 @@
 				104BFFDB245ECB9400152A49 /* HomeViewController.swift */,
 				104BFFDD245ED63700152A49 /* StatusPhotosTableViewCell.swift */,
 				104BFFDE245ED63700152A49 /* StatusPhotosTableViewCell.xib */,
+				102885132462A540002E95E6 /* DetailStatusViewController.swift */,
+				102885142462A540002E95E6 /* DetailStatusViewController.xib */,
 			);
 			path = ProfileApps;
 			sourceTree = "<group>";
@@ -144,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				104BBF6B2457436500568B10 /* LaunchScreen.storyboard in Resources */,
+				102885162462A540002E95E6 /* DetailStatusViewController.xib in Resources */,
 				104BBF682457436500568B10 /* Assets.xcassets in Resources */,
 				104BFFE0245ED63700152A49 /* StatusPhotosTableViewCell.xib in Resources */,
 				104BBF662457436300568B10 /* Main.storyboard in Resources */,
@@ -160,6 +167,7 @@
 				104BBF632457436300568B10 /* ViewController.swift in Sources */,
 				104BBF73245744E400568B10 /* Profile.swift in Sources */,
 				104BBF5F2457436300568B10 /* AppDelegate.swift in Sources */,
+				102885152462A540002E95E6 /* DetailStatusViewController.swift in Sources */,
 				104BBF75245745A700568B10 /* ConstantsVal.swift in Sources */,
 				104BFFDA245EBD7900152A49 /* StatusPhotos.swift in Sources */,
 				104BFFDC245ECB9400152A49 /* HomeViewController.swift in Sources */,
