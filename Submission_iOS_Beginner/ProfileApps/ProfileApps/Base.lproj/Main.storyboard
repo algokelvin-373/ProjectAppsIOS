@@ -183,17 +183,130 @@
                     <view key="view" contentMode="scaleToFill" id="j5r-3v-dU0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZgR-yg-YPM" userLabel="mainStackView">
+                                <rect key="frame" x="16" y="16" width="382" height="781"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="VAg-at-URx" userLabel="android">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="257.5"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="android_jetpack" translatesAutoresizingMaskIntoConstraints="NO" id="bVK-pl-aQP" userLabel="imageAndroid">
+                                                <rect key="frame" x="0.0" y="0.0" width="186" height="257.5"/>
+                                            </imageView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o3L-wl-54t" userLabel="androidSertificateStackView">
+                                                <rect key="frame" x="196" y="0.0" width="186" height="257.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Android Jetpack Pro" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tQr-GY-a0p">
+                                                        <rect key="frame" x="0.0" y="0.0" width="186" height="77.5"/>
+                                                        <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="15"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kotlin Android Developer Expert" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ku-Fc-JaX">
+                                                        <rect key="frame" x="0.0" y="60" width="186" height="77.5"/>
+                                                        <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="15"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Belajar Aplikasi Android Fundamental" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rU6-w1-l6i">
+                                                        <rect key="frame" x="0.0" y="120" width="186" height="77.5"/>
+                                                        <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="15"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Belajar Aplikasi Android Pemula" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ESU-Lw-8lk">
+                                                        <rect key="frame" x="0.0" y="180" width="186" height="77.5"/>
+                                                        <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="15"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="92Y-xu-qhv" userLabel="game">
+                                        <rect key="frame" x="0.0" y="262" width="382" height="257"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="android_jetpack" translatesAutoresizingMaskIntoConstraints="NO" id="iO3-Mq-Hxa" userLabel="imageGame">
+                                                <rect key="frame" x="0.0" y="0.0" width="186" height="257"/>
+                                            </imageView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="4be-qT-bY9" userLabel="gameSertificateStackView">
+                                                <rect key="frame" x="196" y="0.0" width="186" height="257"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Belajar Membuat Game Pemula dengan Unity" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0iM-6i-GJ4">
+                                                        <rect key="frame" x="0.0" y="0.0" width="186" height="128.5"/>
+                                                        <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="15"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Belajar Membangun Game HTML5 in Tizen" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="asA-KT-bNy">
+                                                        <rect key="frame" x="0.0" y="128.5" width="186" height="128.5"/>
+                                                        <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="15"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="MrU-ks-gER" userLabel="basic_programming">
+                                        <rect key="frame" x="0.0" y="523.5" width="382" height="257.5"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="android_jetpack" translatesAutoresizingMaskIntoConstraints="NO" id="chI-kt-F0y" userLabel="imageAndroid">
+                                                <rect key="frame" x="0.0" y="0.0" width="186" height="257.5"/>
+                                            </imageView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="17" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WVu-68-WLu" userLabel="androidSertificateStackView">
+                                                <rect key="frame" x="196" y="0.0" width="186" height="257.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Memulai Pemrograman Dengan Swift" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hpW-W6-uva">
+                                                        <rect key="frame" x="0.0" y="0.0" width="186" height="65"/>
+                                                        <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="15"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Memulai Pemrograman Dengan Kotlin" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jrm-ym-U34">
+                                                        <rect key="frame" x="0.0" y="64.5" width="186" height="64.5"/>
+                                                        <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="15"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Memulai Pemrograman Dengan Python" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IaO-Uy-Ks5">
+                                                        <rect key="frame" x="0.0" y="128.5" width="186" height="65"/>
+                                                        <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="15"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Memulai Pemrograman Dengan Java" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XIl-m8-mHP">
+                                                        <rect key="frame" x="0.0" y="193" width="186" height="64.5"/>
+                                                        <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="15"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" red="0.72236732548869054" green="0.78039215689999997" blue="0.730160818542965" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="lEu-ra-3z6" firstAttribute="trailing" secondItem="ZgR-yg-YPM" secondAttribute="trailing" constant="16" id="FJT-Fe-zRa"/>
+                            <constraint firstItem="lEu-ra-3z6" firstAttribute="bottom" secondItem="ZgR-yg-YPM" secondAttribute="bottom" constant="16" id="KXY-sC-liL"/>
+                            <constraint firstItem="ZgR-yg-YPM" firstAttribute="leading" secondItem="lEu-ra-3z6" secondAttribute="leading" constant="16" id="jqj-Lj-1Np"/>
+                            <constraint firstItem="ZgR-yg-YPM" firstAttribute="top" secondItem="j5r-3v-dU0" secondAttribute="top" constant="16" id="t1d-LL-UFr"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="lEu-ra-3z6"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Sertificate" image="sertificate" id="jJS-Oe-BDR"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CZu-Xf-0HC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1039" y="-669"/>
+            <point key="canvasLocation" x="1037.68115942029" y="-669.64285714285711"/>
         </scene>
     </scenes>
     <resources>
+        <image name="android_jetpack" width="84.5" height="84.5"/>
         <image name="home" width="21" height="21"/>
         <image name="profile" width="21" height="21"/>
         <image name="sertificate" width="21" height="21"/>
