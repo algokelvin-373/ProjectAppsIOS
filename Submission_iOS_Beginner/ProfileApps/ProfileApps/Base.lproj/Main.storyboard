@@ -219,10 +219,10 @@
             </objects>
             <point key="canvasLocation" x="1037.68115942029" y="-669.64285714285711"/>
         </scene>
-        <!--View Controller-->
+        <!--Data Profile View Controller-->
         <scene sceneID="IfM-X3-FZA">
             <objects>
-                <viewController id="DQP-yN-H5i" sceneMemberID="viewController">
+                <viewController id="DQP-yN-H5i" customClass="DataProfileViewController" customModule="ProfileApps" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Vor-yI-kAo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="450"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -338,6 +338,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="v1n-Xa-37B"/>
                     </view>
+                    <connections>
+                        <outlet property="imageProfile" destination="O9H-FA-p26" id="Xzk-Bb-byQ"/>
+                        <outlet property="titleAddress" destination="3mq-Eo-si2" id="JRc-bu-M8P"/>
+                        <outlet property="titleAddressHouse" destination="6Gg-Bh-pjP" id="Zdu-jr-boa"/>
+                        <outlet property="titleDateBirth" destination="2KU-k9-vPO" id="vCL-1e-VEC"/>
+                        <outlet property="titleEmail" destination="ELY-15-Cz8" id="PlO-uD-A8h"/>
+                        <outlet property="titleShortDescription" destination="dfA-IR-XPg" id="Tns-OV-9PX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lm7-sL-6LG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
