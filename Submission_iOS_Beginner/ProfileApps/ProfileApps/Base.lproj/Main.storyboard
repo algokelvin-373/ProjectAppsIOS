@@ -227,15 +227,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="450"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O9H-FA-p26" userLabel="imageProfile">
-                                <rect key="frame" x="20" y="16" width="100" height="100"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photos01" translatesAutoresizingMaskIntoConstraints="NO" id="O9H-FA-p26" userLabel="imageProfile">
+                                <rect key="frame" x="16" y="16" width="104" height="150"/>
                             </imageView>
-                            <containerView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lj0-KJ-sGM">
-                                <rect key="frame" x="134" y="16" width="260" height="100"/>
-                                <connections>
-                                    <segue destination="HFG-LA-63z" kind="embed" id="IGG-EW-OSJ"/>
-                                </connections>
-                            </containerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YFx-i8-zY2" userLabel="titleEmail">
                                 <rect key="frame" x="16" y="182" width="382" height="18"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -296,45 +290,95 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Postingan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XU7-HP-yMQ">
+                                <rect key="frame" x="128" y="16" width="68" height="21"/>
+                                <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pengikut" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9WS-cd-tKw">
+                                <rect key="frame" x="128" y="60" width="60" height="21"/>
+                                <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mengikuti" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eZd-0O-UgC">
+                                <rect key="frame" x="128" y="97" width="69" height="21"/>
+                                <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="200" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qJj-nc-wXF" userLabel="amountPostingan">
+                                <rect key="frame" x="373" y="16" width="25" height="21"/>
+                                <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="200" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ykq-tA-MsI" userLabel="amountPengikut">
+                                <rect key="frame" x="373" y="60" width="25" height="21"/>
+                                <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="200" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iUy-0N-WdP" userLabel="amountMengikuti">
+                                <rect key="frame" x="373" y="97" width="25" height="21"/>
+                                <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="lj0-KJ-sGM" firstAttribute="top" secondItem="Vor-yI-kAo" secondAttribute="top" constant="16" id="0w8-HE-Mz1"/>
                             <constraint firstAttribute="trailing" secondItem="igA-cj-2hS" secondAttribute="trailing" constant="16" id="12F-Jk-Zmn"/>
                             <constraint firstItem="2YO-fD-cDV" firstAttribute="leading" secondItem="Vor-yI-kAo" secondAttribute="leading" constant="16" id="3ft-YH-MET"/>
                             <constraint firstItem="dfA-IR-XPg" firstAttribute="top" secondItem="Nt4-NY-DMC" secondAttribute="bottom" constant="8" id="3ma-2v-cc3"/>
                             <constraint firstAttribute="trailing" secondItem="ELY-15-Cz8" secondAttribute="trailing" constant="16" id="3xh-Z3-GwY"/>
                             <constraint firstAttribute="trailing" secondItem="Nt4-NY-DMC" secondAttribute="trailing" constant="16" id="7oz-KK-FGL"/>
                             <constraint firstItem="YFx-i8-zY2" firstAttribute="top" secondItem="O9H-FA-p26" secondAttribute="bottom" constant="16" id="8ND-J5-bUa"/>
+                            <constraint firstItem="eZd-0O-UgC" firstAttribute="leading" secondItem="O9H-FA-p26" secondAttribute="trailing" constant="8" id="AoK-Dd-l2D"/>
                             <constraint firstItem="6Gg-Bh-pjP" firstAttribute="leading" secondItem="Vor-yI-kAo" secondAttribute="leading" constant="16" id="DoE-Yw-gQR"/>
                             <constraint firstItem="O9H-FA-p26" firstAttribute="top" secondItem="Vor-yI-kAo" secondAttribute="top" constant="16" id="E5E-tc-gW7"/>
                             <constraint firstItem="ELY-15-Cz8" firstAttribute="leading" secondItem="Vor-yI-kAo" secondAttribute="leading" constant="16" id="FKu-E9-QIr"/>
                             <constraint firstItem="dfA-IR-XPg" firstAttribute="leading" secondItem="Vor-yI-kAo" secondAttribute="leading" constant="16" id="GGz-j6-Z7j"/>
                             <constraint firstItem="6Gg-Bh-pjP" firstAttribute="top" secondItem="igA-cj-2hS" secondAttribute="bottom" constant="8" id="GXN-qd-WiB"/>
                             <constraint firstItem="YFx-i8-zY2" firstAttribute="leading" secondItem="Vor-yI-kAo" secondAttribute="leading" constant="16" id="KC8-uG-l6m"/>
+                            <constraint firstItem="v1n-Xa-37B" firstAttribute="trailing" secondItem="iUy-0N-WdP" secondAttribute="trailing" constant="16" id="KMT-AE-tfh"/>
                             <constraint firstItem="3mq-Eo-si2" firstAttribute="top" secondItem="2YO-fD-cDV" secondAttribute="bottom" constant="8" id="KuX-qi-Wsx"/>
+                            <constraint firstItem="qJj-nc-wXF" firstAttribute="leading" secondItem="XU7-HP-yMQ" secondAttribute="trailing" constant="177" id="PdS-Hz-aAe"/>
                             <constraint firstItem="2YO-fD-cDV" firstAttribute="top" secondItem="6Gg-Bh-pjP" secondAttribute="bottom" constant="8" id="QXL-ha-eok"/>
-                            <constraint firstItem="lj0-KJ-sGM" firstAttribute="leading" secondItem="O9H-FA-p26" secondAttribute="trailing" constant="14" id="QZf-CH-LzN"/>
                             <constraint firstItem="3mq-Eo-si2" firstAttribute="leading" secondItem="Vor-yI-kAo" secondAttribute="leading" constant="16" id="QbV-U8-Tte"/>
                             <constraint firstAttribute="trailing" secondItem="3mq-Eo-si2" secondAttribute="trailing" constant="16" id="Qc8-B5-xii"/>
+                            <constraint firstItem="XU7-HP-yMQ" firstAttribute="leading" secondItem="O9H-FA-p26" secondAttribute="trailing" constant="8" id="S0H-or-xtN"/>
                             <constraint firstItem="igA-cj-2hS" firstAttribute="leading" secondItem="Vor-yI-kAo" secondAttribute="leading" constant="16" id="T37-S5-Vz2"/>
                             <constraint firstItem="T3m-Hr-URm" firstAttribute="top" secondItem="ELY-15-Cz8" secondAttribute="bottom" constant="8" id="Tu6-b8-o3t"/>
                             <constraint firstItem="T3m-Hr-URm" firstAttribute="leading" secondItem="Vor-yI-kAo" secondAttribute="leading" constant="16" id="TzP-Ba-JQR"/>
+                            <constraint firstItem="YFx-i8-zY2" firstAttribute="top" secondItem="eZd-0O-UgC" secondAttribute="bottom" constant="64" id="UfR-Zw-fzf"/>
                             <constraint firstAttribute="trailing" secondItem="T3m-Hr-URm" secondAttribute="trailing" constant="16" id="VL2-d3-39V"/>
                             <constraint firstItem="Nt4-NY-DMC" firstAttribute="leading" secondItem="Vor-yI-kAo" secondAttribute="leading" constant="16" id="Vou-1a-6Iq"/>
                             <constraint firstAttribute="trailing" secondItem="6Gg-Bh-pjP" secondAttribute="trailing" constant="16" id="YD8-hu-7Nj"/>
+                            <constraint firstItem="ykq-tA-MsI" firstAttribute="leading" secondItem="9WS-cd-tKw" secondAttribute="trailing" constant="185" id="Zyk-yG-3CX"/>
                             <constraint firstItem="2KU-k9-vPO" firstAttribute="leading" secondItem="Vor-yI-kAo" secondAttribute="leading" constant="16" id="aP9-nE-hsL"/>
                             <constraint firstItem="Nt4-NY-DMC" firstAttribute="top" secondItem="3mq-Eo-si2" secondAttribute="bottom" constant="8" id="ae1-01-Qz1"/>
+                            <constraint firstItem="iUy-0N-WdP" firstAttribute="top" secondItem="ykq-tA-MsI" secondAttribute="bottom" constant="16" id="bqy-MI-Loy"/>
                             <constraint firstAttribute="bottom" secondItem="dfA-IR-XPg" secondAttribute="bottom" constant="16" id="fIS-ch-OcO"/>
                             <constraint firstAttribute="trailing" secondItem="2YO-fD-cDV" secondAttribute="trailing" constant="16" id="fs0-lp-esp"/>
                             <constraint firstItem="igA-cj-2hS" firstAttribute="top" secondItem="2KU-k9-vPO" secondAttribute="bottom" constant="8" id="fyV-xl-0L5"/>
                             <constraint firstAttribute="trailing" secondItem="dfA-IR-XPg" secondAttribute="trailing" constant="16" id="gQb-2T-MZc"/>
                             <constraint firstItem="ELY-15-Cz8" firstAttribute="top" secondItem="YFx-i8-zY2" secondAttribute="bottom" constant="8" id="gdm-dQ-l5V"/>
+                            <constraint firstItem="ykq-tA-MsI" firstAttribute="top" secondItem="qJj-nc-wXF" secondAttribute="bottom" constant="23" id="i8K-eP-dqi"/>
                             <constraint firstAttribute="trailing" secondItem="YFx-i8-zY2" secondAttribute="trailing" constant="16" id="iby-PN-uV3"/>
-                            <constraint firstItem="v1n-Xa-37B" firstAttribute="trailing" secondItem="lj0-KJ-sGM" secondAttribute="trailing" constant="16" id="lLs-aI-wTG"/>
+                            <constraint firstItem="9WS-cd-tKw" firstAttribute="leading" secondItem="O9H-FA-p26" secondAttribute="trailing" constant="8" id="ktU-ie-ykZ"/>
+                            <constraint firstItem="qJj-nc-wXF" firstAttribute="top" secondItem="Vor-yI-kAo" secondAttribute="top" constant="16" id="mFP-Ua-v20"/>
                             <constraint firstItem="2KU-k9-vPO" firstAttribute="top" secondItem="T3m-Hr-URm" secondAttribute="bottom" constant="8" id="obJ-Of-soe"/>
+                            <constraint firstItem="v1n-Xa-37B" firstAttribute="trailing" secondItem="ykq-tA-MsI" secondAttribute="trailing" constant="16" id="pRm-nC-BaG"/>
+                            <constraint firstItem="YFx-i8-zY2" firstAttribute="top" secondItem="iUy-0N-WdP" secondAttribute="bottom" constant="64" id="q3f-Lf-UF7"/>
+                            <constraint firstAttribute="trailing" secondItem="qJj-nc-wXF" secondAttribute="trailing" constant="16" id="r69-eg-OLU"/>
                             <constraint firstAttribute="trailing" secondItem="2KU-k9-vPO" secondAttribute="trailing" constant="16" id="rgW-nh-yQK"/>
+                            <constraint firstItem="iUy-0N-WdP" firstAttribute="leading" secondItem="eZd-0O-UgC" secondAttribute="trailing" constant="176" id="ts3-xm-IfV"/>
+                            <constraint firstItem="9WS-cd-tKw" firstAttribute="top" secondItem="XU7-HP-yMQ" secondAttribute="bottom" constant="23" id="vrl-OM-lnb"/>
                             <constraint firstItem="O9H-FA-p26" firstAttribute="leading" secondItem="v1n-Xa-37B" secondAttribute="leading" constant="16" id="wSX-0R-1Tr"/>
+                            <constraint firstItem="eZd-0O-UgC" firstAttribute="top" secondItem="9WS-cd-tKw" secondAttribute="bottom" constant="16" id="wk3-U0-kBr"/>
+                            <constraint firstItem="XU7-HP-yMQ" firstAttribute="top" secondItem="Vor-yI-kAo" secondAttribute="top" constant="16" id="xS8-tQ-Vmz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="v1n-Xa-37B"/>
                     </view>
@@ -351,87 +395,11 @@
             </objects>
             <point key="canvasLocation" x="1744.9275362318842" y="136.60714285714286"/>
         </scene>
-        <!--Data Post View Controller-->
-        <scene sceneID="qm5-Xm-OI3">
-            <objects>
-                <viewController id="HFG-LA-63z" customClass="DataPostViewController" customModule="ProfileApps" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="yah-Vc-9ns">
-                        <rect key="frame" x="0.0" y="0.0" width="260" height="100"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Postingan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XU7-HP-yMQ">
-                                <rect key="frame" x="8" y="8" width="68" height="21"/>
-                                <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="15"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="200" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qJj-nc-wXF" userLabel="amountPostingan">
-                                <rect key="frame" x="227" y="8" width="25" height="21"/>
-                                <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="15"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="200" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ykq-tA-MsI" userLabel="amountPengikut">
-                                <rect key="frame" x="227" y="37" width="25" height="21"/>
-                                <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="15"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pengikut" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9WS-cd-tKw">
-                                <rect key="frame" x="8" y="37" width="60" height="21"/>
-                                <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="15"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mengikuti" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eZd-0O-UgC">
-                                <rect key="frame" x="8" y="66" width="69" height="21"/>
-                                <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="15"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="200" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iUy-0N-WdP" userLabel="amountMengikuti">
-                                <rect key="frame" x="227" y="66" width="25" height="21"/>
-                                <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="15"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="XU7-HP-yMQ" firstAttribute="top" secondItem="yah-Vc-9ns" secondAttribute="top" constant="8" id="0pu-zZ-Clr"/>
-                            <constraint firstItem="9WS-cd-tKw" firstAttribute="top" secondItem="XU7-HP-yMQ" secondAttribute="bottom" constant="8" id="2Tu-sK-3jz"/>
-                            <constraint firstItem="XU7-HP-yMQ" firstAttribute="leading" secondItem="yah-Vc-9ns" secondAttribute="leading" constant="8" id="4sy-gn-YmO"/>
-                            <constraint firstItem="qJj-nc-wXF" firstAttribute="leading" secondItem="XU7-HP-yMQ" secondAttribute="trailing" constant="151" id="91V-nU-2Ii"/>
-                            <constraint firstAttribute="trailing" secondItem="iUy-0N-WdP" secondAttribute="trailing" constant="8" id="9JC-5b-2xD"/>
-                            <constraint firstItem="ykq-tA-MsI" firstAttribute="leading" secondItem="9WS-cd-tKw" secondAttribute="trailing" constant="159" id="JDr-ff-abE"/>
-                            <constraint firstAttribute="trailing" secondItem="ykq-tA-MsI" secondAttribute="trailing" constant="8" id="KVs-An-gvp"/>
-                            <constraint firstItem="eZd-0O-UgC" firstAttribute="leading" secondItem="yah-Vc-9ns" secondAttribute="leading" constant="8" id="L8R-ES-IxI"/>
-                            <constraint firstAttribute="bottom" secondItem="iUy-0N-WdP" secondAttribute="bottom" constant="13" id="OS9-Sc-nIr"/>
-                            <constraint firstAttribute="bottom" secondItem="eZd-0O-UgC" secondAttribute="bottom" constant="13" id="Opw-zd-C4Y"/>
-                            <constraint firstItem="9WS-cd-tKw" firstAttribute="leading" secondItem="yah-Vc-9ns" secondAttribute="leading" constant="8" id="Vbi-eQ-z6Z"/>
-                            <constraint firstAttribute="trailing" secondItem="qJj-nc-wXF" secondAttribute="trailing" constant="8" id="Ww8-nr-JRY"/>
-                            <constraint firstItem="ykq-tA-MsI" firstAttribute="top" secondItem="qJj-nc-wXF" secondAttribute="bottom" constant="8" id="bMS-UH-tDn"/>
-                            <constraint firstItem="iUy-0N-WdP" firstAttribute="leading" secondItem="eZd-0O-UgC" secondAttribute="trailing" constant="150" id="fQK-6D-ebj"/>
-                            <constraint firstItem="eZd-0O-UgC" firstAttribute="top" secondItem="9WS-cd-tKw" secondAttribute="bottom" constant="8" id="qPW-Dl-Fpt"/>
-                            <constraint firstItem="qJj-nc-wXF" firstAttribute="top" secondItem="yah-Vc-9ns" secondAttribute="top" constant="8" id="ryC-p3-WDs"/>
-                            <constraint firstItem="iUy-0N-WdP" firstAttribute="top" secondItem="ykq-tA-MsI" secondAttribute="bottom" constant="8" id="v1n-fG-gRB"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="bEX-AS-R7i"/>
-                    </view>
-                    <connections>
-                        <outlet property="amountFollow" destination="iUy-0N-WdP" id="UDq-It-DHP"/>
-                        <outlet property="amountFollowers" destination="ykq-tA-MsI" id="v2Z-pR-u9M"/>
-                        <outlet property="amountPost" destination="qJj-nc-wXF" id="HzY-A1-FuZ"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="VBl-nr-puJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2380" y="138"/>
-        </scene>
     </scenes>
     <resources>
         <image name="android_jetpack" width="84.5" height="84.5"/>
         <image name="home" width="21" height="21"/>
+        <image name="photos01" width="401" height="399"/>
         <image name="profile" width="21" height="21"/>
         <image name="sertificate" width="21" height="21"/>
     </resources>
