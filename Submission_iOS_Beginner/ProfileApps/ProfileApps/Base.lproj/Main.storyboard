@@ -394,6 +394,9 @@
                         <viewLayoutGuide key="safeArea" id="v1n-Xa-37B"/>
                     </view>
                     <connections>
+                        <outlet property="amountFollow" destination="iUy-0N-WdP" id="Ft4-MF-9eB"/>
+                        <outlet property="amountFollowers" destination="ykq-tA-MsI" id="8Od-10-b8f"/>
+                        <outlet property="amountPost" destination="qJj-nc-wXF" id="Toz-Bb-hSH"/>
                         <outlet property="imageProfile" destination="O9H-FA-p26" id="Xzk-Bb-byQ"/>
                         <outlet property="titleAddress" destination="3mq-Eo-si2" id="JRc-bu-M8P"/>
                         <outlet property="titleAddressHouse" destination="6Gg-Bh-pjP" id="Zdu-jr-boa"/>
