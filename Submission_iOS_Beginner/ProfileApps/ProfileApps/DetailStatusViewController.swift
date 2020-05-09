@@ -10,9 +10,20 @@ import UIKit
 
 class DetailStatusViewController: UIViewController {
 
+    var statusPhotos: StatusPhotos?
+    
+    @IBOutlet weak var titleStatus: UILabel!
+    @IBOutlet weak var imageStatus: UIImageView!
+    @IBOutlet weak var descriptionStatus: UILabel!
+    @IBOutlet weak var likeStatus: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        if let result = statusPhotos {
+            titleStatus.text = result.title
+            imageStatus.image = result.image
+            likeStatus.text = "\(result.likes) likes"
+            descriptionStatus.text = result.status
+        }
     }
 }
