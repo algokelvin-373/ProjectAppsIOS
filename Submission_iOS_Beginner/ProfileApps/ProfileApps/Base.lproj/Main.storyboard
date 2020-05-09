@@ -15,24 +15,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w9T-Fg-WzR">
-                                <rect key="frame" x="0.0" y="209" width="414" height="450"/>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w9T-Fg-WzR">
+                                <rect key="frame" x="0.0" y="44" width="414" height="450"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <segue destination="DQP-yN-H5i" kind="embed" id="lEc-IV-ZW8"/>
                                 </connections>
                             </containerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JeO-JV-Uao" userLabel="textAbout">
+                                <rect key="frame" x="16" y="502" width="382" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nzk-Gn-Wof" userLabel="textLongDescription">
+                                <rect key="frame" x="16" y="531" width="382" height="266"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.79690715355933517" green="0.97680455450000003" blue="0.81671179079114442" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="w9T-Fg-WzR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Bsx-gJ-wXW"/>
-                            <constraint firstItem="w9T-Fg-WzR" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="209" id="MLW-iK-Agl"/>
-                            <constraint firstAttribute="trailing" secondItem="w9T-Fg-WzR" secondAttribute="trailing" id="clO-d9-yCn"/>
-                            <constraint firstAttribute="bottom" secondItem="w9T-Fg-WzR" secondAttribute="bottom" constant="237" id="y1D-jL-K0k"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="profile" id="ZTQ-kh-I07"/>
                     <connections>
+                        <outlet property="textAbout" destination="nzk-Gn-Wof" id="Zci-bR-l4N"/>
+                        <outlet property="textLongDescription" destination="nzk-Gn-Wof" id="EhE-k3-hNO"/>
                         <outlet property="textShortDescription" destination="dfA-IR-XPg" id="emh-7l-Fyd"/>
                     </connections>
                 </viewController>

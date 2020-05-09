@@ -11,6 +11,9 @@ import UIKit
 
 func getDataProfile() -> Profile {
     let data = Profile()
+    data.amountPost = "356"
+    data.amountFollowers = "894"
+    data.amountFollow = "1877"
     data.name = "Kelvin Herwanda Tandrio"
     data.email = "kelvin373.ht@gmail.com"
     data.place_of_birth = "Bengkulu"
