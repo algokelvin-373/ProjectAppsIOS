@@ -15,6 +15,7 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
 
         tableStatusPhotos.dataSource = self
+        tableStatusPhotos.delegate = self
         tableStatusPhotos.register(
             UINib(nibName: "StatusPhotosTableViewCell", bundle: nil),
             forCellReuseIdentifier: "StatusPhotosCell"
@@ -39,3 +40,13 @@ extension HomeViewController: UITableViewDataSource {
     }
 }
 
+extension HomeViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detail = DetailStatusViewController(
+            nibName: "DetailStatusViewController",
+            bundle: nil
+        )
+        detail.statusPhotos = statusPhotos[indexPath.row]
+        self.navigationController?.pushViewController(detail, animated: true)
+    }
+}
