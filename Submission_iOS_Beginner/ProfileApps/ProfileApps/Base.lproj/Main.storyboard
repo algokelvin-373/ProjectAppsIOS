@@ -238,7 +238,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="450"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photos01" translatesAutoresizingMaskIntoConstraints="NO" id="O9H-FA-p26" userLabel="imageProfile">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="my_profile" translatesAutoresizingMaskIntoConstraints="NO" id="O9H-FA-p26" userLabel="imageProfile">
                                 <rect key="frame" x="16" y="16" width="104" height="150"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YFx-i8-zY2" userLabel="titleEmail">
@@ -432,7 +432,7 @@
     <resources>
         <image name="android_jetpack" width="84.5" height="84.5"/>
         <image name="home" width="21" height="21"/>
-        <image name="photos01" width="401" height="399"/>
+        <image name="my_profile" width="100" height="99.5"/>
         <image name="profile" width="21" height="21"/>
         <image name="sertificate" width="21" height="21"/>
     </resources>
