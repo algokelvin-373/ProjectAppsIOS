@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailStatusViewController" customModule="ProfileApps" customModuleProvider="target">
+            <connections>
+                <outlet property="descriptionStatus" destination="WGJ-mu-71F" id="j1u-YN-sf9"/>
+                <outlet property="imageStatus" destination="LFR-XM-N55" id="bjP-2Z-ta3"/>
+                <outlet property="likeStatus" destination="RJd-vc-4B7" id="bI3-DW-LdF"/>
+                <outlet property="titleStatus" destination="uSS-Kv-niu" id="VhY-Iv-ceU"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LFR-XM-N55" userLabel="imageStatus">
+                    <rect key="frame" x="16" y="60" width="382" height="381"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kelvin Herwanda Tandrio" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uSS-Kv-niu" userLabel="titleStatus">
+                    <rect key="frame" x="16" y="449" width="382" height="21"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30 Likes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RJd-vc-4B7" userLabel="likeStatus">
+                    <rect key="frame" x="16" y="478" width="382" height="18"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WGJ-mu-71F" userLabel="descriptionStatus">
+                    <rect key="frame" x="20" y="504" width="374" height="358"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="RJd-vc-4B7" firstAttribute="top" secondItem="uSS-Kv-niu" secondAttribute="bottom" constant="8" id="1zF-ab-XVC"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="LFR-XM-N55" secondAttribute="trailing" constant="16" id="Cxa-QH-TJr"/>
+                <constraint firstItem="LFR-XM-N55" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="NPN-pu-bBk"/>
+                <constraint firstItem="RJd-vc-4B7" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="OLh-fF-y5P"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="RJd-vc-4B7" secondAttribute="trailing" constant="16" id="Thb-Xt-s8Y"/>
+                <constraint firstItem="uSS-Kv-niu" firstAttribute="top" secondItem="LFR-XM-N55" secondAttribute="bottom" constant="8" id="a1a-bl-qZi"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="RJd-vc-4B7" secondAttribute="bottom" constant="366" id="awC-gq-1DU"/>
+                <constraint firstItem="uSS-Kv-niu" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="kRp-rU-XRC"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="uSS-Kv-niu" secondAttribute="bottom" constant="392" id="kmG-Wf-gIF"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="LFR-XM-N55" secondAttribute="bottom" constant="421" id="nsf-on-34r"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="uSS-Kv-niu" secondAttribute="trailing" constant="16" id="tS8-m6-cyU"/>
+                <constraint firstItem="LFR-XM-N55" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="vnK-oR-xhc"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="137.68115942028987" y="152.67857142857142"/>
+        </view>
+    </objects>
+</document>
