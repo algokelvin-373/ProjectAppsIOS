@@ -11,11 +11,25 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
+            /**UI Text**/
             Text("Hello AlgoKelvin")
             .font(.largeTitle)
             .fontWeight(.bold)
             .foregroundColor(Color.black)
             .padding(.all, 8.0)
+            
+            /**UI Button**/
+            Button(action: {
+                print("You click Button OK")
+            }) {
+                Text("OKAY")
+                    .font(.largeTitle)
+                    .fontWeight(.medium)
+                    .foregroundColor(Color.black)
+                    .padding(.vertical, 8.0)
+                    .padding(.horizontal, 50.0)
+                    .background(/*@START_MENU_TOKEN@*/Color.green/*@END_MENU_TOKEN@*/)
+            }
         }
         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
         .background(/*@START_MENU_TOKEN@*/Color.blue/*@END_MENU_TOKEN@*/)
