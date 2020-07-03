@@ -16,7 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		107796AB24AF92AE00C064CD /* m16_ui_image_zstack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = m16_ui_image_zstack.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		107796AB24AF92AE00C064CD /* m16_ui_image_hstack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = m16_ui_image_hstack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		107796AE24AF92AE00C064CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		107796B024AF92AE00C064CD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		107796B224AF92AE00C064CD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -48,7 +48,7 @@
 		107796AC24AF92AE00C064CD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				107796AB24AF92AE00C064CD /* m16_ui_image_zstack.app */,
+				107796AB24AF92AE00C064CD /* m16_ui_image_hstack.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -78,9 +78,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		107796AA24AF92AE00C064CD /* m16_ui_image_zstack */ = {
+		107796AA24AF92AE00C064CD /* m16_ui_image_hstack */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 107796BF24AF92B000C064CD /* Build configuration list for PBXNativeTarget "m16_ui_image_zstack" */;
+			buildConfigurationList = 107796BF24AF92B000C064CD /* Build configuration list for PBXNativeTarget "m16_ui_image_hstack" */;
 			buildPhases = (
 				107796A724AF92AE00C064CD /* Sources */,
 				107796A824AF92AE00C064CD /* Frameworks */,
@@ -90,9 +90,9 @@
 			);
 			dependencies = (
 			);
-			name = m16_ui_image_zstack;
+			name = m16_ui_image_hstack;
 			productName = m16_ui_image_zstack;
-			productReference = 107796AB24AF92AE00C064CD /* m16_ui_image_zstack.app */;
+			productReference = 107796AB24AF92AE00C064CD /* m16_ui_image_hstack.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -110,7 +110,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 107796A624AF92AE00C064CD /* Build configuration list for PBXProject "m16_ui_image_zstack" */;
+			buildConfigurationList = 107796A624AF92AE00C064CD /* Build configuration list for PBXProject "m16_ui_image_hstack" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -123,7 +123,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				107796AA24AF92AE00C064CD /* m16_ui_image_zstack */,
+				107796AA24AF92AE00C064CD /* m16_ui_image_hstack */,
 			);
 		};
 /* End PBXProject section */
@@ -292,8 +292,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.algokelvin.m16-ui-image-zstack";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.algokelvin.m16-ui-image-hstack";
+				PRODUCT_NAME = m16_ui_image_hstack;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -311,8 +311,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.algokelvin.m16-ui-image-zstack";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.algokelvin.m16-ui-image-hstack";
+				PRODUCT_NAME = m16_ui_image_hstack;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -321,7 +321,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		107796A624AF92AE00C064CD /* Build configuration list for PBXProject "m16_ui_image_zstack" */ = {
+		107796A624AF92AE00C064CD /* Build configuration list for PBXProject "m16_ui_image_hstack" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				107796BD24AF92B000C064CD /* Debug */,
@@ -330,7 +330,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		107796BF24AF92B000C064CD /* Build configuration list for PBXNativeTarget "m16_ui_image_zstack" */ = {
+		107796BF24AF92B000C064CD /* Build configuration list for PBXNativeTarget "m16_ui_image_hstack" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				107796C024AF92B000C064CD /* Debug */,
