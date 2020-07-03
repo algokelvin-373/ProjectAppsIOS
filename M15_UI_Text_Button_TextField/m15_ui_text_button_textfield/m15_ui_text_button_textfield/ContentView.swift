@@ -16,6 +16,7 @@ struct ContentView: View {
             .font(.largeTitle)
             .fontWeight(.bold)
             .foregroundColor(Color.black)
+            .background(Color.orange)
             .padding(.all, 8.0)
             
             /**UI Button**/
