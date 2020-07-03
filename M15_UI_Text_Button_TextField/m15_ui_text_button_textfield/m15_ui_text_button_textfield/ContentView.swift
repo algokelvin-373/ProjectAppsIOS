@@ -10,11 +10,15 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello AlgoKelvin")
+        VStack {
+            Text("Hello AlgoKelvin")
             .font(.largeTitle)
             .fontWeight(.bold)
             .foregroundColor(Color.black)
             .padding(.all, 8.0)
+        }
+        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
+        .background(/*@START_MENU_TOKEN@*/Color.blue/*@END_MENU_TOKEN@*/)
     }
 }
 
