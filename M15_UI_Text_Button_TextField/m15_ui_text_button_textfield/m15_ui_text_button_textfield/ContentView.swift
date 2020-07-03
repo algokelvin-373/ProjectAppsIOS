@@ -9,6 +9,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var name: String = "Algokelvin"
+    
     var body: some View {
         VStack {
             /**UI Text**/
@@ -31,6 +33,12 @@ struct ContentView: View {
                     .padding(.horizontal, 50.0)
                     .background(/*@START_MENU_TOKEN@*/Color.green/*@END_MENU_TOKEN@*/)
             }
+            
+            /**UI TextField***/
+            TextField("iOS Fundamental", text: $name)
+                .font(Font.system(size: 15, weight: .medium, design: .serif))
+                .padding(.all)
+                .background(Color.white)
         }
         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
         .background(/*@START_MENU_TOKEN@*/Color.blue/*@END_MENU_TOKEN@*/)
