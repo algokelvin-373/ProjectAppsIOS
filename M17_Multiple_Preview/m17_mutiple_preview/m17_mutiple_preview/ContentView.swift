@@ -10,7 +10,28 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, World!")
+        VStack {
+            Text("Hello, World! AlgoKelvin")
+                .fontWeight(.regular)
+                .foregroundColor(Color.black)
+                .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                .padding(.horizontal)
+            
+            Text("AlgoKelvin learn SwiftUI")
+                .fontWeight(.regular)
+                .foregroundColor(Color.black)
+                .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                .padding(.horizontal)
+            
+            Text("UI Version ContentView")
+                .fontWeight(.regular)
+                .foregroundColor(Color.black)
+                .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                .padding(.horizontal)
+        }
     }
 }
 
@@ -19,5 +40,6 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
             .previewDevice(PreviewDevice(rawValue: "iPhone 7"))
             .previewDisplayName("iPhone 7 AlgoKelvin Old Version")
+            .background(Color.yellow)
     }
 }
