@@ -37,9 +37,16 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
-            .previewDevice(PreviewDevice(rawValue: "iPhone 7"))
-            .previewDisplayName("iPhone 7 AlgoKelvin Old Version")
-            .background(Color.yellow)
+        Group {
+            ContentView()
+                .previewDevice(PreviewDevice(rawValue: "iPhone 7"))
+                .previewDisplayName("iPhone 7 AlgoKelvin Old Version")
+                .background(Color.yellow)
+            
+            ContentView()
+                .previewDevice(PreviewDevice(rawValue: "iPhone 7"))
+                .previewDisplayName("iPhone 7 AlgoKelvin Old Version")
+                .background(Color.yellow)
+        }
     }
 }
