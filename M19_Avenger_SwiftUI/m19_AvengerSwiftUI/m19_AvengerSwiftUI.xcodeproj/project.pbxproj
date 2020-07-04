@@ -13,6 +13,7 @@
 		104F589224B0C6F200C8A161 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 104F589124B0C6F200C8A161 /* Assets.xcassets */; };
 		104F589524B0C6F200C8A161 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 104F589424B0C6F200C8A161 /* Preview Assets.xcassets */; };
 		104F589824B0C6F200C8A161 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 104F589624B0C6F200C8A161 /* LaunchScreen.storyboard */; };
+		104F58A124B0F64900C8A161 /* Avenger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104F58A024B0F64900C8A161 /* Avenger.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		104F589424B0C6F200C8A161 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		104F589724B0C6F200C8A161 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		104F589924B0C6F200C8A161 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		104F58A024B0F64900C8A161 /* Avenger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Avenger.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		104F588A24B0C6F000C8A161 /* m19_AvengerSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				104F589F24B0DE3D00C8A161 /* Model */,
 				104F588B24B0C6F000C8A161 /* AppDelegate.swift */,
 				104F588D24B0C6F000C8A161 /* SceneDelegate.swift */,
 				104F588F24B0C6F000C8A161 /* ContentView.swift */,
@@ -73,6 +76,14 @@
 				104F589424B0C6F200C8A161 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		104F589F24B0DE3D00C8A161 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				104F58A024B0F64900C8A161 /* Avenger.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,6 +157,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				104F58A124B0F64900C8A161 /* Avenger.swift in Sources */,
 				104F588C24B0C6F000C8A161 /* AppDelegate.swift in Sources */,
 				104F588E24B0C6F000C8A161 /* SceneDelegate.swift in Sources */,
 				104F589024B0C6F000C8A161 /* ContentView.swift in Sources */,
