@@ -35,6 +35,31 @@ struct ContentView: View {
     }
 }
 
+struct ContentViewVersionTwo: View {
+    var body: some View {
+        VStack {
+            Text("Hello, World! AlgoKelvin")
+                .fontWeight(.regular)
+                .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                .foregroundColor(Color.white)
+                .padding(.horizontal)
+            
+            Text("AlgoKelvin learn SwiftUI")
+                .fontWeight(.regular)
+                .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                .foregroundColor(Color.white)
+                .padding(.horizontal)
+            
+            Text("UI Version ContentViewVersionTwo")
+                .fontWeight(.regular)
+                .foregroundColor(Color.white)
+                .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                .multilineTextAlignment(.center)
+                .padding(.horizontal)
+        }
+    }
+}
+
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
