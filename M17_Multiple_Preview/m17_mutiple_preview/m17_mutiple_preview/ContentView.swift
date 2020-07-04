@@ -68,10 +68,10 @@ struct ContentView_Previews: PreviewProvider {
                 .previewDisplayName("iPhone 7 AlgoKelvin Old Version")
                 .background(Color.yellow)
             
-            ContentView()
-                .previewDevice(PreviewDevice(rawValue: "iPhone 7"))
-                .previewDisplayName("iPhone 7 AlgoKelvin Old Version")
-                .background(Color.yellow)
+            ContentViewVersionTwo()
+                .previewDevice(PreviewDevice(rawValue: "iPhone 11"))
+                .previewDisplayName("iPhone 11 AlgoKelvin New Version")
+                .background(Color.red)
         }
     }
 }
