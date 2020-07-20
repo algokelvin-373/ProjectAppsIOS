@@ -12,17 +12,17 @@ struct ContentView: View {
     var body: some View {
         TabView {
             HomeView().tabItem({
-                Image(systemName: ConstantVal.TabBarImage.tabBar0)
+            Image("\(ConstantVal.TabBarImage.tabBar0)")
                 Text("\(ConstantVal.TabBarText.tabBar0)")
             }).tag(0)
             
             SearchPageView().tabItem({
-                Image(systemName: ConstantVal.TabBarImage.tabBar0)
+            Image("\(ConstantVal.TabBarImage.tabBar0)")
                 Text("\(ConstantVal.TabBarText.tabBar1)")
             }).tag(1)
             
             ProfileView().tabItem({
-                Image(systemName: ConstantVal.TabBarImage.tabBar0)
+            Image("\(ConstantVal.TabBarImage.tabBar0)")
                 Text("\(ConstantVal.TabBarText.tabBar2)")
             }).tag(2)
         }
