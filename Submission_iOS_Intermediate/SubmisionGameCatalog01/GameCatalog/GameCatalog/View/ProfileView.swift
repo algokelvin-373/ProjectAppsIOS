@@ -10,7 +10,16 @@ import SwiftUI
 
 struct ProfileView: View {
     var body: some View {
-        Text("Profile View")
+        VStack {
+            VStack(alignment: .leading) {
+                Image("background_profile")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                Image("photos_profile")
+                    .resizable()
+                    .frame(width: 150.0, height: 150.0)
+            }
+        }
     }
 }
 
