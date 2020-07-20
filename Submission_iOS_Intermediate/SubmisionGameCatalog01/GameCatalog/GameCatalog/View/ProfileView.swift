@@ -10,7 +10,7 @@ import SwiftUI
 
 struct ProfileView: View {
     var body: some View {
-        VStack {
+        VStack(alignment: .center) {
             VStack {
                 Image("background_profile")
                     .resizable()
@@ -22,6 +22,8 @@ struct ProfileView: View {
                     .padding(.bottom, -50)
             }
         }
+        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
+
     }
 }
 
