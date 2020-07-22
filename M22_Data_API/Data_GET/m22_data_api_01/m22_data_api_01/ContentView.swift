@@ -10,40 +10,18 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, World!")
+        ScrollView {
+            VStack {
+                ForEach((1...100), id: \.self) { index in
+                    Text("\(index). Hello World")
+                }
+            }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
-    let url = "https://api.rawg.io/api/games"
     static var previews: some View {
         ContentView()
-        getDataGame()
-    }
-    
-    private func getDataGame() {
-        let task = URLSession.shared.dataTask(with: URL(string: url)!, completionHandler: { data, response, error in
-            
-            guard let data = data, error  == nil else {
-                print("Something when wrong")
-                return
-            }
-            
-            //have data
-            var result: DataGame?
-            do {
-                result = try JSONDecoder().decode(DataGame.self, from: data)
-            }
-            catch {
-                print("Failed to convert \(error.localizedDescription)")
-            }
-            
-            guard let json = result else {
-                return
-            }
-            print(json.results)
-        })
-        
-        task.resume()
     }
 }
