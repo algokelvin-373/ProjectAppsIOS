@@ -9,11 +9,17 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var games: [Game] = []
+    
     var body: some View {
         ScrollView {
             VStack {
-                ForEach((1...100), id: \.self) { index in
-                    Text("\(index). Hello World")
+                ForEach(games) { data in
+                    Text("Game : \(data.name)")
+                }.onAppear {
+                    Api().getDataGame { (dataGame) in
+                        self.games = dataGame
+                    }
                 }
             }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
         }
