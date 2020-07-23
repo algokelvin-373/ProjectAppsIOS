@@ -15,6 +15,7 @@ struct DataGame: Codable {
 }
 
 struct Game: Codable {
+    let id: Int
     let name: String
 }
 
@@ -23,21 +24,17 @@ class Api {
         guard let url = URL(string: "https://api.rawg.io/api/games") else { return }
         
         URLSession.shared.dataTask(with: url) { data, response, error in
-            var result: DataGame?
+            let jsonGame: DataGame?
             do {
-                result = try JSONDecoder().decode(DataGame.self, from: data!)
+                jsonGame = try JSONDecoder().decode(DataGame.self, from: data!)
+                /** Play data in Asynchronous **/
+                DispatchQueue.main.async {
+                    responseData(jsonGame!.results) // To set value Array<Game> in 'responseData'
+                    print(jsonGame!.results)
+                }
             }
             catch {
                 print("Failed to convert \(error.localizedDescription)")
-            }
-            
-            guard let json = result else {
-                return
-            }
-            
-            /** Play data in Asynchronous **/
-            DispatchQueue.main.async {
-                responseData(json.results) // To set value Array<Game> in 'responseData'
             }
             
         }.resume()
