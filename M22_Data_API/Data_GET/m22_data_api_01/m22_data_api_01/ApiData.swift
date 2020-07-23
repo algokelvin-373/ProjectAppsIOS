@@ -11,7 +11,7 @@ import Foundation
 let url = "https://api.rawg.io/api/games"
 
 struct DataGame: Codable {
-    let results: Array<Game>
+    let results: [Game]
 }
 
 struct Game: Codable {
