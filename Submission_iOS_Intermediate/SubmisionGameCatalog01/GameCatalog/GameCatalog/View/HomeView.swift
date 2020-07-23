@@ -29,12 +29,15 @@ struct HomeView: View {
                                 Image("ic-love-on")
                             }
                         }.padding()
+                        
+                        
                     }
                     .background(Color(red: 255.0/255, green: 240.0/255, blue: 240.0/255, opacity: 1.0))
                     .cornerRadius(5)
                 }
             }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
                 .background(Color.white)
+            .padding()
 
         }
     }
