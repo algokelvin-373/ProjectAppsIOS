@@ -14,8 +14,10 @@ struct ContentView: View {
     var body: some View {
         ScrollView {
             VStack {
+                Text("Data game")
                 ForEach(games, id: \.id) { data in
                     Text("Game : \(data.name)")
+                        .background(Color.red)
                 }.onAppear {
                     Api().getDataGame { (game) in
                         self.games = game
@@ -31,3 +33,4 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
