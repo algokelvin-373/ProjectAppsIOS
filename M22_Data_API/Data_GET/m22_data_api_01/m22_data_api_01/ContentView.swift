@@ -13,17 +13,17 @@ struct ContentView: View {
     
     var body: some View {
         ScrollView {
-            VStack {
+            VStack(alignment: .leading) {
                 Text("Data game")
                 ForEach(games, id: \.id) { data in
                     Text("Game : \(data.name)")
-                        .background(Color.red)
-                }.onAppear {
-                    Api().getDataGame { (game) in
-                        self.games = game
-                    }
                 }
             }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
+            .onAppear {
+                Api().getDataGame { (game) in
+                    self.games = game
+                }
+            }
         }
     }
 }
