@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1049BC7424CB28B500A626FE /* ModelDataGames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1049BC7324CB28B500A626FE /* ModelDataGames.swift */; };
 		104AC9E124C69CF5008B3D3F /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 104AC9E024C69CF5008B3D3F /* Roboto-Regular.ttf */; };
 		104AC9E424C6A0AB008B3D3F /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 104AC9E224C6A0AB008B3D3F /* Roboto-Medium.ttf */; };
 		104AC9E524C6A0AB008B3D3F /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 104AC9E324C6A0AB008B3D3F /* Roboto-Bold.ttf */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1049BC7324CB28B500A626FE /* ModelDataGames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelDataGames.swift; sourceTree = "<group>"; };
 		104AC9E024C69CF5008B3D3F /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		104AC9E224C6A0AB008B3D3F /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		104AC9E324C6A0AB008B3D3F /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
@@ -56,6 +58,14 @@
 			children = (
 			);
 			path = ApiResponse;
+			sourceTree = "<group>";
+		};
+		1049BC7224CB288F00A626FE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1049BC7324CB28B500A626FE /* ModelDataGames.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		104AC9DF24C69A60008B3D3F /* Fonts */ = {
@@ -105,6 +115,7 @@
 		10B2525D24ACAE0900E60B5D /* GameCatalog */ = {
 			isa = PBXGroup;
 			children = (
+				1049BC7224CB288F00A626FE /* Model */,
 				1049BC7124CAD4D700A626FE /* ApiResponse */,
 				104AC9DF24C69A60008B3D3F /* Fonts */,
 				10B1A9AE24C49203005B99E6 /* View */,
@@ -209,6 +220,7 @@
 				10B1A9B024C49223005B99E6 /* HomeView.swift in Sources */,
 				10B1A9B424C4946C005B99E6 /* ProfileView.swift in Sources */,
 				10B2526324ACAE0900E60B5D /* ContentView.swift in Sources */,
+				1049BC7424CB28B500A626FE /* ModelDataGames.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
