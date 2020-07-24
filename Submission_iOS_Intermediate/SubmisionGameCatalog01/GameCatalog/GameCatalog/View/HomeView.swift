@@ -9,21 +9,24 @@
 import SwiftUI
 
 struct HomeView: View {
+    @State var games: [Games] = []
+    
     var body: some View {
         ScrollView {
-            VStack() {
-                ForEach((1...10), id: \.self) { i in
+            VStack {
+                ForEach((games), id: \.id) { x in
                     VStack(alignment: .leading) {
                         Image("background_profile")
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                         
                         HStack{
-                            Text("Resident Evil")
-                                .font(.title)
+                            Text(x.name)
+                                .font(.custom("RobotoCondensed-Bold", size: 24))
                             Spacer(minLength: 0)
                             Image("ic-star-rating")
-                            Text("4.48/5")
+                            Text(String(format: "%.2f/5", x.rating))
+                            .font(.custom("RobotoCondensed-Regular", size: 24))
                             Button(action: {
                             }) {
                                 Image("ic-love-on")
@@ -53,7 +56,11 @@ struct HomeView: View {
             }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
                 .background(Color.white)
             .padding()
-
+                .onAppear() {
+                    ResponseGame().getDataGame { (games) in
+                        self.games = games
+                    }
+            }
         }
     }
 }

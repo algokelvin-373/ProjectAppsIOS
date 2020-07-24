@@ -17,7 +17,7 @@ struct Games: Codable {
     let id: Int
     let name: String
     let background_image: String
-    let rating: Double
+    let rating: Float
     let parent_platforms: [Platforms]
     let genres: [Genres]
 }
