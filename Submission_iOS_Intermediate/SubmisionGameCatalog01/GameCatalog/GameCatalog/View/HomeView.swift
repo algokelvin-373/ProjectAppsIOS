@@ -35,10 +35,10 @@ struct HomeView: View {
                         .padding(.horizontal, 4.0)
                         
                         HStack{
-                            Text("Adventure")
+                            ForEach((x.genres), id: \.id) { y1 in
+                                Text(y1.name)
                                 .italic()
-                            Text("Action")
-                            .italic()
+                            }
                         }
                         .padding(.horizontal, 4.0)
                         
