@@ -51,6 +51,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1049BC7124CAD4D700A626FE /* ApiResponse */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ApiResponse;
+			sourceTree = "<group>";
+		};
 		104AC9DF24C69A60008B3D3F /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +105,7 @@
 		10B2525D24ACAE0900E60B5D /* GameCatalog */ = {
 			isa = PBXGroup;
 			children = (
+				1049BC7124CAD4D700A626FE /* ApiResponse */,
 				104AC9DF24C69A60008B3D3F /* Fonts */,
 				10B1A9AE24C49203005B99E6 /* View */,
 				10B1A9AB24C486AE005B99E6 /* utils */,

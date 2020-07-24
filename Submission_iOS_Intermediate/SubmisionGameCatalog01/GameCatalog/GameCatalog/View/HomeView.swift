@@ -13,7 +13,7 @@ struct HomeView: View {
         ScrollView {
             VStack() {
                 ForEach((1...10), id: \.self) { i in
-                    VStack {
+                    VStack(alignment: .leading) {
                         Image("background_profile")
                             .resizable()
                             .aspectRatio(contentMode: .fit)
