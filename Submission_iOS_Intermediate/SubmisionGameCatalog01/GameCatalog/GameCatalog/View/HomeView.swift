@@ -13,7 +13,7 @@ struct HomeView: View {
         ScrollView {
             VStack() {
                 ForEach((1...10), id: \.self) { i in
-                    VStack(spacing: 20) {
+                    VStack {
                         Image("background_profile")
                             .resizable()
                             .aspectRatio(contentMode: .fit)
@@ -28,10 +28,25 @@ struct HomeView: View {
                             }) {
                                 Image("ic-love-on")
                             }
-                        }.padding()
+                        }
+                        .padding(.horizontal, 4.0)
                         
+                        HStack{
+                            Text("Adventure")
+                                .italic()
+                            Text("Action")
+                            .italic()
+                        }
+                        .padding(.horizontal, 4.0)
                         
+                        HStack{
+                            Image("ic-tool-game-pc")
+                            Image("ic-tool-game-playstation")
+                            Image("ic-tool-game-xbox")
+                        }
+                        .padding(8.0)
                     }
+                    .padding(.top, 8.0)
                     .background(Color(red: 255.0/255, green: 240.0/255, blue: 240.0/255, opacity: 1.0))
                     .cornerRadius(5)
                 }
