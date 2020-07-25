@@ -9,8 +9,29 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var text: String = ""
+    
     var body: some View {
-        Text("Hello, World!")
+        VStack {
+            HStack {
+                TextField("Search", text: $text)
+                    .padding()
+                Button(action: {
+                    
+                    self.text = ""
+                    
+                }) {
+                    
+                    Text("Cancel")
+                        .padding()
+                        .foregroundColor(Color.black)
+                    .background(Color(red: 200.0/255, green: 200.0/255, blue: 200.0/255, opacity: 1.0))
+                
+                }
+            }
+            
+            Text(text)
+        }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
     }
 }
 
