@@ -9,8 +9,37 @@
 import SwiftUI
 
 struct SearchPageView: View {
+    @State var txt = ""
+    
     var body: some View {
-        Text("Search Page View")
+        VStack {
+            SearchView(txt: $txt)
+        }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
+    }
+}
+
+struct SearchView: View {
+    @Binding var txt: String
+    
+    var body: some View {
+        VStack {
+            ZStack {
+                HStack {
+                    TextField("Search", text: $txt)
+                        .padding(.trailing, 75)
+                }.padding()
+                    .background(Color.white)
+                
+                HStack {
+                    Spacer()
+                    Button(action: {
+                        self.txt = ""
+                    }) {
+                        Text("Cancel")
+                    }.foregroundColor(.black)
+                }.padding()
+            }
+        }
     }
 }
 
