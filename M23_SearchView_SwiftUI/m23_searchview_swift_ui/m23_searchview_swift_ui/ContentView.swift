@@ -13,8 +13,26 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            SearchView(txt: $text)
-                .padding()
+            HStack {
+            
+                TextField("Search", text: $text)
+                    .padding()
+                Button(action: {
+                    
+                    self.text = ""
+                    
+                }) {
+                    
+                    Text("Cancel")
+                        .padding()
+                        .foregroundColor(Color.black)
+                    .background(Color(red: 200.0/255, green: 200.0/255, blue: 200.0/255, opacity: 1.0))
+                
+                }
+            }
+            
+            Text(text)
+                .foregroundColor(Color.red)
             
         }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
             .background(Color(red: 243.0/255, green: 243.0/255, blue: 243.0/255, opacity: 1.0))
