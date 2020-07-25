@@ -13,6 +13,7 @@
 		10F210B424CC5A0A00F395CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10F210B324CC5A0A00F395CE /* Assets.xcassets */; };
 		10F210B724CC5A0A00F395CE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10F210B624CC5A0A00F395CE /* Preview Assets.xcassets */; };
 		10F210BA24CC5A0A00F395CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10F210B824CC5A0A00F395CE /* LaunchScreen.storyboard */; };
+		10F210C224CC65FC00F395CE /* ApiSearchGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F210C124CC65FC00F395CE /* ApiSearchGame.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		10F210B624CC5A0A00F395CE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		10F210B924CC5A0A00F395CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		10F210BB24CC5A0A00F395CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		10F210C124CC65FC00F395CE /* ApiSearchGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiSearchGame.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				10F210B824CC5A0A00F395CE /* LaunchScreen.storyboard */,
 				10F210BB24CC5A0A00F395CE /* Info.plist */,
 				10F210B524CC5A0A00F395CE /* Preview Content */,
+				10F210C124CC65FC00F395CE /* ApiSearchGame.swift */,
 			);
 			path = m22_get_api_02;
 			sourceTree = "<group>";
@@ -146,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10F210C224CC65FC00F395CE /* ApiSearchGame.swift in Sources */,
 				10F210AE24CC5A0800F395CE /* AppDelegate.swift in Sources */,
 				10F210B024CC5A0800F395CE /* SceneDelegate.swift in Sources */,
 				10F210B224CC5A0800F395CE /* ContentView.swift in Sources */,

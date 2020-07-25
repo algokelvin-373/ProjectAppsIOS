@@ -10,6 +10,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State var text: String = ""
+    @State var games: [Game] = []
     
     var body: some View {
         VStack {
@@ -30,8 +31,17 @@ struct ContentView: View {
                 }
             }
             
-            Text(text)
+            ForEach(games, id: \.id) { x in
+                Text(x.name)
+            }
+            
         }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
+        .onAppear {
+            Api().getDataGame(search: self.text) { (game) in
+                self.games = game
+            }
+        }
+
     }
 }
 
