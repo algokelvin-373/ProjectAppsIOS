@@ -13,7 +13,7 @@ struct DataGame: Codable {
     let results: [Games]
 }
 
-struct Games: Codable {
+struct Games: Codable, Identifiable {
     let id: Int
     let name: String
     let background_image: String
@@ -26,13 +26,13 @@ struct Platforms: Codable {
     let platform: DataPlatforms
 }
 
-struct DataPlatforms: Codable {
+struct DataPlatforms: Codable, Identifiable {
     let id: Int
     let name: String
     let slug: String
 }
 
-struct Genres: Codable {
+struct Genres: Codable, Identifiable {
     let id: Int
     let name: String
 }
