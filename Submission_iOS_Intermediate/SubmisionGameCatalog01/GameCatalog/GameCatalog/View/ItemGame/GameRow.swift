@@ -1,5 +1,5 @@
 //
-//  GameList.swift
+//  GameRow.swift
 //  GameCatalog
 //
 //  Created by Kelvin HT on 7/26/20.
@@ -8,7 +8,9 @@
 
 import SwiftUI
 
-struct GameList: View {
+struct GameRow: View {
+    var game: Games
+    
     var body: some View {
         VStack(alignment: .leading) {
             Image("background_profile")
@@ -16,7 +18,7 @@ struct GameList: View {
                 .aspectRatio(contentMode: .fit)
             
             HStack{
-                Text("Resident Evil")
+                Text(game.name)
                     .font(.custom("RobotoCondensed-Bold", size: 24))
                 Spacer(minLength: 0)
                 Image("ic-star-rating")
@@ -47,11 +49,5 @@ struct GameList: View {
         .padding(.top, 8.0)
         .background(Color(red: 255.0/255, green: 240.0/255, blue: 240.0/255, opacity: 1.0))
         .cornerRadius(5)
-    }
-}
-
-struct GameList_Previews: PreviewProvider {
-    static var previews: some View {
-        GameList()
     }
 }
