@@ -22,8 +22,8 @@ struct GameRow: View {
                     .font(.custom("RobotoCondensed-Bold", size: 24))
                 Spacer(minLength: 0)
                 Image("ic-star-rating")
-                Text("4.4/5")
-                .font(.custom("RobotoCondensed-Regular", size: 24))
+                Text(String(format: "%.2f/5", game.rating))
+                    .font(.custom("RobotoCondensed-Regular", size: 24))
                 Button(action: {
                 }) {
                     Image("ic-love-on")
@@ -32,10 +32,10 @@ struct GameRow: View {
             .padding(.horizontal, 4.0)
             
             HStack{
-                Text("Action")
+                ForEach((game.genres), id: \.id) { x in
+                    Text(x.name)
                     .italic()
-                Text("Action")
-                    .italic()
+                }
             }
             .padding(.horizontal, 4.0)
             
