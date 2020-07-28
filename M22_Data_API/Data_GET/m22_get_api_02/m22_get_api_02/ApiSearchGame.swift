@@ -19,7 +19,7 @@ struct Game: Codable {
 }
 
 class Api {
-    func getDataGame(search: String, completion: @escaping ([Game]) -> ()) {
+    func getDataGame(search: String, completion: @escaping ([Game]) -> Void) {
         var componentURL = URLComponents(string: "https://api.rawg.io/api/games")!
         componentURL.queryItems = [
             URLQueryItem(name: "search", value: search)

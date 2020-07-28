@@ -15,8 +15,14 @@ struct ContentView: View {
     var body: some View {
         VStack {
             HStack {
-                TextField("Search", text: $text)
-                    .padding()
+                TextField("Enter username...", text: $text, onEditingChanged: { _ -> Void in
+                    
+                    
+                    
+                }) {
+                    print("Username onCommit")
+                }
+                
                 Button(action: {
                     
                     self.text = ""
@@ -31,17 +37,13 @@ struct ContentView: View {
                 }
             }
             
+            Text("Input : \(text)")
+            
             ForEach(games, id: \.id) { x in
                 Text(x.name)
             }
             
         }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
-        .onAppear {
-            Api().getDataGame(search: self.text) { (game) in
-                self.games = game
-            }
-        }
-
     }
 }
 
