@@ -12,7 +12,7 @@ import Combine
 
 class ImageLoader: ObservableObject {
     
-    var downloadImage: UIImage?
+    @Published var downloadImage: UIImage?
     var didChange = PassthroughSubject<ImageLoader?, Never>()
     
     func load(url: String) {
