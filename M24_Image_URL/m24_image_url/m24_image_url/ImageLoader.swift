@@ -13,7 +13,6 @@ import Combine
 class ImageLoader: ObservableObject {
     
     @Published var downloadImage: UIImage?
-    var didChange = PassthroughSubject<ImageLoader?, Never>()
     
     func load(url: String) {
         
@@ -25,14 +24,13 @@ class ImageLoader: ObservableObject {
             
             guard let data = data, error == nil else {
                 DispatchQueue.main.async {
-                    self.didChange.send(nil)
+                    self.downloadImage = nil
                 }
                 return
             }
             
-            self.downloadImage = UIImage(data: data)
             DispatchQueue.main.async {
-                self.didChange.send(self)
+                self.downloadImage = UIImage(data: data)
             }
             
         }.resume()

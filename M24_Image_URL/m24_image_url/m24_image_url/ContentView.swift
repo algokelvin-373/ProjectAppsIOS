@@ -8,12 +8,15 @@
 
 import SwiftUI
 
+let url = "https://media.rawg.io/media/games/84d/84da2ac3fdfc6507807a1808595afb12.jpg"
+
 struct ContentView: View {
     
-    let url = "https://media.rawg.io/media/games/84d/84da2ac3fdfc6507807a1808595afb12.jpg"
-    
     var body: some View {
-        URLImage(url: url)
+        VStack() {
+            URLImage(url: url)
+            Spacer()
+        }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 200.0, alignment: .top)
     }
 }
 

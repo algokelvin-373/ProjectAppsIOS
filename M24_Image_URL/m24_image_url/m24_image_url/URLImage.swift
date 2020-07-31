@@ -16,14 +16,14 @@ struct URLImage: View {
     
     init(url: String, placeholder: Image = Image(systemName: "photo")) {
         self.placeholder = placeholder
+        imageLoader.load(url: url)
     }
     
     var body: some View {
         if let uiImage = self.imageLoader.downloadImage {
             return Image(uiImage: uiImage)
+                    .resizable()
         }
-        else {
-            return placeholder
-        }
+        return placeholder
     }
 }
