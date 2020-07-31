@@ -13,6 +13,8 @@
 		104441EC24D2A663001BC229 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 104441EB24D2A663001BC229 /* Assets.xcassets */; };
 		104441EF24D2A663001BC229 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 104441EE24D2A663001BC229 /* Preview Assets.xcassets */; };
 		104441F224D2A663001BC229 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 104441F024D2A663001BC229 /* LaunchScreen.storyboard */; };
+		104441FA24D2D915001BC229 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104441F924D2D915001BC229 /* ImageLoader.swift */; };
+		104BBA2424D3E23800475F1A /* URLImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104BBA2324D3E23800475F1A /* URLImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		104441EE24D2A663001BC229 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		104441F124D2A663001BC229 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		104441F324D2A663001BC229 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		104441F924D2D915001BC229 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		104BBA2324D3E23800475F1A /* URLImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				104441F024D2A663001BC229 /* LaunchScreen.storyboard */,
 				104441F324D2A663001BC229 /* Info.plist */,
 				104441ED24D2A663001BC229 /* Preview Content */,
+				104441F924D2D915001BC229 /* ImageLoader.swift */,
+				104BBA2324D3E23800475F1A /* URLImage.swift */,
 			);
 			path = m24_image_url;
 			sourceTree = "<group>";
@@ -149,6 +155,8 @@
 				104441E624D2A65E001BC229 /* AppDelegate.swift in Sources */,
 				104441E824D2A65E001BC229 /* SceneDelegate.swift in Sources */,
 				104441EA24D2A65E001BC229 /* ContentView.swift in Sources */,
+				104BBA2424D3E23800475F1A /* URLImage.swift in Sources */,
+				104441FA24D2D915001BC229 /* ImageLoader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

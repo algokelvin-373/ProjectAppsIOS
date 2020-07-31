@@ -9,8 +9,11 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    let url = "https://media.rawg.io/media/games/84d/84da2ac3fdfc6507807a1808595afb12.jpg"
+    
     var body: some View {
-        Text("Hello, World!")
+        URLImage(url: url)
     }
 }
 
