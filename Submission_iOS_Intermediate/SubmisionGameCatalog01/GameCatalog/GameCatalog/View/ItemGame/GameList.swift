@@ -14,7 +14,7 @@ struct GameList: View {
     var body: some View {
         List(games) { game in
             ZStack {
-                NavigationLink(destination: GameDetails()) {
+                NavigationLink(destination: GameDetails(games: game)) {
                     GameRow(game: game)
                 }
             }

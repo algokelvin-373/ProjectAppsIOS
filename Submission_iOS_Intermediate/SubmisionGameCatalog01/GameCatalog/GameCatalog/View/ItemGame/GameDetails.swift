@@ -9,13 +9,11 @@
 import SwiftUI
 
 struct GameDetails: View {
+    let games: Games
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
-
-struct GameDetails_Previews: PreviewProvider {
-    static var previews: some View {
-        GameDetails()
+        VStack {
+            Text(games.name)
+        }
     }
 }
