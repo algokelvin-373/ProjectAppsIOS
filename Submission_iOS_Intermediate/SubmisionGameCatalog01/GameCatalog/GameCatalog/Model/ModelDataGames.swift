@@ -23,7 +23,8 @@ struct Games: Codable, Identifiable {
     let genres: [Genres]
 }
 
-struct Platforms: Codable {
+struct Platforms: Codable, Identifiable {
+    let id = UUID()
     let platform: DataPlatforms
 }
 
