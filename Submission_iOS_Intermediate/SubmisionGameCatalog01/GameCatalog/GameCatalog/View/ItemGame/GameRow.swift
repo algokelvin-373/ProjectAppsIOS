@@ -13,9 +13,9 @@ struct GameRow: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            Image("background_profile")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
+            VStack {
+                URLImage(url: game.background_image)
+            }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 200.0, alignment: .top)
             
             HStack{
                 Text(game.name)
@@ -36,13 +36,23 @@ struct GameRow: View {
                     Text(x.name)
                     .italic()
                 }
+                Spacer(minLength: 0)
+                Text(game.released)
             }
             .padding(.horizontal, 4.0)
             
             HStack{
-                Image("ic-tool-game-pc")
-                Image("ic-tool-game-playstation")
-                Image("ic-tool-game-xbox")
+                ForEach(game.parent_platforms) { y in
+                    if (y.platform.id == 1) {
+                        Image("ic-tool-game-pc")
+                    }
+                    else if (y.platform.id == 2) {
+                        Image("ic-tool-game-playstation")
+                    }
+                    else if (y.platform.id == 3) {
+                        Image("ic-tool-game-xbox")
+                    }
+                }
             }
             .padding(8.0)
         }
