@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1044364024D5A73F001A9335 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1044363F24D5A73F001A9335 /* ImageLoader.swift */; };
 		1044364424D5A77D001A9335 /* URLImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1044364324D5A77D001A9335 /* URLImage.swift */; };
+		1044364624D5DF00001A9335 /* GameDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1044364524D5DF00001A9335 /* GameDetails.swift */; };
 		1049BC7424CB28B500A626FE /* ModelDataGames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1049BC7324CB28B500A626FE /* ModelDataGames.swift */; };
 		1049BC7624CB37BE00A626FE /* ResponseGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1049BC7524CB37BE00A626FE /* ResponseGame.swift */; };
 		1049BC7924CB3BB200A626FE /* RobotoCondensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1049BC7724CB3BB200A626FE /* RobotoCondensed-Bold.ttf */; };
@@ -34,6 +35,7 @@
 /* Begin PBXFileReference section */
 		1044363F24D5A73F001A9335 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		1044364324D5A77D001A9335 /* URLImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImage.swift; sourceTree = "<group>"; };
+		1044364524D5DF00001A9335 /* GameDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetails.swift; sourceTree = "<group>"; };
 		1049BC7324CB28B500A626FE /* ModelDataGames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelDataGames.swift; sourceTree = "<group>"; };
 		1049BC7524CB37BE00A626FE /* ResponseGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseGame.swift; sourceTree = "<group>"; };
 		1049BC7724CB3BB200A626FE /* RobotoCondensed-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Bold.ttf"; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 			children = (
 				1053803F24CD1728008AFC77 /* GameList.swift */,
 				1053804224CD19CD008AFC77 /* GameRow.swift */,
+				1044364524D5DF00001A9335 /* GameDetails.swift */,
 			);
 			path = ItemGame;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 				10B1A9B424C4946C005B99E6 /* ProfileView.swift in Sources */,
 				1053804024CD1728008AFC77 /* GameList.swift in Sources */,
 				10B2526324ACAE0900E60B5D /* ContentView.swift in Sources */,
+				1044364624D5DF00001A9335 /* GameDetails.swift in Sources */,
 				1049BC7424CB28B500A626FE /* ModelDataGames.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
