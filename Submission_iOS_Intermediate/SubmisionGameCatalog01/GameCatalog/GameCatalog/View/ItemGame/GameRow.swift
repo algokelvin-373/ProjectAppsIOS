@@ -36,6 +36,8 @@ struct GameRow: View {
                     Text(x.name)
                     .italic()
                 }
+                Spacer(minLength: 0)
+                Text(game.released)
             }
             .padding(.horizontal, 4.0)
             

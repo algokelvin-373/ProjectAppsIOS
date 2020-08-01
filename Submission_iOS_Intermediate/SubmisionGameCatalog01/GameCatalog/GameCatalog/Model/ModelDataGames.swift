@@ -17,6 +17,7 @@ struct Games: Codable, Identifiable {
     let id: Int
     let name: String
     let background_image: String
+    let released: String
     let rating: Float
     let parent_platforms: [Platforms]
     let genres: [Genres]
