@@ -13,9 +13,9 @@ struct GameRow: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            Image("background_profile")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
+            VStack {
+                URLImage(url: game.background_image)
+            }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 200.0, alignment: .top)
             
             HStack{
                 Text(game.name)

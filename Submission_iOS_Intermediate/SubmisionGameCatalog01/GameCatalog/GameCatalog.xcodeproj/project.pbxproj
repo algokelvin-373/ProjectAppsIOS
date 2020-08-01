@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1044364024D5A73F001A9335 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1044363F24D5A73F001A9335 /* ImageLoader.swift */; };
+		1044364424D5A77D001A9335 /* URLImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1044364324D5A77D001A9335 /* URLImage.swift */; };
 		1049BC7424CB28B500A626FE /* ModelDataGames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1049BC7324CB28B500A626FE /* ModelDataGames.swift */; };
 		1049BC7624CB37BE00A626FE /* ResponseGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1049BC7524CB37BE00A626FE /* ResponseGame.swift */; };
 		1049BC7924CB3BB200A626FE /* RobotoCondensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1049BC7724CB3BB200A626FE /* RobotoCondensed-Bold.ttf */; };
@@ -30,6 +32,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1044363F24D5A73F001A9335 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		1044364324D5A77D001A9335 /* URLImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImage.swift; sourceTree = "<group>"; };
 		1049BC7324CB28B500A626FE /* ModelDataGames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelDataGames.swift; sourceTree = "<group>"; };
 		1049BC7524CB37BE00A626FE /* ResponseGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseGame.swift; sourceTree = "<group>"; };
 		1049BC7724CB3BB200A626FE /* RobotoCondensed-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Bold.ttf"; sourceTree = "<group>"; };
@@ -65,10 +69,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1044364124D5A760001A9335 /* LayoutView */ = {
+			isa = PBXGroup;
+			children = (
+				1044364324D5A77D001A9335 /* URLImage.swift */,
+			);
+			path = LayoutView;
+			sourceTree = "<group>";
+		};
 		1049BC7124CAD4D700A626FE /* ApiResponse */ = {
 			isa = PBXGroup;
 			children = (
 				1049BC7524CB37BE00A626FE /* ResponseGame.swift */,
+				1044363F24D5A73F001A9335 /* ImageLoader.swift */,
 			);
 			path = ApiResponse;
 			sourceTree = "<group>";
@@ -114,6 +127,7 @@
 		10B1A9AE24C49203005B99E6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1044364124D5A760001A9335 /* LayoutView */,
 				1053804124CD19AD008AFC77 /* ItemGame */,
 				10B1A9AF24C49223005B99E6 /* HomeView.swift */,
 				10B1A9B124C4944C005B99E6 /* SearchPageView.swift */,
@@ -244,8 +258,10 @@
 			files = (
 				1053804324CD19CD008AFC77 /* GameRow.swift in Sources */,
 				10B2525F24ACAE0900E60B5D /* AppDelegate.swift in Sources */,
+				1044364024D5A73F001A9335 /* ImageLoader.swift in Sources */,
 				10B1A9B224C4944C005B99E6 /* SearchPageView.swift in Sources */,
 				10B1A9AD24C48FE6005B99E6 /* ConstantVal.swift in Sources */,
+				1044364424D5A77D001A9335 /* URLImage.swift in Sources */,
 				10B2526124ACAE0900E60B5D /* SceneDelegate.swift in Sources */,
 				1049BC7624CB37BE00A626FE /* ResponseGame.swift in Sources */,
 				10B1A9B024C49223005B99E6 /* HomeView.swift in Sources */,
