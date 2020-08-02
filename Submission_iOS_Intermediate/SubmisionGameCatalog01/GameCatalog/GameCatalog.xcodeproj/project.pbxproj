@@ -20,6 +20,7 @@
 		104AC9E524C6A0AB008B3D3F /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 104AC9E324C6A0AB008B3D3F /* Roboto-Bold.ttf */; };
 		1053804024CD1728008AFC77 /* GameList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1053803F24CD1728008AFC77 /* GameList.swift */; };
 		1053804324CD19CD008AFC77 /* GameRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1053804224CD19CD008AFC77 /* GameRow.swift */; };
+		10954F2324D7043C00F67A22 /* ResponseDetailGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10954F2224D7043C00F67A22 /* ResponseDetailGame.swift */; };
 		10B1A9AD24C48FE6005B99E6 /* ConstantVal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B1A9AC24C48FE6005B99E6 /* ConstantVal.swift */; };
 		10B1A9B024C49223005B99E6 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B1A9AF24C49223005B99E6 /* HomeView.swift */; };
 		10B1A9B224C4944C005B99E6 /* SearchPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B1A9B124C4944C005B99E6 /* SearchPageView.swift */; };
@@ -46,6 +47,7 @@
 		104AC9E324C6A0AB008B3D3F /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		1053803F24CD1728008AFC77 /* GameList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameList.swift; sourceTree = "<group>"; };
 		1053804224CD19CD008AFC77 /* GameRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRow.swift; sourceTree = "<group>"; };
+		10954F2224D7043C00F67A22 /* ResponseDetailGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseDetailGame.swift; sourceTree = "<group>"; };
 		10B1A9AC24C48FE6005B99E6 /* ConstantVal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantVal.swift; sourceTree = "<group>"; };
 		10B1A9AF24C49223005B99E6 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		10B1A9B124C4944C005B99E6 /* SearchPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPageView.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 			children = (
 				1049BC7524CB37BE00A626FE /* ResponseGame.swift */,
 				1044363F24D5A73F001A9335 /* ImageLoader.swift */,
+				10954F2224D7043C00F67A22 /* ResponseDetailGame.swift */,
 			);
 			path = ApiResponse;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 				1049BC7624CB37BE00A626FE /* ResponseGame.swift in Sources */,
 				10B1A9B024C49223005B99E6 /* HomeView.swift in Sources */,
 				10B1A9B424C4946C005B99E6 /* ProfileView.swift in Sources */,
+				10954F2324D7043C00F67A22 /* ResponseDetailGame.swift in Sources */,
 				1053804024CD1728008AFC77 /* GameList.swift in Sources */,
 				10B2526324ACAE0900E60B5D /* ContentView.swift in Sources */,
 				1044364624D5DF00001A9335 /* GameDetails.swift in Sources */,

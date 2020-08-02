@@ -23,6 +23,15 @@ struct Games: Codable, Identifiable {
     let genres: [Genres]
 }
 
+struct DetailGames: Codable, Identifiable {
+    let id: Int
+    let name: String
+    let background_image: String
+    let released: String
+    let rating: Float
+    let description_raw: String?
+}
+
 struct Platforms: Codable, Identifiable {
     let id = UUID()
     let platform: DataPlatforms

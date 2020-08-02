@@ -9,11 +9,23 @@
 import SwiftUI
 
 struct GameDetails: View {
-    let games: Games
+    @State var detailGame: DetailGames?
+    let id: Int
+    
+    init(id: Int) {
+        self.id = id
+    }
     
     var body: some View {
         VStack {
-            Text(games.name)
+            Text(detailGame!.name)
+                .padding(.top, 16.0)
+                .font(.custom("RobotoCondensed-Bold", size: 24))
+        }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
+        .onAppear() {
+            ResponseDetailGame().getDataDetailGame(id: String(self.id)) { (dataGame) in
+                self.detailGame = dataGame
+            }
         }
     }
 }
