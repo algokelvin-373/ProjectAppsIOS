@@ -10,7 +10,7 @@ import SwiftUI
 
 struct GameDetails: View {
     let id: Int
-//    @State var detailGame: DetailGames
+    @State private var detailGame: DetailGames
     
     var body: some View {
         VStack {
@@ -22,7 +22,7 @@ struct GameDetails: View {
         }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
         .onAppear() {
             ResponseDetailGame().getDataDetailGame(id: String(self.id)) { (dataGame) in
-//                self.detailGame = dataGame
+                self.detailGame = dataGame
                 print(dataGame)
             }
         }
