@@ -47,3 +47,13 @@ struct Genres: Codable, Identifiable {
     let id: Int
     let name: String
 }
+
+/**Dummy Detail Game**/
+var dummyDetailGame = DetailGames(
+    id: 3498,
+    name: "Grand Theft Auto V",
+    background_image: "No Image",
+    released: "0",
+    rating: 3.3,
+    description_raw: "Default"
+)

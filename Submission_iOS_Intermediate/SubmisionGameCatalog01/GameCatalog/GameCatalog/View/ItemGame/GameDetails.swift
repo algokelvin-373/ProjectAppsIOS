@@ -10,20 +10,22 @@ import SwiftUI
 
 struct GameDetails: View {
     let id: Int
-    @State private var detailGame: DetailGames
+    @State var detailGame: DetailGames
     
     var body: some View {
         VStack {
-            Text("Name Game")
-                .padding(.top, 16.0)
+            Text(detailGame.name)
                 .font(.custom("RobotoCondensed-Bold", size: 24))
             
+            Text(detailGame.description_raw)
             
-        }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
+        }
+        .padding(.all, 16.0)
+        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
         .onAppear() {
             ResponseDetailGame().getDataDetailGame(id: String(self.id)) { (dataGame) in
-                self.detailGame = dataGame
                 print(dataGame)
+                self.detailGame = dataGame
             }
         }
     }
