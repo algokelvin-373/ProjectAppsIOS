@@ -52,7 +52,7 @@ struct Genres: Codable, Identifiable {
 var dummyDetailGame = DetailGames(
     id: 3498,
     name: "Grand Theft Auto V",
-    background_image: "No Image",
+    background_image: "https://media.rawg.io/media/games/84d/84da2ac3fdfc6507807a1808595afb12.jpg",
     released: "0",
     rating: 3.3,
     description_raw: "Default"
