@@ -9,22 +9,22 @@
 import SwiftUI
 
 struct GameDetails: View {
-    let detailGame: Games
-    @State var descriptionGames: String
+    let id: Int
+//    @State var detailGame: DetailGames
     
     var body: some View {
         VStack {
-            Text(detailGame.name)
+            Text("Name Game")
                 .padding(.top, 16.0)
                 .font(.custom("RobotoCondensed-Bold", size: 24))
             
-            Text(descriptionGames)
-                .onAppear() {
-                    ResponseDetailGame().getDataDetailGame(id: String(self.detailGame.id)) { (dataGame) in
-                        self.descriptionGames = dataGame.description_raw ?? "Nilai ini kosong"
-                    }
-                }
             
         }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
+        .onAppear() {
+            ResponseDetailGame().getDataDetailGame(id: String(self.id)) { (dataGame) in
+//                self.detailGame = dataGame
+                print(dataGame)
+            }
+        }
     }
 }

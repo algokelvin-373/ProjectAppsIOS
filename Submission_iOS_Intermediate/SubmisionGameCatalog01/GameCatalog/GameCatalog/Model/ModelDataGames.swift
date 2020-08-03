@@ -29,7 +29,7 @@ struct DetailGames: Codable, Identifiable {
     let background_image: String
     let released: String
     let rating: Float
-    let description_raw: String?
+    let description_raw: String
 }
 
 struct Platforms: Codable, Identifiable {
