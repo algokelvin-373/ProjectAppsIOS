@@ -9,7 +9,6 @@
 import SwiftUI
 
 struct GameDetails: View {
-    let id: Int
     @State var detailGame: DetailGames
     
     var body: some View {
@@ -46,7 +45,7 @@ struct GameDetails: View {
         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
         .background(Color(red: 255.0/255, green: 240.0/255, blue: 240.0/255, opacity: 1.0))
         .onAppear() {
-            ResponseDetailGame().getDataDetailGame(id: String(self.id)) { (dataGame) in
+            ResponseDetailGame().getDataDetailGame(id: String(self.detailGame.id)) { (dataGame) in
                 print(dataGame)
                 self.detailGame = dataGame
             }
