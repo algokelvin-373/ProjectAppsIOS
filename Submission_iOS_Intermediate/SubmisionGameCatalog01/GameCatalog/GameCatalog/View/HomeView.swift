@@ -9,8 +9,12 @@
 import SwiftUI
 
 struct HomeView: View {
+    @State var games: [Games] = []
+    
     var body: some View {
-        Text("Home View")
+        NavigationView {
+            GameList()
+        }
     }
 }
 

@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "ic-search.png",
+      "filename" : "ic-tool-game-pc.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "ic-search2x.png",
+      "filename" : "ic-tool-game-pc@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "ic-search3x.png",
+      "filename" : "ic-tool-game-pc@3x.png",
       "scale" : "3x"
     }
   ],

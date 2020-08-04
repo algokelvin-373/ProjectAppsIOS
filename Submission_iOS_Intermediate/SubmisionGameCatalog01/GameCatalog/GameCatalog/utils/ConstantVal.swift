@@ -10,7 +10,9 @@ import Foundation
 
 struct ConstantVal {
     struct TabBarImage {
-        static let tabBar0 = "ic-search"
+        static let tabBar0 = "ic-home"
+        static let tabBar1 = "ic-search-page"
+        static let tabBar2 = "ic-profile"
     }
     
     struct TabBarText {
