@@ -14,40 +14,31 @@ struct ContentView: View {
     @Environment(\.managedObjectContext) var moc
     @FetchRequest(entity: Member.entity(), sortDescriptors: []) var members: FetchedResults<Member>
     
+    @State private var nameMember = ""
+    @State private var aboutMember = ""
+    
     var body: some View {
-        VStack {
+        NavigationView {
             List {
-                ForEach(members, id: \.id) { member in
-                    VStack {
-                        Text(member.name ?? "Unknown")
-                            .font(.title)
-                            .fontWeight(.bold)
-                            .foregroundColor(Color.black)
+                Section(header: Text("Input Your Name")) {
+                    HStack {
+                        VStack {
+                            TextField("Name", text: self.$nameMember)
+                            TextField("About", text: self.$aboutMember)
+                        }
                         
-                        Text(member.about ?? "Unknown")
-                            .font(.body)
-                            .fontWeight(.regular)
-                            .foregroundColor(Color.black)
+                        Button(action: {
+                            
+                        }){
+                            Image(systemName: "plus.circle.fill")
+                                .foregroundColor(.green)
+                                .imageScale(.large)
+                        }
                     }
-                }
+                }.font(.headline)
             }
-            
-            Button("Add") {
-                let firstNames = ["Kelvin", "Natasha", "Thea", "Dodit", "ACI"]
-                let lastNames = ["Tandrio", "Wilona", "Bernice", "Mulyanto", "GameSpot"]
-                let aboutNames = ["Software Developer",
-                                  "Artis",
-                                  "Selebgram / Influenzer",
-                                  "Comedian",
-                                  "Youtuber Games"]
-                
-                let member = Member(context: self.moc)
-                member.id = UUID()
-                member.name = "\(String(describing: firstNames.randomElement()!)) \(String(describing: lastNames.randomElement()!))"
-                member.about = aboutNames.randomElement()
-
-                try? self.moc.save()
-            }
+            .navigationBarTitle(Text("My Fans"))
+            .navigationBarItems(trailing: EditButton())
         }
     }
 }
