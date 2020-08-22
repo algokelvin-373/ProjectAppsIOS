@@ -11,32 +11,43 @@ import CoreData
 
 struct ContentView: View {
     
-    @State var member:[NSManagedObject] = []
-    @State var newMemberString = ""
+    @Environment(\.managedObjectContext) var moc
+    @FetchRequest(entity: Member.entity(), sortDescriptors: []) var members: FetchedResults<Member>
     
     var body: some View {
-        Text("Hello, World!")
-    }
-    
-    func addNewData() {
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-            return
-        }
-        
-        let managedContext = appDelegate.persistentContainer.viewContext
-        
-        let entity = NSEntityDescription.entity(forEntityName: "Member", in: managedContext)!
-        
-        let newMember = NSManagedObject(entity: entity, insertInto: managedContext)
-        
-        newMember.setValue(1, forKeyPath: "id")
-        newMember.setValue("Kelvin Herwanda Tandrio", forKeyPath: "name")
-        newMember.setValue("Android and iOS Developer", forKeyPath: "about")
-        
-        do {
-            try managedContext.save()
-        } catch let error as NSError {
-            print("Could not save. \(error), \(error.userInfo)")
+        VStack {
+            List {
+                ForEach(members, id: \.id) { member in
+                    VStack {
+                        Text(member.name ?? "Unknown")
+                            .font(.title)
+                            .fontWeight(.bold)
+                            .foregroundColor(Color.black)
+                        
+                        Text(member.about ?? "Unknown")
+                            .font(.body)
+                            .fontWeight(.regular)
+                            .foregroundColor(Color.black)
+                    }
+                }
+            }
+            
+            Button("Add") {
+                let firstNames = ["Kelvin", "Natasha", "Thea", "Dodit", "ACI"]
+                let lastNames = ["Tandrio", "Wilona", "Bernice", "Mulyanto", "GameSpot"]
+                let aboutNames = ["Software Developer",
+                                  "Artis",
+                                  "Selebgram / Influenzer",
+                                  "Comedian",
+                                  "Youtuber Games"]
+                
+                let member = Member(context: self.moc)
+                member.id = UUID()
+                member.name = "\(String(describing: firstNames.randomElement()!)) \(String(describing: lastNames.randomElement()!))"
+                member.about = aboutNames.randomElement()
+
+                try? self.moc.save()
+            }
         }
     }
 }
