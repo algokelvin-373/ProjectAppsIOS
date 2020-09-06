@@ -28,7 +28,12 @@ struct ContentView: View {
                         }
                         
                         Button(action: {
-                            
+                            let member = Member(context: self.moc)
+                            member.id = UUID()
+                            member.name = self.nameMember
+                            member.about = self.aboutMember
+
+                            try? self.moc.save()
                         }){
                             Image(systemName: "plus.circle.fill")
                                 .foregroundColor(.green)
@@ -36,6 +41,20 @@ struct ContentView: View {
                         }
                     }
                 }.font(.headline)
+                
+                ForEach(members, id: \.id) { member in
+                    VStack {
+                        Text(member.name ?? "Unknown")
+                            .font(.title)
+                            .fontWeight(.bold)
+                            .foregroundColor(Color.black)
+                        
+                        Text(member.about ?? "Unknown")
+                            .font(.body)
+                            .fontWeight(.regular)
+                            .foregroundColor(Color.black)
+                    }
+                }
             }
             .navigationBarTitle(Text("My Fans"))
             .navigationBarItems(trailing: EditButton())
