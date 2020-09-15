@@ -6,21 +6,21 @@
 //  Copyright © 2020 Kelvin HT. All rights reserved.
 //
 
-import Foundation
 import SwiftUI
 import CoreData
+import Combine
 
-class PlayCoreData {
-    func addNewData(id: Int, name: String, aboutName: String) {
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-            return
-        }
-        
-        let managedContext = appDelegate.persistentContainer.viewContext
-
-        let entity = NSEntityDescription.entity(forEntityName: "Member", in: managedContext)!
-
-        let newMember = NSManagedObject(entity: entity, insertInto: managedContext)
+class PlayCoreData: ObservableObject {
+    let managedContext: NSManagedObjectContext
+    @Published var data = [Member]()
+    
+    init() {
+        managedContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        readData()
+    }
+    
+    func addNewData(id: UUID, name: String, aboutName: String) {
+        let newMember = NSEntityDescription.insertNewObject(forEntityName: "Member", into: managedContext)
 
         newMember.setValue(id, forKey: "id")
         newMember.setValue(name, forKey: "name")
@@ -28,8 +28,34 @@ class PlayCoreData {
         
         do {
             try managedContext.save()
+            
+            print("Success input data")
+            
         } catch let error as NSError {
             print("Could not save. \(error), \(error.userInfo)")
         }
+    }
+    func readData() {
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Member")
+        
+        do {
+            let results = try managedContext.fetch(fetchRequest)
+            
+            for i in results as! [NSManagedObject] {
+                self.data.append(Member(
+                    id: i.value(forKey: "id") as! UUID,
+                    name: i.value(forKey: "name") as! String,
+                    about: i.value(forKey: "about") as! String
+                ))
+            }
+            
+            print("Read data success")
+            
+        } catch let error as NSError {
+            print("Could not fetch. \(error), \(error.userInfo)")
+        }
+    }
+    func deleteData() {
+        
     }
 }

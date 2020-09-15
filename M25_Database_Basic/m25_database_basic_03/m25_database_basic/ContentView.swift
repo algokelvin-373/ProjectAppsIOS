@@ -11,8 +11,7 @@ import CoreData
 
 struct ContentView: View {
     
-    @Environment(\.managedObjectContext) var moc
-    @FetchRequest(entity: Member.entity(), sortDescriptors: []) var members: FetchedResults<Member>
+    @ObservedObject private var dataMembers = PlayCoreData()
     
     @State private var nameMember = ""
     @State private var aboutMember = ""
@@ -28,12 +27,7 @@ struct ContentView: View {
                         }
                         
                         Button(action: {
-                            let member = Member(context: self.moc)
-                            member.id = UUID()
-                            member.name = self.nameMember
-                            member.about = self.aboutMember
-
-                            try? self.moc.save()
+                            self.dataMembers.addNewData(id: UUID(), name: self.nameMember, aboutName: self.aboutMember)
                         }){
                             Image(systemName: "plus.circle.fill")
                                 .foregroundColor(.green)
@@ -42,7 +36,7 @@ struct ContentView: View {
                     }
                 }.font(.headline)
                 
-                ForEach(members, id: \.id) { member in
+                ForEach(dataMembers.data, id: \.id) { member in
                     VStack {
                         Text(member.name ?? "Unknown")
                             .font(.title)
