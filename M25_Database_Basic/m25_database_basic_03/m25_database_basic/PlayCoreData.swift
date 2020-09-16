@@ -39,15 +39,9 @@ class PlayCoreData: ObservableObject {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Member")
         
         do {
-            let results = try managedContext.fetch(fetchRequest)
+            guard let results = try managedContext.fetch(fetchRequest) as? [Member] else { return }
             
-            for i in results as! [NSManagedObject] {
-                self.data.append(Member(
-                    id: i.value(forKey: "id") as! UUID,
-                    name: i.value(forKey: "name") as! String,
-                    about: i.value(forKey: "about") as! String
-                ))
-            }
+            self.data = results
             
             print("Read data success")
             
