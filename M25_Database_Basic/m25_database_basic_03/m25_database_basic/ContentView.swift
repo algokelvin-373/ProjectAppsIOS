@@ -12,6 +12,7 @@ import CoreData
 struct ContentView: View {
     
     @ObservedObject private var dataMembers = PlayCoreData()
+    @FetchRequest(entity: Member.entity(), sortDescriptors: []) var members: FetchedResults<Member>
     
     @State private var nameMember = ""
     @State private var aboutMember = ""
@@ -36,7 +37,7 @@ struct ContentView: View {
                     }
                 }.font(.headline)
                 
-                ForEach(dataMembers.data, id: \.id) { member in
+                ForEach(members, id: \.id) { member in
                     VStack {
                         Text(member.name ?? "Unknown")
                             .font(.title)
