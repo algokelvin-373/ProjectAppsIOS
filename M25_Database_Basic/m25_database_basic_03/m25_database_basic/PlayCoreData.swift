@@ -49,7 +49,22 @@ class PlayCoreData: ObservableObject {
             print("Could not fetch. \(error), \(error.userInfo)")
         }
     }
-    func deleteData() {
+    func deleteData(id: UUID) {
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Member")
         
+        fetchRequest.predicate = NSPredicate(format: "id == \(id)")
+        
+        fetchRequest.fetchLimit = 1
+        if let result = try? managedContext.fetch(fetchRequest), let member = result.first as? Member {
+            managedContext.delete(result)
+        }
+        
+        managedContext.delete(result)
+        
+        do {
+            try managedContext.save()
+        } catch let error as NSError {
+            print("Could not save. \(error), \(error.userInfo)")
+        }
     }
 }
