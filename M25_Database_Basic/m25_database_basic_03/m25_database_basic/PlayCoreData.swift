@@ -54,14 +54,12 @@ class PlayCoreData: ObservableObject {
         
         fetchRequest.predicate = NSPredicate(format: "id == \(id)")
         
-        fetchRequest.fetchLimit = 1
-        if let result = try? managedContext.fetch(fetchRequest), let member = result.first as? Member {
-            managedContext.delete(result)
-        }
-        
-        managedContext.delete(result)
-        
         do {
+            fetchRequest.fetchLimit = 1
+            guard let result = try? managedContext.fetch(fetchRequest), let member = result.first as? Member else { return }
+            
+            managedContext.delete(result)
+            
             try managedContext.save()
         } catch let error as NSError {
             print("Could not save. \(error), \(error.userInfo)")
