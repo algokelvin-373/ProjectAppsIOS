@@ -33,6 +33,7 @@
 		10B2526824ACAE0C00E60B5D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10B2526724ACAE0C00E60B5D /* Preview Assets.xcassets */; };
 		10B2526B24ACAE0C00E60B5D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10B2526924ACAE0C00E60B5D /* LaunchScreen.storyboard */; };
 		10CF0E34251893670015646E /* GameFavoriteCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CF0E33251893670015646E /* GameFavoriteCoreData.swift */; };
+		10CF0E37251907620015646E /* GameFavorite.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 10CF0E35251907620015646E /* GameFavorite.xcdatamodeld */; };
 		10E06E3E24DBBE8E008D5767 /* FavoritePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E06E3D24DBBE8E008D5767 /* FavoritePageView.swift */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +66,7 @@
 		10B2526A24ACAE0C00E60B5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		10B2526C24ACAE0C00E60B5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		10CF0E33251893670015646E /* GameFavoriteCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameFavoriteCoreData.swift; sourceTree = "<group>"; };
+		10CF0E36251907620015646E /* GameFavorite.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GameFavorite.xcdatamodel; sourceTree = "<group>"; };
 		10E06E3D24DBBE8E008D5767 /* FavoritePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritePageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -182,6 +184,7 @@
 				10B2526924ACAE0C00E60B5D /* LaunchScreen.storyboard */,
 				10B2526C24ACAE0C00E60B5D /* Info.plist */,
 				10B2526624ACAE0C00E60B5D /* Preview Content */,
+				10CF0E35251907620015646E /* GameFavorite.xcdatamodeld */,
 			);
 			path = GameCatalog;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 				10B2525F24ACAE0900E60B5D /* AppDelegate.swift in Sources */,
 				1044364024D5A73F001A9335 /* ImageLoader.swift in Sources */,
 				10B1A9B224C4944C005B99E6 /* SearchPageView.swift in Sources */,
+				10CF0E37251907620015646E /* GameFavorite.xcdatamodeld in Sources */,
 				10B1A9AD24C48FE6005B99E6 /* ConstantVal.swift in Sources */,
 				1044364424D5A77D001A9335 /* URLImage.swift in Sources */,
 				10CF0E34251893670015646E /* GameFavoriteCoreData.swift in Sources */,
@@ -488,6 +492,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		10CF0E35251907620015646E /* GameFavorite.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				10CF0E36251907620015646E /* GameFavorite.xcdatamodel */,
+			);
+			currentVersion = 10CF0E36251907620015646E /* GameFavorite.xcdatamodel */;
+			path = GameFavorite.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 10B2525324ACAE0900E60B5D /* Project object */;
 }

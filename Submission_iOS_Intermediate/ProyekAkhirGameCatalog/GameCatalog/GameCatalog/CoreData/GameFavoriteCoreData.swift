@@ -12,7 +12,7 @@ import Combine
 
 class GameFavoriteCoreData: ObservableObject {
     let managedContext: NSManagedObjectContext
-    @Published var data = [Member]()
+    @Published var data = [GameFavorite]()
     
     init() {
         managedContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -20,7 +20,7 @@ class GameFavoriteCoreData: ObservableObject {
     }
     
     func addNewData(id: UUID, name: String, aboutName: String) {
-        let newMember = NSEntityDescription.insertNewObject(forEntityName: "Member", into: managedContext)
+        let newMember = NSEntityDescription.insertNewObject(forEntityName: "GameFavorite", into: managedContext)
 
         newMember.setValue(id, forKey: "id")
         newMember.setValue(name, forKey: "name")
@@ -36,7 +36,7 @@ class GameFavoriteCoreData: ObservableObject {
         }
     }
     func readData() {
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Member")
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "GameFavorite")
         
         do {
             guard let results = try managedContext.fetch(fetchRequest) as? [Member] else { return }
