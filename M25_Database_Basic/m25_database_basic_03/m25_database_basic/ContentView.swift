@@ -49,6 +49,8 @@ struct ContentView: View {
                             .fontWeight(.regular)
                             .foregroundColor(Color.black)
                     }
+                }.onDelete { (index) in
+                    dataMembers.deleteData(id: self.members[index] ?? 0)
                 }
             }
             .navigationBarTitle(Text("My Fans"))
