@@ -39,7 +39,7 @@ class GameFavoriteCoreData: ObservableObject {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "GameFavorite")
         
         do {
-            guard let results = try managedContext.fetch(fetchRequest) as? [Member] else { return }
+            guard let results = try managedContext.fetch(fetchRequest) as? [GameFavorite] else { return }
             
             self.data = results
             
