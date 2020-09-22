@@ -50,19 +50,19 @@ class GameFavoriteCoreData: ObservableObject {
         }
     }
     func deleteData(id: UUID) {
-//        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Member")
-//
-//        fetchRequest.predicate = NSPredicate(format: "id == \(id)")
-//
-//        do {
-//            fetchRequest.fetchLimit = 1
-//            guard let result = try? managedContext.fetch(fetchRequest), let member = result.first as? Member else { return }
-//
-//            managedContext.delete(result)
-//
-//            try managedContext.save()
-//        } catch let error as NSError {
-//            print("Could not save. \(error), \(error.userInfo)")
-//        }
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "GameFavorite")
+
+        fetchRequest.predicate = NSPredicate(format: "id == \(id)")
+
+        do {
+            fetchRequest.fetchLimit = 1
+            guard let result = try? managedContext.fetch(fetchRequest), let gameCatalog = result.first as? GameFavorite else { return }
+
+            managedContext.delete(gameCatalog)
+
+            try managedContext.save()
+        } catch let error as NSError {
+            print("Could not save. \(error), \(error.userInfo)")
+        }
     }
 }
