@@ -10,7 +10,28 @@ import SwiftUI
 
 struct GameFavoriteRaw: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(alignment: .leading) {
+            HStack(alignment: .top) {
+                VStack(alignment: .leading) {
+                    URLImage(url: "https://media.rawg.io/media/games/4be/4be6a6ad0364751a96229c56bf69be59.jpg")
+                }.frame(minWidth: 0, maxWidth: 140.0, minHeight: 0, maxHeight: 90.0, alignment: .top)
+                
+                VStack(alignment: .leading, spacing: 0.0) {
+                    Text("God of War")
+                        .font(.custom("RobotoCondensed-Bold", size: 18))
+                    Text("Action, Adventure")
+                        .font(.custom("RobotoCondensed-Regular", size: 14))
+                    Text("April 20, 2018")
+                        .font(.custom("RobotoCondensed-Regular", size: 12))
+                }
+                
+                Image("ic-star-rating")
+            }
+        }
+        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 90.0, alignment: .top)
+        .padding(.all, 8.0)
+        .background(Color(red: 255.0/255, green: 240.0/255, blue: 240.0/255, opacity: 1.0))
+        .cornerRadius(5)
     }
 }
 
