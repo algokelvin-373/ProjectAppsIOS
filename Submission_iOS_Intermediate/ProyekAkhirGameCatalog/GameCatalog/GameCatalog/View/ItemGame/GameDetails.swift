@@ -9,6 +9,8 @@
 import SwiftUI
 
 struct GameDetails: View {
+    @State var addGameFavorite = "ic-love-off"
+    @State var onLove = false
     @State var detailGame: DetailGames
     
     var body: some View {
@@ -31,6 +33,20 @@ struct GameDetails: View {
                     Image("ic-star-rating")
                     Text(String(format: "%.2f/5", detailGame.rating))
                         .font(.custom("RobotoCondensed-Regular", size: 18))
+                    Button(action: {
+                        if (self.onLove == false) {
+                            print("Save")
+                            self.onLove = true
+                            self.addGameFavorite = "ic-love-on"
+                        }
+                        else {
+                            print("Delete")
+                            self.onLove = false
+                            self.addGameFavorite = "ic-love-off"
+                        }
+                    }) {
+                        Image(addGameFavorite)
+                    }
                 }
                 .padding(.horizontal, 8.0)
                 
