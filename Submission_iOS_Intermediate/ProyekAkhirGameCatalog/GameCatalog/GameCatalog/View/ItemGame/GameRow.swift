@@ -26,7 +26,7 @@ struct GameRow: View {
                     .font(.custom("RobotoCondensed-Regular", size: 24))
                 Button(action: {
                 }) {
-                    Image("ic-love-on")
+                    Image("ic-love-off")
                 }
             }
             .padding(.horizontal, 4.0)
