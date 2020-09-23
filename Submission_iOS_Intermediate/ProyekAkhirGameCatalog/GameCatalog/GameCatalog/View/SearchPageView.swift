@@ -9,8 +9,33 @@
 import SwiftUI
 
 struct SearchPageView: View {
+    @State private var keyword = ""
+    
     var body: some View {
-        Text("Coming Soon")
+        NavigationView {
+            List {
+                Section(header: Text("Input Keyword")) {
+                    HStack {
+                        VStack {
+                            TextField("Search", text: self.$keyword)
+                        }
+                        
+                        Button(action: {
+                            
+                        }){
+                            Image(systemName: "plus.circle.fill")
+                                .foregroundColor(.green)
+                                .imageScale(.large)
+                        }
+                    }
+                    .padding(.all, 16.0)
+                    .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
+                }.font(.headline)
+                
+                
+            }
+        }.navigationBarTitle(Text("Search Game"))
+        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
     }
 }
 
