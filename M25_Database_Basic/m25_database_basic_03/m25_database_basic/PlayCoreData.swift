@@ -52,7 +52,7 @@ class PlayCoreData: ObservableObject {
     func deleteData(id: UUID) {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Member")
         
-        fetchRequest.predicate = NSPredicate(format: "id == \(id)")
+        fetchRequest.predicate = NSPredicate(format: "id == %@", id as CVarArg)
         
         do {
             fetchRequest.fetchLimit = 1
