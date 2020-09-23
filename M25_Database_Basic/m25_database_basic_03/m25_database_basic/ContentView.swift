@@ -49,7 +49,14 @@ struct ContentView: View {
                             .fontWeight(.regular)
                             .foregroundColor(Color.black)
                     }
-                }
+                }.onDelete(perform: { (index) in
+                    for x in index {
+                      let member = self.members[x]
+                      if let id = member.id {
+                        self.dataMembers.deleteData(id: id)
+                      }
+                    }
+                })
             }
             .navigationBarTitle(Text("My Fans"))
             .navigationBarItems(trailing: EditButton())

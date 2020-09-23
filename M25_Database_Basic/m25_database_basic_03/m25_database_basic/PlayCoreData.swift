@@ -52,13 +52,13 @@ class PlayCoreData: ObservableObject {
     func deleteData(id: UUID) {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Member")
         
-        fetchRequest.predicate = NSPredicate(format: "id == \(id)")
+        fetchRequest.predicate = NSPredicate(format: "id == %@", id as CVarArg)
         
         do {
             fetchRequest.fetchLimit = 1
             guard let result = try? managedContext.fetch(fetchRequest), let member = result.first as? Member else { return }
             
-            managedContext.delete(result)
+            managedContext.delete(member)
             
             try managedContext.save()
         } catch let error as NSError {
