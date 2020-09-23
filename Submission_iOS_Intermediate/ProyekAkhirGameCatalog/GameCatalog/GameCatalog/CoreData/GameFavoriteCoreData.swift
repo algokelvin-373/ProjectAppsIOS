@@ -51,7 +51,7 @@ class GameFavoriteCoreData: ObservableObject {
             print("Could not fetch. \(error), \(error.userInfo)")
         }
     }
-    func deleteData(id: UUID) {
+    func deleteData(id: Int64) {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "GameFavorite")
 
         fetchRequest.predicate = NSPredicate(format: "id == \(id)")
@@ -63,6 +63,9 @@ class GameFavoriteCoreData: ObservableObject {
             managedContext.delete(gameCatalog)
 
             try managedContext.save()
+            
+            print("Success Delete Data")
+            
         } catch let error as NSError {
             print("Could not save. \(error), \(error.userInfo)")
         }

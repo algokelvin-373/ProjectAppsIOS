@@ -54,6 +54,7 @@ struct GameDetails: View {
                             print("Delete")
                             self.onLove = false
                             self.addGameFavorite = "ic-love-off"
+                            self.dataGameFavorite.deleteData(id: Int64(self.detailGame.id))
                         }
                     }) {
                         Image(addGameFavorite)
