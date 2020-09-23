@@ -9,8 +9,41 @@
 import SwiftUI
 
 struct SearchPageView: View {
+    @State var games: [Games] = []
+    @State private var keyword = ""
+    @State private var searchGame = ""
+    
     var body: some View {
-        Text("Coming Soon")
+        NavigationView {
+            List {
+                Section(header: Text("Input Keyword")) {
+                    HStack {
+                        VStack {
+                            TextField("Search", text: self.$keyword)
+                        }
+                        
+                        Button(action: {
+                            self.searchGame = self.keyword
+                        }){
+                            Text("Search")
+                                .padding(.all, 8.0)
+                                .background(/*@START_MENU_TOKEN@*/Color.gray/*@END_MENU_TOKEN@*/)
+                        }
+                    }
+                    .padding(.all, 16.0)
+                    .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
+                }.font(.headline)
+                
+                ForEach(games, id: \.id) { data in
+                    Text("Game : \(data.name)")
+                }
+            }.onAppear {
+                ResponseGame().searchDataGame(key: self.searchGame) { (games) in
+                    self.games = games
+                }
+            }
+        }.navigationBarTitle(Text("Search Game"))
+        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
     }
 }
 
