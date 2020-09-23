@@ -15,23 +15,21 @@ struct FavoritePageView: View {
     
     var body: some View {
         NavigationView {
-            List {
-                ForEach(gameFavorites, id: \.id) { member in
-                    VStack {
-                        Text(member.name ?? "Unknown")
+            if gameFavorites.isEmpty {
+                Text("Oopss... Data Game Favorite is Empty")
+            }
+            else {
+                List {
+                    ForEach(gameFavorites, id: \.self) { games in
+                        VStack {
+                            Text(games.title ?? "Unknown")
                             .font(.title)
                             .fontWeight(.bold)
                             .foregroundColor(Color.black)
-
-                        Text(member.about ?? "Unknown")
-                            .font(.body)
-                            .fontWeight(.regular)
-                            .foregroundColor(Color.black)
+                        }
                     }
-                }
+                }.navigationBarTitle(Text("My Game Favorite"))
             }
-            .navigationBarTitle(Text("My Game Favorite"))
-            .navigationBarItems(trailing: EditButton())
         }
     }
 }
