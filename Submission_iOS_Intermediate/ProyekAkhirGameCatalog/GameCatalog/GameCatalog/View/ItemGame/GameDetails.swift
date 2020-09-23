@@ -12,6 +12,7 @@ struct GameDetails: View {
     @ObservedObject private var dataGameFavorite = GameFavoriteCoreData()
     @FetchRequest(entity: GameFavorite.entity(), sortDescriptors: []) var gameFavorites: FetchedResults<GameFavorite>
     
+    @State var buttonSearch = false
     @State var addGameFavorite = "ic-love-off"
     @State var onLove = false
     @State var detailGame: DetailGames
@@ -57,7 +58,7 @@ struct GameDetails: View {
                             self.dataGameFavorite.deleteData(id: Int64(self.detailGame.id))
                         }
                     }) {
-                        Image(addGameFavorite)
+                        Image(buttonSearch ? "ic-love-on" : "ic-love-off")
                     }
                 }
                 .padding(.horizontal, 8.0)
