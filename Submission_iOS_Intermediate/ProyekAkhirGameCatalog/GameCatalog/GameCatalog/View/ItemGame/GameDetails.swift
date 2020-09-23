@@ -9,6 +9,9 @@
 import SwiftUI
 
 struct GameDetails: View {
+    @ObservedObject private var dataGameFavorite = GameFavoriteCoreData()
+    @FetchRequest(entity: GameFavorite.entity(), sortDescriptors: []) var gameFavorites: FetchedResults<GameFavorite>
+    
     @State var addGameFavorite = "ic-love-off"
     @State var onLove = false
     @State var detailGame: DetailGames
@@ -33,11 +36,19 @@ struct GameDetails: View {
                     Image("ic-star-rating")
                     Text(String(format: "%.2f/5", detailGame.rating))
                         .font(.custom("RobotoCondensed-Regular", size: 18))
+                    
                     Button(action: {
                         if (self.onLove == false) {
                             print("Save")
                             self.onLove = true
                             self.addGameFavorite = "ic-love-on"
+                            self.dataGameFavorite.addNewData(
+                                id: Int64(self.detailGame.id),
+                                title: self.detailGame.name,
+                                image: self.detailGame.background_image,
+                                date: self.detailGame.released,
+                                rating: String(format: "%.2f", self.detailGame.released)
+                            )
                         }
                         else {
                             print("Delete")

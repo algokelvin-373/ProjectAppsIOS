@@ -2,13 +2,12 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="19E287" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="GameFavorite" representedClassName="GameFavorite" syncable="YES" codeGenerationType="class">
         <attribute name="date_release" optional="YES" attributeType="String"/>
-        <attribute name="genres" optional="YES" attributeType="String"/>
         <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="image" optional="YES" attributeType="String"/>
         <attribute name="rating" optional="YES" attributeType="String"/>
         <attribute name="title" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="GameFavorite" positionX="-63" positionY="-18" width="128" height="133"/>
+        <element name="GameFavorite" positionX="-63" positionY="-18" width="128" height="118"/>
     </elements>
 </model>

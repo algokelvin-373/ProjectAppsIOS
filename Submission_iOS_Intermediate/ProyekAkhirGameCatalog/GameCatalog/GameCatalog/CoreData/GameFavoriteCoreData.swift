@@ -19,12 +19,14 @@ class GameFavoriteCoreData: ObservableObject {
         readData()
     }
     
-    func addNewData(id: UUID, name: String, aboutName: String) {
+    func addNewData(id: Int64,title: String,image: String,date: String,rating: String) {
         let newMember = NSEntityDescription.insertNewObject(forEntityName: "GameFavorite", into: managedContext)
 
         newMember.setValue(id, forKey: "id")
-        newMember.setValue(name, forKey: "name")
-        newMember.setValue(aboutName, forKey: "about")
+        newMember.setValue(title, forKey: "title")
+        newMember.setValue(image, forKey: "image")
+        newMember.setValue(date, forKey: "date_release")
+        newMember.setValue(rating, forKey: "rating")
         
         do {
             try managedContext.save()
