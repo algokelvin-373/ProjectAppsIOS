@@ -9,9 +9,9 @@
 import SwiftUI
 
 struct SearchPageView: View {
-    @State var games: [Games] = []
+    @State var games: [GameSearch] = []
     @State private var keyword = ""
-    @State private var searchGame = ""
+    @State private var searchGame = "evil"
     
     var body: some View {
         NavigationView {
@@ -35,7 +35,7 @@ struct SearchPageView: View {
                 }.font(.headline)
                 
                 ForEach(games, id: \.id) { data in
-                    Text("Game : \(data.name)")
+                    Text("Game Released : \(data.name)")
                 }
             }.onAppear {
                 ResponseGame().searchDataGame(key: self.searchGame) { (games) in

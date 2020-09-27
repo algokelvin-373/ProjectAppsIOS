@@ -32,7 +32,7 @@ class ResponseGame {
     }
     
     /*Get Data Item Game from Search Data*/
-    func searchDataGame(key: String, completion: @escaping ([Games]) -> ()) {
+    func searchDataGame(key: String, completion: @escaping ([GameSearch]) -> ()) {
         var componentURL = URLComponents(string: "https://api.rawg.io/api/games")!
         componentURL.queryItems = [
             URLQueryItem(name: "search", value: key)
@@ -44,9 +44,9 @@ class ResponseGame {
                 return
             }
                 
-            let jsonGame: DataGame?
+            let jsonGame: SearchGame?
             do {
-                jsonGame = try JSONDecoder().decode(DataGame.self, from: data2)
+                jsonGame = try JSONDecoder().decode(SearchGame.self, from: data2)
                 completion(jsonGame!.results) // To set value Array<Game> in 'responseData'
                 print(jsonGame!.results)
             }
