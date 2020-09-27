@@ -33,7 +33,7 @@ class ResponseGame {
     
     /*Get Data Item Game from Search Data*/
     func searchDataGame(key: String, completion: @escaping ([GameSearch]) -> ()) {
-        var componentURL = URLComponents(string: "https://api.rawg.io/api/games")!
+        guard var componentURL = URLComponents(string: "https://api.rawg.io/api/games") else { return }
         componentURL.queryItems = [
             URLQueryItem(name: "search", value: key)
         ]
