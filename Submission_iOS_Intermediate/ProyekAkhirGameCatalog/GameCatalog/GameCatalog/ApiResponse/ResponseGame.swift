@@ -37,7 +37,8 @@ class ResponseGame {
         componentURL.queryItems = [
             URLQueryItem(name: "search", value: key)
         ]
-        let request = URLRequest(url: componentURL.url!)
+        guard let url = componentURL.url else { return }
+        let request = URLRequest(url: url)
 
         URLSession.shared.dataTask(with: request) { data, response, error in
             guard let data2 = data, error == nil else {
