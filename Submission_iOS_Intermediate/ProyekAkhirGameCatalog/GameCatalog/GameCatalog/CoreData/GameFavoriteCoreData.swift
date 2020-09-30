@@ -51,21 +51,25 @@ class GameFavoriteCoreData: ObservableObject {
             print("Could not fetch. \(error), \(error.userInfo)")
         }
     }
-    func checkData(id: Int64) {
+    func checkData(id: Int64) -> Bool {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "GameFavorite")
         
         fetchRequest.predicate = NSPredicate(format: "id == \(id)")
         
         do {
-            guard let results = try managedContext.fetch(fetchRequest) as? [GameFavorite] else { return }
+            guard let results = try managedContext.fetch(fetchRequest) as? [GameFavorite] else { return false }
             
             self.data = results
             
             print("Check data success")
             
+            return true
+            
         } catch let error as NSError {
             print("Could not fetch. \(error), \(error.userInfo)")
         }
+        
+        return false
     }
     func deleteData(id: Int64) {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "GameFavorite")

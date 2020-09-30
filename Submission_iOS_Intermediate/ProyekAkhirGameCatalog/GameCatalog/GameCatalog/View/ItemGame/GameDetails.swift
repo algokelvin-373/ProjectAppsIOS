@@ -58,7 +58,7 @@ struct GameDetails: View {
                             self.dataGameFavorite.deleteData(id: Int64(self.detailGame.id))
                         }
                     }) {
-                        Image(buttonSearch ? "ic-love-on" : "ic-love-off")
+                        Image(self.dataGameFavorite.checkData(id: Int64(self.detailGame.id)) ? "ic-love-on" : "ic-love-off")
                     }
                 }
                 .padding(.horizontal, 8.0)
