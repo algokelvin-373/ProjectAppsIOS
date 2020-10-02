@@ -32,7 +32,16 @@ struct FavoritePageView: View {
                                     .font(.custom("RobotoCondensed-Regular", size: 12))
                             }
                         }
-                    }
+                    }.onDelete(perform: { (index) in
+                        for x in index {
+                            let gameFavorite = self.dataGameFavorite.data[x]
+                            let id = gameFavorite.id
+                            if id == gameFavorite.id {
+                                self.dataGameFavorite.deleteData(id: id)
+                          }
+                        }
+                        self.dataGameFavorite.readData()
+                    })
                 }.navigationBarTitle(Text("My Game Favorite"))
             }
         }.onAppear {
