@@ -11,16 +11,15 @@ import CoreData
 
 struct FavoritePageView: View {
     @ObservedObject private var dataGameFavorite = GameFavoriteCoreData()
-    @FetchRequest(entity: GameFavorite.entity(), sortDescriptors: []) var gameFavorites: FetchedResults<GameFavorite>
     
     var body: some View {
         NavigationView {
-            if gameFavorites.isEmpty {
+            if dataGameFavorite.data.isEmpty {
                 Text("Oopss... Data Game Favorite is Empty")
             }
             else {
                 List {
-                    ForEach(gameFavorites, id: \.self) { games in
+                    ForEach(dataGameFavorite.data, id: \.self) { games in
                         VStack {
                             Text(games.title ?? "Unknown")
                             .font(.title)
@@ -30,6 +29,8 @@ struct FavoritePageView: View {
                     }
                 }.navigationBarTitle(Text("My Game Favorite"))
             }
+        }.onAppear {
+            self.dataGameFavorite.readData()
         }
     }
 }

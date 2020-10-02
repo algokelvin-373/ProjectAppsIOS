@@ -63,7 +63,13 @@ class GameFavoriteCoreData: ObservableObject {
             
             print("Check data success")
             
-            return true
+            // Giving to result check data
+            if results.isEmpty {
+                return false
+            }
+            else {
+                return true
+            }
             
         } catch let error as NSError {
             print("Could not fetch. \(error), \(error.userInfo)")

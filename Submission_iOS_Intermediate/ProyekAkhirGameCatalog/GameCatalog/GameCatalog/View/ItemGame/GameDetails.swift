@@ -10,7 +10,6 @@ import SwiftUI
 
 struct GameDetails: View {
     @ObservedObject private var dataGameFavorite = GameFavoriteCoreData()
-    @FetchRequest(entity: GameFavorite.entity(), sortDescriptors: []) var gameFavorites: FetchedResults<GameFavorite>
     
     @State var buttonSearch = false
     @State var addGameFavorite = "ic-love-off"
@@ -50,15 +49,17 @@ struct GameDetails: View {
                                 date: self.detailGame.released,
                                 rating: String(format: "%.2f", self.detailGame.released)
                             )
+                            self.checkDataGamefavorite()
                         }
                         else {
                             print("Delete")
                             self.onLove = false
                             self.addGameFavorite = "ic-love-off"
                             self.dataGameFavorite.deleteData(id: Int64(self.detailGame.id))
+                            self.checkDataGamefavorite()
                         }
                     }) {
-                        Image(self.dataGameFavorite.checkData(id: Int64(self.detailGame.id)) ? "ic-love-on" : "ic-love-off")
+                        Image(onLove ? "ic-love-on" : "ic-love-off")
                     }
                 }
                 .padding(.horizontal, 8.0)
@@ -74,10 +75,16 @@ struct GameDetails: View {
         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
         .background(Color(red: 255.0/255, green: 240.0/255, blue: 240.0/255, opacity: 1.0))
         .onAppear() {
+            self.checkDataGamefavorite()
             ResponseDetailGame().getDataDetailGame(id: String(self.detailGame.id)) { (dataGame) in
                 print(dataGame)
                 self.detailGame = dataGame
             }
         }
+    }
+    
+    // This is function to check
+    func checkDataGamefavorite() {
+        onLove = self.dataGameFavorite.checkData(id: Int64(self.detailGame.id))
     }
 }
