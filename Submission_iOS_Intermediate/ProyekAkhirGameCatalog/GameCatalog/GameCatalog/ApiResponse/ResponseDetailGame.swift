@@ -11,9 +11,11 @@ import Foundation
 class ResponseDetailGame {
     /*Get Data Detail Game**/
     func getDataDetailGame(id: String, completion: @escaping (DetailGames) -> ()) {
-        let url = URLRequest(url: URL(string: "https://api.rawg.io/api/games/\(id)")!)
+        guard let componentURL = URLComponents(string: "https://api.rawg.io/api/games/\(id)") else { return }
+        guard let url = componentURL.url else { return }
+        let request = URLRequest(url: url)
             
-        URLSession.shared.dataTask(with: url) { data, response, error in
+        URLSession.shared.dataTask(with: request) { data, response, error in
             guard let data2 = data, error == nil else {
                 return
             }
