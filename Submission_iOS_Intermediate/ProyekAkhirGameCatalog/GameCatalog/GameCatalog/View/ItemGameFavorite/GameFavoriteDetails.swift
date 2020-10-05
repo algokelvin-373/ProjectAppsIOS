@@ -16,7 +16,7 @@ struct GameFavoriteDetails: View {
     @State var onLove = false
     @State var id: Int
     
-    @State var detailGame: DetailGames
+    @State var detailGame: DetailGames = dummyDetailGame
     
     var body: some View {
         ScrollView {

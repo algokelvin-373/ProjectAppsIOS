@@ -14,16 +14,9 @@ struct GameFavoriteList: View {
     var body: some View {
         List {
             ForEach(dataGameFavorite.data, id: \.self) { games in
-                HStack(spacing: 1.0) {
-                    VStack(alignment: .leading) {
-                        URLImage(url: games.image ?? "nil")
-                    }.frame(minWidth: 0, maxWidth: 140.0, minHeight: 0, maxHeight: 90.0, alignment: .top)
-                    
-                    VStack(alignment: .leading, spacing: 0.0) {
-                        Text(games.title ?? "Unknown")
-                            .font(.custom("RobotoCondensed-Bold", size: 18))
-                        Text(games.date_release ?? "2020-10-02")
-                            .font(.custom("RobotoCondensed-Regular", size: 12))
+                ZStack {
+                    NavigationLink(destination: GameFavoriteDetails(id: games.id)) {
+                        GameFavoriteRaw(games: games)
                     }
                 }
             }.onDelete(perform: { (index) in
