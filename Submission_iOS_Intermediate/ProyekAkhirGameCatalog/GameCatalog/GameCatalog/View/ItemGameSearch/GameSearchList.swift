@@ -37,17 +37,8 @@ struct GameSearchList: View {
             }.font(.headline)
             
             ForEach(todoGetter.searchGames, id: \.id) { data in
-                HStack(alignment: .top, spacing: 4.0) {
-                    VStack(alignment: .leading) {
-                        URLImage(url: data.background_image)
-                    }.frame(minWidth: 0, maxWidth: 140.0, minHeight: 0, maxHeight: 90.0, alignment: .top)
-                    
-                    VStack(alignment: .leading, spacing: 0.0) {
-                        Text(data.name)
-                            .font(.custom("RobotoCondensed-Bold", size: 18))
-                        Text(data.released ?? "No have date released")
-                        .font(.custom("RobotoCondensed-Regular", size: 12))
-                    }
+                NavigationLink(destination: GameSearchDetails(id: data.id)) {
+                    GameSearchRow(games: data)
                 }
             }
         }
