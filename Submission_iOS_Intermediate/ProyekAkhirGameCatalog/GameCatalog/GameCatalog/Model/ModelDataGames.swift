@@ -68,4 +68,5 @@ struct GameSearch: Codable, Identifiable {
     let name: String
     let background_image: String
     let released: String?
+    let rating: Float
 }

@@ -37,7 +37,14 @@ struct GameSearchList: View {
             }.font(.headline)
             
             ForEach(todoGetter.searchGames, id: \.id) { data in
-                NavigationLink(destination: GameSearchDetails(id: data.id)) {
+                NavigationLink(destination: GameSearchDetails(
+                    detailGame: DetailGames(
+                        id: data.id,
+                        name: data.name,
+                        background_image: data.background_image,
+                        released: data.released ?? "2020-10-02",
+                        rating: data.rating,
+                        description_raw: "Memuat data..."))) {
                     GameSearchRow(games: data)
                 }
             }

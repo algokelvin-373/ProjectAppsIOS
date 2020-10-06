@@ -14,9 +14,7 @@ struct GameSearchDetails: View {
     @State var buttonSearch = false
     @State var addGameFavorite = "ic-love-off"
     @State var onLove = false
-    @State var detailGame: DetailGames = dummyDetailGame
-    
-    @State var id: Int
+    @State var detailGame: DetailGames
     
     var body: some View {
         ScrollView {
