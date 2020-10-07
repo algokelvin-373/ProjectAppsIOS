@@ -86,6 +86,6 @@ struct GameFavoriteDetails: View {
     
     // This is function to check
     func checkDataGamefavorite() {
-        onLove = self.dataGameFavorite.checkData(id: Int64(self.detailGame.id))
+        onLove = self.dataGameFavorite.checkData(id: Int64(self.id))
     }
 }
