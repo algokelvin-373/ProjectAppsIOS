@@ -14,7 +14,9 @@ struct GameSearchDetails: View {
     @State var buttonSearch = false
     @State var addGameFavorite = "ic-love-off"
     @State var onLove = false
-    @State var detailGame: DetailGames
+    @State var detailGame: DetailGames = dummyDetailGame
+    
+    @State var id: Int
     
     var body: some View {
         ScrollView {
@@ -76,7 +78,7 @@ struct GameSearchDetails: View {
         .background(Color(red: 255.0/255, green: 240.0/255, blue: 240.0/255, opacity: 1.0))
         .onAppear() {
             self.checkDataGamefavorite()
-            ResponseDetailGame().getDataDetailGame(id: String(self.detailGame.id)) { (dataGame) in
+            ResponseDetailGame().getDataDetailGame(id: String(self.id)) { (dataGame) in
                 print(dataGame)
                 self.detailGame = dataGame
             }
