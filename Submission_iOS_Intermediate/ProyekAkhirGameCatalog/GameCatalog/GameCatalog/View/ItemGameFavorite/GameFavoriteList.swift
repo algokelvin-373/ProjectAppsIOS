@@ -9,8 +9,27 @@
 import SwiftUI
 
 struct GameFavoriteList: View {
+    @ObservedObject private var dataGameFavorite = GameFavoriteCoreData()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List {
+            ForEach(dataGameFavorite.data, id: \.self) { games in
+                ZStack {
+                    NavigationLink(destination: GameFavoriteDetails(id: Int(games.id))) {
+                        GameFavoriteRaw(games: games)
+                    }
+                }
+            }.onDelete(perform: { (index) in
+                for x in index {
+                    let gameFavorite = self.dataGameFavorite.data[x]
+                    let id = gameFavorite.id
+                    if id == gameFavorite.id {
+                        self.dataGameFavorite.deleteData(id: id)
+                  }
+                }
+                self.dataGameFavorite.readData()
+            })
+        }.navigationBarTitle(Text("My Game Favorite"), displayMode: .inline)
     }
 }
 

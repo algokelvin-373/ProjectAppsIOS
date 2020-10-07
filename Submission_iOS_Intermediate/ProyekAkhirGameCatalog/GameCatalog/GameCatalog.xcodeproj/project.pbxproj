@@ -19,6 +19,7 @@
 		104AC9E424C6A0AB008B3D3F /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 104AC9E224C6A0AB008B3D3F /* Roboto-Medium.ttf */; };
 		104AC9E524C6A0AB008B3D3F /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 104AC9E324C6A0AB008B3D3F /* Roboto-Bold.ttf */; };
 		104BB79F24D94CB700EAE096 /* ModelProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104BB79E24D94CB700EAE096 /* ModelProfile.swift */; };
+		104EC5F6252B13D400A7154F /* GameFavoriteDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104EC5F5252B13D400A7154F /* GameFavoriteDetails.swift */; };
 		1053804024CD1728008AFC77 /* GameList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1053803F24CD1728008AFC77 /* GameList.swift */; };
 		1053804324CD19CD008AFC77 /* GameRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1053804224CD19CD008AFC77 /* GameRow.swift */; };
 		10954F2324D7043C00F67A22 /* ResponseDetailGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10954F2224D7043C00F67A22 /* ResponseDetailGame.swift */; };
@@ -56,6 +57,7 @@
 		104AC9E224C6A0AB008B3D3F /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		104AC9E324C6A0AB008B3D3F /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		104BB79E24D94CB700EAE096 /* ModelProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelProfile.swift; sourceTree = "<group>"; };
+		104EC5F5252B13D400A7154F /* GameFavoriteDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameFavoriteDetails.swift; sourceTree = "<group>"; };
 		1053803F24CD1728008AFC77 /* GameList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameList.swift; sourceTree = "<group>"; };
 		1053804224CD19CD008AFC77 /* GameRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRow.swift; sourceTree = "<group>"; };
 		10954F2224D7043C00F67A22 /* ResponseDetailGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseDetailGame.swift; sourceTree = "<group>"; };
@@ -225,6 +227,7 @@
 			children = (
 				10CF0E3925191AB10015646E /* GameFavoriteList.swift */,
 				10CF0E3B25191ACF0015646E /* GameFavoriteRaw.swift */,
+				104EC5F5252B13D400A7154F /* GameFavoriteDetails.swift */,
 			);
 			path = ItemGameFavorite;
 			sourceTree = "<group>";
@@ -333,6 +336,7 @@
 				10954F2324D7043C00F67A22 /* ResponseDetailGame.swift in Sources */,
 				1053804024CD1728008AFC77 /* GameList.swift in Sources */,
 				10DC6DD1252C13A600904686 /* GameSearchList.swift in Sources */,
+				104EC5F6252B13D400A7154F /* GameFavoriteDetails.swift in Sources */,
 				10BBAA512520FA1700A601D6 /* ResponseSearchGame.swift in Sources */,
 				10B2526324ACAE0900E60B5D /* ContentView.swift in Sources */,
 				1044364624D5DF00001A9335 /* GameDetails.swift in Sources */,
