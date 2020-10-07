@@ -37,7 +37,7 @@ struct GameSearchList: View {
             }.font(.headline)
             
             ForEach(todoGetter.searchGames, id: \.id) { data in
-                NavigationLink(destination: GameSearchDetails(id: data.id)) {
+                NavigationLink(destination: GameDetail(id: data.id)) {
                     GameSearchRow(games: data)
                 }
             }

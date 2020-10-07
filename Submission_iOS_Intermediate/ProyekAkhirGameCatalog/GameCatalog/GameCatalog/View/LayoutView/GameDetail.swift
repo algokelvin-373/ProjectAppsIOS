@@ -1,14 +1,14 @@
 //
-//  GameSearchDetails.swift
+//  GameDetail.swift
 //  GameCatalog
 //
-//  Created by Kelvin HT on 10/6/20.
+//  Created by Kelvin HT on 10/7/20.
 //  Copyright © 2020 Kelvin HT. All rights reserved.
 //
 
 import SwiftUI
 
-struct GameSearchDetails: View {
+struct GameDetail: View {
     @ObservedObject private var dataGameFavorite = GameFavoriteCoreData()
     
     @State var buttonSearch = false
@@ -79,7 +79,6 @@ struct GameSearchDetails: View {
         .onAppear() {
             self.checkDataGamefavorite()
             ResponseDetailGame().getDataDetailGame(id: String(self.id)) { (dataGame) in
-                print(dataGame)
                 self.detailGame = dataGame
             }
         }

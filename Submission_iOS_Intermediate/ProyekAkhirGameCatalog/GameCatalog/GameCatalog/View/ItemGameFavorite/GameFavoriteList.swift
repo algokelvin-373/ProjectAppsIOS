@@ -15,7 +15,7 @@ struct GameFavoriteList: View {
         List {
             ForEach(dataGameFavorite.data, id: \.self) { games in
                 ZStack {
-                    NavigationLink(destination: GameFavoriteDetails(id: Int(games.id))) {
+                    NavigationLink(destination: GameDetail(id: Int(games.id))) {
                         GameFavoriteRaw(games: games)
                     }
                 }

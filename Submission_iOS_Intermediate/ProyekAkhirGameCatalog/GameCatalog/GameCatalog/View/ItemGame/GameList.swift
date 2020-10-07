@@ -14,14 +14,7 @@ struct GameList: View {
     var body: some View {
         List(games) { game in
             ZStack {
-                NavigationLink(destination: GameDetails(
-                    detailGame: DetailGames(
-                        id: game.id,
-                        name: game.name,
-                        background_image: game.background_image,
-                        released: game.released,
-                        rating: game.rating,
-                        description_raw: "Memuat data..."))) {
+                NavigationLink(destination: GameDetail(id: game.id)) {
                     GameRow(game: game)
                 }
             }
@@ -29,7 +22,7 @@ struct GameList: View {
         .onAppear() {
             ResponseGame().getDataGame { (games) in
                 self.games = games
+            }
         }
     }
-}
 }
