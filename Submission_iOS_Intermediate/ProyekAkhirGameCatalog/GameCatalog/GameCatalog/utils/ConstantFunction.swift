@@ -8,7 +8,7 @@
 
 import Foundation
 
-func convertFormatDate(stringDate: String) {
+func convertFormatDate(stringDate: String) -> String {
     let dateFormatter = DateFormatter()
     dateFormatter.dateFormat = "MMM, d yyyy"
     let d = dateFormatter.date(from: stringDate) ?? nil
