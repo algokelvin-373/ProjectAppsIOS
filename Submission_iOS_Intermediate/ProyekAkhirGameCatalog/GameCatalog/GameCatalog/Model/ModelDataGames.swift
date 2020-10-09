@@ -66,7 +66,7 @@ struct SearchGame: Codable {
 struct GameSearch: Codable, Identifiable {
     let id: Int
     let name: String
-    let background_image: String
+    let background_image: String?
     let released: String?
     let rating: Float
 }
