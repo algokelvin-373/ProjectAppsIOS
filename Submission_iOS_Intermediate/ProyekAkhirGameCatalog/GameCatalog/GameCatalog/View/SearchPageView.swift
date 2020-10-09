@@ -9,8 +9,18 @@
 import SwiftUI
 
 struct SearchPageView: View {
+    @ObservedObject var todoGetter = ResponseSearchGame()
+    
+    @State var games: [GameSearch] = []
+    @State private var keyword = ""
+    @State private var key = ""
+    
     var body: some View {
-        Text("Coming Soon")
+        VStack {
+            NavigationView {
+                GameSearchList()
+            }.navigationBarTitle(Text("Search Game"))
+        }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
     }
 }
 

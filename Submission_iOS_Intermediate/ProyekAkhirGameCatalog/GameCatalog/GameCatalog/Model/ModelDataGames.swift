@@ -57,3 +57,16 @@ var dummyDetailGame = DetailGames(
     rating: 3.3,
     description_raw: "Default"
 )
+
+/*For Model Search Game**/
+struct SearchGame: Codable {
+    let results: [GameSearch]
+}
+
+struct GameSearch: Codable, Identifiable {
+    let id: Int
+    let name: String
+    let background_image: String?
+    let released: String?
+    let rating: Float
+}

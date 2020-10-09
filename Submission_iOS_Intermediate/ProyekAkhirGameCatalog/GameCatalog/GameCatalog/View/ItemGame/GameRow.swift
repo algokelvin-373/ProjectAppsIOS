@@ -24,10 +24,6 @@ struct GameRow: View {
                 Image("ic-star-rating")
                 Text(String(format: "%.2f/5", game.rating))
                     .font(.custom("RobotoCondensed-Regular", size: 24))
-                Button(action: {
-                }) {
-                    Image("ic-love-on")
-                }
             }
             .padding(.horizontal, 4.0)
             
