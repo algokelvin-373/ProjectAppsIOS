@@ -22,6 +22,8 @@ struct GameFavoriteRaw: View {
                     .font(.custom("RobotoCondensed-Bold", size: 18))
                 Text(games.date_release ?? "2020-10-02")
                     .font(.custom("RobotoCondensed-Regular", size: 12))
+                Text(String(format: "%.2f/5", games.rating ?? 0.0))
+                .font(.custom("RobotoCondensed-Regular", size: 10))
             }
         }
     }

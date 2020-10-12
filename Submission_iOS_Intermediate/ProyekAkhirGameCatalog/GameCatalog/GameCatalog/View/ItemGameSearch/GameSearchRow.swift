@@ -22,6 +22,8 @@ struct GameSearchRow: View {
                     .font(.custom("RobotoCondensed-Bold", size: 18))
                 Text(games.released ?? "No have date released")
                 .font(.custom("RobotoCondensed-Regular", size: 12))
+                Text(String(format: "%.2f/5", games.rating))
+                .font(.custom("RobotoCondensed-Regular", size: 10))
             }
         }
     }
