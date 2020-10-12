@@ -78,7 +78,7 @@ struct GameDetail: View {
         .background(Color(red: 255.0/255, green: 240.0/255, blue: 240.0/255, opacity: 1.0))
         .onAppear() {
             self.checkDataGamefavorite()
-            ResponseDetailGame().getDataDetailGame(id: String(self.id)) { (dataGame) in
+            ResponseGame().getDataDetailGame(id: String(self.id)) { (dataGame) in
                 self.detailGame = dataGame
             }
         }

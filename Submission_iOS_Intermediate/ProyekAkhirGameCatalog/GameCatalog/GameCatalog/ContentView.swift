@@ -12,23 +12,23 @@ struct ContentView: View {
     var body: some View {
         TabView {
             HomeView().tabItem({
-            Image("\(ConstantVal.TabBarImage.tabBar0)").renderingMode(.template)
-                Text("\(ConstantVal.TabBarText.tabBar0)")
+            Image("\(ConstantVal.TabBarImage.homeTabBar)").renderingMode(.template)
+                Text("\(ConstantVal.TabBarText.homeTabBar)")
             }).tag(0)
             
             SearchPageView().tabItem({
-            Image("\(ConstantVal.TabBarImage.tabBar1)").renderingMode(.template)
-                Text("\(ConstantVal.TabBarText.tabBar1)")
+            Image("\(ConstantVal.TabBarImage.searchTabBar)").renderingMode(.template)
+                Text("\(ConstantVal.TabBarText.searchTabBar)")
             }).tag(1)
             
             FavoritePageView().tabItem({
-            Image("\(ConstantVal.TabBarImage.tabBar2)").renderingMode(.template)
-                Text("\(ConstantVal.TabBarText.tabBar2)")
+            Image("\(ConstantVal.TabBarImage.favoriteTabBar)").renderingMode(.template)
+                Text("\(ConstantVal.TabBarText.favoriteTabBar)")
             }).tag(2)
             
             ProfileView().tabItem({
-            Image("\(ConstantVal.TabBarImage.tabBar3)").renderingMode(.template)
-                Text("\(ConstantVal.TabBarText.tabBar3)")
+            Image("\(ConstantVal.TabBarImage.profileTabBar)").renderingMode(.template)
+                Text("\(ConstantVal.TabBarText.profileTabBar)")
             }).tag(3)
         }.accentColor(Color(red: 16.0/255, green: 152.0/255, blue: 251.0/255, opacity: 1.0))
     }

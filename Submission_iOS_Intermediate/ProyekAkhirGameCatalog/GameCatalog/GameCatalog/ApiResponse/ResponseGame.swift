@@ -17,19 +17,18 @@ class ResponseGame {
         let request = URLRequest(url: url)
             
         URLSession.shared.dataTask(with: request) { data, response, error in
-            guard let data2 = data, error == nil else {
-                return
+            if let data = data {
+                do {
+                    let jsonGame = try JSONDecoder().decode(DataGame.self, from: data)
+                    completion(jsonGame.results) // To set value Array<Game> in 'responseData'
+                }
+                catch {
+                    print("Failed to convert \(error.localizedDescription)")
+                }
             }
-                
-            let jsonGame: DataGame?
-            do {
-                jsonGame = try JSONDecoder().decode(DataGame.self, from: data2)
-                completion(jsonGame!.results) // To set value Array<Game> in 'responseData'
+            else if let error = error {
+                print("Error response: \(error.localizedDescription)")
             }
-            catch {
-                print("Failed to convert \(error.localizedDescription)")
-            }
-                
         }.resume()
     }
     
@@ -43,20 +42,40 @@ class ResponseGame {
         let request = URLRequest(url: url)
 
         URLSession.shared.dataTask(with: request) { data, response, error in
-            guard let data2 = data, error == nil else {
-                return
+            if let data = data {
+                do {
+                    let jsonGame = try JSONDecoder().decode(SearchGame.self, from: data)
+                    completion(jsonGame.results) // To set value Array<Game> in 'responseData'
+                }
+                catch {
+                    print("Failed to convert \(error.localizedDescription)")
+                }
             }
-                
-            let jsonGame: SearchGame?
-            do {
-                jsonGame = try JSONDecoder().decode(SearchGame.self, from: data2)
-                completion(jsonGame!.results) // To set value Array<Game> in 'responseData'
-                print(jsonGame!.results)
+            else if let error = error {
+                print("Error response: \(error.localizedDescription)")
             }
-            catch {
-                print("Failed to convert \(error.localizedDescription)")
+        }.resume()
+    }
+    
+    /*Get Data Detail Game**/
+    func getDataDetailGame(id: String, completion: @escaping (DetailGames) -> ()) {
+        guard let componentURL = URLComponents(string: "https://api.rawg.io/api/games/\(id)") else { return }
+        guard let url = componentURL.url else { return }
+        let request = URLRequest(url: url)
+            
+        URLSession.shared.dataTask(with: request) { data, response, error in
+            if let data = data {
+                do {
+                    let jsonGame = try JSONDecoder().decode(DetailGames.self, from: data)
+                    completion(jsonGame) // To set value Array<Game> in 'responseData'
+                }
+                catch {
+                    print("Failed to convert \(error.localizedDescription)")
+                }
             }
-                
+            else if let error = error {
+                print("Error response: \(error.localizedDescription)")
+            }
         }.resume()
     }
 }
