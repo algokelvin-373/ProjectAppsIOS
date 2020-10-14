@@ -49,7 +49,7 @@ struct GameDetail: View {
                                 title: self.detailGame.name,
                                 image: self.detailGame.background_image,
                                 date: self.detailGame.released,
-                                rating: String(format: "%.2f", self.detailGame.released)
+                                rating: String(format: "%.2f/5", self.detailGame.rating)
                             )
                             self.checkDataGamefavorite()
                         }
