@@ -18,6 +18,8 @@ struct GameFavoriteList: View {
                     NavigationLink(destination: GameDetail(id: Int(games.id))) {
                         GameFavoriteRaw(games: games)
                     }
+                }.onAppear() {
+                    self.dataGameFavorite.readData()
                 }
             }.onDelete(perform: { (index) in
                 for x in index {

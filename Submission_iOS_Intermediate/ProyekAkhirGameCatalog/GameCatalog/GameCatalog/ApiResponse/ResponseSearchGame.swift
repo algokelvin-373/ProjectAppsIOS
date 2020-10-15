@@ -42,7 +42,6 @@ class ResponseSearchGame: ObservableObject {
                 DispatchQueue.main.async {
                     self.searchGames = jsonGame!.results
                 }
-                print(jsonGame!.results)
             }
             catch {
                 print("Failed to convert \(error.localizedDescription)")
