@@ -30,9 +30,6 @@ class GameFavoriteCoreData: ObservableObject {
         
         do {
             try managedContext.save()
-            
-            print("Success input data")
-            
         } catch let error as NSError {
             print("Could not save. \(error), \(error.userInfo)")
         }
@@ -44,8 +41,6 @@ class GameFavoriteCoreData: ObservableObject {
             guard let results = try managedContext.fetch(fetchRequest) as? [GameFavorite] else { return }
             
             self.data = results
-            
-            print("Read data success")
             
         } catch let error as NSError {
             print("Could not fetch. \(error), \(error.userInfo)")
@@ -60,8 +55,6 @@ class GameFavoriteCoreData: ObservableObject {
             guard let results = try managedContext.fetch(fetchRequest) as? [GameFavorite] else { return false }
             
             self.data = results
-            
-            print("Check data success")
             
             // Giving to result check data
             if results.isEmpty {
@@ -89,8 +82,6 @@ class GameFavoriteCoreData: ObservableObject {
             managedContext.delete(gameCatalog)
 
             try managedContext.save()
-            
-            print("Success Delete Data")
             
         } catch let error as NSError {
             print("Could not save. \(error), \(error.userInfo)")
