@@ -23,6 +23,8 @@
 		10A5C1B62560295400626129 /* WelcomeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A5C1B52560295400626129 /* WelcomeRepository.swift */; };
 		10A5C1B825602DCD00626129 /* WelcomeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A5C1B725602DCD00626129 /* WelcomeUseCase.swift */; };
 		10A5C1BA25602F1800626129 /* WelcomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A5C1B925602F1800626129 /* WelcomeInteractor.swift */; };
+		10A5C1BD256030FA00626129 /* WelcomePresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A5C1BC256030FA00626129 /* WelcomePresenterProtocol.swift */; };
+		10A5C1BF2560334A00626129 /* WelcomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A5C1BE2560334A00626129 /* WelcomePresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,8 @@
 		10A5C1B52560295400626129 /* WelcomeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeRepository.swift; sourceTree = "<group>"; };
 		10A5C1B725602DCD00626129 /* WelcomeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeUseCase.swift; sourceTree = "<group>"; };
 		10A5C1B925602F1800626129 /* WelcomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeInteractor.swift; sourceTree = "<group>"; };
+		10A5C1BC256030FA00626129 /* WelcomePresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePresenterProtocol.swift; sourceTree = "<group>"; };
+		10A5C1BE2560334A00626129 /* WelcomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +119,7 @@
 		109C6EA9255155CE00625087 /* WelcomeApps */ = {
 			isa = PBXGroup;
 			children = (
+				10A5C1BB256030AB00626129 /* Presenter */,
 				10A5C1AE256024A400626129 /* Domain */,
 				10A5C1AB2560242A00626129 /* Data */,
 				109C6EAA255155CE00625087 /* AppDelegate.swift */,
@@ -174,6 +179,15 @@
 				10A5C1B925602F1800626129 /* WelcomeInteractor.swift */,
 			);
 			path = Domain;
+			sourceTree = "<group>";
+		};
+		10A5C1BB256030AB00626129 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				10A5C1BC256030FA00626129 /* WelcomePresenterProtocol.swift */,
+				10A5C1BE2560334A00626129 /* WelcomePresenter.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -331,9 +345,11 @@
 				10A5C1B825602DCD00626129 /* WelcomeUseCase.swift in Sources */,
 				10A5C1B4256026C900626129 /* WelcomeRepositoryProtocol.swift in Sources */,
 				10A5C1BA25602F1800626129 /* WelcomeInteractor.swift in Sources */,
+				10A5C1BD256030FA00626129 /* WelcomePresenterProtocol.swift in Sources */,
 				10A5C1AD2560244A00626129 /* WelcomeDataSourceProtocol.swift in Sources */,
 				109C6EAB255155CE00625087 /* AppDelegate.swift in Sources */,
 				10A5C1B0256024B400626129 /* MessageEntity.swift in Sources */,
+				10A5C1BF2560334A00626129 /* WelcomePresenter.swift in Sources */,
 				109C6EAD255155CE00625087 /* SceneDelegate.swift in Sources */,
 				109C6EB2255155CE00625087 /* ContentView.swift in Sources */,
 				109C6EB0255155CE00625087 /* WelcomeApps.xcdatamodeld in Sources */,
