@@ -21,6 +21,8 @@
 		10A5C1B2256024FB00626129 /* WelcomeDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A5C1B1256024FB00626129 /* WelcomeDataSource.swift */; };
 		10A5C1B4256026C900626129 /* WelcomeRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A5C1B3256026C900626129 /* WelcomeRepositoryProtocol.swift */; };
 		10A5C1B62560295400626129 /* WelcomeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A5C1B52560295400626129 /* WelcomeRepository.swift */; };
+		10A5C1B825602DCD00626129 /* WelcomeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A5C1B725602DCD00626129 /* WelcomeUseCase.swift */; };
+		10A5C1BA25602F1800626129 /* WelcomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A5C1B925602F1800626129 /* WelcomeInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		10A5C1B1256024FB00626129 /* WelcomeDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeDataSource.swift; sourceTree = "<group>"; };
 		10A5C1B3256026C900626129 /* WelcomeRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeRepositoryProtocol.swift; sourceTree = "<group>"; };
 		10A5C1B52560295400626129 /* WelcomeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeRepository.swift; sourceTree = "<group>"; };
+		10A5C1B725602DCD00626129 /* WelcomeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeUseCase.swift; sourceTree = "<group>"; };
+		10A5C1B925602F1800626129 /* WelcomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +170,8 @@
 			isa = PBXGroup;
 			children = (
 				10A5C1AF256024B400626129 /* MessageEntity.swift */,
+				10A5C1B725602DCD00626129 /* WelcomeUseCase.swift */,
+				10A5C1B925602F1800626129 /* WelcomeInteractor.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -322,7 +328,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10A5C1B825602DCD00626129 /* WelcomeUseCase.swift in Sources */,
 				10A5C1B4256026C900626129 /* WelcomeRepositoryProtocol.swift in Sources */,
+				10A5C1BA25602F1800626129 /* WelcomeInteractor.swift in Sources */,
 				10A5C1AD2560244A00626129 /* WelcomeDataSourceProtocol.swift in Sources */,
 				109C6EAB255155CE00625087 /* AppDelegate.swift in Sources */,
 				10A5C1B0256024B400626129 /* MessageEntity.swift in Sources */,
