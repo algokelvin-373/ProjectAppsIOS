@@ -25,6 +25,7 @@
 		10A5C1BA25602F1800626129 /* WelcomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A5C1B925602F1800626129 /* WelcomeInteractor.swift */; };
 		10A5C1BD256030FA00626129 /* WelcomePresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A5C1BC256030FA00626129 /* WelcomePresenterProtocol.swift */; };
 		10A5C1BF2560334A00626129 /* WelcomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A5C1BE2560334A00626129 /* WelcomePresenter.swift */; };
+		10A5C1C22560369100626129 /* Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A5C1C12560369100626129 /* Injection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		10A5C1B925602F1800626129 /* WelcomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeInteractor.swift; sourceTree = "<group>"; };
 		10A5C1BC256030FA00626129 /* WelcomePresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePresenterProtocol.swift; sourceTree = "<group>"; };
 		10A5C1BE2560334A00626129 /* WelcomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePresenter.swift; sourceTree = "<group>"; };
+		10A5C1C12560369100626129 /* Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 		109C6EA9255155CE00625087 /* WelcomeApps */ = {
 			isa = PBXGroup;
 			children = (
+				10A5C1C02560367B00626129 /* DI */,
 				10A5C1BB256030AB00626129 /* Presenter */,
 				10A5C1AE256024A400626129 /* Domain */,
 				10A5C1AB2560242A00626129 /* Data */,
@@ -188,6 +191,14 @@
 				10A5C1BE2560334A00626129 /* WelcomePresenter.swift */,
 			);
 			path = Presenter;
+			sourceTree = "<group>";
+		};
+		10A5C1C02560367B00626129 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				10A5C1C12560369100626129 /* Injection.swift */,
+			);
+			path = DI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -349,6 +360,7 @@
 				10A5C1AD2560244A00626129 /* WelcomeDataSourceProtocol.swift in Sources */,
 				109C6EAB255155CE00625087 /* AppDelegate.swift in Sources */,
 				10A5C1B0256024B400626129 /* MessageEntity.swift in Sources */,
+				10A5C1C22560369100626129 /* Injection.swift in Sources */,
 				10A5C1BF2560334A00626129 /* WelcomePresenter.swift in Sources */,
 				109C6EAD255155CE00625087 /* SceneDelegate.swift in Sources */,
 				109C6EB2255155CE00625087 /* ContentView.swift in Sources */,
