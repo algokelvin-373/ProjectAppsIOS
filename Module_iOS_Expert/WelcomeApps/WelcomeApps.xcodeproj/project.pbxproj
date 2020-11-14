@@ -16,6 +16,11 @@
 		109C6EBA255155D000625087 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 109C6EB8255155D000625087 /* LaunchScreen.storyboard */; };
 		109C6EC5255155D000625087 /* WelcomeAppsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109C6EC4255155D000625087 /* WelcomeAppsTests.swift */; };
 		109C6ED0255155D000625087 /* WelcomeAppsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109C6ECF255155D000625087 /* WelcomeAppsUITests.swift */; };
+		10A5C1AD2560244A00626129 /* WelcomeDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A5C1AC2560244A00626129 /* WelcomeDataSourceProtocol.swift */; };
+		10A5C1B0256024B400626129 /* MessageEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A5C1AF256024B400626129 /* MessageEntity.swift */; };
+		10A5C1B2256024FB00626129 /* WelcomeDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A5C1B1256024FB00626129 /* WelcomeDataSource.swift */; };
+		10A5C1B4256026C900626129 /* WelcomeRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A5C1B3256026C900626129 /* WelcomeRepositoryProtocol.swift */; };
+		10A5C1B62560295400626129 /* WelcomeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A5C1B52560295400626129 /* WelcomeRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +56,11 @@
 		109C6ECB255155D000625087 /* WelcomeAppsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WelcomeAppsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		109C6ECF255155D000625087 /* WelcomeAppsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeAppsUITests.swift; sourceTree = "<group>"; };
 		109C6ED1255155D000625087 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		10A5C1AC2560244A00626129 /* WelcomeDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeDataSourceProtocol.swift; sourceTree = "<group>"; };
+		10A5C1AF256024B400626129 /* MessageEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageEntity.swift; sourceTree = "<group>"; };
+		10A5C1B1256024FB00626129 /* WelcomeDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeDataSource.swift; sourceTree = "<group>"; };
+		10A5C1B3256026C900626129 /* WelcomeRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeRepositoryProtocol.swift; sourceTree = "<group>"; };
+		10A5C1B52560295400626129 /* WelcomeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +111,8 @@
 		109C6EA9255155CE00625087 /* WelcomeApps */ = {
 			isa = PBXGroup;
 			children = (
+				10A5C1AE256024A400626129 /* Domain */,
+				10A5C1AB2560242A00626129 /* Data */,
 				109C6EAA255155CE00625087 /* AppDelegate.swift */,
 				109C6EAC255155CE00625087 /* SceneDelegate.swift */,
 				109C6EB1255155CE00625087 /* ContentView.swift */,
@@ -137,6 +149,25 @@
 				109C6ED1255155D000625087 /* Info.plist */,
 			);
 			path = WelcomeAppsUITests;
+			sourceTree = "<group>";
+		};
+		10A5C1AB2560242A00626129 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				10A5C1AC2560244A00626129 /* WelcomeDataSourceProtocol.swift */,
+				10A5C1B1256024FB00626129 /* WelcomeDataSource.swift */,
+				10A5C1B3256026C900626129 /* WelcomeRepositoryProtocol.swift */,
+				10A5C1B52560295400626129 /* WelcomeRepository.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		10A5C1AE256024A400626129 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				10A5C1AF256024B400626129 /* MessageEntity.swift */,
+			);
+			path = Domain;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,10 +322,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10A5C1B4256026C900626129 /* WelcomeRepositoryProtocol.swift in Sources */,
+				10A5C1AD2560244A00626129 /* WelcomeDataSourceProtocol.swift in Sources */,
 				109C6EAB255155CE00625087 /* AppDelegate.swift in Sources */,
+				10A5C1B0256024B400626129 /* MessageEntity.swift in Sources */,
 				109C6EAD255155CE00625087 /* SceneDelegate.swift in Sources */,
 				109C6EB2255155CE00625087 /* ContentView.swift in Sources */,
 				109C6EB0255155CE00625087 /* WelcomeApps.xcdatamodeld in Sources */,
+				10A5C1B62560295400626129 /* WelcomeRepository.swift in Sources */,
+				10A5C1B2256024FB00626129 /* WelcomeDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
