@@ -205,7 +205,6 @@
 		10A5C1C32560393100626129 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				109C6EB1255155CE00625087 /* ContentView.swift */,
 				10A5C1EE2560533D00626129 /* WelcomeView.swift */,
 			);
 			path = View;
@@ -214,6 +213,7 @@
 		10A5C1C42560393E00626129 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				109C6EB1255155CE00625087 /* ContentView.swift */,
 				109C6EAA255155CE00625087 /* AppDelegate.swift */,
 				109C6EAC255155CE00625087 /* SceneDelegate.swift */,
 			);

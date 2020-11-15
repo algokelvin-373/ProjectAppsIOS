@@ -11,6 +11,8 @@ import SwiftUI
 struct ContentView: View {
     @EnvironmentObject var welcomePresenter: WelcomePresenter
     var body: some View {
-        Text(self.welcomeMessage.welcome)
+        NavigationView {
+            WelcomePresenter(useCase: welcomePresenter)
+        }
     }
 }
