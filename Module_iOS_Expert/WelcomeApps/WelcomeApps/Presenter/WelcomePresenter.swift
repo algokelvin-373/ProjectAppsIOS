@@ -7,8 +7,9 @@
 //
 
 import Foundation
+import SwiftUI
 
-class WelcomePresenter: WelcomePresenterProtocol {
+class WelcomePresenter: WelcomePresenterProtocol, ObservableObject {
     private let welcomeUseCase: WelcomeUseCase
     init(useCase: WelcomeUseCase) {
         self.welcomeUseCase = useCase

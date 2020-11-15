@@ -11,6 +11,8 @@ import SwiftUI
 struct WelcomeView: View {
     @ObservedObject var presenter: WelcomePresenter
     var body: some View {
-        Text(presenter.getMessage(name: <#T##String#>))
+        VStack {
+            Text("loading")
+        }
     }
 }

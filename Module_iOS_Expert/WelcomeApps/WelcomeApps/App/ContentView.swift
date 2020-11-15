@@ -12,7 +12,7 @@ struct ContentView: View {
     @EnvironmentObject var welcomePresenter: WelcomePresenter
     var body: some View {
         NavigationView {
-            WelcomePresenter(useCase: welcomePresenter)
+            WelcomeView(presenter: welcomePresenter)
         }
     }
 }
