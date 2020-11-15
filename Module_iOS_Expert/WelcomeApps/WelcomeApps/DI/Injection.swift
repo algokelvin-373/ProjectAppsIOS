@@ -8,7 +8,7 @@
 
 import Foundation
 
-final class Injection: ObservableObject {
+final class Injection: NSObject {
     private func provideDataSource() -> WelcomeDataSourceProtocol {
         return WelcomeDataSource()
     }

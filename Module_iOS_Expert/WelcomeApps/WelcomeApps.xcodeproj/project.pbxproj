@@ -26,6 +26,7 @@
 		10A5C1BD256030FA00626129 /* WelcomePresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A5C1BC256030FA00626129 /* WelcomePresenterProtocol.swift */; };
 		10A5C1BF2560334A00626129 /* WelcomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A5C1BE2560334A00626129 /* WelcomePresenter.swift */; };
 		10A5C1C22560369100626129 /* Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A5C1C12560369100626129 /* Injection.swift */; };
+		10A5C1EF2560533D00626129 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A5C1EE2560533D00626129 /* WelcomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		10A5C1BC256030FA00626129 /* WelcomePresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePresenterProtocol.swift; sourceTree = "<group>"; };
 		10A5C1BE2560334A00626129 /* WelcomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePresenter.swift; sourceTree = "<group>"; };
 		10A5C1C12560369100626129 /* Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injection.swift; sourceTree = "<group>"; };
+		10A5C1EE2560533D00626129 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,7 +205,7 @@
 		10A5C1C32560393100626129 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				109C6EB1255155CE00625087 /* ContentView.swift */,
+				10A5C1EE2560533D00626129 /* WelcomeView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -211,6 +213,7 @@
 		10A5C1C42560393E00626129 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				109C6EB1255155CE00625087 /* ContentView.swift */,
 				109C6EAA255155CE00625087 /* AppDelegate.swift */,
 				109C6EAC255155CE00625087 /* SceneDelegate.swift */,
 			);
@@ -379,6 +382,7 @@
 				10A5C1C22560369100626129 /* Injection.swift in Sources */,
 				10A5C1BF2560334A00626129 /* WelcomePresenter.swift in Sources */,
 				109C6EAD255155CE00625087 /* SceneDelegate.swift in Sources */,
+				10A5C1EF2560533D00626129 /* WelcomeView.swift in Sources */,
 				109C6EB2255155CE00625087 /* ContentView.swift in Sources */,
 				109C6EB0255155CE00625087 /* WelcomeApps.xcdatamodeld in Sources */,
 				10A5C1B62560295400626129 /* WelcomeRepository.swift in Sources */,
