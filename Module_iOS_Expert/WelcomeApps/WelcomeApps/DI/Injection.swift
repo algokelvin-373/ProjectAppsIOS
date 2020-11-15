@@ -7,19 +7,8 @@
 //
 
 import Foundation
-import Combine
 
-class Injection: ObservableObject {
-    private var useCase: WelcomeUseCase
-    private var presenter: WelcomePresenter
-    @Published var welcome: MessageEntity
-    init() {
-        let welcomeDataSource = WelcomeDataSource()
-        let welcomeRepository = WelcomeRepository(dataSource: welcomeDataSource)
-        self.useCase = WelcomeInteractor(repository: welcomeRepository)
-        self.presenter = WelcomePresenter(useCase: useCase)
-        self.welcome = presenter.getMessage(name: "AlgoKelvin")
-    }
+final class Injection: NSObject {
     private func provideDataSource() -> WelcomeDataSourceProtocol {
         return WelcomeDataSource()
     }
