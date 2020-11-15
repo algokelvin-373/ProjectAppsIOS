@@ -9,8 +9,8 @@
 import SwiftUI
 
 struct ContentView: View {
-    @ObservedObject var welcomeMessage = Injection()
+    @EnvironmentObject var welcomePresenter: WelcomePresenter
     var body: some View {
-        Text(welcomeMessage.welcome)
+        Text(self.welcomeMessage.welcome)
     }
 }
