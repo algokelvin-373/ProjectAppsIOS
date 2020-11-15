@@ -9,10 +9,17 @@
 import SwiftUI
 
 struct WelcomeView: View {
+
     @ObservedObject var presenter: WelcomePresenter
+
     var body: some View {
         VStack {
-            Text("loading")
-        }
+            Text(presenter.msgWelcome.welcomeMessage)
+        }.onAppear {
+            self.presenter.getMessageVersion2(name: "Kelvin")
+        }.navigationBarTitle(
+          Text("Welcome Apps"),
+          displayMode: .automatic
+        )
     }
 }

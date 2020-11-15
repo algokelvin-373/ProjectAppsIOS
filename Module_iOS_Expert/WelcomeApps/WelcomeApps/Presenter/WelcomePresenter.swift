@@ -11,10 +11,17 @@ import SwiftUI
 
 class WelcomePresenter: WelcomePresenterProtocol, ObservableObject {
     private let welcomeUseCase: WelcomeUseCase
+
+    @Published var msgWelcome = MessageEntity(welcomeMessage: "empty message")
+
     init(useCase: WelcomeUseCase) {
         self.welcomeUseCase = useCase
     }
+
     func getMessage(name: String) -> MessageEntity {
         return welcomeUseCase.getMessage(name: name)
+    }
+    func getMessageVersion2(name: String) {
+        msgWelcome = welcomeUseCase.getMessage(name: name)
     }
 }
