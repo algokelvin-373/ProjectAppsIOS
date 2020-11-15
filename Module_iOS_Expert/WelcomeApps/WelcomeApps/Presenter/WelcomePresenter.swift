@@ -18,10 +18,7 @@ class WelcomePresenter: WelcomePresenterProtocol, ObservableObject {
         self.welcomeUseCase = useCase
     }
 
-    func getMessage(name: String) -> MessageEntity {
-        return welcomeUseCase.getMessage(name: name)
-    }
-    func getMessageVersion2(name: String) {
+    func getMessage(name: String) {
         msgWelcome = welcomeUseCase.getMessage(name: name)
     }
 }

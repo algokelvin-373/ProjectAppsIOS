@@ -9,5 +9,5 @@
 import Foundation
 
 protocol WelcomePresenterProtocol: class {
-    func getMessage(name: String) -> MessageEntity
+    func getMessage(name: String)
 }

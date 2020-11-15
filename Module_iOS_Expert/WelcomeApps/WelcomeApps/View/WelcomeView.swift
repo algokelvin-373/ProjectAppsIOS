@@ -16,7 +16,7 @@ struct WelcomeView: View {
         VStack {
             Text(presenter.msgWelcome.welcomeMessage)
         }.onAppear {
-            self.presenter.getMessageVersion2(name: "Kelvin")
+            self.presenter.getMessage(name: "Kelvin")
         }.navigationBarTitle(
           Text("Welcome Apps"),
           displayMode: .automatic
