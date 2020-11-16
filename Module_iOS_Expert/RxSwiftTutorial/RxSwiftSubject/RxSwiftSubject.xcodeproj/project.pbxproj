@@ -3,11 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		10A5C2172562C2A600626129 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A5C2162562C2A600626129 /* main.swift */; };
+		10A5C21F2562D48900626129 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 10A5C21E2562D48900626129 /* RxSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10A5C21F2562D48900626129 /* RxSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +80,9 @@
 			dependencies = (
 			);
 			name = RxSwiftSubject;
+			packageProductDependencies = (
+				10A5C21E2562D48900626129 /* RxSwift */,
+			);
 			productName = RxSwiftSubject;
 			productReference = 10A5C2132562C2A600626129 /* RxSwiftSubject */;
 			productType = "com.apple.product-type.tool";
@@ -106,6 +111,9 @@
 				Base,
 			);
 			mainGroup = 10A5C20A2562C2A600626129;
+			packageReferences = (
+				10A5C21D2562D48900626129 /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = 10A5C2142562C2A600626129 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -280,6 +288,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		10A5C21D2562D48900626129 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		10A5C21E2562D48900626129 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 10A5C21D2562D48900626129 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 10A5C20B2562C2A600626129 /* Project object */;
 }
