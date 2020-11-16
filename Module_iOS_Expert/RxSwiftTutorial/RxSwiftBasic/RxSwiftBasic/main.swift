@@ -19,3 +19,10 @@ Observable.of("1", "2", "3", "4", "5")
     .toArray()
     .map { $0.count }
     .subscribe(onSuccess: { print("Total bilangan ganjil adalah \($0)") })
+
+print("\n02. Multi-Threading with Schedulers")
+getEmployeeNames()
+    .observeOn(MainScheduler.instance)
+    .subscribeOn(ConcurrentDispatchQueueScheduler(qos: .background))
+    .subscribe(onNext: { print($0) })
+
