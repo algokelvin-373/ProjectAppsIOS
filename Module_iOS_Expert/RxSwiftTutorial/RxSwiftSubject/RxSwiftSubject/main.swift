@@ -30,4 +30,25 @@ sourcePublish02.subscribe(onNext: { print("Another again subscription value is \
 sourcePublish02.onNext(5)
 sourcePublish02.onCompleted()
 
+print("\nBehaviour - Behaviour Subject v01")
+let sourceBehaviour01 = BehaviorSubject<Int>(value: 0) // Value start is 0
+sourceBehaviour01.subscribe(onNext: { print("Subscription value is \($0)") })
+sourceBehaviour01.onNext(1)
+sourceBehaviour01.onNext(2)
+sourceBehaviour01.subscribe(onNext: { print("Another subscription value is \($0)") })
+sourceBehaviour01.onNext(3)
+sourceBehaviour01.onCompleted()
+
+print("\nBehaviour - Behaviour Subject v02")
+let sourceBehaviour02 = BehaviorSubject<Int>(value: 0)
+sourceBehaviour02.subscribe(onNext: { print("Subscription value is \($0)") })
+sourceBehaviour02.onNext(1)
+sourceBehaviour02.onNext(2)
+sourceBehaviour02.subscribe(onNext: { print("Another subscription value is \($0)") })
+sourceBehaviour02.onNext(3)
+sourceBehaviour02.onNext(4)
+sourceBehaviour02.subscribe(onNext: { print("Another again subscription value is \($0)") })
+sourceBehaviour02.onNext(5)
+sourceBehaviour02.onCompleted()
+
 print("")
