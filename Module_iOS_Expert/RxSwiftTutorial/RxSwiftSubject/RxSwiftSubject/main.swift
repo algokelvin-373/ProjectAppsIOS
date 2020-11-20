@@ -82,4 +82,13 @@ sourceReplay02.onNext(14)
 sourceReplay02.onNext(15)
 sourceReplay02.onCompleted()
 
+print("\nAsync - Async Subject")
+let source = AsyncSubject<Int>()
+source.subscribe(onNext: { print("Subscription value is \($0)") })
+source.onNext(1)
+source.onNext(2)
+source.subscribe(onNext: { print("Another subscription value is \($0)") })
+source.onNext(3)
+source.onCompleted()
+
 print("")
