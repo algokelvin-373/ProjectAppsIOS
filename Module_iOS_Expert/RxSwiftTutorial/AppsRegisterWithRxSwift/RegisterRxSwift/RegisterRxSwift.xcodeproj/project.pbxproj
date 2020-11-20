@@ -105,9 +105,7 @@
 		10BE5EAF2563AC1800FDEA65 /* RegisterRxSwift */ = {
 			isa = PBXGroup;
 			children = (
-				10BE5EB02563AC1800FDEA65 /* AppDelegate.swift */,
-				10BE5EB22563AC1800FDEA65 /* SceneDelegate.swift */,
-				10BE5EB72563AC1800FDEA65 /* ContentView.swift */,
+				10F01302256804CF00FB6DD2 /* App */,
 				10BE5EB92563AC1900FDEA65 /* Assets.xcassets */,
 				10BE5EBE2563AC1900FDEA65 /* LaunchScreen.storyboard */,
 				10BE5EC12563AC1900FDEA65 /* Info.plist */,
@@ -141,6 +139,16 @@
 				10BE5ED72563AC1900FDEA65 /* Info.plist */,
 			);
 			path = RegisterRxSwiftUITests;
+			sourceTree = "<group>";
+		};
+		10F01302256804CF00FB6DD2 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				10BE5EB02563AC1800FDEA65 /* AppDelegate.swift */,
+				10BE5EB22563AC1800FDEA65 /* SceneDelegate.swift */,
+				10BE5EB72563AC1800FDEA65 /* ContentView.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
