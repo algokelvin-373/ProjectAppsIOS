@@ -11,9 +11,21 @@ import RxSwift
 import RxCocoa
 
 class PresenterRegister: ObservableObject {
-    @Published var namePresenter = ""
+    @Published var nameMessage = ""
     
     func setName(name: String) {
-        print("Input: \(name)")
+        /**Implement RxSwift**/
+        let disposable = Observable.from(optional: name)
+            .map{ $0.isEmpty }
+            .subscribe(
+               onNext: {
+                if($0) {
+                    self.nameMessage = "Name must not be empty"
+                }
+                else {
+                    self.nameMessage = ""
+                }
+            })
+        disposable.dispose()
     }
 }

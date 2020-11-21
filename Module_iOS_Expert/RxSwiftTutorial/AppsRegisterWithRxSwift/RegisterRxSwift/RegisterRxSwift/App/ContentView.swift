@@ -14,6 +14,8 @@ struct ContentView: View {
     @State var password: String = ""
     @State var confirmPassword: String = ""
     
+    @ObservedObject var presenter: PresenterRegister
+    
     var body: some View {
         VStack {
             Text("Registration Form")
@@ -27,10 +29,14 @@ struct ContentView: View {
                     .bold()
                 TextField("Enter your name...", text: $name)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
+                Text(self.presenter.nameMessage)
+                    .font(.caption)
+                    .foregroundColor(Color.red)
                 
                 Text("Email")
                     .font(.headline)
                     .bold()
+                    .padding(.top, 16.0)
                 TextField("Enter your email...", text: $email)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                 
@@ -47,8 +53,7 @@ struct ContentView: View {
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                 
                 Button(action: {
-                    print("Success Sign In")
-                    print("\(self.name) \(self.email)")
+                    self.presenter.setName(name: self.name)
                 }) {
                     HStack {
                         Text("Sign In")
@@ -66,11 +71,5 @@ struct ContentView: View {
             .padding(EdgeInsets(top: 30, leading: 10, bottom: 0, trailing: 10))
                 
         }.frame(minWidth: 0,maxWidth: .infinity,minHeight: 0,maxHeight: .infinity)
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
     }
 }
