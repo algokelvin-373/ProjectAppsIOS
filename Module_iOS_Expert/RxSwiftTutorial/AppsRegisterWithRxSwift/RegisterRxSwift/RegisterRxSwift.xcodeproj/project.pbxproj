@@ -18,6 +18,7 @@
 		10BE5ED62563AC1900FDEA65 /* RegisterRxSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BE5ED52563AC1900FDEA65 /* RegisterRxSwiftUITests.swift */; };
 		10BE5EE52563AD7500FDEA65 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 10BE5EE42563AD7500FDEA65 /* RxSwift */; };
 		10BE5EE72563AD7500FDEA65 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 10BE5EE62563AD7500FDEA65 /* RxCocoa */; };
+		10F013052568EF5B00FB6DD2 /* RegisterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F013042568EF5B00FB6DD2 /* RegisterPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		10BE5ED12563AC1900FDEA65 /* RegisterRxSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RegisterRxSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		10BE5ED52563AC1900FDEA65 /* RegisterRxSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRxSwiftUITests.swift; sourceTree = "<group>"; };
 		10BE5ED72563AC1900FDEA65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		10F013042568EF5B00FB6DD2 /* RegisterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,9 +107,8 @@
 		10BE5EAF2563AC1800FDEA65 /* RegisterRxSwift */ = {
 			isa = PBXGroup;
 			children = (
-				10BE5EB02563AC1800FDEA65 /* AppDelegate.swift */,
-				10BE5EB22563AC1800FDEA65 /* SceneDelegate.swift */,
-				10BE5EB72563AC1800FDEA65 /* ContentView.swift */,
+				10F013032568EF3E00FB6DD2 /* Presenter */,
+				10F01302256804CF00FB6DD2 /* App */,
 				10BE5EB92563AC1900FDEA65 /* Assets.xcassets */,
 				10BE5EBE2563AC1900FDEA65 /* LaunchScreen.storyboard */,
 				10BE5EC12563AC1900FDEA65 /* Info.plist */,
@@ -141,6 +142,24 @@
 				10BE5ED72563AC1900FDEA65 /* Info.plist */,
 			);
 			path = RegisterRxSwiftUITests;
+			sourceTree = "<group>";
+		};
+		10F01302256804CF00FB6DD2 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				10BE5EB02563AC1800FDEA65 /* AppDelegate.swift */,
+				10BE5EB22563AC1800FDEA65 /* SceneDelegate.swift */,
+				10BE5EB72563AC1800FDEA65 /* ContentView.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		10F013032568EF3E00FB6DD2 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				10F013042568EF5B00FB6DD2 /* RegisterPresenter.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,6 +300,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10F013052568EF5B00FB6DD2 /* RegisterPresenter.swift in Sources */,
 				10BE5EB12563AC1800FDEA65 /* AppDelegate.swift in Sources */,
 				10BE5EB32563AC1800FDEA65 /* SceneDelegate.swift in Sources */,
 				10BE5EB82563AC1800FDEA65 /* ContentView.swift in Sources */,
