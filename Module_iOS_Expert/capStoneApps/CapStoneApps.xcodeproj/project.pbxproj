@@ -36,7 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		108029542551A603004069BB /* capStoneApps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = capStoneApps.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		108029542551A603004069BB /* CapStoneApps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CapStoneApps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		108029572551A603004069BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		108029592551A603004069BB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		1080295C2551A603004069BB /* capStoneApps.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = capStoneApps.xcdatamodel; sourceTree = "<group>"; };
@@ -45,10 +45,10 @@
 		108029632551A604004069BB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		108029662551A604004069BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		108029682551A604004069BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1080296D2551A604004069BB /* capStoneAppsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = capStoneAppsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1080296D2551A604004069BB /* CapStoneAppsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CapStoneAppsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		108029712551A604004069BB /* capStoneAppsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = capStoneAppsTests.swift; sourceTree = "<group>"; };
 		108029732551A604004069BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		108029782551A604004069BB /* capStoneAppsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = capStoneAppsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		108029782551A604004069BB /* CapStoneAppsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CapStoneAppsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1080297C2551A604004069BB /* capStoneAppsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = capStoneAppsUITests.swift; sourceTree = "<group>"; };
 		1080297E2551A604004069BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -101,9 +101,9 @@
 		108029552551A603004069BB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				108029542551A603004069BB /* capStoneApps.app */,
-				1080296D2551A604004069BB /* capStoneAppsTests.xctest */,
-				108029782551A604004069BB /* capStoneAppsUITests.xctest */,
+				108029542551A603004069BB /* CapStoneApps.app */,
+				1080296D2551A604004069BB /* CapStoneAppsTests.xctest */,
+				108029782551A604004069BB /* CapStoneAppsUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -150,9 +150,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		108029532551A603004069BB /* capStoneApps */ = {
+		108029532551A603004069BB /* CapStoneApps */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 108029812551A604004069BB /* Build configuration list for PBXNativeTarget "capStoneApps" */;
+			buildConfigurationList = 108029812551A604004069BB /* Build configuration list for PBXNativeTarget "CapStoneApps" */;
 			buildPhases = (
 				108029502551A603004069BB /* Sources */,
 				108029512551A603004069BB /* Frameworks */,
@@ -163,14 +163,14 @@
 			);
 			dependencies = (
 			);
-			name = capStoneApps;
+			name = CapStoneApps;
 			productName = capStoneApps;
-			productReference = 108029542551A603004069BB /* capStoneApps.app */;
+			productReference = 108029542551A603004069BB /* CapStoneApps.app */;
 			productType = "com.apple.product-type.application";
 		};
-		1080296C2551A604004069BB /* capStoneAppsTests */ = {
+		1080296C2551A604004069BB /* CapStoneAppsTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 108029842551A604004069BB /* Build configuration list for PBXNativeTarget "capStoneAppsTests" */;
+			buildConfigurationList = 108029842551A604004069BB /* Build configuration list for PBXNativeTarget "CapStoneAppsTests" */;
 			buildPhases = (
 				108029692551A604004069BB /* Sources */,
 				1080296A2551A604004069BB /* Frameworks */,
@@ -181,14 +181,14 @@
 			dependencies = (
 				1080296F2551A604004069BB /* PBXTargetDependency */,
 			);
-			name = capStoneAppsTests;
+			name = CapStoneAppsTests;
 			productName = capStoneAppsTests;
-			productReference = 1080296D2551A604004069BB /* capStoneAppsTests.xctest */;
+			productReference = 1080296D2551A604004069BB /* CapStoneAppsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		108029772551A604004069BB /* capStoneAppsUITests */ = {
+		108029772551A604004069BB /* CapStoneAppsUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 108029872551A604004069BB /* Build configuration list for PBXNativeTarget "capStoneAppsUITests" */;
+			buildConfigurationList = 108029872551A604004069BB /* Build configuration list for PBXNativeTarget "CapStoneAppsUITests" */;
 			buildPhases = (
 				108029742551A604004069BB /* Sources */,
 				108029752551A604004069BB /* Frameworks */,
@@ -199,9 +199,9 @@
 			dependencies = (
 				1080297A2551A604004069BB /* PBXTargetDependency */,
 			);
-			name = capStoneAppsUITests;
+			name = CapStoneAppsUITests;
 			productName = capStoneAppsUITests;
-			productReference = 108029782551A604004069BB /* capStoneAppsUITests.xctest */;
+			productReference = 108029782551A604004069BB /* CapStoneAppsUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -227,7 +227,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 1080294F2551A603004069BB /* Build configuration list for PBXProject "capStoneApps" */;
+			buildConfigurationList = 1080294F2551A603004069BB /* Build configuration list for PBXProject "CapStoneApps" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -240,9 +240,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				108029532551A603004069BB /* capStoneApps */,
-				1080296C2551A604004069BB /* capStoneAppsTests */,
-				108029772551A604004069BB /* capStoneAppsUITests */,
+				108029532551A603004069BB /* CapStoneApps */,
+				1080296C2551A604004069BB /* CapStoneAppsTests */,
+				108029772551A604004069BB /* CapStoneAppsUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -327,12 +327,12 @@
 /* Begin PBXTargetDependency section */
 		1080296F2551A604004069BB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 108029532551A603004069BB /* capStoneApps */;
+			target = 108029532551A603004069BB /* CapStoneApps */;
 			targetProxy = 1080296E2551A604004069BB /* PBXContainerItemProxy */;
 		};
 		1080297A2551A604004069BB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 108029532551A603004069BB /* capStoneApps */;
+			target = 108029532551A603004069BB /* CapStoneApps */;
 			targetProxy = 108029792551A604004069BB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -518,7 +518,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/capStoneApps.app/capStoneApps";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CapStoneApps.app/CapStoneApps";
 			};
 			name = Debug;
 		};
@@ -539,7 +539,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/capStoneApps.app/capStoneApps";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CapStoneApps.app/CapStoneApps";
 			};
 			name = Release;
 		};
@@ -584,7 +584,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1080294F2551A603004069BB /* Build configuration list for PBXProject "capStoneApps" */ = {
+		1080294F2551A603004069BB /* Build configuration list for PBXProject "CapStoneApps" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1080297F2551A604004069BB /* Debug */,
@@ -593,7 +593,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		108029812551A604004069BB /* Build configuration list for PBXNativeTarget "capStoneApps" */ = {
+		108029812551A604004069BB /* Build configuration list for PBXNativeTarget "CapStoneApps" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				108029822551A604004069BB /* Debug */,
@@ -602,7 +602,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		108029842551A604004069BB /* Build configuration list for PBXNativeTarget "capStoneAppsTests" */ = {
+		108029842551A604004069BB /* Build configuration list for PBXNativeTarget "CapStoneAppsTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				108029852551A604004069BB /* Debug */,
@@ -611,7 +611,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		108029872551A604004069BB /* Build configuration list for PBXNativeTarget "capStoneAppsUITests" */ = {
+		108029872551A604004069BB /* Build configuration list for PBXNativeTarget "CapStoneAppsUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				108029882551A604004069BB /* Debug */,
