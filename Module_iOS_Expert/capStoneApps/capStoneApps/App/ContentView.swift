@@ -11,25 +11,31 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         TabView {
-            HomeView().tabItem({
-            Image("\(ConstantVal.TabBarImage.homeTabBar)").renderingMode(.template)
-                Text("\(ConstantVal.TabBarText.homeTabBar)")
+            MovieView().tabItem({
+            Image("\(ConstantVal.TabBarImage.movieTabBar)").renderingMode(.template)
+                Text("\(ConstantVal.TabBarText.movieTabBar)")
             }).tag(0)
-            
-            SearchPageView().tabItem({
-            Image("\(ConstantVal.TabBarImage.searchTabBar)").renderingMode(.template)
-                Text("\(ConstantVal.TabBarText.searchTabBar)")
+
+            SportView().tabItem({
+            Image("\(ConstantVal.TabBarImage.sportTabBar)").renderingMode(.template)
+                Text("\(ConstantVal.TabBarText.sportTabBar)")
             }).tag(1)
-            
-            FavoritePageView().tabItem({
-            Image("\(ConstantVal.TabBarImage.favoriteTabBar)").renderingMode(.template)
-                Text("\(ConstantVal.TabBarText.favoriteTabBar)")
+
+            GameView().tabItem({
+            Image("\(ConstantVal.TabBarImage.gameTabBar)").renderingMode(.template)
+                Text("\(ConstantVal.TabBarText.gameTabBar)")
             }).tag(2)
-            
+
+            TravelView().tabItem({
+            Image("\(ConstantVal.TabBarImage.travelTabBar)").renderingMode(.template)
+                Text("\(ConstantVal.TabBarText.travelTabBar)")
+            }).tag(3)
+
             ProfileView().tabItem({
             Image("\(ConstantVal.TabBarImage.profileTabBar)").renderingMode(.template)
                 Text("\(ConstantVal.TabBarText.profileTabBar)")
-            }).tag(3)
+            }).tag(4)
+
         }.accentColor(Color(red: 16.0/255, green: 152.0/255, blue: 251.0/255, opacity: 1.0))
     }
 }

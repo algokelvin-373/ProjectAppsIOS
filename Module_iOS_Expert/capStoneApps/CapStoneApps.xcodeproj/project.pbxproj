@@ -12,6 +12,7 @@
 		100F37F625715B94005EC043 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100F37F525715B94005EC043 /* GameView.swift */; };
 		100F37F825715BDD005EC043 /* TravelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100F37F725715BDD005EC043 /* TravelView.swift */; };
 		100F37FA25715BF1005EC043 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100F37F925715BF1005EC043 /* ProfileView.swift */; };
+		100F37FD25715CF8005EC043 /* ConstantVal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100F37FC25715CF8005EC043 /* ConstantVal.swift */; };
 		108029582551A603004069BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108029572551A603004069BB /* AppDelegate.swift */; };
 		1080295A2551A603004069BB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108029592551A603004069BB /* SceneDelegate.swift */; };
 		1080295D2551A603004069BB /* capStoneApps.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1080295B2551A603004069BB /* capStoneApps.xcdatamodeld */; };
@@ -46,6 +47,7 @@
 		100F37F525715B94005EC043 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		100F37F725715BDD005EC043 /* TravelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelView.swift; sourceTree = "<group>"; };
 		100F37F925715BF1005EC043 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		100F37FC25715CF8005EC043 /* ConstantVal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantVal.swift; sourceTree = "<group>"; };
 		108029542551A603004069BB /* CapStoneApps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CapStoneApps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		108029572551A603004069BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		108029592551A603004069BB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +112,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		100F37FB25715CE4005EC043 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				100F37FC25715CF8005EC043 /* ConstantVal.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		1080294B2551A603004069BB = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +143,7 @@
 		108029562551A603004069BB /* capStoneApps */ = {
 			isa = PBXGroup;
 			children = (
+				100F37FB25715CE4005EC043 /* Utils */,
 				100F37F0257159E3005EC043 /* View */,
 				100F37EE256F6C08005EC043 /* App */,
 				108029602551A604004069BB /* Assets.xcassets */,
@@ -323,6 +334,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				100F37F225715B59005EC043 /* MovieView.swift in Sources */,
+				100F37FD25715CF8005EC043 /* ConstantVal.swift in Sources */,
 				100F37FA25715BF1005EC043 /* ProfileView.swift in Sources */,
 				108029582551A603004069BB /* AppDelegate.swift in Sources */,
 				1080295A2551A603004069BB /* SceneDelegate.swift in Sources */,
