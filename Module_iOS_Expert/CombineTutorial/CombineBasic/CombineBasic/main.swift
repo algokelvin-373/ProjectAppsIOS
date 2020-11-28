@@ -27,3 +27,14 @@ examplePublisher.sink(receiveCompletion: { err in
 })
 
 print("\n--END of Subscriber--\n")
+
+print("--Operator--")
+
+Publishers.Sequence(sequence: ["1", "2", "3", "4", "5", "6", "7", "8", "9"] )
+    .map { Int($0) ?? 0 }
+    .filter { $0%2 == 1 }
+    .print()
+    .count()
+    .sink(receiveValue: { print("Total bilangan ganjil adalah \($0)") })
+
+print("\n--END of Operator--\n")
