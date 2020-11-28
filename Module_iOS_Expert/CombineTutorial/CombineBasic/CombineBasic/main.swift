@@ -28,6 +28,7 @@ examplePublisher.sink(receiveCompletion: { err in
 
 print("\n--END of Subscriber--\n")
 
+/**Combine Tutorial - Operator**/
 print("--Operator--")
 
 Publishers.Sequence(sequence: ["1", "2", "3", "4", "5", "6", "7", "8", "9"] )
@@ -38,3 +39,18 @@ Publishers.Sequence(sequence: ["1", "2", "3", "4", "5", "6", "7", "8", "9"] )
     .sink(receiveValue: { print("Total bilangan ganjil adalah \($0)") })
 
 print("\n--END of Operator--\n")
+
+/**Combine Tutorial - Subsribes and Receive**/
+print("--Subsribes and Receive--")
+
+private func getEmployeeNames() -> Publishers.Sequence<[String], Never> {
+  let employees = ["Buchori", "Dimas", "Arif", "Gilang", "Widy"]
+  return Publishers.Sequence(sequence: employees)
+}
+
+getEmployeeNames()
+  .subscribe(on: DispatchQueue.global(qos: .background))
+  .receive(on: RunLoop.main)
+  .sink(receiveValue: { print($0) } )
+
+print("\n--END of Subsribes and Receive--\n")
