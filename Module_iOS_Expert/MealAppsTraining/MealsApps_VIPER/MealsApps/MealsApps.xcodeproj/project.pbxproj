@@ -78,6 +78,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		104BC2AE2572BC6800ABDB36 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				108029182551A205004069BB /* AppDelegate.swift */,
+				1080291A2551A205004069BB /* SceneDelegate.swift */,
+				1080291F2551A205004069BB /* ContentView.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
 		1080290C2551A205004069BB = {
 			isa = PBXGroup;
 			children = (
@@ -101,9 +111,7 @@
 		108029172551A205004069BB /* MealsApps */ = {
 			isa = PBXGroup;
 			children = (
-				108029182551A205004069BB /* AppDelegate.swift */,
-				1080291A2551A205004069BB /* SceneDelegate.swift */,
-				1080291F2551A205004069BB /* ContentView.swift */,
+				104BC2AE2572BC6800ABDB36 /* App */,
 				108029212551A208004069BB /* Assets.xcassets */,
 				108029262551A208004069BB /* LaunchScreen.storyboard */,
 				108029292551A208004069BB /* Info.plist */,
