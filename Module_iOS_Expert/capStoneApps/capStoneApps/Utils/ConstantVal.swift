@@ -9,6 +9,9 @@
 import Foundation
 
 struct ConstantVal {
+    struct ProfileUser {
+        static let aboutMe = "My name is Kelvin Herwanda Tandrio. I graduated from the Department of Informatics at Universitas Sebelas Maret, Surakarta."
+    }
     struct TabBarImage {
         static let movieTabBar = "baseline_movie_black_36pt"
         static let sportTabBar = "baseline_sports_soccer_black_36pt"
