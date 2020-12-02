@@ -53,6 +53,48 @@ struct ProfileView: View {
                     .offset(y: -20.0)
                 }
                 .padding(.top, 16.0)
+
+                Text("Your Favorite")
+                    .font(.title)
+                    .fontWeight(.semibold)
+                VStack {
+                    HStack {
+                        Image(ConstantVal.TabBarImage.movieTabBar)
+                        Text("MOVIE")
+                            .bold()
+                    }
+                }.cornerRadius(10.0)
+                .padding(EdgeInsets(top: 10, leading: 150, bottom: 10, trailing: 150))
+                .background(Color(red: 251.0/255, green: 162.0/255, blue: 134.0/255, opacity: 1.0))
+                .onTapGesture {
+                    print("You click Movie Sports")
+                }
+
+                VStack {
+                    HStack {
+                        Image(ConstantVal.TabBarImage.gameTabBar)
+                        Text("GAME")
+                            .bold()
+                    }
+                }.cornerRadius(10.0)
+                .padding(EdgeInsets(top: 10, leading: 154, bottom: 10, trailing: 154))
+                .background(Color(red: 251.0/255, green: 162.0/255, blue: 134.0/255, opacity: 1.0))
+                .onTapGesture {
+                    print("You click Game")
+                }
+
+                VStack {
+                    HStack {
+                        Image(ConstantVal.TabBarImage.sportTabBar)
+                        Text("SPORTS")
+                            .bold()
+                    }
+                }.cornerRadius(10.0)
+                .padding(EdgeInsets(top: 10, leading: 145, bottom: 10, trailing: 145))
+                .background(Color(red: 251.0/255, green: 162.0/255, blue: 134.0/255, opacity: 1.0))
+                .onTapGesture {
+                    print("You click Sports")
+                }
             }
         }
         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
