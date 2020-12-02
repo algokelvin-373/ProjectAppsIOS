@@ -10,94 +10,96 @@ import SwiftUI
 
 struct ProfileView: View {
     var body: some View {
-        VStack(alignment: .center) {
-            VStack {
-                Image("background_profile")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                Image("photos_profile")
-                    .resizable()
-                    .frame(width: 150.0, height: 150.0)
-                    .offset(y: -50)
-                    .padding(.bottom, -50)
-
-                Text("Kelvin Herwanda Tandrio")
-                    .font(.custom("Roboto-Bold", size: 30))
-                    .frame(minWidth: 0, maxWidth: .infinity)
-                Text("Android Developer")
-                    .font(.custom("Roboto-Medium", size: 25))
-                    .frame(minWidth: 0, maxWidth: .infinity)
-                Text("TSM Technology")
-                    .font(.custom("Roboto-Medium", size: 20))
-                    .frame(minWidth: 0, maxWidth: .infinity)
-
+        ScrollView {
+            VStack(alignment: .center) {
                 VStack {
-                    Text("ABOUT ME")
-                        .padding(.leading, 50.0)
-                        .padding(.trailing, 50.0)
-                        .padding(.top, 10.0)
-                        .padding(.bottom, 30.0)
-                        .font(.custom("Roboto-Regular", size: 20))
-                        .background(Color(red: 251.0/255, green: 162.0/255, blue: 134.0/255, opacity: 1.0))
-                        .cornerRadius(20.0)
+                    Image("background_profile")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                    Image("photos_profile")
+                        .resizable()
+                        .frame(width: 150.0, height: 150.0)
+                        .offset(y: -50)
+                        .padding(.bottom, -50)
+
+                    Text("Kelvin Herwanda Tandrio")
+                        .font(.custom("Roboto-Bold", size: 30))
+                        .frame(minWidth: 0, maxWidth: .infinity)
+                    Text("Android Developer")
+                        .font(.custom("Roboto-Medium", size: 25))
+                        .frame(minWidth: 0, maxWidth: .infinity)
+                    Text("TSM Technology")
+                        .font(.custom("Roboto-Medium", size: 20))
+                        .frame(minWidth: 0, maxWidth: .infinity)
 
                     VStack {
-                        Text(ConstantVal.ProfileUser.aboutMe)
-                            .font(.custom("Roboto-Regular", size: 15))
-                            .lineLimit(50)
-                            .padding(.all, 16.0)
-                            .border(Color(red: 251.0/255, green: 135.0/255, blue: 0.0/255, opacity: 1.0), width: 1)
-                    }
-                    .background(Color.white)
-                    .cornerRadius(20.0)
-                    .offset(y: -20.0)
-                }
-                .padding(.top, 16.0)
+                        Text("ABOUT ME")
+                            .padding(.leading, 50.0)
+                            .padding(.trailing, 50.0)
+                            .padding(.top, 10.0)
+                            .padding(.bottom, 30.0)
+                            .font(.custom("Roboto-Regular", size: 20))
+                            .background(Color(red: 251.0/255, green: 162.0/255, blue: 134.0/255, opacity: 1.0))
+                            .cornerRadius(20.0)
 
-                Text("Your Favorite")
-                    .font(.title)
-                    .fontWeight(.semibold)
-                VStack {
-                    HStack {
-                        Image(ConstantVal.TabBarImage.movieTabBar)
-                        Text("MOVIE")
-                            .bold()
+                        VStack {
+                            Text(ConstantVal.ProfileUser.aboutMe)
+                                .font(.custom("Roboto-Regular", size: 15))
+                                .lineLimit(50)
+                                .padding(.all, 16.0)
+                                .border(Color(red: 251.0/255, green: 135.0/255, blue: 0.0/255, opacity: 1.0), width: 1)
+                        }
+                        .background(Color.white)
+                        .cornerRadius(20.0)
+                        .offset(y: -20.0)
                     }
-                }.cornerRadius(10.0)
-                .padding(EdgeInsets(top: 10, leading: 150, bottom: 10, trailing: 150))
-                .background(Color(red: 251.0/255, green: 162.0/255, blue: 134.0/255, opacity: 1.0))
-                .onTapGesture {
-                    print("You click Movie Sports")
-                }
+                    .padding(.top, 16.0)
 
-                VStack {
-                    HStack {
-                        Image(ConstantVal.TabBarImage.gameTabBar)
-                        Text("GAME")
-                            .bold()
+                    Text("Your Favorite")
+                        .font(.title)
+                        .fontWeight(.semibold)
+                    VStack {
+                        HStack {
+                            Image(ConstantVal.TabBarImage.movieTabBar)
+                            Text("MOVIE")
+                                .bold()
+                        }
+                    }.cornerRadius(10.0)
+                    .padding(EdgeInsets(top: 10, leading: 150, bottom: 10, trailing: 150))
+                    .background(Color(red: 251.0/255, green: 162.0/255, blue: 134.0/255, opacity: 1.0))
+                    .onTapGesture {
+                        print("You click Movie Sports")
                     }
-                }.cornerRadius(10.0)
-                .padding(EdgeInsets(top: 10, leading: 154, bottom: 10, trailing: 154))
-                .background(Color(red: 251.0/255, green: 162.0/255, blue: 134.0/255, opacity: 1.0))
-                .onTapGesture {
-                    print("You click Game")
-                }
 
-                VStack {
-                    HStack {
-                        Image(ConstantVal.TabBarImage.sportTabBar)
-                        Text("SPORTS")
-                            .bold()
+                    VStack {
+                        HStack {
+                            Image(ConstantVal.TabBarImage.gameTabBar)
+                            Text("GAME")
+                                .bold()
+                        }
+                    }.cornerRadius(10.0)
+                    .padding(EdgeInsets(top: 10, leading: 154, bottom: 10, trailing: 154))
+                    .background(Color(red: 251.0/255, green: 162.0/255, blue: 134.0/255, opacity: 1.0))
+                    .onTapGesture {
+                        print("You click Game")
                     }
-                }.cornerRadius(10.0)
-                .padding(EdgeInsets(top: 10, leading: 145, bottom: 10, trailing: 145))
-                .background(Color(red: 251.0/255, green: 162.0/255, blue: 134.0/255, opacity: 1.0))
-                .onTapGesture {
-                    print("You click Sports")
+
+                    VStack {
+                        HStack {
+                            Image(ConstantVal.TabBarImage.sportTabBar)
+                            Text("SPORTS")
+                                .bold()
+                        }
+                    }.cornerRadius(10.0)
+                    .padding(EdgeInsets(top: 10, leading: 145, bottom: 10, trailing: 145))
+                    .background(Color(red: 251.0/255, green: 162.0/255, blue: 134.0/255, opacity: 1.0))
+                    .onTapGesture {
+                        print("You click Sports")
+                    }
                 }
             }
+            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
         }
-        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
     }
 }
 
