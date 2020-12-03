@@ -30,6 +30,8 @@
 		10D0A68725794C0200BA5712 /* CallAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D0A68625794C0200BA5712 /* CallAPI.swift */; };
 		10D0A68A25794DF200BA5712 /* CustomeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D0A68925794DF200BA5712 /* CustomeError.swift */; };
 		10D0A68D25795B6500BA5712 /* CategoryMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D0A68C25795B6500BA5712 /* CategoryMapper.swift */; };
+		10D0A68F25795D4500BA5712 /* MealInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D0A68E25795D4500BA5712 /* MealInteractor.swift */; };
+		10D0A69125795D6100BA5712 /* MealUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D0A69025795D6100BA5712 /* MealUseCaseProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +81,8 @@
 		10D0A68625794C0200BA5712 /* CallAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallAPI.swift; sourceTree = "<group>"; };
 		10D0A68925794DF200BA5712 /* CustomeError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomeError.swift; sourceTree = "<group>"; };
 		10D0A68C25795B6500BA5712 /* CategoryMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryMapper.swift; sourceTree = "<group>"; };
+		10D0A68E25795D4500BA5712 /* MealInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealInteractor.swift; sourceTree = "<group>"; };
+		10D0A69025795D6100BA5712 /* MealUseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealUseCaseProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +149,7 @@
 			children = (
 				105A1D7F25780DB800E25E84 /* UseCase */,
 				105A1D7E25780DAF00E25E84 /* Protocol */,
+				10D0A68E25795D4500BA5712 /* MealInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -155,6 +160,7 @@
 				105A1D8025780DD000E25E84 /* MealProtocol.swift */,
 				10D0A67D2579482E00BA5712 /* MealDataSourceProtocol.swift */,
 				10D0A67F2579496500BA5712 /* MealRepositoryProtocol.swift */,
+				10D0A69025795D6100BA5712 /* MealUseCaseProtocol.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -461,11 +467,13 @@
 				108029202551A205004069BB /* ContentView.swift in Sources */,
 				105A1D7C25780ACB00E25E84 /* MealRouter.swift in Sources */,
 				1080291E2551A205004069BB /* MealsApps.xcdatamodeld in Sources */,
+				10D0A68F25795D4500BA5712 /* MealInteractor.swift in Sources */,
 				105A1D8125780DD000E25E84 /* MealProtocol.swift in Sources */,
 				105A1D762578078800E25E84 /* MealView.swift in Sources */,
 				105A1D89257814FD00E25E84 /* MealRepository.swift in Sources */,
 				105A1D8325780DE100E25E84 /* MealUseCase.swift in Sources */,
 				10D0A68A25794DF200BA5712 /* CustomeError.swift in Sources */,
+				10D0A69125795D6100BA5712 /* MealUseCaseProtocol.swift in Sources */,
 				10D0A68325794B0F00BA5712 /* MealDataSource.swift in Sources */,
 				10D0A67C257946F400BA5712 /* CategoryModel.swift in Sources */,
 				10D0A68725794C0200BA5712 /* CallAPI.swift in Sources */,
