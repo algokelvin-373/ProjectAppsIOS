@@ -8,11 +8,11 @@
 
 import Foundation
 
-struct MealResponse: Decodable {
-  let meals: [Meals]
+struct CategoriesResponse: Decodable {
+  let categories: [CategoryResponse]
 }
 
-struct Meals: Decodable {
+struct CategoryResponse: Decodable {
   private enum CodingKeys: String, CodingKey {
     case idMeal = "idCategory"
     case titleMeal = "strCategory"

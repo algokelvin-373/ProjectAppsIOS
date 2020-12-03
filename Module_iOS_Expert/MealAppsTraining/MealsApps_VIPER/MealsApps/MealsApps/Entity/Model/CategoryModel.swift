@@ -8,9 +8,9 @@
 
 import Foundation
 
-struct MealModel: Equatable, Identifiable {
-  let idMeal: String
-  let titleMeal: String
-  let imageMeal: String
-  let descriptionMeal: String
+struct CategoryModel: Equatable, Identifiable {
+  let id: String
+  let title: String
+  let image: String
+  let description: String
 }
