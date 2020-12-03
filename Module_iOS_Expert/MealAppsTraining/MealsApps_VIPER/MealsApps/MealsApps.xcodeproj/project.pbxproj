@@ -13,7 +13,7 @@
 		105A1D8125780DD000E25E84 /* MealProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105A1D8025780DD000E25E84 /* MealProtocol.swift */; };
 		105A1D8325780DE100E25E84 /* MealUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105A1D8225780DE100E25E84 /* MealUseCase.swift */; };
 		105A1D89257814FD00E25E84 /* MealRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105A1D88257814FD00E25E84 /* MealRepository.swift */; };
-		105A1D8B2578154800E25E84 /* MealResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105A1D8A2578154800E25E84 /* MealResponse.swift */; };
+		105A1D8B2578154800E25E84 /* CategoriesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105A1D8A2578154800E25E84 /* CategoriesResponse.swift */; };
 		108029192551A205004069BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108029182551A205004069BB /* AppDelegate.swift */; };
 		1080291B2551A205004069BB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1080291A2551A205004069BB /* SceneDelegate.swift */; };
 		1080291E2551A205004069BB /* MealsApps.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1080291C2551A205004069BB /* MealsApps.xcdatamodeld */; };
@@ -23,6 +23,13 @@
 		108029282551A208004069BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 108029262551A208004069BB /* LaunchScreen.storyboard */; };
 		108029332551A208004069BB /* MealsAppsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108029322551A208004069BB /* MealsAppsTests.swift */; };
 		1080293E2551A208004069BB /* MealsAppsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1080293D2551A208004069BB /* MealsAppsUITests.swift */; };
+		10D0A67C257946F400BA5712 /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D0A67B257946F400BA5712 /* CategoryModel.swift */; };
+		10D0A67E2579482E00BA5712 /* MealDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D0A67D2579482E00BA5712 /* MealDataSourceProtocol.swift */; };
+		10D0A6802579496500BA5712 /* MealRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D0A67F2579496500BA5712 /* MealRepositoryProtocol.swift */; };
+		10D0A68325794B0F00BA5712 /* MealDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D0A68225794B0F00BA5712 /* MealDataSource.swift */; };
+		10D0A68725794C0200BA5712 /* CallAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D0A68625794C0200BA5712 /* CallAPI.swift */; };
+		10D0A68A25794DF200BA5712 /* CustomeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D0A68925794DF200BA5712 /* CustomeError.swift */; };
+		10D0A68D25795B6500BA5712 /* CategoryMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D0A68C25795B6500BA5712 /* CategoryMapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,7 +56,7 @@
 		105A1D8025780DD000E25E84 /* MealProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealProtocol.swift; sourceTree = "<group>"; };
 		105A1D8225780DE100E25E84 /* MealUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealUseCase.swift; sourceTree = "<group>"; };
 		105A1D88257814FD00E25E84 /* MealRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealRepository.swift; sourceTree = "<group>"; };
-		105A1D8A2578154800E25E84 /* MealResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealResponse.swift; sourceTree = "<group>"; };
+		105A1D8A2578154800E25E84 /* CategoriesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesResponse.swift; sourceTree = "<group>"; };
 		108029152551A205004069BB /* MealsApps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MealsApps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		108029182551A205004069BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1080291A2551A205004069BB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +72,13 @@
 		108029392551A208004069BB /* MealsAppsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MealsAppsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1080293D2551A208004069BB /* MealsAppsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsAppsUITests.swift; sourceTree = "<group>"; };
 		1080293F2551A208004069BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		10D0A67B257946F400BA5712 /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
+		10D0A67D2579482E00BA5712 /* MealDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDataSourceProtocol.swift; sourceTree = "<group>"; };
+		10D0A67F2579496500BA5712 /* MealRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealRepositoryProtocol.swift; sourceTree = "<group>"; };
+		10D0A68225794B0F00BA5712 /* MealDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDataSource.swift; sourceTree = "<group>"; };
+		10D0A68625794C0200BA5712 /* CallAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallAPI.swift; sourceTree = "<group>"; };
+		10D0A68925794DF200BA5712 /* CustomeError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomeError.swift; sourceTree = "<group>"; };
+		10D0A68C25795B6500BA5712 /* CategoryMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryMapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +153,8 @@
 			isa = PBXGroup;
 			children = (
 				105A1D8025780DD000E25E84 /* MealProtocol.swift */,
+				10D0A67D2579482E00BA5712 /* MealDataSourceProtocol.swift */,
+				10D0A67F2579496500BA5712 /* MealRepositoryProtocol.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -154,7 +170,7 @@
 		105A1D842578132E00E25E84 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				105A1D872578135400E25E84 /* Database */,
+				10D0A68125794AE800BA5712 /* DataSource */,
 				105A1D862578134C00E25E84 /* Api */,
 				105A1D852578134600E25E84 /* Model */,
 			);
@@ -164,7 +180,8 @@
 		105A1D852578134600E25E84 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				105A1D8A2578154800E25E84 /* MealResponse.swift */,
+				105A1D8A2578154800E25E84 /* CategoriesResponse.swift */,
+				10D0A67B257946F400BA5712 /* CategoryModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -175,13 +192,6 @@
 				105A1D88257814FD00E25E84 /* MealRepository.swift */,
 			);
 			path = Api;
-			sourceTree = "<group>";
-		};
-		105A1D872578135400E25E84 /* Database */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Database;
 			sourceTree = "<group>";
 		};
 		1080290C2551A205004069BB = {
@@ -207,6 +217,7 @@
 		108029172551A205004069BB /* MealsApps */ = {
 			isa = PBXGroup;
 			children = (
+				10D0A68425794B8600BA5712 /* Utils */,
 				105A1D842578132E00E25E84 /* Entity */,
 				105A1D7D25780D9900E25E84 /* Interactor */,
 				105A1D7A2578098600E25E84 /* Router */,
@@ -246,6 +257,48 @@
 				1080293F2551A208004069BB /* Info.plist */,
 			);
 			path = MealsAppsUITests;
+			sourceTree = "<group>";
+		};
+		10D0A68125794AE800BA5712 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				10D0A68225794B0F00BA5712 /* MealDataSource.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		10D0A68425794B8600BA5712 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				10D0A68B25795B5400BA5712 /* Mapper */,
+				10D0A68825794DE300BA5712 /* Extension */,
+				10D0A68525794BB800BA5712 /* Network */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		10D0A68525794BB800BA5712 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				10D0A68625794C0200BA5712 /* CallAPI.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		10D0A68825794DE300BA5712 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				10D0A68925794DF200BA5712 /* CustomeError.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		10D0A68B25795B5400BA5712 /* Mapper */ = {
+			isa = PBXGroup;
+			children = (
+				10D0A68C25795B6500BA5712 /* CategoryMapper.swift */,
+			);
+			path = Mapper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -400,9 +453,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10D0A6802579496500BA5712 /* MealRepositoryProtocol.swift in Sources */,
 				108029192551A205004069BB /* AppDelegate.swift in Sources */,
 				105A1D792578092A00E25E84 /* MealPresenter.swift in Sources */,
 				1080291B2551A205004069BB /* SceneDelegate.swift in Sources */,
+				10D0A67E2579482E00BA5712 /* MealDataSourceProtocol.swift in Sources */,
 				108029202551A205004069BB /* ContentView.swift in Sources */,
 				105A1D7C25780ACB00E25E84 /* MealRouter.swift in Sources */,
 				1080291E2551A205004069BB /* MealsApps.xcdatamodeld in Sources */,
@@ -410,7 +465,12 @@
 				105A1D762578078800E25E84 /* MealView.swift in Sources */,
 				105A1D89257814FD00E25E84 /* MealRepository.swift in Sources */,
 				105A1D8325780DE100E25E84 /* MealUseCase.swift in Sources */,
-				105A1D8B2578154800E25E84 /* MealResponse.swift in Sources */,
+				10D0A68A25794DF200BA5712 /* CustomeError.swift in Sources */,
+				10D0A68325794B0F00BA5712 /* MealDataSource.swift in Sources */,
+				10D0A67C257946F400BA5712 /* CategoryModel.swift in Sources */,
+				10D0A68725794C0200BA5712 /* CallAPI.swift in Sources */,
+				10D0A68D25795B6500BA5712 /* CategoryMapper.swift in Sources */,
+				105A1D8B2578154800E25E84 /* CategoriesResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
