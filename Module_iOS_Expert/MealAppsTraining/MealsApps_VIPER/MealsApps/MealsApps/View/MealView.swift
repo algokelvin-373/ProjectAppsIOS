@@ -9,13 +9,31 @@
 import SwiftUI
 
 struct MealView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
 
-struct MealView_Previews: PreviewProvider {
-    static var previews: some View {
-        MealView()
+    @ObservedObject var presenter: MealPresenter
+
+    var body: some View {
+        ZStack {
+            if presenter.loadingState {
+                VStack {
+                    Text("Loading...")
+                    ActivityIndicator()
+                }
+            } else {
+                ScrollView(.vertical, showsIndicators: false) {
+                    ForEach(self.presenter.categories,id: \.id) { category in
+                        ZStack {
+                            self.presenter.linkBuilder(for: category) {
+                                MealRowsView(category: category)
+                            }.buttonStyle(PlainButtonStyle())
+                        }.padding(8)
+                    }
+                }
+            }
+        }.onAppear {
+            if self.presenter.categories.count == 0 {
+                self.presenter.getCategories()
+            }
+        }.navigationBarTitle(Text("Meals Apps"),displayMode: .automatic)
     }
 }
