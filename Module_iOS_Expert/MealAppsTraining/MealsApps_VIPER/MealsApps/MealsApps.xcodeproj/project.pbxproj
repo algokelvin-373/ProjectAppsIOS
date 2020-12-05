@@ -14,6 +14,8 @@
 		105A1D89257814FD00E25E84 /* MealRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105A1D88257814FD00E25E84 /* MealRepository.swift */; };
 		105A1D8B2578154800E25E84 /* CategoriesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105A1D8A2578154800E25E84 /* CategoriesResponse.swift */; };
 		10609015257BE43C0070CAA5 /* Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10609014257BE43C0070CAA5 /* Injection.swift */; };
+		10609017257BE87D0070CAA5 /* MealRowsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10609016257BE87D0070CAA5 /* MealRowsView.swift */; };
+		10609019257BE9BC0070CAA5 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10609018257BE9BC0070CAA5 /* ActivityIndicator.swift */; };
 		108029192551A205004069BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108029182551A205004069BB /* AppDelegate.swift */; };
 		1080291B2551A205004069BB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1080291A2551A205004069BB /* SceneDelegate.swift */; };
 		1080291E2551A205004069BB /* MealsApps.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1080291C2551A205004069BB /* MealsApps.xcdatamodeld */; };
@@ -59,6 +61,8 @@
 		105A1D88257814FD00E25E84 /* MealRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealRepository.swift; sourceTree = "<group>"; };
 		105A1D8A2578154800E25E84 /* CategoriesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesResponse.swift; sourceTree = "<group>"; };
 		10609014257BE43C0070CAA5 /* Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injection.swift; sourceTree = "<group>"; };
+		10609016257BE87D0070CAA5 /* MealRowsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealRowsView.swift; sourceTree = "<group>"; };
+		10609018257BE9BC0070CAA5 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		108029152551A205004069BB /* MealsApps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MealsApps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		108029182551A205004069BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1080291A2551A205004069BB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -124,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				105A1D752578078800E25E84 /* MealView.swift */,
+				10609016257BE87D0070CAA5 /* MealRowsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -207,6 +212,14 @@
 			path = DI;
 			sourceTree = "<group>";
 		};
+		1060901A257BE9C90070CAA5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				10609018257BE9BC0070CAA5 /* ActivityIndicator.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		1080290C2551A205004069BB = {
 			isa = PBXGroup;
 			children = (
@@ -283,6 +296,7 @@
 		10D0A68425794B8600BA5712 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				1060901A257BE9C90070CAA5 /* View */,
 				10609013257BE41F0070CAA5 /* DI */,
 				10D0A68B25795B5400BA5712 /* Mapper */,
 				10D0A68825794DE300BA5712 /* Extension */,
@@ -469,6 +483,7 @@
 			files = (
 				10609015257BE43C0070CAA5 /* Injection.swift in Sources */,
 				10D0A6802579496500BA5712 /* MealRepositoryProtocol.swift in Sources */,
+				10609017257BE87D0070CAA5 /* MealRowsView.swift in Sources */,
 				108029192551A205004069BB /* AppDelegate.swift in Sources */,
 				105A1D792578092A00E25E84 /* MealPresenter.swift in Sources */,
 				1080291B2551A205004069BB /* SceneDelegate.swift in Sources */,
@@ -482,6 +497,7 @@
 				105A1D89257814FD00E25E84 /* MealRepository.swift in Sources */,
 				10D0A68A25794DF200BA5712 /* CustomeError.swift in Sources */,
 				10D0A69125795D6100BA5712 /* MealUseCaseProtocol.swift in Sources */,
+				10609019257BE9BC0070CAA5 /* ActivityIndicator.swift in Sources */,
 				10D0A68325794B0F00BA5712 /* MealDataSource.swift in Sources */,
 				10D0A67C257946F400BA5712 /* CategoryModel.swift in Sources */,
 				10D0A68725794C0200BA5712 /* CallAPI.swift in Sources */,

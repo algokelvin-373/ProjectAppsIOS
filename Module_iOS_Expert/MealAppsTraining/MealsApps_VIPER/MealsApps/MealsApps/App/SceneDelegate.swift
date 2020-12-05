@@ -16,9 +16,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene,
                willConnectTo session: UISceneSession,
                options connectionOptions: UIScene.ConnectionOptions) {
-        let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext
 
-        let contentView = ContentView().environment(\.managedObjectContext, context!)
+        let mealUseCase = Injection.init().provideMeal()
+
+        let mealPresenter = MealPresenter(mealUseCase: mealUseCase)
+
+        let contentView = ContentView().environmentObject(mealPresenter)
 
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {
