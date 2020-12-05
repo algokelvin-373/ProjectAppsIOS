@@ -11,9 +11,9 @@
 		105A1D792578092A00E25E84 /* MealPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105A1D782578092A00E25E84 /* MealPresenter.swift */; };
 		105A1D7C25780ACB00E25E84 /* MealRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105A1D7B25780ACB00E25E84 /* MealRouter.swift */; };
 		105A1D8125780DD000E25E84 /* MealProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105A1D8025780DD000E25E84 /* MealProtocol.swift */; };
-		105A1D8325780DE100E25E84 /* MealUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105A1D8225780DE100E25E84 /* MealUseCase.swift */; };
 		105A1D89257814FD00E25E84 /* MealRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105A1D88257814FD00E25E84 /* MealRepository.swift */; };
 		105A1D8B2578154800E25E84 /* CategoriesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105A1D8A2578154800E25E84 /* CategoriesResponse.swift */; };
+		10609015257BE43C0070CAA5 /* Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10609014257BE43C0070CAA5 /* Injection.swift */; };
 		108029192551A205004069BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108029182551A205004069BB /* AppDelegate.swift */; };
 		1080291B2551A205004069BB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1080291A2551A205004069BB /* SceneDelegate.swift */; };
 		1080291E2551A205004069BB /* MealsApps.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1080291C2551A205004069BB /* MealsApps.xcdatamodeld */; };
@@ -56,9 +56,9 @@
 		105A1D782578092A00E25E84 /* MealPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealPresenter.swift; sourceTree = "<group>"; };
 		105A1D7B25780ACB00E25E84 /* MealRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealRouter.swift; sourceTree = "<group>"; };
 		105A1D8025780DD000E25E84 /* MealProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealProtocol.swift; sourceTree = "<group>"; };
-		105A1D8225780DE100E25E84 /* MealUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealUseCase.swift; sourceTree = "<group>"; };
 		105A1D88257814FD00E25E84 /* MealRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealRepository.swift; sourceTree = "<group>"; };
 		105A1D8A2578154800E25E84 /* CategoriesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesResponse.swift; sourceTree = "<group>"; };
+		10609014257BE43C0070CAA5 /* Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injection.swift; sourceTree = "<group>"; };
 		108029152551A205004069BB /* MealsApps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MealsApps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		108029182551A205004069BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1080291A2551A205004069BB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -149,7 +149,6 @@
 			children = (
 				105A1D7F25780DB800E25E84 /* UseCase */,
 				105A1D7E25780DAF00E25E84 /* Protocol */,
-				10D0A68E25795D4500BA5712 /* MealInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -168,7 +167,7 @@
 		105A1D7F25780DB800E25E84 /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
-				105A1D8225780DE100E25E84 /* MealUseCase.swift */,
+				10D0A68E25795D4500BA5712 /* MealInteractor.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -198,6 +197,14 @@
 				105A1D88257814FD00E25E84 /* MealRepository.swift */,
 			);
 			path = Api;
+			sourceTree = "<group>";
+		};
+		10609013257BE41F0070CAA5 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				10609014257BE43C0070CAA5 /* Injection.swift */,
+			);
+			path = DI;
 			sourceTree = "<group>";
 		};
 		1080290C2551A205004069BB = {
@@ -276,6 +283,7 @@
 		10D0A68425794B8600BA5712 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				10609013257BE41F0070CAA5 /* DI */,
 				10D0A68B25795B5400BA5712 /* Mapper */,
 				10D0A68825794DE300BA5712 /* Extension */,
 				10D0A68525794BB800BA5712 /* Network */,
@@ -459,6 +467,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10609015257BE43C0070CAA5 /* Injection.swift in Sources */,
 				10D0A6802579496500BA5712 /* MealRepositoryProtocol.swift in Sources */,
 				108029192551A205004069BB /* AppDelegate.swift in Sources */,
 				105A1D792578092A00E25E84 /* MealPresenter.swift in Sources */,
@@ -471,7 +480,6 @@
 				105A1D8125780DD000E25E84 /* MealProtocol.swift in Sources */,
 				105A1D762578078800E25E84 /* MealView.swift in Sources */,
 				105A1D89257814FD00E25E84 /* MealRepository.swift in Sources */,
-				105A1D8325780DE100E25E84 /* MealUseCase.swift in Sources */,
 				10D0A68A25794DF200BA5712 /* CustomeError.swift in Sources */,
 				10D0A69125795D6100BA5712 /* MealUseCaseProtocol.swift in Sources */,
 				10D0A68325794B0F00BA5712 /* MealDataSource.swift in Sources */,

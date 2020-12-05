@@ -14,11 +14,11 @@ class MealPresenter: ObservableObject {
     @Published var categories: [CategoryModel] = []
     @Published var errorMessage: String = ""
     @Published var loadingState: Bool = false
-    
+
     init(mealUseCase: MealUseCaseProtocol) {
       self.mealUseCase = mealUseCase
     }
-    
+
     func getCategories() {
         loadingState = true
         mealUseCase.getCategories { result in
