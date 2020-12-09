@@ -17,8 +17,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                willConnectTo session: UISceneSession,
                options connectionOptions: UIScene.ConnectionOptions) {
 
-        let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext
-        let contentView = ContentView().environment(\.managedObjectContext, context!)
+        let profileUseCase = Injection.init().provideProfile()
+
+        let profilePresenter = ProfilePresenter(profileProtocol: profileUseCase)
+
+        let contentView = ContentView().environmentObject(profilePresenter)
 
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
