@@ -9,6 +9,9 @@
 import SwiftUI
 
 struct ContentView: View {
+
+    @EnvironmentObject var profilePresenter: ProfilePresenter
+
     var body: some View {
         TabView {
             MovieView().tabItem({
@@ -31,7 +34,7 @@ struct ContentView: View {
                 Text("\(ConstantVal.TabBarText.travelTabBar)")
             }).tag(3)
 
-            ProfileView().tabItem({
+            ProfileView(profilePresenter: profilePresenter).tabItem({
             Image("\(ConstantVal.TabBarImage.profileTabBar)").renderingMode(.template)
                 Text("\(ConstantVal.TabBarText.profileTabBar)")
             }).tag(4)
