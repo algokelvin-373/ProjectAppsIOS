@@ -9,6 +9,9 @@
 import SwiftUI
 
 struct ProfileView: View {
+
+    @ObservedObject var profilePresenter: ProfilePresenter
+
     var body: some View {
         ScrollView {
             VStack(alignment: .center) {
@@ -22,13 +25,13 @@ struct ProfileView: View {
                         .offset(y: -50)
                         .padding(.bottom, -50)
 
-                    Text("Kelvin Herwanda Tandrio")
+                    Text(self.profilePresenter.profile.name)
                         .font(.custom("Roboto-Bold", size: 30))
                         .frame(minWidth: 0, maxWidth: .infinity)
-                    Text("Android Developer")
+                    Text(self.profilePresenter.profile.job)
                         .font(.custom("Roboto-Medium", size: 25))
                         .frame(minWidth: 0, maxWidth: .infinity)
-                    Text("TSM Technology")
+                    Text(self.profilePresenter.profile.company)
                         .font(.custom("Roboto-Medium", size: 20))
                         .frame(minWidth: 0, maxWidth: .infinity)
 
@@ -97,14 +100,10 @@ struct ProfileView: View {
                         print("You click Sports")
                     }
                 }
+            }.onAppear {
+                self.profilePresenter.getProfile()
             }
             .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
         }
-    }
-}
-
-struct ProfileView_Previews: PreviewProvider {
-    static var previews: some View {
-        ProfileView()
     }
 }
