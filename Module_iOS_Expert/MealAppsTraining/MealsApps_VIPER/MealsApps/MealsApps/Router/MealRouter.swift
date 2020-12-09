@@ -6,4 +6,12 @@
 //  Copyright © 2020 Kelvin HT. All rights reserved.
 //
 
-import Foundation
+import SwiftUI
+
+class MealRouter {
+    func makeDetailView(for category: CategoryModel) -> some View {
+      let detailUseCase = Injection.init().provideMealDetail(category: category)
+      let presenter = MealDetailsPresenter(detailUseCase: detailUseCase)
+      return MealDetailView(presenter: presenter)
+    }
+}
