@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct MealRowsView: View {
     
@@ -33,7 +34,7 @@ struct MealRowsView: View {
                     .lineLimit(2)
             }.padding(EdgeInsets(top: 0,leading: 16,bottom: 16,trailing: 16))
         }.frame(width: UIScreen.main.bounds.width - 32, height: 250)
-        .background(Color.random.opacity(0.3))
+        .background(Color.red)
         .cornerRadius(30)
     }
 }

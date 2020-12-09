@@ -3,11 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		1042524C2580B3A6007C29D4 /* MealDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1042524B2580B3A6007C29D4 /* MealDetailView.swift */; };
+		1042524F2580BA03007C29D4 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 1042524E2580BA03007C29D4 /* SDWebImageSwiftUI */; };
 		105A1D762578078800E25E84 /* MealView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105A1D752578078800E25E84 /* MealView.swift */; };
 		105A1D792578092A00E25E84 /* MealPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105A1D782578092A00E25E84 /* MealPresenter.swift */; };
 		105A1D7C25780ACB00E25E84 /* MealRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105A1D7B25780ACB00E25E84 /* MealRouter.swift */; };
@@ -102,6 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1042524F2580BA03007C29D4 /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +360,9 @@
 			dependencies = (
 			);
 			name = MealsApps;
+			packageProductDependencies = (
+				1042524E2580BA03007C29D4 /* SDWebImageSwiftUI */,
+			);
 			productName = MealsApps;
 			productReference = 108029152551A205004069BB /* MealsApps.app */;
 			productType = "com.apple.product-type.application";
@@ -430,6 +435,9 @@
 				Base,
 			);
 			mainGroup = 1080290C2551A205004069BB;
+			packageReferences = (
+				1042524D2580BA03007C29D4 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = 108029162551A205004069BB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -837,6 +845,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1042524D2580BA03007C29D4 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1042524E2580BA03007C29D4 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1042524D2580BA03007C29D4 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		1080291C2551A205004069BB /* MealsApps.xcdatamodeld */ = {
