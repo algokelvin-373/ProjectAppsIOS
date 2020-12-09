@@ -21,7 +21,7 @@ struct MealView: View {
                 }
             } else {
                 ScrollView(.vertical, showsIndicators: false) {
-                    ForEach(self.presenter.categories,id: \.id) { category in
+                    ForEach(self.presenter.categories, id: \.id) { category in
                         ZStack {
                             self.presenter.linkBuilder(for: category) {
                                 MealRowsView(category: category)
@@ -34,6 +34,6 @@ struct MealView: View {
             if self.presenter.categories.count == 0 {
                 self.presenter.getCategories()
             }
-        }.navigationBarTitle(Text("Meals Apps"),displayMode: .automatic)
+        }.navigationBarTitle(Text("Meals Apps"), displayMode: .automatic)
     }
 }
