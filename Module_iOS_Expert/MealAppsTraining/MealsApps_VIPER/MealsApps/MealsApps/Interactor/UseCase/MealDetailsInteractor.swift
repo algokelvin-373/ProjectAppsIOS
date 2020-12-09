@@ -13,7 +13,7 @@ class MealDetailsInteractor: MealDetailUseCaseProtocol {
   private let repository: MealRepositoryProtocol
   private let category: CategoryModel
 
-  required init(repository: MealRepositoryProtocol,category: CategoryModel) {
+  required init(repository: MealRepositoryProtocol, category: CategoryModel) {
     self.repository = repository
     self.category = category
   }

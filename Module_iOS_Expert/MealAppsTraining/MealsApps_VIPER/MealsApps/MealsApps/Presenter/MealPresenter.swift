@@ -38,7 +38,7 @@ class MealPresenter: ObservableObject {
         }
     }
 
-    func linkBuilder<Content: View>(for category: CategoryModel,@ViewBuilder content: () -> Content) -> some View {
+    func linkBuilder<Content: View>(for category: CategoryModel, @ViewBuilder content: () -> Content) -> some View {
       NavigationLink(destination: router.makeDetailView(for: category)) { content() }
     }
 }

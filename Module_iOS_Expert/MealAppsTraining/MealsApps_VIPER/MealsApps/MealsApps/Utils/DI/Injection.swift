@@ -18,7 +18,7 @@ final class Injection: NSObject {
       let repository = provideRepository()
       return MealInteractor(repository: repository)
     }
-    
+
     func provideMealDetail(category: CategoryModel) -> MealDetailUseCaseProtocol {
       let repository = provideRepository()
       return MealDetailsInteractor(repository: repository, category: category)
