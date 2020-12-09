@@ -113,10 +113,10 @@
 		100F37F0257159E3005EC043 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1042526425810746007C29D4 /* Game */,
 				1042525D2580D91C007C29D4 /* Profile */,
 				100F37F125715B59005EC043 /* MovieView.swift */,
 				100F37F325715B7F005EC043 /* SportView.swift */,
-				100F37F525715B94005EC043 /* GameView.swift */,
 				100F37F725715BDD005EC043 /* TravelView.swift */,
 			);
 			path = View;
@@ -201,6 +201,14 @@
 				104252622580E763007C29D4 /* Injection.swift */,
 			);
 			path = DI;
+			sourceTree = "<group>";
+		};
+		1042526425810746007C29D4 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				100F37F525715B94005EC043 /* GameView.swift */,
+			);
+			path = Game;
 			sourceTree = "<group>";
 		};
 		1080294B2551A603004069BB = {
