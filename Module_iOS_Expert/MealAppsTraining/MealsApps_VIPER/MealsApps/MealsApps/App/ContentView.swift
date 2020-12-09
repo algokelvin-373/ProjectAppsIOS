@@ -9,8 +9,12 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var mealPresenter: MealPresenter
+
     var body: some View {
-        Text("Hello, World!")
+        NavigationView {
+            MealView(presenter: mealPresenter)
+        }
     }
 }
 
