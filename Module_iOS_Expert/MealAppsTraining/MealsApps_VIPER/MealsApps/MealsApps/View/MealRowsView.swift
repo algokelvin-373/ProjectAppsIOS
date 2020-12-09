@@ -34,7 +34,7 @@ struct MealRowsView: View {
                     .lineLimit(2)
             }.padding(EdgeInsets(top: 0, leading: 16, bottom: 16, trailing: 16))
         }.frame(width: UIScreen.main.bounds.width - 32, height: 250)
-        .background(Color.red)
+        .background(Color(red: .random(in: 0...1), green: .random(in: 0...1), blue: .random(in: 0...1)))
         .cornerRadius(30)
     }
 }
