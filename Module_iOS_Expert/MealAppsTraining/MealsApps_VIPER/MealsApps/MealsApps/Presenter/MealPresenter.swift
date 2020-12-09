@@ -6,9 +6,10 @@
 //  Copyright © 2020 Kelvin HT. All rights reserved.
 //
 
-import Foundation
+import SwiftUI
 
 class MealPresenter: ObservableObject {
+    private let router = MealRouter()
     private let mealUseCase: MealUseCaseProtocol
 
     @Published var categories: [CategoryModel] = []
@@ -35,5 +36,9 @@ class MealPresenter: ObservableObject {
               }
             }
         }
+    }
+
+    func linkBuilder<Content: View>(for category: CategoryModel,@ViewBuilder content: () -> Content) -> some View {
+      NavigationLink(destination: router.makeDetailView(for: category)) { content() }
     }
 }
