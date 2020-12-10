@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,6 +18,7 @@
 		1042525C2580CEC7007C29D4 /* ProfileProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1042525B2580CEC7007C29D4 /* ProfileProtocol.swift */; };
 		1042525F2580DBEB007C29D4 /* ProfileEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1042525E2580DBEB007C29D4 /* ProfileEntity.swift */; };
 		104252632580E763007C29D4 /* Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104252622580E763007C29D4 /* Injection.swift */; };
+		1042526B2581D198007C29D4 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 1042526A2581D198007C29D4 /* SDWebImageSwiftUI */; };
 		1042526825810BE3007C29D4 /* GameRowsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1042526725810BE3007C29D4 /* GameRowsView.swift */; };
 		108029582551A603004069BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108029572551A603004069BB /* AppDelegate.swift */; };
 		1080295A2551A603004069BB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108029592551A603004069BB /* SceneDelegate.swift */; };
@@ -82,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1042526B2581D198007C29D4 /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +306,9 @@
 			dependencies = (
 			);
 			name = CapStoneApps;
+			packageProductDependencies = (
+				1042526A2581D198007C29D4 /* SDWebImageSwiftUI */,
+			);
 			productName = capStoneApps;
 			productReference = 108029542551A603004069BB /* CapStoneApps.app */;
 			productType = "com.apple.product-type.application";
@@ -376,6 +381,9 @@
 				Base,
 			);
 			mainGroup = 1080294B2551A603004069BB;
+			packageReferences = (
+				104252692581D198007C29D4 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = 108029552551A603004069BB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -773,6 +781,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		104252692581D198007C29D4 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1042526A2581D198007C29D4 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 104252692581D198007C29D4 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		1080295B2551A603004069BB /* capStoneApps.xcdatamodeld */ = {
