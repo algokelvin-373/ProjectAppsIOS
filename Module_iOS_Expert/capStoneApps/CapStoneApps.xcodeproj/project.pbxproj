@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,13 @@
 		100F37F825715BDD005EC043 /* TravelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100F37F725715BDD005EC043 /* TravelView.swift */; };
 		100F37FA25715BF1005EC043 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100F37F925715BF1005EC043 /* ProfileView.swift */; };
 		100F37FD25715CF8005EC043 /* ConstantVal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100F37FC25715CF8005EC043 /* ConstantVal.swift */; };
+		104252562580CDBE007C29D4 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104252552580CDBE007C29D4 /* ProfilePresenter.swift */; };
+		1042525A2580CE9B007C29D4 /* ProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104252592580CE9B007C29D4 /* ProfileInteractor.swift */; };
+		1042525C2580CEC7007C29D4 /* ProfileProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1042525B2580CEC7007C29D4 /* ProfileProtocol.swift */; };
+		1042525F2580DBEB007C29D4 /* ProfileEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1042525E2580DBEB007C29D4 /* ProfileEntity.swift */; };
+		104252632580E763007C29D4 /* Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104252622580E763007C29D4 /* Injection.swift */; };
+		1042526B2581D198007C29D4 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 1042526A2581D198007C29D4 /* SDWebImageSwiftUI */; };
+		1042526825810BE3007C29D4 /* GameRowsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1042526725810BE3007C29D4 /* GameRowsView.swift */; };
 		108029582551A603004069BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108029572551A603004069BB /* AppDelegate.swift */; };
 		1080295A2551A603004069BB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108029592551A603004069BB /* SceneDelegate.swift */; };
 		1080295D2551A603004069BB /* capStoneApps.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1080295B2551A603004069BB /* capStoneApps.xcdatamodeld */; };
@@ -48,6 +55,12 @@
 		100F37F725715BDD005EC043 /* TravelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelView.swift; sourceTree = "<group>"; };
 		100F37F925715BF1005EC043 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		100F37FC25715CF8005EC043 /* ConstantVal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantVal.swift; sourceTree = "<group>"; };
+		104252552580CDBE007C29D4 /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
+		104252592580CE9B007C29D4 /* ProfileInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInteractor.swift; sourceTree = "<group>"; };
+		1042525B2580CEC7007C29D4 /* ProfileProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileProtocol.swift; sourceTree = "<group>"; };
+		1042525E2580DBEB007C29D4 /* ProfileEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEntity.swift; sourceTree = "<group>"; };
+		104252622580E763007C29D4 /* Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injection.swift; sourceTree = "<group>"; };
+		1042526725810BE3007C29D4 /* GameRowsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRowsView.swift; sourceTree = "<group>"; };
 		108029542551A603004069BB /* CapStoneApps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CapStoneApps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		108029572551A603004069BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		108029592551A603004069BB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1042526B2581D198007C29D4 /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,11 +117,11 @@
 		100F37F0257159E3005EC043 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1042526425810746007C29D4 /* Game */,
+				1042525D2580D91C007C29D4 /* Profile */,
 				100F37F125715B59005EC043 /* MovieView.swift */,
 				100F37F325715B7F005EC043 /* SportView.swift */,
-				100F37F525715B94005EC043 /* GameView.swift */,
 				100F37F725715BDD005EC043 /* TravelView.swift */,
-				100F37F925715BF1005EC043 /* ProfileView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -115,9 +129,99 @@
 		100F37FB25715CE4005EC043 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				104252612580E756007C29D4 /* DI */,
 				100F37FC25715CF8005EC043 /* ConstantVal.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		104252502580CC8A007C29D4 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				104252582580CE7A007C29D4 /* Protocol */,
+				104252572580CE72007C29D4 /* UseCase */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		104252512580CCC5007C29D4 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				1042526525810B16007C29D4 /* Game */,
+				104252542580CDAA007C29D4 /* Profile */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		104252522580CCD0007C29D4 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				1042525E2580DBEB007C29D4 /* ProfileEntity.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		104252532580CCDF007C29D4 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		104252542580CDAA007C29D4 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				104252552580CDBE007C29D4 /* ProfilePresenter.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		104252572580CE72007C29D4 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				104252592580CE9B007C29D4 /* ProfileInteractor.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		104252582580CE7A007C29D4 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				1042525B2580CEC7007C29D4 /* ProfileProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		1042525D2580D91C007C29D4 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				100F37F925715BF1005EC043 /* ProfileView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		104252612580E756007C29D4 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				104252622580E763007C29D4 /* Injection.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		1042526425810746007C29D4 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				100F37F525715B94005EC043 /* GameView.swift */,
+				1042526725810BE3007C29D4 /* GameRowsView.swift */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		1042526525810B16007C29D4 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Game;
 			sourceTree = "<group>";
 		};
 		1080294B2551A603004069BB = {
@@ -143,6 +247,10 @@
 		108029562551A603004069BB /* capStoneApps */ = {
 			isa = PBXGroup;
 			children = (
+				104252532580CCDF007C29D4 /* Router */,
+				104252522580CCD0007C29D4 /* Entity */,
+				104252512580CCC5007C29D4 /* Presenter */,
+				104252502580CC8A007C29D4 /* Interactor */,
 				100F37FB25715CE4005EC043 /* Utils */,
 				100F37F0257159E3005EC043 /* View */,
 				100F37EE256F6C08005EC043 /* App */,
@@ -198,6 +306,9 @@
 			dependencies = (
 			);
 			name = CapStoneApps;
+			packageProductDependencies = (
+				1042526A2581D198007C29D4 /* SDWebImageSwiftUI */,
+			);
 			productName = capStoneApps;
 			productReference = 108029542551A603004069BB /* CapStoneApps.app */;
 			productType = "com.apple.product-type.application";
@@ -270,6 +381,9 @@
 				Base,
 			);
 			mainGroup = 1080294B2551A603004069BB;
+			packageReferences = (
+				104252692581D198007C29D4 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = 108029552551A603004069BB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -333,6 +447,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				104252632580E763007C29D4 /* Injection.swift in Sources */,
+				104252562580CDBE007C29D4 /* ProfilePresenter.swift in Sources */,
 				100F37F225715B59005EC043 /* MovieView.swift in Sources */,
 				100F37FD25715CF8005EC043 /* ConstantVal.swift in Sources */,
 				100F37FA25715BF1005EC043 /* ProfileView.swift in Sources */,
@@ -342,7 +458,11 @@
 				100F37F825715BDD005EC043 /* TravelView.swift in Sources */,
 				1080295F2551A603004069BB /* ContentView.swift in Sources */,
 				1080295D2551A603004069BB /* capStoneApps.xcdatamodeld in Sources */,
+				1042525A2580CE9B007C29D4 /* ProfileInteractor.swift in Sources */,
 				100F37F625715B94005EC043 /* GameView.swift in Sources */,
+				1042526825810BE3007C29D4 /* GameRowsView.swift in Sources */,
+				1042525F2580DBEB007C29D4 /* ProfileEntity.swift in Sources */,
+				1042525C2580CEC7007C29D4 /* ProfileProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -661,6 +781,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		104252692581D198007C29D4 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1042526A2581D198007C29D4 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 104252692581D198007C29D4 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		1080295B2551A603004069BB /* capStoneApps.xcdatamodeld */ = {
