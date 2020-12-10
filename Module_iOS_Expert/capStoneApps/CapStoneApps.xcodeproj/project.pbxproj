@@ -18,6 +18,7 @@
 		1042525C2580CEC7007C29D4 /* ProfileProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1042525B2580CEC7007C29D4 /* ProfileProtocol.swift */; };
 		1042525F2580DBEB007C29D4 /* ProfileEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1042525E2580DBEB007C29D4 /* ProfileEntity.swift */; };
 		104252632580E763007C29D4 /* Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104252622580E763007C29D4 /* Injection.swift */; };
+		1042526825810BE3007C29D4 /* GameRowsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1042526725810BE3007C29D4 /* GameRowsView.swift */; };
 		108029582551A603004069BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108029572551A603004069BB /* AppDelegate.swift */; };
 		1080295A2551A603004069BB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108029592551A603004069BB /* SceneDelegate.swift */; };
 		1080295D2551A603004069BB /* capStoneApps.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1080295B2551A603004069BB /* capStoneApps.xcdatamodeld */; };
@@ -58,6 +59,7 @@
 		1042525B2580CEC7007C29D4 /* ProfileProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileProtocol.swift; sourceTree = "<group>"; };
 		1042525E2580DBEB007C29D4 /* ProfileEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEntity.swift; sourceTree = "<group>"; };
 		104252622580E763007C29D4 /* Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injection.swift; sourceTree = "<group>"; };
+		1042526725810BE3007C29D4 /* GameRowsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRowsView.swift; sourceTree = "<group>"; };
 		108029542551A603004069BB /* CapStoneApps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CapStoneApps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		108029572551A603004069BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		108029592551A603004069BB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 		104252512580CCC5007C29D4 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				1042526525810B16007C29D4 /* Game */,
 				104252542580CDAA007C29D4 /* Profile */,
 			);
 			path = Presenter;
@@ -207,6 +210,14 @@
 			isa = PBXGroup;
 			children = (
 				100F37F525715B94005EC043 /* GameView.swift */,
+				1042526725810BE3007C29D4 /* GameRowsView.swift */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		1042526525810B16007C29D4 /* Game */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -441,6 +452,7 @@
 				1080295D2551A603004069BB /* capStoneApps.xcdatamodeld in Sources */,
 				1042525A2580CE9B007C29D4 /* ProfileInteractor.swift in Sources */,
 				100F37F625715B94005EC043 /* GameView.swift in Sources */,
+				1042526825810BE3007C29D4 /* GameRowsView.swift in Sources */,
 				1042525F2580DBEB007C29D4 /* ProfileEntity.swift in Sources */,
 				1042525C2580CEC7007C29D4 /* ProfileProtocol.swift in Sources */,
 			);
