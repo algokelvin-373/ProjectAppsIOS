@@ -30,6 +30,7 @@
 		1066420D25828F9000624EF9 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1066420C25828F9000624EF9 /* API.swift */; };
 		10664210258290E200624EF9 /* CustomeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1066420F258290E200624EF9 /* CustomeError.swift */; };
 		106642132582946400624EF9 /* DataMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106642122582946400624EF9 /* DataMapper.swift */; };
+		106642162582A2BF00624EF9 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106642152582A2BF00624EF9 /* ActivityIndicator.swift */; };
 		108029582551A603004069BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108029572551A603004069BB /* AppDelegate.swift */; };
 		1080295A2551A603004069BB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108029592551A603004069BB /* SceneDelegate.swift */; };
 		1080295D2551A603004069BB /* capStoneApps.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1080295B2551A603004069BB /* capStoneApps.xcdatamodeld */; };
@@ -81,6 +82,7 @@
 		1066420C25828F9000624EF9 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		1066420F258290E200624EF9 /* CustomeError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomeError.swift; sourceTree = "<group>"; };
 		106642122582946400624EF9 /* DataMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataMapper.swift; sourceTree = "<group>"; };
+		106642152582A2BF00624EF9 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		108029542551A603004069BB /* CapStoneApps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CapStoneApps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		108029572551A603004069BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		108029592551A603004069BB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 		100F37FB25715CE4005EC043 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				106642142582A2A300624EF9 /* View */,
 				106642112582945800624EF9 /* Mapper */,
 				1066420E258290D200624EF9 /* Extension */,
 				1066420925828CDF00624EF9 /* Network */,
@@ -308,6 +311,14 @@
 				106642122582946400624EF9 /* DataMapper.swift */,
 			);
 			path = Mapper;
+			sourceTree = "<group>";
+		};
+		106642142582A2A300624EF9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				106642152582A2BF00624EF9 /* ActivityIndicator.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		1080294B2551A603004069BB = {
@@ -549,6 +560,7 @@
 				1080295F2551A603004069BB /* ContentView.swift in Sources */,
 				1066420625828C1900624EF9 /* GameRepository.swift in Sources */,
 				1080295D2551A603004069BB /* capStoneApps.xcdatamodeld in Sources */,
+				106642162582A2BF00624EF9 /* ActivityIndicator.swift in Sources */,
 				1042525A2580CE9B007C29D4 /* ProfileInteractor.swift in Sources */,
 				1066420B25828E4F00624EF9 /* APIGame.swift in Sources */,
 				10664210258290E200624EF9 /* CustomeError.swift in Sources */,

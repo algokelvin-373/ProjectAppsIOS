@@ -9,13 +9,30 @@
 import SwiftUI
 
 struct GameView: View {
-    var body: some View {
-        Text("Game Page")
-    }
-}
 
-struct GameView_Previews: PreviewProvider {
-    static var previews: some View {
-        GameView()
+    @ObservedObject var presenterGame: GamePresenter
+
+    var body: some View {
+        ZStack {
+            if presenterGame.loadingState {
+                VStack {
+                    Text("Loading...")
+                    ActivityIndicator()
+                }
+            } else {
+                ScrollView(.vertical, showsIndicators: false) {
+                    ForEach(self.presenterGame.games, id: \.idGame) { game in
+                        VStack {
+                            Text(game.nameGame ?? "Empty")
+                        }
+                    }
+                }
+            }
+        }.onAppear {
+            if self.presenterGame.games.count == 0 {
+                self.presenterGame.getGames()
+            }
+        }
+        .navigationBarTitle(Text("Game"), displayMode: .automatic)
     }
 }
