@@ -11,6 +11,7 @@ import SwiftUI
 struct ContentView: View {
 
     @EnvironmentObject var profilePresenter: ProfilePresenter
+    @EnvironmentObject var gamePresenter: GamePresenter
 
     var body: some View {
         TabView {
@@ -24,7 +25,7 @@ struct ContentView: View {
                 Text("\(ConstantVal.TabBarText.sportTabBar)")
             }).tag(1)
 
-            GameView().tabItem({
+            GameView(presenterGame: gamePresenter).tabItem({
             Image("\(ConstantVal.TabBarImage.gameTabBar)").renderingMode(.template)
                 Text("\(ConstantVal.TabBarText.gameTabBar)")
             }).tag(2)
@@ -40,11 +41,5 @@ struct ContentView: View {
             }).tag(4)
 
         }.accentColor(Color(red: 16.0/255, green: 152.0/255, blue: 251.0/255, opacity: 1.0))
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
     }
 }
