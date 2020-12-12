@@ -9,13 +9,10 @@
 import SwiftUI
 
 struct PageTwoView: View {
+    
+    @ObservedObject var presenterPageTwo: PageTwoPresenter
+    
     var body: some View {
         Text("Page Two")
-    }
-}
-
-struct PageTwoView_Previews: PreviewProvider {
-    static var previews: some View {
-        PageTwoView()
     }
 }

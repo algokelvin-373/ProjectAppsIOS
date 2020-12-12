@@ -19,6 +19,11 @@
 		10CEF13C2584C1A700CF1EFE /* ConstantVal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CEF13B2584C1A700CF1EFE /* ConstantVal.swift */; };
 		10CEF13E2584C41200CF1EFE /* PageOneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CEF13D2584C41200CF1EFE /* PageOneView.swift */; };
 		10CEF1402584C45600CF1EFE /* PageTwoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CEF13F2584C45600CF1EFE /* PageTwoView.swift */; };
+		10CEF1422584CD8100CF1EFE /* MainProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CEF1412584CD8100CF1EFE /* MainProtocol.swift */; };
+		10CEF1442584CDF000CF1EFE /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CEF1432584CDF000CF1EFE /* MainInteractor.swift */; };
+		10CEF14D2584DA3A00CF1EFE /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CEF14C2584DA3A00CF1EFE /* MainRouter.swift */; };
+		10CEF14F2584E57100CF1EFE /* PageOnePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CEF14E2584E57100CF1EFE /* PageOnePresenter.swift */; };
+		10CEF1512584E57D00CF1EFE /* PageTwoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CEF1502584E57D00CF1EFE /* PageTwoPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +41,11 @@
 		10CEF13B2584C1A700CF1EFE /* ConstantVal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantVal.swift; sourceTree = "<group>"; };
 		10CEF13D2584C41200CF1EFE /* PageOneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageOneView.swift; sourceTree = "<group>"; };
 		10CEF13F2584C45600CF1EFE /* PageTwoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageTwoView.swift; sourceTree = "<group>"; };
+		10CEF1412584CD8100CF1EFE /* MainProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainProtocol.swift; sourceTree = "<group>"; };
+		10CEF1432584CDF000CF1EFE /* MainInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInteractor.swift; sourceTree = "<group>"; };
+		10CEF14C2584DA3A00CF1EFE /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
+		10CEF14E2584E57100CF1EFE /* PageOnePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageOnePresenter.swift; sourceTree = "<group>"; };
+		10CEF1502584E57D00CF1EFE /* PageTwoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageTwoPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,19 +78,17 @@
 		104AFAA025836F970042BE5F /* TabViewViper */ = {
 			isa = PBXGroup;
 			children = (
-				104AFAA125836F970042BE5F /* AppDelegate.swift */,
-				104AFAA325836F970042BE5F /* SceneDelegate.swift */,
-				104AFAA525836F970042BE5F /* ContentView.swift */,
+				10CEF14B2584D64F00CF1EFE /* Utils */,
+				10CEF14A2584D63C00CF1EFE /* Router */,
+				10CEF1492584D63300CF1EFE /* Entitiy */,
+				10CEF1482584D62600CF1EFE /* Presenter */,
+				10CEF1472584D60E00CF1EFE /* Interactor */,
+				10CEF1462584D60000CF1EFE /* View */,
+				10CEF1452584D5EE00CF1EFE /* App */,
 				104AFAA725836F980042BE5F /* Assets.xcassets */,
 				104AFAAC25836F980042BE5F /* LaunchScreen.storyboard */,
 				104AFAAF25836F980042BE5F /* Info.plist */,
 				104AFAA925836F980042BE5F /* Preview Content */,
-				104AFAB5258373D00042BE5F /* MainView.swift */,
-				104AFAB725837CC00042BE5F /* Injection.swift */,
-				104AFAB925837CCE0042BE5F /* MainPresenter.swift */,
-				10CEF13B2584C1A700CF1EFE /* ConstantVal.swift */,
-				10CEF13D2584C41200CF1EFE /* PageOneView.swift */,
-				10CEF13F2584C45600CF1EFE /* PageTwoView.swift */,
 			);
 			path = TabViewViper;
 			sourceTree = "<group>";
@@ -91,6 +99,69 @@
 				104AFAAA25836F980042BE5F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		10CEF1452584D5EE00CF1EFE /* App */ = {
+			isa = PBXGroup;
+			children = (
+				104AFAA125836F970042BE5F /* AppDelegate.swift */,
+				104AFAA325836F970042BE5F /* SceneDelegate.swift */,
+				104AFAA525836F970042BE5F /* ContentView.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		10CEF1462584D60000CF1EFE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				10CEF13D2584C41200CF1EFE /* PageOneView.swift */,
+				10CEF13F2584C45600CF1EFE /* PageTwoView.swift */,
+				104AFAB5258373D00042BE5F /* MainView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		10CEF1472584D60E00CF1EFE /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				10CEF1412584CD8100CF1EFE /* MainProtocol.swift */,
+				10CEF1432584CDF000CF1EFE /* MainInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		10CEF1482584D62600CF1EFE /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				104AFAB925837CCE0042BE5F /* MainPresenter.swift */,
+				10CEF14E2584E57100CF1EFE /* PageOnePresenter.swift */,
+				10CEF1502584E57D00CF1EFE /* PageTwoPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		10CEF1492584D63300CF1EFE /* Entitiy */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entitiy;
+			sourceTree = "<group>";
+		};
+		10CEF14A2584D63C00CF1EFE /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				10CEF14C2584DA3A00CF1EFE /* MainRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		10CEF14B2584D64F00CF1EFE /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				104AFAB725837CC00042BE5F /* Injection.swift */,
+				10CEF13B2584C1A700CF1EFE /* ConstantVal.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,9 +237,14 @@
 			files = (
 				104AFAB825837CC00042BE5F /* Injection.swift in Sources */,
 				10CEF1402584C45600CF1EFE /* PageTwoView.swift in Sources */,
+				10CEF1422584CD8100CF1EFE /* MainProtocol.swift in Sources */,
 				104AFABA25837CCE0042BE5F /* MainPresenter.swift in Sources */,
 				104AFAA225836F970042BE5F /* AppDelegate.swift in Sources */,
+				10CEF14D2584DA3A00CF1EFE /* MainRouter.swift in Sources */,
+				10CEF1512584E57D00CF1EFE /* PageTwoPresenter.swift in Sources */,
 				104AFAB6258373D00042BE5F /* MainView.swift in Sources */,
+				10CEF1442584CDF000CF1EFE /* MainInteractor.swift in Sources */,
+				10CEF14F2584E57100CF1EFE /* PageOnePresenter.swift in Sources */,
 				10CEF13C2584C1A700CF1EFE /* ConstantVal.swift in Sources */,
 				104AFAA425836F970042BE5F /* SceneDelegate.swift in Sources */,
 				10CEF13E2584C41200CF1EFE /* PageOneView.swift in Sources */,
