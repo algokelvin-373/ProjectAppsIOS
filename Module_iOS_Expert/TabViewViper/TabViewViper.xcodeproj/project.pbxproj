@@ -19,6 +19,8 @@
 		10CEF13C2584C1A700CF1EFE /* ConstantVal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CEF13B2584C1A700CF1EFE /* ConstantVal.swift */; };
 		10CEF13E2584C41200CF1EFE /* PageOneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CEF13D2584C41200CF1EFE /* PageOneView.swift */; };
 		10CEF1402584C45600CF1EFE /* PageTwoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CEF13F2584C45600CF1EFE /* PageTwoView.swift */; };
+		10CEF1422584CD8100CF1EFE /* MainProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CEF1412584CD8100CF1EFE /* MainProtocol.swift */; };
+		10CEF1442584CDF000CF1EFE /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CEF1432584CDF000CF1EFE /* MainInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		10CEF13B2584C1A700CF1EFE /* ConstantVal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantVal.swift; sourceTree = "<group>"; };
 		10CEF13D2584C41200CF1EFE /* PageOneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageOneView.swift; sourceTree = "<group>"; };
 		10CEF13F2584C45600CF1EFE /* PageTwoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageTwoView.swift; sourceTree = "<group>"; };
+		10CEF1412584CD8100CF1EFE /* MainProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainProtocol.swift; sourceTree = "<group>"; };
+		10CEF1432584CDF000CF1EFE /* MainInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,8 @@
 				10CEF13B2584C1A700CF1EFE /* ConstantVal.swift */,
 				10CEF13D2584C41200CF1EFE /* PageOneView.swift */,
 				10CEF13F2584C45600CF1EFE /* PageTwoView.swift */,
+				10CEF1412584CD8100CF1EFE /* MainProtocol.swift */,
+				10CEF1432584CDF000CF1EFE /* MainInteractor.swift */,
 			);
 			path = TabViewViper;
 			sourceTree = "<group>";
@@ -166,9 +172,11 @@
 			files = (
 				104AFAB825837CC00042BE5F /* Injection.swift in Sources */,
 				10CEF1402584C45600CF1EFE /* PageTwoView.swift in Sources */,
+				10CEF1422584CD8100CF1EFE /* MainProtocol.swift in Sources */,
 				104AFABA25837CCE0042BE5F /* MainPresenter.swift in Sources */,
 				104AFAA225836F970042BE5F /* AppDelegate.swift in Sources */,
 				104AFAB6258373D00042BE5F /* MainView.swift in Sources */,
+				10CEF1442584CDF000CF1EFE /* MainInteractor.swift in Sources */,
 				10CEF13C2584C1A700CF1EFE /* ConstantVal.swift in Sources */,
 				104AFAA425836F970042BE5F /* SceneDelegate.swift in Sources */,
 				10CEF13E2584C41200CF1EFE /* PageOneView.swift in Sources */,

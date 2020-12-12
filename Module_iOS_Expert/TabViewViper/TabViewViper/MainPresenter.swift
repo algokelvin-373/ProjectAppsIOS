@@ -7,3 +7,11 @@
 //
 
 import Foundation
+
+class MainPresenter: ObservableObject {
+    private var mainUseCase: MainProtocol
+    
+    init(mainUseCase: MainProtocol) {
+      self.mainUseCase = mainUseCase
+    }
+}

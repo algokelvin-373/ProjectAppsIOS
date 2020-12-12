@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+final class Injection: NSObject {
+    func provideMain() -> MainProtocol {
+        return MainInteractor()
+    }
+}
