@@ -9,8 +9,10 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var mainPresenter: MainPresenter
+    
     var body: some View {
-        MainView()
+        MainView(mainPresenter: mainPresenter)
     }
 }
 
