@@ -72,21 +72,17 @@
 		104AFAA025836F970042BE5F /* TabViewViper */ = {
 			isa = PBXGroup;
 			children = (
-				104AFAA125836F970042BE5F /* AppDelegate.swift */,
-				104AFAA325836F970042BE5F /* SceneDelegate.swift */,
-				104AFAA525836F970042BE5F /* ContentView.swift */,
+				10CEF14B2584D64F00CF1EFE /* Utils */,
+				10CEF14A2584D63C00CF1EFE /* Router */,
+				10CEF1492584D63300CF1EFE /* Entitiy */,
+				10CEF1482584D62600CF1EFE /* Presenter */,
+				10CEF1472584D60E00CF1EFE /* Interactor */,
+				10CEF1462584D60000CF1EFE /* View */,
+				10CEF1452584D5EE00CF1EFE /* App */,
 				104AFAA725836F980042BE5F /* Assets.xcassets */,
 				104AFAAC25836F980042BE5F /* LaunchScreen.storyboard */,
 				104AFAAF25836F980042BE5F /* Info.plist */,
 				104AFAA925836F980042BE5F /* Preview Content */,
-				104AFAB5258373D00042BE5F /* MainView.swift */,
-				104AFAB725837CC00042BE5F /* Injection.swift */,
-				104AFAB925837CCE0042BE5F /* MainPresenter.swift */,
-				10CEF13B2584C1A700CF1EFE /* ConstantVal.swift */,
-				10CEF13D2584C41200CF1EFE /* PageOneView.swift */,
-				10CEF13F2584C45600CF1EFE /* PageTwoView.swift */,
-				10CEF1412584CD8100CF1EFE /* MainProtocol.swift */,
-				10CEF1432584CDF000CF1EFE /* MainInteractor.swift */,
 			);
 			path = TabViewViper;
 			sourceTree = "<group>";
@@ -97,6 +93,66 @@
 				104AFAAA25836F980042BE5F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		10CEF1452584D5EE00CF1EFE /* App */ = {
+			isa = PBXGroup;
+			children = (
+				104AFAA125836F970042BE5F /* AppDelegate.swift */,
+				104AFAA325836F970042BE5F /* SceneDelegate.swift */,
+				104AFAA525836F970042BE5F /* ContentView.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		10CEF1462584D60000CF1EFE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				10CEF13D2584C41200CF1EFE /* PageOneView.swift */,
+				10CEF13F2584C45600CF1EFE /* PageTwoView.swift */,
+				104AFAB5258373D00042BE5F /* MainView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		10CEF1472584D60E00CF1EFE /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				10CEF1412584CD8100CF1EFE /* MainProtocol.swift */,
+				10CEF1432584CDF000CF1EFE /* MainInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		10CEF1482584D62600CF1EFE /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				104AFAB925837CCE0042BE5F /* MainPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		10CEF1492584D63300CF1EFE /* Entitiy */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entitiy;
+			sourceTree = "<group>";
+		};
+		10CEF14A2584D63C00CF1EFE /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		10CEF14B2584D64F00CF1EFE /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				104AFAB725837CC00042BE5F /* Injection.swift */,
+				10CEF13B2584C1A700CF1EFE /* ConstantVal.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
