@@ -18,11 +18,11 @@ class MainPresenter: ObservableObject {
     
     func tabViewProgram() -> some View {
         TabView {
-            PageOneView().tabItem({
+            mainRouter.goToTabOnePage().tabItem({
                 Image("\(ConstantVal.TabBarImage.oneTabBar)").renderingMode(.template)
                 Text("\(ConstantVal.TabBarText.oneTabBar)")
             }).tag(0)
-            PageTwoView().tabItem({
+            mainRouter.goToTabTwoPage().tabItem({
                 Image("\(ConstantVal.TabBarImage.twoTabBar)").renderingMode(.template)
                 Text("\(ConstantVal.TabBarText.twoTabBar)")
             }).tag(1)

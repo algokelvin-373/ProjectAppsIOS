@@ -22,6 +22,8 @@
 		10CEF1422584CD8100CF1EFE /* MainProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CEF1412584CD8100CF1EFE /* MainProtocol.swift */; };
 		10CEF1442584CDF000CF1EFE /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CEF1432584CDF000CF1EFE /* MainInteractor.swift */; };
 		10CEF14D2584DA3A00CF1EFE /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CEF14C2584DA3A00CF1EFE /* MainRouter.swift */; };
+		10CEF14F2584E57100CF1EFE /* PageOnePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CEF14E2584E57100CF1EFE /* PageOnePresenter.swift */; };
+		10CEF1512584E57D00CF1EFE /* PageTwoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CEF1502584E57D00CF1EFE /* PageTwoPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		10CEF1412584CD8100CF1EFE /* MainProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainProtocol.swift; sourceTree = "<group>"; };
 		10CEF1432584CDF000CF1EFE /* MainInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInteractor.swift; sourceTree = "<group>"; };
 		10CEF14C2584DA3A00CF1EFE /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
+		10CEF14E2584E57100CF1EFE /* PageOnePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageOnePresenter.swift; sourceTree = "<group>"; };
+		10CEF1502584E57D00CF1EFE /* PageTwoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageTwoPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +134,8 @@
 			isa = PBXGroup;
 			children = (
 				104AFAB925837CCE0042BE5F /* MainPresenter.swift */,
+				10CEF14E2584E57100CF1EFE /* PageOnePresenter.swift */,
+				10CEF1502584E57D00CF1EFE /* PageTwoPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -235,8 +241,10 @@
 				104AFABA25837CCE0042BE5F /* MainPresenter.swift in Sources */,
 				104AFAA225836F970042BE5F /* AppDelegate.swift in Sources */,
 				10CEF14D2584DA3A00CF1EFE /* MainRouter.swift in Sources */,
+				10CEF1512584E57D00CF1EFE /* PageTwoPresenter.swift in Sources */,
 				104AFAB6258373D00042BE5F /* MainView.swift in Sources */,
 				10CEF1442584CDF000CF1EFE /* MainInteractor.swift in Sources */,
+				10CEF14F2584E57100CF1EFE /* PageOnePresenter.swift in Sources */,
 				10CEF13C2584C1A700CF1EFE /* ConstantVal.swift in Sources */,
 				104AFAA425836F970042BE5F /* SceneDelegate.swift in Sources */,
 				10CEF13E2584C41200CF1EFE /* PageOneView.swift in Sources */,

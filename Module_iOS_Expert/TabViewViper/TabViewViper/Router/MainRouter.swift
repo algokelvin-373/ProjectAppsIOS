@@ -10,10 +10,12 @@ import SwiftUI
 
 class MainRouter {
     func goToTabOnePage() -> some View {
-        return PageOneView()
+        let presenterOnePage = PageOnePresenter()
+        return PageOneView(presenterPageOne: presenterOnePage)
     }
     
     func goToTabTwoPage() -> some View {
-        return PageTwoView()
+        let presenterTwoPage = PageTwoPresenter()
+        return PageTwoView(presenterPageTwo: presenterTwoPage)
     }
 }
