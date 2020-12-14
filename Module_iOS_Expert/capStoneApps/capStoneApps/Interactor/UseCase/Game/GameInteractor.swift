@@ -9,14 +9,13 @@
 import Foundation
 
 class GameInteractor: GameProtocol {
+    private let gameRepository: GameRepositoryProtocol
 
-    private let gameRepository: GameProtocol
-
-    required init(repository: GameProtocol) {
+    required init(repository: GameRepositoryProtocol) {
       self.gameRepository = repository
     }
 
-    func getGame(completion: @escaping (Result<[Games], URLError>) -> Void) {
+    func getGame(completion: @escaping (Result<[GameModel], Error>) -> Void) {
         gameRepository.getGame { result in
             completion(result)
         }
