@@ -21,9 +21,9 @@ struct GameView: View {
                 }
             } else {
                 ScrollView(.vertical, showsIndicators: false) {
-                    ForEach(self.presenterGame.games, id: \.idGame) { game in
+                    ForEach(self.presenterGame.games, id: \.id) { game in
                         VStack {
-                            Text(game.nameGame ?? "Empty")
+                            Text(game.name)
                         }
                     }
                 }
