@@ -9,5 +9,5 @@
 import Foundation
 
 protocol GameProtocol {
-  func getGame(completion: @escaping (Result<[Games], URLError>) -> Void)
+  func getGame(completion: @escaping (Result<[GameModel], Error>) -> Void)
 }
