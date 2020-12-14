@@ -11,7 +11,7 @@ import Foundation
 class GamePresenter: ObservableObject {
     private let gameUseCase: GameProtocol
 
-    @Published var games: [Games] = []
+    @Published var games: [GameModel] = []
     @Published var errorMessage: String = ""
     @Published var loadingState: Bool = false
 

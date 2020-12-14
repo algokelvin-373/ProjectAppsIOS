@@ -8,26 +8,30 @@
 
 import Foundation
 
+protocol GameDataSourceProtocol: class {
+  func getGame(result: @escaping (Result<[Games], URLError>) -> Void)
+}
+
 final class GameDataSource: NSObject {
     private override init() { }
 
     static let sharedInstance: GameDataSource =  GameDataSource()
 }
 
-extension GameDataSource: GameProtocol {
-    func getGame(completion: @escaping (Result<[Games], URLError>) -> Void) {
+extension GameDataSource: GameDataSourceProtocol {
+    func getGame(result: @escaping (Result<[Games], URLError>) -> Void) {
         guard let url = URL(string: GameEndpoints.Gets.games.url) else { return }
 
         let task = URLSession.shared.dataTask(with: url) { maybeData, maybeResponse, maybeError in
           if maybeError != nil {
-              completion(.failure(.addressUnreachable(url)))
+              result(.failure(.addressUnreachable(url)))
           } else if let data = maybeData, let response = maybeResponse as? HTTPURLResponse, response.statusCode == 200 {
               let decoder = JSONDecoder()
               do {
                 let categories = try decoder.decode(DataGame.self, from: data).results
-                  completion(.success(categories))
+                  result(.success(categories))
               } catch {
-                completion(.failure(.invalidResponse))
+                result(.failure(.invalidResponse))
               }
           }
         }
