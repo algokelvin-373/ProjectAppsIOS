@@ -31,6 +31,13 @@
 		10664210258290E200624EF9 /* CustomeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1066420F258290E200624EF9 /* CustomeError.swift */; };
 		106642132582946400624EF9 /* DataMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106642122582946400624EF9 /* DataMapper.swift */; };
 		106642162582A2BF00624EF9 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106642152582A2BF00624EF9 /* ActivityIndicator.swift */; };
+		10683D152587DD140006CB02 /* APIMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10683D142587DD140006CB02 /* APIMovie.swift */; };
+		10683D192587DFD20006CB02 /* MoviePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10683D182587DFD20006CB02 /* MoviePresenter.swift */; };
+		10683D1B2587DFE80006CB02 /* MovieEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10683D1A2587DFE80006CB02 /* MovieEntity.swift */; };
+		10683D1D2587DFFA0006CB02 /* MovieRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10683D1C2587DFFA0006CB02 /* MovieRepository.swift */; };
+		10683D1F2587E00A0006CB02 /* MovieDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10683D1E2587E00A0006CB02 /* MovieDataSource.swift */; };
+		10683D222587E03B0006CB02 /* MovieProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10683D212587E03B0006CB02 /* MovieProtocol.swift */; };
+		10683D252587E0510006CB02 /* MovieInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10683D242587E0510006CB02 /* MovieInteractor.swift */; };
 		108029582551A603004069BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108029572551A603004069BB /* AppDelegate.swift */; };
 		1080295A2551A603004069BB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108029592551A603004069BB /* SceneDelegate.swift */; };
 		1080295D2551A603004069BB /* capStoneApps.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1080295B2551A603004069BB /* capStoneApps.xcdatamodeld */; };
@@ -83,6 +90,13 @@
 		1066420F258290E200624EF9 /* CustomeError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomeError.swift; sourceTree = "<group>"; };
 		106642122582946400624EF9 /* DataMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataMapper.swift; sourceTree = "<group>"; };
 		106642152582A2BF00624EF9 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		10683D142587DD140006CB02 /* APIMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIMovie.swift; sourceTree = "<group>"; };
+		10683D182587DFD20006CB02 /* MoviePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviePresenter.swift; sourceTree = "<group>"; };
+		10683D1A2587DFE80006CB02 /* MovieEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieEntity.swift; sourceTree = "<group>"; };
+		10683D1C2587DFFA0006CB02 /* MovieRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRepository.swift; sourceTree = "<group>"; };
+		10683D1E2587E00A0006CB02 /* MovieDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDataSource.swift; sourceTree = "<group>"; };
+		10683D212587E03B0006CB02 /* MovieProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieProtocol.swift; sourceTree = "<group>"; };
+		10683D242587E0510006CB02 /* MovieInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieInteractor.swift; sourceTree = "<group>"; };
 		108029542551A603004069BB /* CapStoneApps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CapStoneApps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		108029572551A603004069BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		108029592551A603004069BB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -139,9 +153,9 @@
 		100F37F0257159E3005EC043 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				10683D162587DD820006CB02 /* Movie */,
 				1042526425810746007C29D4 /* Game */,
 				1042525D2580D91C007C29D4 /* Profile */,
-				100F37F125715B59005EC043 /* MovieView.swift */,
 				100F37F325715B7F005EC043 /* SportView.swift */,
 				100F37F725715BDD005EC043 /* TravelView.swift */,
 			);
@@ -173,6 +187,7 @@
 		104252512580CCC5007C29D4 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				10683D172587DDAA0006CB02 /* Movie */,
 				1042526525810B16007C29D4 /* Game */,
 				104252542580CDAA007C29D4 /* Profile */,
 			);
@@ -186,15 +201,9 @@
 				106642032582896D00624EF9 /* Api */,
 				1042525E2580DBEB007C29D4 /* ProfileEntity.swift */,
 				106641FE2582873900624EF9 /* GameEntity.swift */,
+				10683D1A2587DFE80006CB02 /* MovieEntity.swift */,
 			);
 			path = Entity;
-			sourceTree = "<group>";
-		};
-		104252532580CCDF007C29D4 /* Router */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Router;
 			sourceTree = "<group>";
 		};
 		104252542580CDAA007C29D4 /* Profile */ = {
@@ -208,6 +217,7 @@
 		104252572580CE72007C29D4 /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
+				10683D232587E0430006CB02 /* Movie */,
 				10664200258288D600624EF9 /* Game */,
 				104252592580CE9B007C29D4 /* ProfileInteractor.swift */,
 			);
@@ -217,6 +227,7 @@
 		104252582580CE7A007C29D4 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
+				10683D202587E02A0006CB02 /* Movie */,
 				1042526E2581D502007C29D4 /* Game */,
 				1042525B2580CEC7007C29D4 /* ProfileProtocol.swift */,
 			);
@@ -276,6 +287,7 @@
 			isa = PBXGroup;
 			children = (
 				1066420525828C1900624EF9 /* GameRepository.swift */,
+				10683D1C2587DFFA0006CB02 /* MovieRepository.swift */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -284,6 +296,7 @@
 			isa = PBXGroup;
 			children = (
 				1066420725828C4F00624EF9 /* GameDataSource.swift */,
+				10683D1E2587E00A0006CB02 /* MovieDataSource.swift */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -293,6 +306,7 @@
 			children = (
 				1066420A25828E4F00624EF9 /* APIGame.swift */,
 				1066420C25828F9000624EF9 /* API.swift */,
+				10683D142587DD140006CB02 /* APIMovie.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -321,6 +335,38 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		10683D162587DD820006CB02 /* Movie */ = {
+			isa = PBXGroup;
+			children = (
+				100F37F125715B59005EC043 /* MovieView.swift */,
+			);
+			path = Movie;
+			sourceTree = "<group>";
+		};
+		10683D172587DDAA0006CB02 /* Movie */ = {
+			isa = PBXGroup;
+			children = (
+				10683D182587DFD20006CB02 /* MoviePresenter.swift */,
+			);
+			path = Movie;
+			sourceTree = "<group>";
+		};
+		10683D202587E02A0006CB02 /* Movie */ = {
+			isa = PBXGroup;
+			children = (
+				10683D212587E03B0006CB02 /* MovieProtocol.swift */,
+			);
+			path = Movie;
+			sourceTree = "<group>";
+		};
+		10683D232587E0430006CB02 /* Movie */ = {
+			isa = PBXGroup;
+			children = (
+				10683D242587E0510006CB02 /* MovieInteractor.swift */,
+			);
+			path = Movie;
+			sourceTree = "<group>";
+		};
 		1080294B2551A603004069BB = {
 			isa = PBXGroup;
 			children = (
@@ -344,7 +390,6 @@
 		108029562551A603004069BB /* capStoneApps */ = {
 			isa = PBXGroup;
 			children = (
-				104252532580CCDF007C29D4 /* Router */,
 				104252522580CCD0007C29D4 /* Entity */,
 				104252512580CCC5007C29D4 /* Presenter */,
 				104252502580CC8A007C29D4 /* Interactor */,
@@ -549,12 +594,16 @@
 				1042526D2581D3F0007C29D4 /* GamePresenter.swift in Sources */,
 				1066420825828C4F00624EF9 /* GameDataSource.swift in Sources */,
 				104252562580CDBE007C29D4 /* ProfilePresenter.swift in Sources */,
+				10683D222587E03B0006CB02 /* MovieProtocol.swift in Sources */,
 				100F37F225715B59005EC043 /* MovieView.swift in Sources */,
 				100F37FD25715CF8005EC043 /* ConstantVal.swift in Sources */,
+				10683D192587DFD20006CB02 /* MoviePresenter.swift in Sources */,
+				10683D152587DD140006CB02 /* APIMovie.swift in Sources */,
 				100F37FA25715BF1005EC043 /* ProfileView.swift in Sources */,
 				108029582551A603004069BB /* AppDelegate.swift in Sources */,
 				1080295A2551A603004069BB /* SceneDelegate.swift in Sources */,
 				106641FF2582873900624EF9 /* GameEntity.swift in Sources */,
+				10683D1D2587DFFA0006CB02 /* MovieRepository.swift in Sources */,
 				100F37F425715B7F005EC043 /* SportView.swift in Sources */,
 				100F37F825715BDD005EC043 /* TravelView.swift in Sources */,
 				1080295F2551A603004069BB /* ContentView.swift in Sources */,
@@ -563,12 +612,15 @@
 				106642162582A2BF00624EF9 /* ActivityIndicator.swift in Sources */,
 				1042525A2580CE9B007C29D4 /* ProfileInteractor.swift in Sources */,
 				1066420B25828E4F00624EF9 /* APIGame.swift in Sources */,
+				10683D1B2587DFE80006CB02 /* MovieEntity.swift in Sources */,
 				10664210258290E200624EF9 /* CustomeError.swift in Sources */,
 				100F37F625715B94005EC043 /* GameView.swift in Sources */,
 				1042526825810BE3007C29D4 /* GameRowsView.swift in Sources */,
 				106642022582890D00624EF9 /* GameInteractor.swift in Sources */,
+				10683D1F2587E00A0006CB02 /* MovieDataSource.swift in Sources */,
 				1042525F2580DBEB007C29D4 /* ProfileEntity.swift in Sources */,
 				1042525C2580CEC7007C29D4 /* ProfileProtocol.swift in Sources */,
+				10683D252587E0510006CB02 /* MovieInteractor.swift in Sources */,
 				1066420D25828F9000624EF9 /* API.swift in Sources */,
 				104252702581D51E007C29D4 /* GameProtocol.swift in Sources */,
 			);
