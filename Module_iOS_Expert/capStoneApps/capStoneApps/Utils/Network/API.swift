@@ -10,6 +10,10 @@ import Foundation
 
 struct API {
     static let baseUrlGame = "https://api.rawg.io/api/"
+    static let baseUrlMovie = "https://api.themoviedb.org/3/movie/"
+}
+struct APIKey {
+    static let apiKeyMovie = "d5264dcf7abdc1371e3cdd46e26f9130"
 }
 
 protocol Endpoint {
