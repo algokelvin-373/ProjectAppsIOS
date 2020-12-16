@@ -19,13 +19,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         let profileUseCase = Injection.init().provideProfile()
         let gameUseCase = Injection.init().provideGame()
+        let movieUsecase = Injection.init().provideMovie()
 
         let profilePresenter = ProfilePresenter(profileProtocol: profileUseCase)
         let gamePresenter = GamePresenter(gameUseCase: gameUseCase)
+        let moviePresenter = MoviePresenter(movieUseCase: movieUsecase)
 
         let contentView = ContentView()
             .environmentObject(profilePresenter)
             .environmentObject(gamePresenter)
+            .environmentObject(moviePresenter)
 
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)

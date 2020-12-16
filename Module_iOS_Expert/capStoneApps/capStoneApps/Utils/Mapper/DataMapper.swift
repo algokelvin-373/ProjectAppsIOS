@@ -20,4 +20,16 @@ final class DataMapper {
             )
         }
     }
+
+    static func mapMovieResponsesToDomains(input movieResponses: [Movies]) -> [MovieModel] {
+        return movieResponses.map { result in
+            return MovieModel(
+                id: result.idMovie ?? 0,
+                name: result.nameMovie ?? "Unknow",
+                backgroundImage: result.backgroundImageMovie ?? "Unknow",
+                released: result.releasedMovie ?? "Unknow",
+                rating: result.ratingMovie ?? 0.0
+            )
+        }
+    }
 }

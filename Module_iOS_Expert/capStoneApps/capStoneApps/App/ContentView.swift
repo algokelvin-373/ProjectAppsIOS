@@ -12,10 +12,11 @@ struct ContentView: View {
 
     @EnvironmentObject var profilePresenter: ProfilePresenter
     @EnvironmentObject var gamePresenter: GamePresenter
+    @EnvironmentObject var moviePresenter: MoviePresenter
 
     var body: some View {
         TabView {
-            MovieView().tabItem({
+            MovieView(presenterMovie: moviePresenter).tabItem({
                 Image("\(ConstantVal.TabBarImage.movieTabBar)").renderingMode(.template)
                 Text("\(ConstantVal.TabBarText.movieTabBar)")
             }).tag(0)
