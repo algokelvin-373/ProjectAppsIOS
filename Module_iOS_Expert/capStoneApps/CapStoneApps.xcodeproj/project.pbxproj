@@ -47,6 +47,12 @@
 		108029672551A604004069BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 108029652551A604004069BB /* LaunchScreen.storyboard */; };
 		108029722551A604004069BB /* capStoneAppsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108029712551A604004069BB /* capStoneAppsTests.swift */; };
 		1080297D2551A604004069BB /* capStoneAppsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1080297C2551A604004069BB /* capStoneAppsUITests.swift */; };
+		10AED98D2592543D00A6E0B1 /* TravelPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10AED98C2592543D00A6E0B1 /* TravelPresenter.swift */; };
+		10AED9902592547000A6E0B1 /* TravelInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10AED98F2592547000A6E0B1 /* TravelInteractor.swift */; };
+		10AED9932592548A00A6E0B1 /* TravelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10AED9922592548A00A6E0B1 /* TravelProtocol.swift */; };
+		10AED995259255CE00A6E0B1 /* TravelEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10AED994259255CE00A6E0B1 /* TravelEntity.swift */; };
+		10AED9972592560700A6E0B1 /* TravelRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10AED9962592560700A6E0B1 /* TravelRepository.swift */; };
+		10AED9992592561400A6E0B1 /* TravelDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10AED9982592561400A6E0B1 /* TravelDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +118,12 @@
 		108029782551A604004069BB /* CapStoneAppsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CapStoneAppsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1080297C2551A604004069BB /* capStoneAppsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = capStoneAppsUITests.swift; sourceTree = "<group>"; };
 		1080297E2551A604004069BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		10AED98C2592543D00A6E0B1 /* TravelPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelPresenter.swift; sourceTree = "<group>"; };
+		10AED98F2592547000A6E0B1 /* TravelInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelInteractor.swift; sourceTree = "<group>"; };
+		10AED9922592548A00A6E0B1 /* TravelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelProtocol.swift; sourceTree = "<group>"; };
+		10AED994259255CE00A6E0B1 /* TravelEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelEntity.swift; sourceTree = "<group>"; };
+		10AED9962592560700A6E0B1 /* TravelRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelRepository.swift; sourceTree = "<group>"; };
+		10AED9982592561400A6E0B1 /* TravelDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,11 +165,11 @@
 		100F37F0257159E3005EC043 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				10AED98A259253DB00A6E0B1 /* Travel */,
 				10683D162587DD820006CB02 /* Movie */,
 				1042526425810746007C29D4 /* Game */,
 				1042525D2580D91C007C29D4 /* Profile */,
 				100F37F325715B7F005EC043 /* SportView.swift */,
-				100F37F725715BDD005EC043 /* TravelView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -187,6 +199,7 @@
 		104252512580CCC5007C29D4 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				10AED98B2592542800A6E0B1 /* Travel */,
 				10683D172587DDAA0006CB02 /* Movie */,
 				1042526525810B16007C29D4 /* Game */,
 				104252542580CDAA007C29D4 /* Profile */,
@@ -202,6 +215,7 @@
 				1042525E2580DBEB007C29D4 /* ProfileEntity.swift */,
 				106641FE2582873900624EF9 /* GameEntity.swift */,
 				10683D1A2587DFE80006CB02 /* MovieEntity.swift */,
+				10AED994259255CE00A6E0B1 /* TravelEntity.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -217,6 +231,7 @@
 		104252572580CE72007C29D4 /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
+				10AED98E2592546000A6E0B1 /* Travel */,
 				10683D232587E0430006CB02 /* Movie */,
 				10664200258288D600624EF9 /* Game */,
 				104252592580CE9B007C29D4 /* ProfileInteractor.swift */,
@@ -227,6 +242,7 @@
 		104252582580CE7A007C29D4 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
+				10AED9912592547C00A6E0B1 /* Travel */,
 				10683D202587E02A0006CB02 /* Movie */,
 				1042526E2581D502007C29D4 /* Game */,
 				1042525B2580CEC7007C29D4 /* ProfileProtocol.swift */,
@@ -288,6 +304,7 @@
 			children = (
 				1066420525828C1900624EF9 /* GameRepository.swift */,
 				10683D1C2587DFFA0006CB02 /* MovieRepository.swift */,
+				10AED9962592560700A6E0B1 /* TravelRepository.swift */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -297,6 +314,7 @@
 			children = (
 				1066420725828C4F00624EF9 /* GameDataSource.swift */,
 				10683D1E2587E00A0006CB02 /* MovieDataSource.swift */,
+				10AED9982592561400A6E0B1 /* TravelDataSource.swift */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -429,6 +447,38 @@
 				1080297E2551A604004069BB /* Info.plist */,
 			);
 			path = capStoneAppsUITests;
+			sourceTree = "<group>";
+		};
+		10AED98A259253DB00A6E0B1 /* Travel */ = {
+			isa = PBXGroup;
+			children = (
+				100F37F725715BDD005EC043 /* TravelView.swift */,
+			);
+			path = Travel;
+			sourceTree = "<group>";
+		};
+		10AED98B2592542800A6E0B1 /* Travel */ = {
+			isa = PBXGroup;
+			children = (
+				10AED98C2592543D00A6E0B1 /* TravelPresenter.swift */,
+			);
+			path = Travel;
+			sourceTree = "<group>";
+		};
+		10AED98E2592546000A6E0B1 /* Travel */ = {
+			isa = PBXGroup;
+			children = (
+				10AED98F2592547000A6E0B1 /* TravelInteractor.swift */,
+			);
+			path = Travel;
+			sourceTree = "<group>";
+		};
+		10AED9912592547C00A6E0B1 /* Travel */ = {
+			isa = PBXGroup;
+			children = (
+				10AED9922592548A00A6E0B1 /* TravelProtocol.swift */,
+			);
+			path = Travel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -589,13 +639,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10AED995259255CE00A6E0B1 /* TravelEntity.swift in Sources */,
 				106642132582946400624EF9 /* DataMapper.swift in Sources */,
+				10AED9992592561400A6E0B1 /* TravelDataSource.swift in Sources */,
 				104252632580E763007C29D4 /* Injection.swift in Sources */,
 				1042526D2581D3F0007C29D4 /* GamePresenter.swift in Sources */,
 				1066420825828C4F00624EF9 /* GameDataSource.swift in Sources */,
 				104252562580CDBE007C29D4 /* ProfilePresenter.swift in Sources */,
 				10683D222587E03B0006CB02 /* MovieProtocol.swift in Sources */,
+				10AED9902592547000A6E0B1 /* TravelInteractor.swift in Sources */,
 				100F37F225715B59005EC043 /* MovieView.swift in Sources */,
+				10AED9972592560700A6E0B1 /* TravelRepository.swift in Sources */,
 				100F37FD25715CF8005EC043 /* ConstantVal.swift in Sources */,
 				10683D192587DFD20006CB02 /* MoviePresenter.swift in Sources */,
 				10683D152587DD140006CB02 /* APIMovie.swift in Sources */,
@@ -607,6 +661,7 @@
 				100F37F425715B7F005EC043 /* SportView.swift in Sources */,
 				100F37F825715BDD005EC043 /* TravelView.swift in Sources */,
 				1080295F2551A603004069BB /* ContentView.swift in Sources */,
+				10AED98D2592543D00A6E0B1 /* TravelPresenter.swift in Sources */,
 				1066420625828C1900624EF9 /* GameRepository.swift in Sources */,
 				1080295D2551A603004069BB /* capStoneApps.xcdatamodeld in Sources */,
 				106642162582A2BF00624EF9 /* ActivityIndicator.swift in Sources */,
@@ -614,6 +669,7 @@
 				1066420B25828E4F00624EF9 /* APIGame.swift in Sources */,
 				10683D1B2587DFE80006CB02 /* MovieEntity.swift in Sources */,
 				10664210258290E200624EF9 /* CustomeError.swift in Sources */,
+				10AED9932592548A00A6E0B1 /* TravelProtocol.swift in Sources */,
 				100F37F625715B94005EC043 /* GameView.swift in Sources */,
 				1042526825810BE3007C29D4 /* GameRowsView.swift in Sources */,
 				106642022582890D00624EF9 /* GameInteractor.swift in Sources */,
