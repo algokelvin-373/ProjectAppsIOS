@@ -7,3 +7,23 @@
 //
 
 import Foundation
+
+struct DataTravels: Decodable {
+    let places: [Travels]
+}
+
+struct Travels: Decodable {
+    let id: Int
+    let name: String
+    let image: String
+    let address: String
+    let like: Int
+}
+
+struct TravelModel: Equatable, Identifiable {
+    let id: Int
+    let name: String
+    let image: String
+    let address: String
+    let like: Int
+}
