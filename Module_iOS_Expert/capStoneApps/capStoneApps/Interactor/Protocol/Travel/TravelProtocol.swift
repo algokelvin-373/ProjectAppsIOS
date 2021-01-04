@@ -9,5 +9,5 @@
 import Foundation
 
 protocol TravelProtocol {
-    
+    func getTravel(completion: @escaping (Result<[TravelModel], Error>) -> Void)
 }

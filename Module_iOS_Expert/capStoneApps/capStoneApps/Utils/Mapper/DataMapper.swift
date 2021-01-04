@@ -32,4 +32,16 @@ final class DataMapper {
             )
         }
     }
+
+    static func mapTravelResponsesToDomains(input travelResponses: [Travels]) -> [TravelModel] {
+        return travelResponses.map { result in
+            return TravelModel(
+                id: result.id ,
+                name: result.name ,
+                image: result.image ,
+                address: result.address ,
+                like: result.like
+            )
+        }
+    }
 }
