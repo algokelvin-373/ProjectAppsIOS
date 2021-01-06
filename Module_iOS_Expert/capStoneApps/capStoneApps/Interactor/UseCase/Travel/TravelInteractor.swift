@@ -9,14 +9,14 @@
 import Foundation
 
 class TravelInteractor: TravelProtocol {
-    private let movieRepository: MovieRepositoryProtocol
+    private let travelRepository: TravelRepositoryProtocol
 
-    required init(repository: MovieRepositoryProtocol) {
-      self.movieRepository = repository
+    required init(repository: TravelRepositoryProtocol) {
+      self.travelRepository = repository
     }
 
-    func getMovie(completion: @escaping (Result<[MovieModel], Error>) -> Void) {
-        movieRepository.getMovie { result in
+    func getTravel(completion: @escaping (Result<[TravelModel], Error>) -> Void) {
+        travelRepository.getTravel { result in
             completion(result)
         }
     }

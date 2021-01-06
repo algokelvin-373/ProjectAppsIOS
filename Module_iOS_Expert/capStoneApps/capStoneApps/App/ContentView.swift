@@ -13,6 +13,7 @@ struct ContentView: View {
     @EnvironmentObject var profilePresenter: ProfilePresenter
     @EnvironmentObject var gamePresenter: GamePresenter
     @EnvironmentObject var moviePresenter: MoviePresenter
+    @EnvironmentObject var travelPresenter: TravelPresenter
 
     var body: some View {
         TabView {
@@ -31,7 +32,7 @@ struct ContentView: View {
                 Text("\(ConstantVal.TabBarText.gameTabBar)")
             }).tag(2)
 
-            TravelView().tabItem({
+            TravelView(presenterTravel: travelPresenter).tabItem({
                 Image("\(ConstantVal.TabBarImage.travelTabBar)").renderingMode(.template)
                 Text("\(ConstantVal.TabBarText.travelTabBar)")
             }).tag(3)
