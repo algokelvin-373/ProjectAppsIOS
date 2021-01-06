@@ -12,6 +12,12 @@ final class Injection: NSObject {
     func provideProfile() -> ProfileProtocol {
       return ProfileInteractor()
     }
+    
+    func provideTravel() -> TravelProtocol {
+        let remoteTravel = TravelDataSource.sharedInstance
+        let repositoryTravel = TravelRepository.sharedInstance(remoteTravel)
+        return TravelInteractor(repository: repositoryTravel)
+    }
 
     func provideGame() -> GameProtocol {
         let remoteGame = GameDataSource.sharedInstance
