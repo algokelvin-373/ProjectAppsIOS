@@ -9,5 +9,15 @@
 import Foundation
 
 class SportsInteractor: SportsProtocol {
-    
+    private let sportRepository: SportRepositoryProtocol
+
+    required init(repository: SportRepositoryProtocol) {
+      self.sportRepository = repository
+    }
+
+    func getSport(completion: @escaping (Result<[SportModel], Error>) -> Void) {
+        sportRepository.getSport { result in
+            completion(result)
+        }
+    }
 }

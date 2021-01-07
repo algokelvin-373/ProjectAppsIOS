@@ -9,5 +9,5 @@
 import Foundation
 
 protocol SportsProtocol {
-    
+    func getSport(completion: @escaping (Result<[SportModel], Error>) -> Void)
 }

@@ -12,7 +12,7 @@ final class Injection: NSObject {
     func provideProfile() -> ProfileProtocol {
       return ProfileInteractor()
     }
-    
+
     func provideTravel() -> TravelProtocol {
         let remoteTravel = TravelDataSource.sharedInstance
         let repositoryTravel = TravelRepository.sharedInstance(remoteTravel)
@@ -29,5 +29,11 @@ final class Injection: NSObject {
         let remoteMovie = MovieDataSource.sharedInstance
         let repositoryMovie = MovieRepository.sharedInstance(remoteMovie)
         return MovieInteractor(repository: repositoryMovie)
+    }
+
+    func provideSport() -> SportsProtocol {
+        let remoteSport = SportDataSource.sharedInstance
+        let repositorySport = SportRepository.sharedInstance(remoteSport)
+        return SportsInteractor(repository: repositorySport)
     }
 }
