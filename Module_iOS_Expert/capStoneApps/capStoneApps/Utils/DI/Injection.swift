@@ -36,4 +36,10 @@ final class Injection: NSObject {
         let repositorySport = SportRepository.sharedInstance(remoteSport)
         return SportsInteractor(repository: repositorySport)
     }
+
+    func provideSportDetail(category: SportModel) -> SportsDetailProtocol {
+      let remoteSport = SportDataSource.sharedInstance
+      let repositorySport = SportRepository.sharedInstance(remoteSport)
+      return SportsDetailInteractor(repository: repositorySport, category: category)
+    }
 }

@@ -10,19 +10,23 @@ import SwiftUI
 
 struct SportView: View {
     @ObservedObject var presenterSport: SportsPresenter
-    
+
     var body: some View {
         ZStack {
-                if presenterSport.loadingState {
+            if presenterSport.loadingState {
                     VStack {
                         Text("Loading...")
                         ActivityIndicator()
                     }
                 } else {
-                    ScrollView(.vertical, showsIndicators: false) {
-                        ForEach(self.presenterSport.sports, id: \.id) { sport in
-                            VStack {
-                                Text(sport.name)
+                    NavigationView {
+                        ScrollView(.vertical, showsIndicators: false) {
+                            ForEach(self.presenterSport.sports, id: \.id) { category in
+                                ZStack {
+                                    self.presenterSport.linkBuilder(for: category) {
+                                        SportRowsView(dataSports: category)
+                                    }.buttonStyle(PlainButtonStyle())
+                                }.padding(8)
                             }
                         }
                     }
