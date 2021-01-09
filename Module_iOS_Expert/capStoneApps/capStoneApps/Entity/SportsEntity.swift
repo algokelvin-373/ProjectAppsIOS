@@ -7,3 +7,28 @@
 //
 
 import Foundation
+
+struct DataSports: Decodable {
+    let sports: [Sports]
+}
+
+struct Sports: Decodable {
+    private enum CodingKeys: String, CodingKey {
+        case idSport = "idSport"
+        case nameSport = "strSport"
+        case backgroundImageSport = "strSportThumb"
+        case descriptionSport = "strSportDescription"
+    }
+
+    let idSport: String?
+    let nameSport: String?
+    let backgroundImageSport: String?
+    let descriptionSport: String?
+}
+
+struct SportModel: Equatable, Identifiable {
+    let id: String
+    let name: String
+    let backgroundImage: String
+    let description: String
+}
