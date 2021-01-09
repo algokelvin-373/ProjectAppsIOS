@@ -22,6 +22,13 @@
 		1042526B2581D198007C29D4 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 1042526A2581D198007C29D4 /* SDWebImageSwiftUI */; };
 		1042526D2581D3F0007C29D4 /* GamePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1042526C2581D3F0007C29D4 /* GamePresenter.swift */; };
 		104252702581D51E007C29D4 /* GameProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1042526F2581D51E007C29D4 /* GameProtocol.swift */; };
+		1061DBEC25A5C9B500E30C27 /* APISport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1061DBEB25A5C9B500E30C27 /* APISport.swift */; };
+		1063C73E25A8688D00B0483A /* SportRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1063C73D25A8688D00B0483A /* SportRouter.swift */; };
+		1063C74025A8692200B0483A /* SportsDetailProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1063C73F25A8692200B0483A /* SportsDetailProtocol.swift */; };
+		1063C74225A86A2D00B0483A /* SportsDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1063C74125A86A2D00B0483A /* SportsDetailInteractor.swift */; };
+		1063C74425A86B1900B0483A /* SportDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1063C74325A86B1900B0483A /* SportDetailView.swift */; };
+		1063C74625A86D1D00B0483A /* SportsDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1063C74525A86D1D00B0483A /* SportsDetailPresenter.swift */; };
+		1063C74825AA103000B0483A /* SportRowsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1063C74725AA103000B0483A /* SportRowsView.swift */; };
 		106641FF2582873900624EF9 /* GameEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106641FE2582873900624EF9 /* GameEntity.swift */; };
 		106642022582890D00624EF9 /* GameInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106642012582890D00624EF9 /* GameInteractor.swift */; };
 		1066420625828C1900624EF9 /* GameRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1066420525828C1900624EF9 /* GameRepository.swift */; };
@@ -94,6 +101,13 @@
 		1042526725810BE3007C29D4 /* GameRowsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRowsView.swift; sourceTree = "<group>"; };
 		1042526C2581D3F0007C29D4 /* GamePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePresenter.swift; sourceTree = "<group>"; };
 		1042526F2581D51E007C29D4 /* GameProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameProtocol.swift; sourceTree = "<group>"; };
+		1061DBEB25A5C9B500E30C27 /* APISport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APISport.swift; sourceTree = "<group>"; };
+		1063C73D25A8688D00B0483A /* SportRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportRouter.swift; sourceTree = "<group>"; };
+		1063C73F25A8692200B0483A /* SportsDetailProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsDetailProtocol.swift; sourceTree = "<group>"; };
+		1063C74125A86A2D00B0483A /* SportsDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsDetailInteractor.swift; sourceTree = "<group>"; };
+		1063C74325A86B1900B0483A /* SportDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportDetailView.swift; sourceTree = "<group>"; };
+		1063C74525A86D1D00B0483A /* SportsDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsDetailPresenter.swift; sourceTree = "<group>"; };
+		1063C74725AA103000B0483A /* SportRowsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportRowsView.swift; sourceTree = "<group>"; };
 		106641FE2582873900624EF9 /* GameEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEntity.swift; sourceTree = "<group>"; };
 		106642012582890D00624EF9 /* GameInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameInteractor.swift; sourceTree = "<group>"; };
 		1066420525828C1900624EF9 /* GameRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRepository.swift; sourceTree = "<group>"; };
@@ -309,6 +323,14 @@
 			path = Game;
 			sourceTree = "<group>";
 		};
+		1063C73C25A8686C00B0483A /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				1063C73D25A8688D00B0483A /* SportRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		10664200258288D600624EF9 /* Game */ = {
 			isa = PBXGroup;
 			children = (
@@ -346,6 +368,7 @@
 				1066420C25828F9000624EF9 /* API.swift */,
 				10683D142587DD140006CB02 /* APIMovie.swift */,
 				10AED9AA2592642B00A6E0B1 /* APITravel.swift */,
+				1061DBEB25A5C9B500E30C27 /* APISport.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -429,6 +452,7 @@
 		108029562551A603004069BB /* capStoneApps */ = {
 			isa = PBXGroup;
 			children = (
+				1063C73C25A8686C00B0483A /* Router */,
 				104252522580CCD0007C29D4 /* Entity */,
 				104252512580CCC5007C29D4 /* Presenter */,
 				104252502580CC8A007C29D4 /* Interactor */,
@@ -506,6 +530,8 @@
 			isa = PBXGroup;
 			children = (
 				100F37F325715B7F005EC043 /* SportView.swift */,
+				1063C74325A86B1900B0483A /* SportDetailView.swift */,
+				1063C74725AA103000B0483A /* SportRowsView.swift */,
 			);
 			path = Sports;
 			sourceTree = "<group>";
@@ -514,6 +540,7 @@
 			isa = PBXGroup;
 			children = (
 				10AED99C259257E500A6E0B1 /* SportsInteractor.swift */,
+				1063C74125A86A2D00B0483A /* SportsDetailInteractor.swift */,
 			);
 			path = Sports;
 			sourceTree = "<group>";
@@ -522,6 +549,7 @@
 			isa = PBXGroup;
 			children = (
 				10AED99F2592581100A6E0B1 /* SportsProtocol.swift */,
+				1063C73F25A8692200B0483A /* SportsDetailProtocol.swift */,
 			);
 			path = Sports;
 			sourceTree = "<group>";
@@ -530,6 +558,7 @@
 			isa = PBXGroup;
 			children = (
 				10AED9A22592584A00A6E0B1 /* SportsPresenter.swift */,
+				1063C74525A86D1D00B0483A /* SportsDetailPresenter.swift */,
 			);
 			path = Sports;
 			sourceTree = "<group>";
@@ -692,9 +721,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1063C74625A86D1D00B0483A /* SportsDetailPresenter.swift in Sources */,
 				10AED995259255CE00A6E0B1 /* TravelEntity.swift in Sources */,
 				106642132582946400624EF9 /* DataMapper.swift in Sources */,
 				10AED9992592561400A6E0B1 /* TravelDataSource.swift in Sources */,
+				1063C73E25A8688D00B0483A /* SportRouter.swift in Sources */,
 				104252632580E763007C29D4 /* Injection.swift in Sources */,
 				1042526D2581D3F0007C29D4 /* GamePresenter.swift in Sources */,
 				1066420825828C4F00624EF9 /* GameDataSource.swift in Sources */,
@@ -706,7 +737,9 @@
 				100F37FD25715CF8005EC043 /* ConstantVal.swift in Sources */,
 				10683D192587DFD20006CB02 /* MoviePresenter.swift in Sources */,
 				10683D152587DD140006CB02 /* APIMovie.swift in Sources */,
+				1063C74025A8692200B0483A /* SportsDetailProtocol.swift in Sources */,
 				100F37FA25715BF1005EC043 /* ProfileView.swift in Sources */,
+				1063C74825AA103000B0483A /* SportRowsView.swift in Sources */,
 				108029582551A603004069BB /* AppDelegate.swift in Sources */,
 				1080295A2551A603004069BB /* SceneDelegate.swift in Sources */,
 				106641FF2582873900624EF9 /* GameEntity.swift in Sources */,
@@ -735,9 +768,12 @@
 				10AED9A525925C7800A6E0B1 /* SportsEntity.swift in Sources */,
 				10683D1F2587E00A0006CB02 /* MovieDataSource.swift in Sources */,
 				1042525F2580DBEB007C29D4 /* ProfileEntity.swift in Sources */,
+				1061DBEC25A5C9B500E30C27 /* APISport.swift in Sources */,
 				1042525C2580CEC7007C29D4 /* ProfileProtocol.swift in Sources */,
 				10683D252587E0510006CB02 /* MovieInteractor.swift in Sources */,
+				1063C74225A86A2D00B0483A /* SportsDetailInteractor.swift in Sources */,
 				1066420D25828F9000624EF9 /* API.swift in Sources */,
+				1063C74425A86B1900B0483A /* SportDetailView.swift in Sources */,
 				104252702581D51E007C29D4 /* GameProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
