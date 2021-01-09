@@ -198,6 +198,11 @@
 				10683D162587DD820006CB02 /* Movie */,
 				1042526425810746007C29D4 /* Game */,
 				1042525D2580D91C007C29D4 /* Profile */,
+				100F37F125715B59005EC043 /* MovieView.swift */,
+				100F37F325715B7F005EC043 /* SportView.swift */,
+				100F37F525715B94005EC043 /* GameView.swift */,
+				100F37F725715BDD005EC043 /* TravelView.swift */,
+				100F37F925715BF1005EC043 /* ProfileView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
