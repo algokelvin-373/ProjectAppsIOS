@@ -14,28 +14,26 @@ struct GameRowsView: View {
     var dataGames: GameModel
 
     var body: some View {
-        VStack {
+        HStack {
             WebImage(url: URL(string: dataGames.backgroundImage))
                 .resizable()
                 .indicator(.activity)
-                .transition(.fade(duration: 0.5))
                 .scaledToFit()
                 .frame(width: 200)
-                .cornerRadius(30)
-                .padding(.top)
+                .cornerRadius(5)
 
-            VStack(alignment: .leading, spacing: 10) {
+            VStack(alignment: .leading, spacing: 5) {
                 Text(dataGames.name)
-                    .font(.title)
+                    .font(.system(size: 14))
                     .bold()
 
                 Text(dataGames.released)
-                    .font(.system(size: 14))
+                    .font(.system(size: 12))
                     .lineLimit(2)
-            }.padding(EdgeInsets(top: 0, leading: 16, bottom: 16, trailing: 16))
-        }.frame(width: UIScreen.main.bounds.width - 32, height: 250)
+            }.padding(EdgeInsets(top: 0, leading: 0, bottom: 16, trailing: 16))
+        }.frame(width: UIScreen.main.bounds.width - 32, height: 150)
         .background(Color(red: .random(in: 0...1), green: .random(in: 0...1), blue: .random(in: 0...1)))
-        .cornerRadius(30)
+        .cornerRadius(10)
     }
 }
 
