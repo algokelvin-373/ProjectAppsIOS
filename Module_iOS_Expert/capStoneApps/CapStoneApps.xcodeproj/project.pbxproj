@@ -194,6 +194,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1042526B2581D198007C29D4 /* SDWebImageSwiftUI in Frameworks */,
+				105B844825AE1684009FB8E3 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -638,6 +639,7 @@
 			name = CapStoneApps;
 			packageProductDependencies = (
 				1042526A2581D198007C29D4 /* SDWebImageSwiftUI */,
+				105B844725AE1684009FB8E3 /* Alamofire */,
 			);
 			productName = capStoneApps;
 			productReference = 108029542551A603004069BB /* CapStoneApps.app */;
@@ -713,6 +715,7 @@
 			mainGroup = 1080294B2551A603004069BB;
 			packageReferences = (
 				104252692581D198007C29D4 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				105B844625AE1684009FB8E3 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 108029552551A603004069BB /* Products */;
 			projectDirPath = "";
@@ -1176,6 +1179,14 @@
 				minimumVersion = 1.5.0;
 			};
 		};
+		105B844625AE1684009FB8E3 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1183,6 +1194,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 104252692581D198007C29D4 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
 			productName = SDWebImageSwiftUI;
+		};
+		105B844725AE1684009FB8E3 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 105B844625AE1684009FB8E3 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 
