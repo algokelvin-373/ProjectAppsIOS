@@ -7,9 +7,10 @@
 //
 
 import Foundation
+import Combine
 
 protocol GameRepositoryProtocol {
-    func getGame(result: @escaping (Result<[GameModel], Error>) -> Void)
+    func getGame() -> AnyPublisher<[GameModel], URLError>
 }
 
 final class GameRepository: NSObject {
@@ -27,15 +28,22 @@ final class GameRepository: NSObject {
 }
 
 extension GameRepository: GameRepositoryProtocol {
-    func getGame(result: @escaping (Result<[GameModel], Error>) -> Void) {
-        self.remote.getGame { remoteResponses in
-            switch remoteResponses {
-            case .success(let gameResponses):
-              let resultList = DataMapper.mapGameResponsesToDomains(input: gameResponses)
-              result(.success(resultList))
-            case .failure(let error):
-              result(.failure(error))
-            }
-        }
+    func getGame() -> AnyPublisher<[GameModel], URLError> {
+//        return Future<[GameModel], Error> { completion in
+//            self.remote.getGame { remoteResponses in
+//                switch remoteResponses {
+//                case .success(let gameResponses):
+//                  let resultList = DataMapper.mapGameResponsesToDomains(input: gameResponses)
+//                  completion(.success(resultList))
+//                case .failure(let error):
+//                  completion(.failure(error))
+//                }
+//            }
+//        }.eraseToAnyPublisher()
+        
+        return self.remote.getGame()
+            .map { DataMapper.mapGameResponsesToDomains(input: $0) }
+            .eraseToAnyPublisher()
+        
     }
 }

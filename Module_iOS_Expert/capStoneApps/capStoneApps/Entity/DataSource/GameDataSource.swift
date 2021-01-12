@@ -8,9 +8,10 @@
 
 import Foundation
 import Alamofire
+import Combine
 
 protocol GameDataSourceProtocol: class {
-  func getGame(result: @escaping (Result<[Games], URLError>) -> Void)
+    func getGame() -> AnyPublisher<[Games], URLError>
 }
 
 final class GameDataSource: NSObject {
@@ -20,16 +21,18 @@ final class GameDataSource: NSObject {
 }
 
 extension GameDataSource: GameDataSourceProtocol {
-    func getGame(result: @escaping (Result<[Games], URLError>) -> Void) {
-        guard let url = URL(string: GameEndpoints.Gets.games.url) else { return }
-
-        AF.request(url).validate().responseDecodable(of: DataGame.self) { response in
-            switch response.result {
-            case .success(let value):
-                result(.success(value.results))
-            case .failure:
-                result(.failure(.invalidResponse))
+    func getGame() -> AnyPublisher<[Games], URLError> {
+        return Future<[Games], URLError> { completion in
+            if let url = URL(string: GameEndpoints.Gets.games.url) {
+                AF.request(url).validate().responseDecodable(of: DataGame.self) { response in
+                    switch response.result {
+                    case .success(let value):
+                        completion(.success(value.results))
+                    case .failure:
+                        completion(.failure(.invalidResponse))
+                    }
+                }
             }
-        }
+        }.eraseToAnyPublisher()
     }
 }

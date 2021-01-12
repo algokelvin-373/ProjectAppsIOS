@@ -6,7 +6,7 @@
 //  Copyright © 2020 Kelvin HT. All rights reserved.
 //
 
-import Foundation
+import Combine
 
 class GameInteractor: GameProtocol {
     private let gameRepository: GameRepositoryProtocol
@@ -15,9 +15,7 @@ class GameInteractor: GameProtocol {
       self.gameRepository = repository
     }
 
-    func getGame(completion: @escaping (Result<[GameModel], Error>) -> Void) {
-        gameRepository.getGame { result in
-            completion(result)
-        }
+    func getGame() -> AnyPublisher<[GameModel], URLError> {
+        return gameRepository.getGame()
     }
 }
