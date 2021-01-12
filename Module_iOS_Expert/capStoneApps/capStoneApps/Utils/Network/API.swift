@@ -10,7 +10,10 @@ import Foundation
 
 struct API {
     static let baseUrlGame = "https://api.rawg.io/api/"
+
     static let baseUrlMovie = "https://api.themoviedb.org/3/movie/"
+    static let baseUrlImage = "https://image.tmdb.org/t/p/w780/"
+
     static let baseUrlTravel = "https://tourism-api.dicoding.dev/"
     static let baseUrlSport = "https://www.thesportsdb.com/api/v1/json/1/"
 }

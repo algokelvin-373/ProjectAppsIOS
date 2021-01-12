@@ -42,6 +42,12 @@ final class Injection: NSObject {
         let repositoryMovie = MovieRepository.sharedInstance(remoteMovie)
         return MovieInteractor(repository: repositoryMovie)
     }
+    
+    func provideMovieDetail(category: MovieModel) -> MovieDetailProtocol {
+        let remoteMovie = MovieDataSource.sharedInstance
+        let repositoryMovie = MovieRepository.sharedInstance(remoteMovie)
+        return MovieDetailInteractor(repository: repositoryMovie, category: category)
+    }
 
     func provideSport() -> SportsProtocol {
         let remoteSport = SportDataSource.sharedInstance
