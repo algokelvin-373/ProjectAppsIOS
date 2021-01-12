@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Alamofire
 
 protocol GameDataSourceProtocol: class {
   func getGame(result: @escaping (Result<[Games], URLError>) -> Void)
@@ -22,19 +23,13 @@ extension GameDataSource: GameDataSourceProtocol {
     func getGame(result: @escaping (Result<[Games], URLError>) -> Void) {
         guard let url = URL(string: GameEndpoints.Gets.games.url) else { return }
 
-        let task = URLSession.shared.dataTask(with: url) { maybeData, maybeResponse, maybeError in
-          if maybeError != nil {
-              result(.failure(.addressUnreachable(url)))
-          } else if let data = maybeData, let response = maybeResponse as? HTTPURLResponse, response.statusCode == 200 {
-              let decoder = JSONDecoder()
-              do {
-                let categories = try decoder.decode(DataGame.self, from: data).results
-                  result(.success(categories))
-              } catch {
+        AF.request(url).validate().responseDecodable(of: DataGame.self) { response in
+            switch response.result {
+            case .success(let value):
+                result(.success(value.results))
+            case .failure:
                 result(.failure(.invalidResponse))
-              }
-          }
+            }
         }
-        task.resume()
     }
 }
