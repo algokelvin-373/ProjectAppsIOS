@@ -10,7 +10,7 @@ import SwiftUI
 
 struct TravelView: View {
     @ObservedObject var presenterTravel: TravelPresenter
-    
+
     var body: some View {
         ZStack {
             if presenterTravel.loadingState {
@@ -19,19 +19,22 @@ struct TravelView: View {
                     ActivityIndicator()
                 }
             } else {
-                ScrollView(.vertical, showsIndicators: false) {
-                    ForEach(self.presenterTravel.travels, id: \.id) { travel in
-                        VStack {
-                            Text(travel.name)
+                NavigationView {
+                    ScrollView(.vertical, showsIndicators: false) {
+                        ForEach(self.presenterTravel.travels, id: \.id) { travel in
+                            ZStack {
+                                self.presenterTravel.linkBuilder(for: travel) {
+                                    TravelRowsView(dataTravels: travel)
+                                }.buttonStyle(PlainButtonStyle())
+                            }.padding(8)
                         }
                     }
-                }
+                }.navigationBarTitle(Text("Travel"), displayMode: .automatic)
             }
         }.onAppear {
             if self.presenterTravel.travels.count == 0 {
                 self.presenterTravel.getTravels()
             }
         }
-        .navigationBarTitle(Text("Travel"), displayMode: .automatic)
     }
 }

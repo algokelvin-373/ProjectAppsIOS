@@ -6,9 +6,10 @@
 //  Copyright © 2020 Kelvin HT. All rights reserved.
 //
 
-import Foundation
+import SwiftUI
 
 class TravelPresenter: ObservableObject {
+    private let travelRouter = TravelRouter()
     private let travelUseCase: TravelProtocol
 
     @Published var travels: [TravelModel] = []
@@ -35,5 +36,12 @@ class TravelPresenter: ObservableObject {
                 }
             }
         }
+    }
+
+    func linkBuilder<Content: View>(
+        for category: TravelModel,
+        @ViewBuilder content: () -> Content
+    ) -> some View {
+        NavigationLink(destination: travelRouter.goToTravelDetailView(for: category)) { content() }
     }
 }
