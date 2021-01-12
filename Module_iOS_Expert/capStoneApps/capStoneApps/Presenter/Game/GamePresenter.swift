@@ -6,9 +6,10 @@
 //  Copyright © 2020 Kelvin HT. All rights reserved.
 //
 
-import Foundation
+import SwiftUI
 
 class GamePresenter: ObservableObject {
+    private let gameRouter = GameRouter()
     private let gameUseCase: GameProtocol
 
     @Published var games: [GameModel] = []
@@ -35,5 +36,12 @@ class GamePresenter: ObservableObject {
                 }
             }
         }
+    }
+
+    func linkBuilder<Content: View>(
+        for category: GameModel,
+        @ViewBuilder content: () -> Content
+    ) -> some View {
+        NavigationLink(destination: gameRouter.goToGameDetailView(for: category)) { content() }
     }
 }
