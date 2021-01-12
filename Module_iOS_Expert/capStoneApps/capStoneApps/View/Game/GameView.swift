@@ -20,19 +20,22 @@ struct GameView: View {
                     ActivityIndicator()
                 }
             } else {
-                ScrollView(.vertical, showsIndicators: false) {
-                    ForEach(self.presenterGame.games, id: \.id) { game in
-                        VStack {
-                            Text(game.name)
+                NavigationView {
+                    ScrollView(.vertical, showsIndicators: false) {
+                        ForEach(self.presenterGame.games, id: \.id) { game in
+                            ZStack {
+                                self.presenterGame.linkBuilder(for: game) {
+                                    GameRowsView(dataGames: game)
+                                }.buttonStyle(PlainButtonStyle())
+                            }.padding(8)
                         }
                     }
-                }
+                }.navigationBarTitle(Text("Game"), displayMode: .automatic)
             }
         }.onAppear {
             if self.presenterGame.games.count == 0 {
                 self.presenterGame.getGames()
             }
         }
-        .navigationBarTitle(Text("Game"), displayMode: .automatic)
     }
 }
