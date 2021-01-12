@@ -6,9 +6,10 @@
 //  Copyright © 2020 Kelvin HT. All rights reserved.
 //
 
-import Foundation
+import SwiftUI
 
 class MoviePresenter: ObservableObject {
+    private let movieRouter = MovieRouter()
     private let movieUseCase: MovieProtocol
 
     @Published var movies: [MovieModel] = []
@@ -35,5 +36,12 @@ class MoviePresenter: ObservableObject {
                 }
             }
         }
+    }
+
+    func linkBuilder<Content: View>(
+        for category: MovieModel,
+        @ViewBuilder content: () -> Content
+    ) -> some View {
+        NavigationLink(destination: movieRouter.goToMovieDetailView(for: category)) { content() }
     }
 }
