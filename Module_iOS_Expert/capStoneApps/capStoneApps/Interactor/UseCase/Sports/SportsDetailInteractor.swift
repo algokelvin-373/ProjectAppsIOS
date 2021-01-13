@@ -9,14 +9,14 @@
 import Foundation
 
 class SportsDetailInteractor: SportsDetailProtocol {
-    private let repository: SportRepository
+    private let repository: SportRepositoryProtocol
     private let category: SportModel
 
-    required init(repository: SportRepository, category: SportModel) {
+    required init(repository: SportRepositoryProtocol, category: SportModel) {
       self.repository = repository
       self.category = category
     }
-    
+
     func getDetailSport() -> SportModel {
         return category
     }
