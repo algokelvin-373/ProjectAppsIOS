@@ -7,9 +7,10 @@
 //
 
 import Foundation
+import Combine
 
 protocol MovieRepositoryProtocol {
-    func getMovie(result: @escaping (Result<[MovieModel], Error>) -> Void)
+    func getMovie() -> AnyPublisher<[MovieModel], URLError>
 }
 
 final class MovieRepository: NSObject {
@@ -27,15 +28,9 @@ final class MovieRepository: NSObject {
 }
 
 extension MovieRepository: MovieRepositoryProtocol {
-    func getMovie(result: @escaping (Result<[MovieModel], Error>) -> Void) {
-        self.remote.getMovie { remoteResponses in
-            switch remoteResponses {
-            case .success(let movieResponses):
-              let resultList = DataMapper.mapMovieResponsesToDomains(input: movieResponses)
-              result(.success(resultList))
-            case .failure(let error):
-              result(.failure(error))
-            }
-        }
+    func getMovie() -> AnyPublisher<[MovieModel], URLError> {
+        return self.remote.getMovie()
+            .map { DataMapper.mapMovieResponsesToDomains(input: $0) }
+            .eraseToAnyPublisher()
     }
 }
