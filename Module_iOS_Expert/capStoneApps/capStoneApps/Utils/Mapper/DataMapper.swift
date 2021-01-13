@@ -27,6 +27,7 @@ final class DataMapper {
                 id: result.idMovie ?? 0,
                 name: result.nameMovie ?? "Unknow",
                 image: result.backgroundImageMovie ?? "Unknow",
+                description: result.descriptionMovie ?? "Unknow",
                 released: result.releasedMovie ?? "Unknow",
                 rating: result.ratingMovie ?? 0.0
             )
@@ -38,7 +39,8 @@ final class DataMapper {
             return TravelModel(
                 id: result.id ,
                 name: result.name ,
-                image: result.image ,
+                image: result.image,
+                description: result.description,
                 address: result.address ,
                 like: result.like
             )
