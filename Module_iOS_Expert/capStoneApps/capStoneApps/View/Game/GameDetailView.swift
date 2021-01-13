@@ -23,13 +23,10 @@ struct GameDetailView: View {
 
                         Spacer()
 
-                        VStack(alignment: .leading, spacing: 0) {
-                            Text(self.presenter.category.name)
-                                .font(.headline)
-                                .padding([.top, .bottom])
-                            Text(self.presenter.category.released)
-                                .font(.system(size: 15))
-                        }
+                        HeadLineViewUI(
+                            title: self.presenter.category.name,
+                            subtitle: self.presenter.category.released
+                        )
                     }
                 }
             }

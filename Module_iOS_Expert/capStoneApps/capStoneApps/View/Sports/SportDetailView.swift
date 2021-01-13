@@ -23,13 +23,7 @@ struct SportDetailView: View {
 
                         Spacer()
 
-                        VStack(alignment: .leading, spacing: 0) {
-                            Text(self.presenter.category.name)
-                                .font(.headline)
-                                .padding([.top, .bottom])
-                            Text(self.presenter.category.description)
-                                .font(.system(size: 15))
-                        }
+                        HeadLineViewUI(title: self.presenter.category.name, subtitle: "")
                     }
                 }
             }
