@@ -7,8 +7,10 @@
 //
 
 import SwiftUI
+import Combine
 
 class SportsPresenter: ObservableObject {
+    private var cancellables: Set<AnyCancellable> = []
     private let sportRouter = SportRouter()
     private let sportUseCase: SportsProtocol
 
@@ -22,20 +24,18 @@ class SportsPresenter: ObservableObject {
 
     func getSports() {
         loadingState = true
-        sportUseCase.getSport { result in
-            switch result {
-            case .success(let dataSport):
-                DispatchQueue.main.async {
+        sportUseCase.getSport()
+            .receive(on: RunLoop.main)
+            .sink(receiveCompletion: { completion in
+                switch completion {
+                case .finished:
                     self.loadingState = false
-                    self.sports = dataSport
+                case .failure:
+                    self.errorMessage = String(describing: completion)
                 }
-            case .failure(let error):
-                DispatchQueue.main.async {
-                    self.loadingState = false
-                    self.errorMessage = error.localizedDescription
-                }
-            }
-        }
+            }, receiveValue: { sports in
+                self.sports = sports
+        }).store(in: &cancellables)
     }
 
     func linkBuilder<Content: View>(
