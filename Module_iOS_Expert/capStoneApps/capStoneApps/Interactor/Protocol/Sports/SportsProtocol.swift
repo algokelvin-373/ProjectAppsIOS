@@ -6,8 +6,8 @@
 //  Copyright © 2020 Kelvin HT. All rights reserved.
 //
 
-import Foundation
+import Combine
 
 protocol SportsProtocol {
-    func getSport(completion: @escaping (Result<[SportModel], Error>) -> Void)
+    func getSport() -> AnyPublisher<[SportModel], URLError>
 }

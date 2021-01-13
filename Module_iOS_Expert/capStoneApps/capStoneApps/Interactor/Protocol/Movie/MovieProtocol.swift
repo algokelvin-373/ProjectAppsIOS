@@ -6,8 +6,8 @@
 //  Copyright © 2020 Kelvin HT. All rights reserved.
 //
 
-import Foundation
+import Combine
 
 protocol MovieProtocol {
-  func getMovie(completion: @escaping (Result<[MovieModel], Error>) -> Void)
+  func getMovie() -> AnyPublisher<[MovieModel], URLError>
 }

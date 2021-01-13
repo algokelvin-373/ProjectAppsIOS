@@ -6,8 +6,8 @@
 //  Copyright © 2020 Kelvin HT. All rights reserved.
 //
 
-import Foundation
+import Combine
 
 protocol TravelProtocol {
-    func getTravel(completion: @escaping (Result<[TravelModel], Error>) -> Void)
+    func getTravel() -> AnyPublisher<[TravelModel], URLError>
 }

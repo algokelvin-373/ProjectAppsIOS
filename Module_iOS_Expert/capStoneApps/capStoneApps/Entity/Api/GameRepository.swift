@@ -29,21 +29,8 @@ final class GameRepository: NSObject {
 
 extension GameRepository: GameRepositoryProtocol {
     func getGame() -> AnyPublisher<[GameModel], URLError> {
-//        return Future<[GameModel], Error> { completion in
-//            self.remote.getGame { remoteResponses in
-//                switch remoteResponses {
-//                case .success(let gameResponses):
-//                  let resultList = DataMapper.mapGameResponsesToDomains(input: gameResponses)
-//                  completion(.success(resultList))
-//                case .failure(let error):
-//                  completion(.failure(error))
-//                }
-//            }
-//        }.eraseToAnyPublisher()
-        
         return self.remote.getGame()
             .map { DataMapper.mapGameResponsesToDomains(input: $0) }
             .eraseToAnyPublisher()
-        
     }
 }

@@ -7,9 +7,11 @@
 //
 
 import Foundation
+import Alamofire
+import Combine
 
 protocol MovieDataSourceProtocol: class {
-  func getMovie(result: @escaping (Result<[Movies], URLError>) -> Void)
+    func getMovie() -> AnyPublisher<[Movies], URLError>
 }
 
 final class MovieDataSource: NSObject {
@@ -19,22 +21,18 @@ final class MovieDataSource: NSObject {
 }
 
 extension MovieDataSource: MovieDataSourceProtocol {
-    func getMovie(result: @escaping (Result<[Movies], URLError>) -> Void) {
-        guard let url = URL(string: MovieEndpoints.Gets.nowPlaying.url) else { return }
-
-        let task = URLSession.shared.dataTask(with: url) { maybeData, maybeResponse, maybeError in
-          if maybeError != nil {
-              result(.failure(.addressUnreachable(url)))
-          } else if let data = maybeData, let response = maybeResponse as? HTTPURLResponse, response.statusCode == 200 {
-              let decoder = JSONDecoder()
-              do {
-                let categories = try decoder.decode(DataMovies.self, from: data).results
-                  result(.success(categories))
-              } catch {
-                result(.failure(.invalidResponse))
-              }
-          }
-        }
-        task.resume()
+    func getMovie() -> AnyPublisher<[Movies], URLError> {
+        return Future<[Movies], URLError> { completion in
+            if let url = URL(string: MovieEndpoints.Gets.nowPlaying.url) {
+                AF.request(url).validate().responseDecodable(of: DataMovies.self) { response in
+                    switch response.result {
+                    case .success(let value):
+                        completion(.success(value.results))
+                    case .failure:
+                        completion(.failure(.invalidResponse))
+                    }
+                }
+            }
+        }.eraseToAnyPublisher()
     }
 }

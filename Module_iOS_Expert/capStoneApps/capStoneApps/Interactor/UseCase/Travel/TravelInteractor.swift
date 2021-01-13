@@ -6,7 +6,7 @@
 //  Copyright © 2020 Kelvin HT. All rights reserved.
 //
 
-import Foundation
+import Combine
 
 class TravelInteractor: TravelProtocol {
     private let travelRepository: TravelRepositoryProtocol
@@ -15,9 +15,7 @@ class TravelInteractor: TravelProtocol {
       self.travelRepository = repository
     }
 
-    func getTravel(completion: @escaping (Result<[TravelModel], Error>) -> Void) {
-        travelRepository.getTravel { result in
-            completion(result)
-        }
+    func getTravel() -> AnyPublisher<[TravelModel], URLError> {
+        return travelRepository.getTravel()
     }
 }

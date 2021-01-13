@@ -6,7 +6,7 @@
 //  Copyright © 2020 Kelvin HT. All rights reserved.
 //
 
-import Foundation
+import Combine
 
 class SportsInteractor: SportsProtocol {
     private let sportRepository: SportRepositoryProtocol
@@ -15,9 +15,7 @@ class SportsInteractor: SportsProtocol {
       self.sportRepository = repository
     }
 
-    func getSport(completion: @escaping (Result<[SportModel], Error>) -> Void) {
-        sportRepository.getSport { result in
-            completion(result)
-        }
+    func getSport() -> AnyPublisher<[SportModel], URLError> {
+        return sportRepository.getSport()
     }
 }

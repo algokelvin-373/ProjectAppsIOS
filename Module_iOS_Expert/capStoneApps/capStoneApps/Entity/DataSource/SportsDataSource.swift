@@ -7,9 +7,11 @@
 //
 
 import Foundation
+import Combine
+import Alamofire
 
 protocol SportDataSourceProtocol: class {
-  func getSport(result: @escaping (Result<[Sports], URLError>) -> Void)
+  func getSport() -> AnyPublisher<[Sports], URLError>
 }
 
 final class SportDataSource: NSObject {
@@ -19,22 +21,18 @@ final class SportDataSource: NSObject {
 }
 
 extension SportDataSource: SportDataSourceProtocol {
-    func getSport(result: @escaping (Result<[Sports], URLError>) -> Void) {
-        guard let url = URL(string: SportEndpoints.Gets.sport.url) else { return }
-
-        let task = URLSession.shared.dataTask(with: url) { maybeData, maybeResponse, maybeError in
-          if maybeError != nil {
-              result(.failure(.addressUnreachable(url)))
-          } else if let data = maybeData, let response = maybeResponse as? HTTPURLResponse, response.statusCode == 200 {
-              let decoder = JSONDecoder()
-              do {
-                let categories = try decoder.decode(DataSports.self, from: data).sports
-                  result(.success(categories))
-              } catch {
-                result(.failure(.invalidResponse))
-              }
-          }
-        }
-        task.resume()
+    func getSport() -> AnyPublisher<[Sports], URLError> {
+        return Future<[Sports], URLError> { completion in
+            if let url = URL(string: SportEndpoints.Gets.sport.url) {
+                AF.request(url).validate().responseDecodable(of: DataSports.self) { response in
+                    switch response.result {
+                    case .success(let value):
+                        completion(.success(value.sports))
+                    case .failure:
+                        completion(.failure(.invalidResponse))
+                    }
+                }
+            }
+        }.eraseToAnyPublisher()
     }
 }

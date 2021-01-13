@@ -6,7 +6,7 @@
 //  Copyright © 2020 Kelvin HT. All rights reserved.
 //
 
-import Foundation
+import Combine
 
 class MovieInteractor: MovieProtocol {
     private let movieRepository: MovieRepositoryProtocol
@@ -15,9 +15,7 @@ class MovieInteractor: MovieProtocol {
       self.movieRepository = repository
     }
 
-    func getMovie(completion: @escaping (Result<[MovieModel], Error>) -> Void) {
-        movieRepository.getMovie { result in
-            completion(result)
-        }
+    func getMovie() -> AnyPublisher<[MovieModel], URLError> {
+        return movieRepository.getMovie()
     }
 }

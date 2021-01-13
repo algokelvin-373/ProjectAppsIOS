@@ -7,8 +7,10 @@
 //
 
 import SwiftUI
+import Combine
 
 class MoviePresenter: ObservableObject {
+    private var cancellables: Set<AnyCancellable> = []
     private let movieRouter = MovieRouter()
     private let movieUseCase: MovieProtocol
 
@@ -22,20 +24,18 @@ class MoviePresenter: ObservableObject {
 
     func getMovies() {
         loadingState = true
-        movieUseCase.getMovie { result in
-            switch result {
-            case .success(let dataMovie):
-                DispatchQueue.main.async {
+        movieUseCase.getMovie()
+            .receive(on: RunLoop.main)
+            .sink(receiveCompletion: { completion in
+                switch completion {
+                case .finished:
                     self.loadingState = false
-                    self.movies = dataMovie
+                case .failure:
+                    self.errorMessage = String(describing: completion)
                 }
-            case .failure(let error):
-                DispatchQueue.main.async {
-                    self.loadingState = false
-                    self.errorMessage = error.localizedDescription
-                }
-            }
-        }
+            }, receiveValue: { movies in
+                self.movies = movies
+        }).store(in: &cancellables)
     }
 
     func linkBuilder<Content: View>(
