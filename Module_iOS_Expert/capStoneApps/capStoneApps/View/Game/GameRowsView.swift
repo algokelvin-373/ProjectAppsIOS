@@ -15,7 +15,7 @@ struct GameRowsView: View {
 
     var body: some View {
         HStack {
-            WebImage(url: URL(string: dataGames.backgroundImage))
+            WebImage(url: URL(string: dataGames.image))
                 .resizable()
                 .indicator(.activity)
                 .scaledToFit()
@@ -44,7 +44,7 @@ struct GameRowsView_Previews: PreviewProvider {
         GameRowsView(dataGames: GameModel(
             id: 1,
             name: "Grand Theft Auto V",
-            backgroundImage: "https://media.rawg.io/media/games/84d/84da2ac3fdfc6507807a1808595afb12.jpg",
+            image: "https://media.rawg.io/media/games/84d/84da2ac3fdfc6507807a1808595afb12.jpg",
             released: "2013-09-17",
             rating: 4.48))
     }

@@ -22,7 +22,7 @@ struct GameDetailView: View {
             } else {
                 ScrollView(.vertical) {
                     VStack {
-                        WebImage(url: URL(string: self.presenter.category.backgroundImage))
+                        WebImage(url: URL(string: self.presenter.category.image))
                             .resizable()
                             .indicator(.activity)
                             .transition(.fade(duration: 0.5))

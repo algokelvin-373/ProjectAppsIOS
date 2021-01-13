@@ -14,7 +14,7 @@ final class DataMapper {
             return GameModel(
                 id: result.idGame ?? 0,
                 name: result.nameGame ?? "Unknow",
-                backgroundImage: result.backgroundImageGame ?? "Unknow",
+                image: result.backgroundImageGame ?? "Unknow",
                 released: result.releasedGame ?? "Unknow",
                 rating: result.ratingGame ?? 0.0
             )
@@ -26,7 +26,8 @@ final class DataMapper {
             return MovieModel(
                 id: result.idMovie ?? 0,
                 name: result.nameMovie ?? "Unknow",
-                backgroundImage: result.backgroundImageMovie ?? "Unknow",
+                image: result.backgroundImageMovie ?? "Unknow",
+                description: result.descriptionMovie ?? "Unknow",
                 released: result.releasedMovie ?? "Unknow",
                 rating: result.ratingMovie ?? 0.0
             )
@@ -38,19 +39,20 @@ final class DataMapper {
             return TravelModel(
                 id: result.id ,
                 name: result.name ,
-                image: result.image ,
+                image: result.image,
+                description: result.description,
                 address: result.address ,
                 like: result.like
             )
         }
     }
-    
+
     static func mapSportResponsesToDomains(input sportResponses: [Sports]) -> [SportModel] {
         return sportResponses.map { result in
             return SportModel(
-                id: result.idSport ?? "0",
+                id: Int(result.idSport ?? "0") ?? 0,
                 name: result.nameSport ?? "Unknown",
-                backgroundImage: result.backgroundImageSport ?? "Unknown",
+                image: result.backgroundImageSport ?? "Unknown",
                 description: result.descriptionSport ?? "Unknown")
         }
     }

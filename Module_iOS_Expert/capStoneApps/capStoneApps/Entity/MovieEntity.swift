@@ -17,6 +17,7 @@ struct Movies: Decodable {
         case idMovie = "id"
         case nameMovie = "original_title"
         case backgroundImageMovie = "poster_path"
+        case descriptionMovie = "overview"
         case releasedMovie = "release_date"
         case ratingMovie = "vote_average"
     }
@@ -24,14 +25,17 @@ struct Movies: Decodable {
     let idMovie: Int?
     let nameMovie: String?
     let backgroundImageMovie: String?
+    let descriptionMovie: String?
     let releasedMovie: String?
     let ratingMovie: Float?
 }
 
-struct MovieModel: Equatable, Identifiable {
+struct MovieModel: Equatable, Identifiable, GeneralAttribute {
     let id: Int
     let name: String
-    let backgroundImage: String
+    let image: String
+
+    let description: String
     let released: String
     let rating: Float
 }

@@ -15,7 +15,7 @@ struct SportRowsView: View {
 
     var body: some View {
         VStack {
-            WebImage(url: URL(string: dataSports.backgroundImage))
+            WebImage(url: URL(string: dataSports.image))
                 .resizable()
                 .indicator(.activity)
                 .transition(.fade(duration: 0.5))

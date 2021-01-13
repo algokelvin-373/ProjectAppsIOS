@@ -28,10 +28,11 @@ struct Games: Decodable {
     let ratingGame: Float?
 }
 
-struct GameModel: Equatable, Identifiable {
+struct GameModel: Equatable, Identifiable, GeneralAttribute {
     let id: Int
     let name: String
-    let backgroundImage: String
+    let image: String
+
     let released: String
     let rating: Float
 }
