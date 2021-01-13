@@ -25,14 +25,16 @@ struct MovieRowsView: View {
             VStack(alignment: .leading, spacing: 5) {
                 Text(dataMovies.name)
                     .font(.system(size: 14))
+                    .foregroundColor(Color.white)
                     .bold()
 
                 Text(dataMovies.released)
                     .font(.system(size: 12))
+                    .foregroundColor(Color.white)
                     .lineLimit(2)
             }.padding(EdgeInsets(top: 0, leading: 0, bottom: 16, trailing: 16))
         }.frame(width: UIScreen.main.bounds.width - 32, height: 150)
-        .background(Color(red: .random(in: 0...1), green: .random(in: 0...1), blue: .random(in: 0...1)))
+            .background(Color(red: .random(in: 0...0.5), green: .random(in: 0...0.5), blue: .random(in: 0...0.5)))
         .cornerRadius(10)
     }
 }
