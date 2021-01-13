@@ -28,10 +28,11 @@ struct Movies: Decodable {
     let ratingMovie: Float?
 }
 
-struct MovieModel: Equatable, Identifiable {
+struct MovieModel: Equatable, Identifiable, GeneralAttribute {
     let id: Int
     let name: String
     let image: String
+
     let released: String
     let rating: Float
 }

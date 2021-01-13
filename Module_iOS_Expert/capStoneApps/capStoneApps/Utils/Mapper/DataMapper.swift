@@ -44,11 +44,11 @@ final class DataMapper {
             )
         }
     }
-    
+
     static func mapSportResponsesToDomains(input sportResponses: [Sports]) -> [SportModel] {
         return sportResponses.map { result in
             return SportModel(
-                id: result.idSport ?? "0",
+                id: Int(result.idSport ?? "0") ?? 0,
                 name: result.nameSport ?? "Unknown",
                 image: result.backgroundImageSport ?? "Unknown",
                 description: result.descriptionSport ?? "Unknown")

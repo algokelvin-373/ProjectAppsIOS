@@ -26,9 +26,10 @@ struct Sports: Decodable {
     let descriptionSport: String?
 }
 
-struct SportModel: Equatable, Identifiable {
-    let id: String
+struct SportModel: Equatable, Identifiable, GeneralAttribute {
+    let id: Int
     let name: String
     let image: String
+
     let description: String
 }

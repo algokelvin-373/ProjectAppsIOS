@@ -20,10 +20,11 @@ struct Travels: Decodable {
     let like: Int
 }
 
-struct TravelModel: Equatable, Identifiable {
+struct TravelModel: Equatable, Identifiable, GeneralAttribute {
     let id: Int
     let name: String
     let image: String
+
     let address: String
     let like: Int
 }
