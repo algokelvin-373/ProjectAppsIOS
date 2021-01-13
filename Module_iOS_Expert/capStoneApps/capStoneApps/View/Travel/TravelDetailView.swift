@@ -19,6 +19,12 @@ struct TravelDetailView: View {
             } else {
                 ScrollView(.vertical) {
                     VStack {
+                        MapViewUI(
+                            latitude: self.presenter.category.latitude,
+                            longitude: self.presenter.category.longitude
+                        ).edgesIgnoringSafeArea(. top)
+                        .frame(height: 300)
+
                         ImageViewUI(image: self.presenter.category.image)
 
                         Spacer()
