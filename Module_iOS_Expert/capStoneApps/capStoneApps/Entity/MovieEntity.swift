@@ -31,7 +31,7 @@ struct Movies: Decodable {
 struct MovieModel: Equatable, Identifiable {
     let id: Int
     let name: String
-    let backgroundImage: String
+    let image: String
     let released: String
     let rating: Float
 }

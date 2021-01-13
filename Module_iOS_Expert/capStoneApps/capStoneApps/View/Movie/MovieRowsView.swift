@@ -15,7 +15,7 @@ struct MovieRowsView: View {
 
     var body: some View {
         HStack {
-            WebImage(url: URL(string: (API.baseUrlImage)+(dataMovies.backgroundImage)))
+            WebImage(url: URL(string: (API.baseUrlImage)+(dataMovies.image)))
                 .resizable()
                 .indicator(.activity)
                 .scaledToFit()

@@ -14,7 +14,7 @@ final class DataMapper {
             return GameModel(
                 id: result.idGame ?? 0,
                 name: result.nameGame ?? "Unknow",
-                backgroundImage: result.backgroundImageGame ?? "Unknow",
+                image: result.backgroundImageGame ?? "Unknow",
                 released: result.releasedGame ?? "Unknow",
                 rating: result.ratingGame ?? 0.0
             )
@@ -26,7 +26,7 @@ final class DataMapper {
             return MovieModel(
                 id: result.idMovie ?? 0,
                 name: result.nameMovie ?? "Unknow",
-                backgroundImage: result.backgroundImageMovie ?? "Unknow",
+                image: result.backgroundImageMovie ?? "Unknow",
                 released: result.releasedMovie ?? "Unknow",
                 rating: result.ratingMovie ?? 0.0
             )
@@ -50,7 +50,7 @@ final class DataMapper {
             return SportModel(
                 id: result.idSport ?? "0",
                 name: result.nameSport ?? "Unknown",
-                backgroundImage: result.backgroundImageSport ?? "Unknown",
+                image: result.backgroundImageSport ?? "Unknown",
                 description: result.descriptionSport ?? "Unknown")
         }
     }

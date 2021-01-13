@@ -29,6 +29,6 @@ struct Sports: Decodable {
 struct SportModel: Equatable, Identifiable {
     let id: String
     let name: String
-    let backgroundImage: String
+    let image: String
     let description: String
 }
