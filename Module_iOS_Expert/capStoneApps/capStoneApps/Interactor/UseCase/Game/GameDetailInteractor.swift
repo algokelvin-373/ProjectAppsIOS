@@ -9,10 +9,10 @@
 import Foundation
 
 class GameDetailInteractor: GameDetailProtocol {
-    private let repository: GameRepository
+    private let repository: GameRepositoryProtocol
     private let category: GameModel
 
-    required init(repository: GameRepository, category: GameModel) {
+    required init(repository: GameRepositoryProtocol, category: GameModel) {
       self.repository = repository
       self.category = category
     }

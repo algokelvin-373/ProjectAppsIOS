@@ -13,51 +13,63 @@ final class Injection: NSObject {
       return ProfileInteractor()
     }
 
-    func provideTravel() -> TravelProtocol {
+    func provideTravelRepository() -> TravelRepositoryProtocol {
         let remoteTravel = TravelDataSource.sharedInstance
-        let repositoryTravel = TravelRepository.sharedInstance(remoteTravel)
+        return TravelRepository.sharedInstance(remoteTravel)
+    }
+
+    func provideTravel() -> TravelProtocol {
+        let repositoryTravel = provideTravelRepository()
         return TravelInteractor(repository: repositoryTravel)
     }
 
     func provideTravelDetail(category: TravelModel) -> TravelDetailProtocol {
-        let remoteTravel = TravelDataSource.sharedInstance
-        let repositoryTravel = TravelRepository.sharedInstance(remoteTravel)
+        let repositoryTravel = provideTravelRepository()
         return TravelDetailInteractor(repository: repositoryTravel, category: category)
     }
 
-    func provideGame() -> GameProtocol {
+    func provideGameRepository() -> GameRepositoryProtocol {
         let remoteGame = GameDataSource.sharedInstance
-        let repositoryGame = GameRepository.sharedInstance(remoteGame)
+        return GameRepository.sharedInstance(remoteGame)
+    }
+
+    func provideGame() -> GameProtocol {
+        let repositoryGame = provideGameRepository()
         return GameInteractor(repository: repositoryGame)
     }
-    
+
     func provideGameDetail(category: GameModel) -> GameDetailProtocol {
-        let remoteGame = GameDataSource.sharedInstance
-        let repositoryGame = GameRepository.sharedInstance(remoteGame)
+        let repositoryGame = provideGameRepository()
         return GameDetailInteractor(repository: repositoryGame, category: category)
     }
 
-    func provideMovie() -> MovieProtocol {
+    func provideMovieRepository() -> MovieRepositoryProtocol {
         let remoteMovie = MovieDataSource.sharedInstance
-        let repositoryMovie = MovieRepository.sharedInstance(remoteMovie)
+        return MovieRepository.sharedInstance(remoteMovie)
+    }
+
+    func provideMovie() -> MovieProtocol {
+        let repositoryMovie = provideMovieRepository()
         return MovieInteractor(repository: repositoryMovie)
     }
-    
+
     func provideMovieDetail(category: MovieModel) -> MovieDetailProtocol {
-        let remoteMovie = MovieDataSource.sharedInstance
-        let repositoryMovie = MovieRepository.sharedInstance(remoteMovie)
+        let repositoryMovie = provideMovieRepository()
         return MovieDetailInteractor(repository: repositoryMovie, category: category)
     }
 
-    func provideSport() -> SportsProtocol {
+    func provideSportRepository() -> SportRepositoryProtocol {
         let remoteSport = SportDataSource.sharedInstance
-        let repositorySport = SportRepository.sharedInstance(remoteSport)
+        return SportRepository.sharedInstance(remoteSport)
+    }
+
+    func provideSport() -> SportsProtocol {
+        let repositorySport = provideSportRepository()
         return SportsInteractor(repository: repositorySport)
     }
 
     func provideSportDetail(category: SportModel) -> SportsDetailProtocol {
-      let remoteSport = SportDataSource.sharedInstance
-      let repositorySport = SportRepository.sharedInstance(remoteSport)
+      let repositorySport = provideSportRepository()
       return SportsDetailInteractor(repository: repositorySport, category: category)
     }
 }

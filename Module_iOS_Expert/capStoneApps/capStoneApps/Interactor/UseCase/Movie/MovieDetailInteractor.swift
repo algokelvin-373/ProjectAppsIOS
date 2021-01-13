@@ -9,10 +9,10 @@
 import Foundation
 
 class MovieDetailInteractor: MovieDetailProtocol {
-    private let repository: MovieRepository
+    private let repository: MovieRepositoryProtocol
     private let category: MovieModel
 
-    required init(repository: MovieRepository, category: MovieModel) {
+    required init(repository: MovieRepositoryProtocol, category: MovieModel) {
       self.repository = repository
       self.category = category
     }

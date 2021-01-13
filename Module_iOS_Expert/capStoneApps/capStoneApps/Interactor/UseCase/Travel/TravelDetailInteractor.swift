@@ -9,10 +9,10 @@
 import Foundation
 
 class TravelDetailInteractor: TravelDetailProtocol {
-    private let repository: TravelRepository
+    private let repository: TravelRepositoryProtocol
     private let category: TravelModel
 
-    required init(repository: TravelRepository, category: TravelModel) {
+    required init(repository: TravelRepositoryProtocol, category: TravelModel) {
       self.repository = repository
       self.category = category
     }
