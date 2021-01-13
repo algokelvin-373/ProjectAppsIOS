@@ -19,11 +19,11 @@ struct SportDetailView: View {
             } else {
                 ScrollView(.vertical) {
                     VStack {
-                        ImageViewUI(image: self.presenter.category.image)
-
-                        Spacer()
-
-                        HeadLineViewUI(title: self.presenter.category.name, subtitle: "")
+                        SubHeadLineUI(
+                            image: self.presenter.category.image,
+                            title: self.presenter.category.name,
+                            subtitle: ""
+                        ).padding(.top)
                     }
                 }
             }

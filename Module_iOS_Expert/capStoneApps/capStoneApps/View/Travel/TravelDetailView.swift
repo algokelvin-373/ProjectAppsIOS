@@ -25,11 +25,8 @@ struct TravelDetailView: View {
                         ).edgesIgnoringSafeArea(. top)
                         .frame(height: 300)
 
-                        ImageViewUI(image: self.presenter.category.image)
-
-                        Spacer()
-
-                        HeadLineViewUI(
+                        SubHeadLineUI(
+                            image: self.presenter.category.image,
                             title: self.presenter.category.name,
                             subtitle: self.presenter.category.address
                         )

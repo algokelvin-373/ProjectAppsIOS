@@ -20,14 +20,11 @@ struct MovieDetailView: View {
             } else {
                 ScrollView(.vertical) {
                     VStack {
-                        ImageViewUI(image: (API.baseUrlImage)+(self.presenter.category.image))
-
-                        Spacer()
-
-                        HeadLineViewUI(
+                        SubHeadLineUI(
+                            image: (API.baseUrlImage)+(self.presenter.category.image),
                             title: self.presenter.category.name,
                             subtitle: self.presenter.category.released
-                        )
+                        ).padding(.top)
                     }
                 }
             }
