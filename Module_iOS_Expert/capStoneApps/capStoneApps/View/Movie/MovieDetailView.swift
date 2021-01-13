@@ -23,12 +23,7 @@ struct MovieDetailView: View {
             } else {
                 ScrollView(.vertical) {
                     VStack {
-                        WebImage(url: URL(string: (API.baseUrlImage)+(self.presenter.category.image)))
-                            .resizable()
-                            .indicator(.activity)
-                            .transition(.fade(duration: 0.5))
-                            .scaledToFit()
-                            .frame(width: 250.0, height: 250.0, alignment: .center)
+                        ImageViewUI(image: (API.baseUrlImage)+(self.presenter.category.image))
 
                         Spacer()
 
