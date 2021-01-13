@@ -36,6 +36,6 @@ struct TravelDetailView: View {
                     }
                 }
             }
-        }.navigationBarTitle(Text(self.presenter.category.name), displayMode: .large)
+        }.navigationBarTitle(Text(self.presenter.category.name), displayMode: .inline)
     }
 }
