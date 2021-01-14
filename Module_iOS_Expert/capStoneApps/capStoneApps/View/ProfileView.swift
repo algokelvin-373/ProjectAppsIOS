@@ -26,78 +26,49 @@ struct ProfileView: View {
                         .padding(.bottom, -50)
 
                     Text(self.profilePresenter.profile.name)
-                        .font(.custom("Roboto-Bold", size: 30))
+                        .font(.system(size: 25))
+                        .fontWeight(.bold)
                         .frame(minWidth: 0, maxWidth: .infinity)
                     Text(self.profilePresenter.profile.job)
-                        .font(.custom("Roboto-Medium", size: 25))
+                        .font(.system(size: 20))
+                        .fontWeight(.medium)
                         .frame(minWidth: 0, maxWidth: .infinity)
                     Text(self.profilePresenter.profile.company)
-                        .font(.custom("Roboto-Medium", size: 20))
+                        .font(.system(size: 15))
+                        .fontWeight(.medium)
                         .frame(minWidth: 0, maxWidth: .infinity)
 
-                    VStack {
-                        Text("ABOUT ME")
-                            .padding(.leading, 50.0)
-                            .padding(.trailing, 50.0)
-                            .padding(.top, 10.0)
-                            .padding(.bottom, 30.0)
-                            .font(.custom("Roboto-Regular", size: 20))
-                            .background(Color(red: 251.0/255, green: 162.0/255, blue: 134.0/255, opacity: 1.0))
-                            .cornerRadius(20.0)
-
-                        VStack {
-                            Text(ConstantVal.ProfileUser.aboutMe)
-                                .font(.custom("Roboto-Regular", size: 15))
-                                .lineLimit(50)
-                                .padding(.all, 16.0)
-                                .border(Color(red: 251.0/255, green: 135.0/255, blue: 0.0/255, opacity: 1.0), width: 1)
-                        }
-                        .background(Color.white)
-                        .cornerRadius(20.0)
-                        .offset(y: -20.0)
-                    }
-                    .padding(.top, 16.0)
-
                     Text("Your Favorite")
-                        .font(.title)
+                        .font(.system(size: 14))
                         .fontWeight(.semibold)
-                    VStack {
-                        HStack {
-                            Image(ConstantVal.TabBarImage.movieTabBar)
-                            Text("MOVIE")
-                                .bold()
-                        }
-                    }.cornerRadius(10.0)
-                    .padding(EdgeInsets(top: 10, leading: 150, bottom: 10, trailing: 150))
-                    .background(Color(red: 251.0/255, green: 162.0/255, blue: 134.0/255, opacity: 1.0))
-                    .onTapGesture {
-                        print("You click Movie Sports")
+                        .padding(.top)
+
+                    TabFavoriteViewUI(
+                        title: "MOVIE",
+                        image: ConstantVal.TabBarImage.movieTabBar
+                    ).onTapGesture {
+                        print("You click Movie")
                     }
 
-                    VStack {
-                        HStack {
-                            Image(ConstantVal.TabBarImage.gameTabBar)
-                            Text("GAME")
-                                .bold()
-                        }
-                    }.cornerRadius(10.0)
-                    .padding(EdgeInsets(top: 10, leading: 154, bottom: 10, trailing: 154))
-                    .background(Color(red: 251.0/255, green: 162.0/255, blue: 134.0/255, opacity: 1.0))
-                    .onTapGesture {
+                    TabFavoriteViewUI(
+                        title: "GAME",
+                        image: ConstantVal.TabBarImage.gameTabBar
+                    ).onTapGesture {
                         print("You click Game")
                     }
 
-                    VStack {
-                        HStack {
-                            Image(ConstantVal.TabBarImage.sportTabBar)
-                            Text("SPORTS")
-                                .bold()
-                        }
-                    }.cornerRadius(10.0)
-                    .padding(EdgeInsets(top: 10, leading: 145, bottom: 10, trailing: 145))
-                    .background(Color(red: 251.0/255, green: 162.0/255, blue: 134.0/255, opacity: 1.0))
-                    .onTapGesture {
+                    TabFavoriteViewUI(
+                        title: "SPORTS",
+                        image: ConstantVal.TabBarImage.sportTabBar
+                    ).onTapGesture {
                         print("You click Sports")
+                    }
+
+                    TabFavoriteViewUI(
+                        title: "TRAVEL",
+                        image: ConstantVal.TabBarImage.travelTabBar
+                    ).onTapGesture {
+                        print("You click Travel")
                     }
                 }
             }.onAppear {

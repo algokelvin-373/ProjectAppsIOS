@@ -92,6 +92,7 @@
 		10C6205225B07B550071E4FF /* MapViewUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C6205125B07B550071E4FF /* MapViewUI.swift */; };
 		10C6205425B07C2A0071E4FF /* SubHeadLineUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C6205325B07C2A0071E4FF /* SubHeadLineUI.swift */; };
 		10C6205625B07C720071E4FF /* GenerateAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C6205525B07C720071E4FF /* GenerateAttribute.swift */; };
+		10E0EB0B25B0ADAE006044D6 /* TabFavoriteViewUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E0EB0A25B0ADAE006044D6 /* TabFavoriteViewUI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -201,6 +202,7 @@
 		10C6205125B07B550071E4FF /* MapViewUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewUI.swift; sourceTree = "<group>"; };
 		10C6205325B07C2A0071E4FF /* SubHeadLineUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubHeadLineUI.swift; sourceTree = "<group>"; };
 		10C6205525B07C720071E4FF /* GenerateAttribute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateAttribute.swift; sourceTree = "<group>"; };
+		10E0EB0A25B0ADAE006044D6 /* TabFavoriteViewUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabFavoriteViewUI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -460,6 +462,7 @@
 				10C6204F25B073A60071E4FF /* LoadingViewUI.swift */,
 				10C6205125B07B550071E4FF /* MapViewUI.swift */,
 				10C6205325B07C2A0071E4FF /* SubHeadLineUI.swift */,
+				10E0EB0A25B0ADAE006044D6 /* TabFavoriteViewUI.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -808,6 +811,7 @@
 				1042526D2581D3F0007C29D4 /* GamePresenter.swift in Sources */,
 				1066420825828C4F00624EF9 /* GameDataSource.swift in Sources */,
 				104252562580CDBE007C29D4 /* ProfilePresenter.swift in Sources */,
+				10E0EB0B25B0ADAE006044D6 /* TabFavoriteViewUI.swift in Sources */,
 				10C6205625B07C720071E4FF /* GenerateAttribute.swift in Sources */,
 				10683D222587E03B0006CB02 /* MovieProtocol.swift in Sources */,
 				10AED9902592547000A6E0B1 /* TravelInteractor.swift in Sources */,
