@@ -32,7 +32,7 @@ struct SportModel: Equatable, Identifiable, GeneralAttribute {
     let name: String
     let image: String
 
-    let description: String
+    let descript: String
 }
 
 class SportEntity: Object {
@@ -40,10 +40,9 @@ class SportEntity: Object {
     @objc dynamic var name: String = ""
     @objc dynamic var image: String = ""
 
-//    @objc dynamic var description: String = ""
+    @objc dynamic var descript: String = ""
 
     override static func primaryKey() -> String? {
         return "id"
     }
 }
-

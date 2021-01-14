@@ -30,7 +30,7 @@ struct SportRowsView: View {
                     .foregroundColor(Color.white)
                     .bold()
 
-                Text(dataSports.description)
+                Text(dataSports.descript)
                     .font(.system(size: 12))
                     .foregroundColor(Color.white)
                     .lineLimit(2)

@@ -31,7 +31,7 @@ struct TravelDetailView: View {
                             subtitle: self.presenter.category.address
                         )
 
-                        DescriptionViewUI(description: self.presenter.category.description)
+                        DescriptionViewUI(description: self.presenter.category.descript)
                             .padding()
 
                         Spacer()

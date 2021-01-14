@@ -27,7 +27,7 @@ final class DataMapper {
                 id: result.idMovie ?? 0,
                 name: result.nameMovie ?? "Unknow",
                 image: result.backgroundImageMovie ?? "Unknow",
-                description: result.descriptionMovie ?? "Unknow",
+                descript: result.descriptionMovie ?? "Unknow",
                 released: result.releasedMovie ?? "Unknow",
                 rating: result.ratingMovie ?? 0.0
             )
@@ -42,7 +42,7 @@ final class DataMapper {
                 image: result.image,
                 latitude: result.latitude,
                 longitude: result.longitude,
-                description: result.description,
+                descript: result.descript ?? "",
                 address: result.address ,
                 like: result.like
             )
@@ -55,7 +55,7 @@ final class DataMapper {
                 id: Int(result.idSport ?? "0") ?? 0,
                 name: result.nameSport ?? "Unknown",
                 image: result.backgroundImageSport ?? "Unknown",
-                description: result.descriptionSport ?? "Unknown")
+                descript: result.descriptionSport ?? "Unknown")
         }
     }
 }
