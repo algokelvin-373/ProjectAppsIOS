@@ -94,6 +94,7 @@
 		10C6205625B07C720071E4FF /* GenerateAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C6205525B07C720071E4FF /* GenerateAttribute.swift */; };
 		10C6205925B091D10071E4FF /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 10C6205825B091D10071E4FF /* Realm */; };
 		10C6205B25B091D10071E4FF /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 10C6205A25B091D10071E4FF /* RealmSwift */; };
+		10C6205E25B093B70071E4FF /* GameLocaleDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C6205D25B093B70071E4FF /* GameLocaleDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -203,6 +204,7 @@
 		10C6205125B07B550071E4FF /* MapViewUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewUI.swift; sourceTree = "<group>"; };
 		10C6205325B07C2A0071E4FF /* SubHeadLineUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubHeadLineUI.swift; sourceTree = "<group>"; };
 		10C6205525B07C720071E4FF /* GenerateAttribute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateAttribute.swift; sourceTree = "<group>"; };
+		10C6205D25B093B70071E4FF /* GameLocaleDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLocaleDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -298,6 +300,7 @@
 		104252522580CCD0007C29D4 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				10C6205C25B093910071E4FF /* Db */,
 				1066420425828BD500624EF9 /* DataSource */,
 				106642032582896D00624EF9 /* Api */,
 				1042525E2580DBEB007C29D4 /* ProfileEntity.swift */,
@@ -641,6 +644,14 @@
 			path = Sports;
 			sourceTree = "<group>";
 		};
+		10C6205C25B093910071E4FF /* Db */ = {
+			isa = PBXGroup;
+			children = (
+				10C6205D25B093B70071E4FF /* GameLocaleDataSource.swift */,
+			);
+			path = Db;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -868,6 +879,7 @@
 				10AED9A725925C8F00A6E0B1 /* SportsRepository.swift in Sources */,
 				10AED9A525925C7800A6E0B1 /* SportsEntity.swift in Sources */,
 				10683D1F2587E00A0006CB02 /* MovieDataSource.swift in Sources */,
+				10C6205E25B093B70071E4FF /* GameLocaleDataSource.swift in Sources */,
 				105B843D25ADE27D009FB8E3 /* TravelRouter.swift in Sources */,
 				1042525F2580DBEB007C29D4 /* ProfileEntity.swift in Sources */,
 				105B843725ADD4B3009FB8E3 /* MovieRowsView.swift in Sources */,
