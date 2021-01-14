@@ -45,7 +45,7 @@ class GameEntity: Object {
 
     @objc dynamic var released: String = ""
     @objc dynamic var rating: Float = 0.0
-    
+
     override static func primaryKey() -> String? {
         return "id"
     }

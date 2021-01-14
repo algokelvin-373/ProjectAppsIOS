@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import RealmSwift
 
 struct DataMovies: Decodable {
     let results: [Movies]
@@ -38,4 +39,18 @@ struct MovieModel: Equatable, Identifiable, GeneralAttribute {
     let description: String
     let released: String
     let rating: Float
+}
+
+class MovieEntity: Object {
+    @objc dynamic var id: Int = 0
+    @objc dynamic var name: String = ""
+    @objc dynamic var image: String = ""
+
+//    @objc dynamic var description: String = ""
+    @objc dynamic var released: String = ""
+    @objc dynamic var rating: Float = 0.0
+    
+    override static func primaryKey() -> String? {
+        return "id"
+    }
 }
