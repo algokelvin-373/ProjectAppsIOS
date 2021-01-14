@@ -121,7 +121,7 @@
 		100F37F325715B7F005EC043 /* SportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportView.swift; sourceTree = "<group>"; };
 		100F37F525715B94005EC043 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		100F37F725715BDD005EC043 /* TravelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelView.swift; sourceTree = "<group>"; };
-		100F37F925715BF1005EC043 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		100F37F925715BF1005EC043 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileView.swift; path = capStoneApps/View/ProfileView.swift; sourceTree = SOURCE_ROOT; };
 		100F37FC25715CF8005EC043 /* ConstantVal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantVal.swift; sourceTree = "<group>"; };
 		104252552580CDBE007C29D4 /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
 		104252592580CE9B007C29D4 /* ProfileInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInteractor.swift; sourceTree = "<group>"; };
@@ -262,7 +262,6 @@
 				100F37F325715B7F005EC043 /* SportView.swift */,
 				100F37F525715B94005EC043 /* GameView.swift */,
 				100F37F725715BDD005EC043 /* TravelView.swift */,
-				100F37F925715BF1005EC043 /* ProfileView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -350,6 +349,7 @@
 		1042525D2580D91C007C29D4 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				100F37F925715BF1005EC043 /* ProfileView.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
