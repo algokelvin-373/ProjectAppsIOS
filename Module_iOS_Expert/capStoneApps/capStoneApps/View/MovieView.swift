@@ -33,6 +33,5 @@ struct MovieView: View {
                 self.presenterMovie.getMovies()
             }
         }
-        .navigationBarTitle(Text("Movie"), displayMode: .automatic)
     }
 }
