@@ -10,7 +10,9 @@ import SwiftUI
 
 struct TravelFavoriteView: View {
     var body: some View {
-        Text("Travel Favorite")
+        VStack {
+            Text("Welcome in Travel Favorite")
+        }.navigationBarTitle(Text("Travel Favorite"), displayMode: .inline)
     }
 }
 

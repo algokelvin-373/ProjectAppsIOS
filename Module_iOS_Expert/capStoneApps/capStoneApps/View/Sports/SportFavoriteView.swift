@@ -10,7 +10,9 @@ import SwiftUI
 
 struct SportFavoriteView: View {
     var body: some View {
-        Text("Sport Favorite")
+        VStack {
+            Text("Welcome in Sport Favorite")
+        }.navigationBarTitle(Text("Sport Favorite"), displayMode: .inline)
     }
 }
 
