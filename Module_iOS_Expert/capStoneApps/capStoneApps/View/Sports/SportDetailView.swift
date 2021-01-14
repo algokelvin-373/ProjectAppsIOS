@@ -24,6 +24,12 @@ struct SportDetailView: View {
                             title: self.presenter.category.name,
                             subtitle: ""
                         ).padding(.top)
+                        
+                        
+                        DescriptionViewUI(description: self.presenter.category.description)
+                            .padding()
+
+                        Spacer()
                     }
                 }
             }

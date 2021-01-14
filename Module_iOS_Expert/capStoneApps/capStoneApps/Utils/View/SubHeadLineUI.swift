@@ -16,7 +16,6 @@ struct SubHeadLineUI: View {
     var body: some View {
         VStack {
             ImageViewUI(image: image)
-            Spacer()
             HeadLineViewUI(title: title, subtitle: subtitle)
         }
     }

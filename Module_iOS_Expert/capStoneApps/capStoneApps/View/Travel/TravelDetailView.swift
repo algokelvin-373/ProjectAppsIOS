@@ -30,6 +30,11 @@ struct TravelDetailView: View {
                             title: self.presenter.category.name,
                             subtitle: self.presenter.category.address
                         )
+
+                        DescriptionViewUI(description: self.presenter.category.description)
+                            .padding()
+
+                        Spacer()
                     }
                 }
             }
