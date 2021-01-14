@@ -95,6 +95,9 @@
 		10C6205925B091D10071E4FF /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 10C6205825B091D10071E4FF /* Realm */; };
 		10C6205B25B091D10071E4FF /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 10C6205A25B091D10071E4FF /* RealmSwift */; };
 		10C6205E25B093B70071E4FF /* GameLocaleDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C6205D25B093B70071E4FF /* GameLocaleDataSource.swift */; };
+		10E0EB0525B0A5E1006044D6 /* MovieLocaleDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E0EB0425B0A5E1006044D6 /* MovieLocaleDataSource.swift */; };
+		10E0EB0725B0A632006044D6 /* TravelLocaleDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E0EB0625B0A632006044D6 /* TravelLocaleDataSource.swift */; };
+		10E0EB0925B0A8D2006044D6 /* SportLocaleDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E0EB0825B0A8D2006044D6 /* SportLocaleDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -205,6 +208,9 @@
 		10C6205325B07C2A0071E4FF /* SubHeadLineUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubHeadLineUI.swift; sourceTree = "<group>"; };
 		10C6205525B07C720071E4FF /* GenerateAttribute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateAttribute.swift; sourceTree = "<group>"; };
 		10C6205D25B093B70071E4FF /* GameLocaleDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLocaleDataSource.swift; sourceTree = "<group>"; };
+		10E0EB0425B0A5E1006044D6 /* MovieLocaleDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieLocaleDataSource.swift; sourceTree = "<group>"; };
+		10E0EB0625B0A632006044D6 /* TravelLocaleDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelLocaleDataSource.swift; sourceTree = "<group>"; };
+		10E0EB0825B0A8D2006044D6 /* SportLocaleDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportLocaleDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -648,6 +654,9 @@
 			isa = PBXGroup;
 			children = (
 				10C6205D25B093B70071E4FF /* GameLocaleDataSource.swift */,
+				10E0EB0425B0A5E1006044D6 /* MovieLocaleDataSource.swift */,
+				10E0EB0625B0A632006044D6 /* TravelLocaleDataSource.swift */,
+				10E0EB0825B0A8D2006044D6 /* SportLocaleDataSource.swift */,
 			);
 			path = Db;
 			sourceTree = "<group>";
@@ -831,10 +840,12 @@
 				10AED9902592547000A6E0B1 /* TravelInteractor.swift in Sources */,
 				100F37F225715B59005EC043 /* MovieView.swift in Sources */,
 				105B844325ADF945009FB8E3 /* TravelDetailView.swift in Sources */,
+				10E0EB0725B0A632006044D6 /* TravelLocaleDataSource.swift in Sources */,
 				10AED9972592560700A6E0B1 /* TravelRepository.swift in Sources */,
 				100F37FD25715CF8005EC043 /* ConstantVal.swift in Sources */,
 				105B843B25ADE1F4009FB8E3 /* TravelRowsView.swift in Sources */,
 				10C6204A25B06E720071E4FF /* DescriptionViewUI.swift in Sources */,
+				10E0EB0925B0A8D2006044D6 /* SportLocaleDataSource.swift in Sources */,
 				10683D192587DFD20006CB02 /* MoviePresenter.swift in Sources */,
 				10683D152587DD140006CB02 /* APIMovie.swift in Sources */,
 				1063C74025A8692200B0483A /* SportsDetailProtocol.swift in Sources */,
@@ -848,6 +859,7 @@
 				105B842925AD5E08009FB8E3 /* GameDetailView.swift in Sources */,
 				10C6204E25B073110071E4FF /* ImageViewUI.swift in Sources */,
 				10683D1D2587DFFA0006CB02 /* MovieRepository.swift in Sources */,
+				10E0EB0525B0A5E1006044D6 /* MovieLocaleDataSource.swift in Sources */,
 				100F37F425715B7F005EC043 /* SportView.swift in Sources */,
 				100F37F825715BDD005EC043 /* TravelView.swift in Sources */,
 				10AED9AB2592642B00A6E0B1 /* APITravel.swift in Sources */,
