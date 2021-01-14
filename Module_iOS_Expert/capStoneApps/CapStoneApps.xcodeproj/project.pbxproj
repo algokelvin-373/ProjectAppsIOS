@@ -92,6 +92,8 @@
 		10C6205225B07B550071E4FF /* MapViewUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C6205125B07B550071E4FF /* MapViewUI.swift */; };
 		10C6205425B07C2A0071E4FF /* SubHeadLineUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C6205325B07C2A0071E4FF /* SubHeadLineUI.swift */; };
 		10C6205625B07C720071E4FF /* GenerateAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C6205525B07C720071E4FF /* GenerateAttribute.swift */; };
+		10C6205925B091D10071E4FF /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 10C6205825B091D10071E4FF /* Realm */; };
+		10C6205B25B091D10071E4FF /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 10C6205A25B091D10071E4FF /* RealmSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -208,6 +210,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10C6205B25B091D10071E4FF /* RealmSwift in Frameworks */,
+				10C6205925B091D10071E4FF /* Realm in Frameworks */,
 				1042526B2581D198007C29D4 /* SDWebImageSwiftUI in Frameworks */,
 				10C6204625B06CAB0071E4FF /* Alamofire in Frameworks */,
 			);
@@ -657,6 +661,8 @@
 			packageProductDependencies = (
 				1042526A2581D198007C29D4 /* SDWebImageSwiftUI */,
 				105B844725AE1684009FB8E3 /* Alamofire */,
+				10C6205825B091D10071E4FF /* Realm */,
+				10C6205A25B091D10071E4FF /* RealmSwift */,
 			);
 			productName = capStoneApps;
 			productReference = 108029542551A603004069BB /* CapStoneApps.app */;
@@ -733,6 +739,7 @@
 			packageReferences = (
 				104252692581D198007C29D4 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 				105B844625AE1684009FB8E3 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				10C6205725B091D10071E4FF /* XCRemoteSwiftPackageReference "realm-cocoa" */,
 			);
 			productRefGroup = 108029552551A603004069BB /* Products */;
 			projectDirPath = "";
@@ -1211,6 +1218,14 @@
 				minimumVersion = 5.4.1;
 			};
 		};
+		10C6205725B091D10071E4FF /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.5.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1223,6 +1238,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 105B844625AE1684009FB8E3 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		10C6205825B091D10071E4FF /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 10C6205725B091D10071E4FF /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = Realm;
+		};
+		10C6205A25B091D10071E4FF /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 10C6205725B091D10071E4FF /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 
