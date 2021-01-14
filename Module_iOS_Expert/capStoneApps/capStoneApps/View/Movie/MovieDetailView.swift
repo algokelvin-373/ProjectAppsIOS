@@ -29,5 +29,12 @@ struct MovieDetailView: View {
                 }
             }
         }.navigationBarTitle(Text(self.presenter.category.name), displayMode: .inline)
+        .navigationBarItems(trailing:
+            Button(action: {
+                print("User icon pressed...")
+            }) {
+                Image(systemName: "person.circle").imageScale(.large)
+            }
+        )
     }
 }
