@@ -15,32 +15,25 @@ struct GameDetailView: View {
     var body: some View {
         ZStack {
             if presenter.loadingState {
-                VStack {
-                    Text("Loading...")
-                    ActivityIndicator()
-                }
+                LoadingViewUI()
             } else {
                 ScrollView(.vertical) {
                     VStack {
-                        WebImage(url: URL(string: self.presenter.category.image))
-                            .resizable()
-                            .indicator(.activity)
-                            .transition(.fade(duration: 0.5))
-                            .scaledToFit()
-                            .frame(width: 250.0, height: 250.0, alignment: .center)
-
-                        Spacer()
-
-                        VStack(alignment: .leading, spacing: 0) {
-                            Text(self.presenter.category.name)
-                                .font(.headline)
-                                .padding([.top, .bottom])
-                            Text(self.presenter.category.released)
-                                .font(.system(size: 15))
-                        }
+                        SubHeadLineUI(
+                            image: self.presenter.category.image,
+                            title: self.presenter.category.name,
+                            subtitle: self.presenter.category.released
+                        ).padding(.top)
                     }
                 }
             }
-        }.navigationBarTitle(Text(self.presenter.category.name), displayMode: .large)
+        }.navigationBarTitle(Text(self.presenter.category.name), displayMode: .inline)
+        .navigationBarItems(trailing:
+            Button(action: {
+                print("User icon pressed...")
+            }) {
+                Image(systemName: "person.circle").imageScale(.large)
+            }
+        )
     }
 }

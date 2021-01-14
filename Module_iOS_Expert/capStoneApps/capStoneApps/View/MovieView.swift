@@ -14,10 +14,7 @@ struct MovieView: View {
     var body: some View {
         ZStack {
             if presenterMovie.loadingState {
-                VStack {
-                    Text("Loading...")
-                    ActivityIndicator()
-                }
+                LoadingViewUI()
             } else {
                 NavigationView {
                     ScrollView(.vertical, showsIndicators: false) {
@@ -36,6 +33,5 @@ struct MovieView: View {
                 self.presenterMovie.getMovies()
             }
         }
-        .navigationBarTitle(Text("Movie"), displayMode: .automatic)
     }
 }

@@ -15,32 +15,36 @@ struct TravelDetailView: View {
     var body: some View {
         ZStack {
             if presenter.loadingState {
-                VStack {
-                    Text("Loading...")
-                    ActivityIndicator()
-                }
+                LoadingViewUI()
             } else {
                 ScrollView(.vertical) {
                     VStack {
-                        WebImage(url: URL(string: self.presenter.category.image))
-                            .resizable()
-                            .indicator(.activity)
-                            .transition(.fade(duration: 0.5))
-                            .scaledToFit()
-                            .frame(width: 250.0, height: 250.0, alignment: .center)
+                        MapViewUI(
+                            latitude: self.presenter.category.latitude,
+                            longitude: self.presenter.category.longitude
+                        ).edgesIgnoringSafeArea(. top)
+                        .frame(height: 300)
+
+                        SubHeadLineUI(
+                            image: self.presenter.category.image,
+                            title: self.presenter.category.name,
+                            subtitle: self.presenter.category.address
+                        )
+
+                        DescriptionViewUI(description: self.presenter.category.description)
+                            .padding()
 
                         Spacer()
-
-                        VStack(alignment: .leading, spacing: 0) {
-                            Text(self.presenter.category.name)
-                                .font(.headline)
-                                .padding([.top, .bottom])
-                            Text(self.presenter.category.address)
-                                .font(.system(size: 15))
-                        }
                     }
                 }
             }
-        }.navigationBarTitle(Text(self.presenter.category.name), displayMode: .large)
+        }.navigationBarTitle(Text(self.presenter.category.name))
+        .navigationBarItems(trailing:
+            Button(action: {
+                print("User icon pressed...")
+            }) {
+                Image(systemName: "person.circle").imageScale(.large)
+            }
+        )
     }
 }

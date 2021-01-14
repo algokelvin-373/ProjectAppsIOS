@@ -40,6 +40,8 @@ final class DataMapper {
                 id: result.id ,
                 name: result.name ,
                 image: result.image,
+                latitude: result.latitude,
+                longitude: result.longitude,
                 description: result.description,
                 address: result.address ,
                 like: result.like

@@ -14,10 +14,7 @@ struct SportView: View {
     var body: some View {
         ZStack {
             if presenterSport.loadingState {
-                    VStack {
-                        Text("Loading...")
-                        ActivityIndicator()
-                    }
+                    LoadingViewUI()
                 } else {
                     NavigationView {
                         ScrollView(.vertical, showsIndicators: false) {
@@ -29,13 +26,12 @@ struct SportView: View {
                                 }.padding(8)
                             }
                         }
-                    }
+                    }.navigationBarTitle(Text("Sport"), displayMode: .automatic)
                 }
             }.onAppear {
                 if self.presenterSport.sports.count == 0 {
                     self.presenterSport.getSports()
                 }
             }
-            .navigationBarTitle(Text("Sport"), displayMode: .automatic)
     }
 }

@@ -14,10 +14,7 @@ struct TravelView: View {
     var body: some View {
         ZStack {
             if presenterTravel.loadingState {
-                VStack {
-                    Text("Loading...")
-                    ActivityIndicator()
-                }
+                LoadingViewUI()
             } else {
                 NavigationView {
                     ScrollView(.vertical, showsIndicators: false) {
