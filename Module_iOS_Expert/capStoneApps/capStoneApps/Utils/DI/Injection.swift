@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import RealmSwift
 
 final class Injection: NSObject {
     func provideProfile() -> ProfileProtocol {
@@ -31,6 +32,12 @@ final class Injection: NSObject {
     func provideGameRepository() -> GameRepositoryProtocol {
         let remoteGame = GameDataSource.sharedInstance
         return GameRepository.sharedInstance(remoteGame)
+    }
+
+    func provideGameLocaleRepository() -> GameLocaleRepositoryProtocol {
+        let realm = try? Realm()
+        let localeGame = GameLocaleDataSource.sharedInstance(realm)
+        return GameLocaleRepository.sharedInstance(localeGame)
     }
 
     func provideGame() -> GameProtocol {
