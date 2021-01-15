@@ -18,8 +18,12 @@ struct GameFavoriteView: View {
                     Text("No Game Favorite")
                 }
             } else {
-                VStack {
-                    Text("Welcome in Game Favorite")
+                ScrollView(.vertical, showsIndicators: false) {
+                    ForEach(self.presenterGameFavorite.game, id: \.id) { game in
+                        VStack {
+                            Text(game.name)
+                        }
+                    }
                 }
             }
         }.navigationBarTitle(Text("Game Favorite"), displayMode: .inline)
