@@ -36,7 +36,7 @@ struct GameDetailView: View {
                 self.presenter.addFavorite(game: DataLocaleMapper.mapGameToEntity(input: self.presenter.category))
                 print("Success....")
             }) {
-                Image(systemName: "person.circle").imageScale(.large)
+                Image(onLove ? "ic-love-on" : "ic-love-off").imageScale(.large)
             }
         )
         .onAppear {
