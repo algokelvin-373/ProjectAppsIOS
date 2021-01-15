@@ -130,7 +130,7 @@
 /* Begin PBXFileReference section */
 		100F37F125715B59005EC043 /* MovieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieView.swift; sourceTree = "<group>"; };
 		100F37F325715B7F005EC043 /* SportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportView.swift; sourceTree = "<group>"; };
-		100F37F525715B94005EC043 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		100F37F525715B94005EC043 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GameView.swift; path = capStoneApps/View/GameView.swift; sourceTree = SOURCE_ROOT; };
 		100F37F725715BDD005EC043 /* TravelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelView.swift; sourceTree = "<group>"; };
 		100F37F925715BF1005EC043 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileView.swift; path = capStoneApps/View/ProfileView.swift; sourceTree = SOURCE_ROOT; };
 		100F37FC25715CF8005EC043 /* ConstantVal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantVal.swift; sourceTree = "<group>"; };
@@ -282,7 +282,6 @@
 				1042525D2580D91C007C29D4 /* Profile */,
 				100F37F125715B59005EC043 /* MovieView.swift */,
 				100F37F325715B7F005EC043 /* SportView.swift */,
-				100F37F525715B94005EC043 /* GameView.swift */,
 				100F37F725715BDD005EC043 /* TravelView.swift */,
 				100F37F925715BF1005EC043 /* ProfileView.swift */,
 			);
@@ -389,6 +388,7 @@
 		1042526425810746007C29D4 /* Game */ = {
 			isa = PBXGroup;
 			children = (
+				100F37F525715B94005EC043 /* GameView.swift */,
 				10E0EB0C25B0B7ED006044D6 /* GameFavoriteView.swift */,
 				1042526725810BE3007C29D4 /* GameRowsView.swift */,
 				105B842825AD5E08009FB8E3 /* GameDetailView.swift */,

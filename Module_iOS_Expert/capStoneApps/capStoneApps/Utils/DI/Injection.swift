@@ -49,6 +49,11 @@ final class Injection: NSObject {
         let repositoryGame = provideGameRepository()
         return GameDetailInteractor(repository: repositoryGame, category: category)
     }
+    
+    func provideGameFavorite() -> GameFavoriteProtocol {
+        let repositoryGameLocale = provideGameLocaleRepository()
+        return GameFavoriteInteractor(repository: repositoryGameLocale)
+    }
 
     func provideMovieRepository() -> MovieRepositoryProtocol {
         let remoteMovie = MovieDataSource.sharedInstance
