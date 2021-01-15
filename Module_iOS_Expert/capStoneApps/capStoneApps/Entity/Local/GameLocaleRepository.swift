@@ -12,6 +12,7 @@ protocol GameLocaleRepositoryProtocol {
     func getLocaleGame(result: @escaping (Result<[GameModel], Error>) -> Void)
     func addLocaleGame(from categories: GameEntity, result: @escaping (Result<Bool, DatabaseError>) -> Void)
     func deleteLocaleGame(from categories: GameEntity, result: @escaping (Result<Bool, DatabaseError>) -> Void)
+    func checkLocaleGame(from categories: GameEntity) -> Bool
 }
 
 final class GameLocaleRepository: NSObject {
@@ -29,6 +30,9 @@ final class GameLocaleRepository: NSObject {
 }
 
 extension GameLocaleRepository: GameLocaleRepositoryProtocol {
+    func checkLocaleGame(from categories: GameEntity) -> Bool {
+        return locale.checkGameLocale(from: categories)
+    }
     func deleteLocaleGame(from categories: GameEntity, result: @escaping (Result<Bool, DatabaseError>) -> Void) {
         locale.deleteGameLocale(from: categories) { deleteFavorite in
             switch deleteFavorite {
@@ -41,7 +45,6 @@ extension GameLocaleRepository: GameLocaleRepositoryProtocol {
             }
         }
     }
-    
     func addLocaleGame(from categories: GameEntity, result: @escaping (Result<Bool, DatabaseError>) -> Void) {
         locale.addGameLocale(from: categories) { addFavorite in
             switch addFavorite {

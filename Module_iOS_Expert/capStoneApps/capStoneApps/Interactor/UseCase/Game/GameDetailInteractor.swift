@@ -32,4 +32,8 @@ class GameDetailInteractor: GameDetailProtocol {
             print("Add Game Favorite")
         }
     }
+
+    func checkFavoriteGame(game: GameEntity) -> Bool {
+        return gameLocaleRepository.checkLocaleGame(from: game)
+    }
 }

@@ -13,6 +13,7 @@ protocol GameLocaleDataSourceProtocol: class {
     func getGameLocale(result: @escaping (Result<[GameEntity], DatabaseError>) -> Void)
     func addGameLocale(from categories: GameEntity, result: @escaping (Result<Bool, DatabaseError>) -> Void)
     func deleteGameLocale(from categories: GameEntity, result: @escaping (Result<Bool, DatabaseError>) -> Void)
+    func checkGameLocale(from categories: GameEntity) -> Bool
 }
 
 final class GameLocaleDataSource: NSObject {
@@ -63,6 +64,20 @@ extension GameLocaleDataSource: GameLocaleDataSourceProtocol {
             }
         } else {
             result(.failure(.invalidInstance))
+        }
+    }
+    func checkGameLocale(from categories: GameEntity) -> Bool {
+        if let realmGame = realmGame {
+            let game: GameEntity? = {
+                realmGame.object(ofType: GameEntity.self, forPrimaryKey: categories.id)
+            }()
+            if game?.id == categories.id {
+                return true
+            } else {
+                return false
+            }
+        } else {
+            return false
         }
     }
 }

@@ -12,6 +12,8 @@ import SDWebImageSwiftUI
 struct GameDetailView: View {
     @ObservedObject var presenter: GameDetailPresenter
 
+    @State var onLove = false
+
     var body: some View {
         ZStack {
             if presenter.loadingState {
@@ -37,5 +39,13 @@ struct GameDetailView: View {
                 Image(systemName: "person.circle").imageScale(.large)
             }
         )
+        .onAppear {
+            self.checkDataGameFavorite()
+        }
+    }
+
+    func checkDataGameFavorite() {
+        onLove = self.presenter.checkFavorite(game: DataLocaleMapper.mapGameToEntity(input: self.presenter.category))
+        print(onLove)
     }
 }

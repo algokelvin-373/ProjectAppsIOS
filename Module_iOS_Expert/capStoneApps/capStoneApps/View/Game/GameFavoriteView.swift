@@ -25,16 +25,17 @@ struct GameFavoriteView: View {
                                 GameRowsView(dataGames: game)
                             }.buttonStyle(PlainButtonStyle())
                         }.padding(8)
-                    }.onDelete(perform: { (index) in
-                        for x in index {
-                            let gameFavorite = self.presenterGameFavorite.game[x]
-                            let id = gameFavorite.id
-                            if id == gameFavorite.id {
-                                self.presenterGameFavorite.deleteData(id: id)
-                          }
-                        }
-                        self.presenterGameFavorite.getLocaleGames()
-                    })
+                    }
+//                    .onDelete(perform: { (index) in
+//                        for x in index {
+//                            let gameFavorite = self.presenterGameFavorite.game[x]
+//                            let id = gameFavorite.id
+//                            if id == gameFavorite.id {
+//                                self.presenterGameFavorite.deleteData(id: id)
+//                          }
+//                        }
+//                        self.presenterGameFavorite.getLocaleGames()
+//                    })
                 }
             }
         }.navigationBarTitle(Text("Game Favorite"), displayMode: .inline)
