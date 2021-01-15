@@ -29,7 +29,6 @@ struct ConstantVal {
         static let profileTabBar = "Profile"
     }
 }
-
 extension Results {
     func toArray<T>(ofType: T.Type) -> [T] {
         var array = [T]()

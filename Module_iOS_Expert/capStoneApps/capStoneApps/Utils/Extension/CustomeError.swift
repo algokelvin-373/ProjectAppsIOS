@@ -21,7 +21,6 @@ enum URLError: LocalizedError {
         }
     }
 }
-
 enum DatabaseError: LocalizedError {
     case invalidInstance
     case requestFailed
