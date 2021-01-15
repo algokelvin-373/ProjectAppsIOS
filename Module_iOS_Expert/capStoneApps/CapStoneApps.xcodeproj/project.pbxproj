@@ -92,6 +92,12 @@
 		10C6205225B07B550071E4FF /* MapViewUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C6205125B07B550071E4FF /* MapViewUI.swift */; };
 		10C6205425B07C2A0071E4FF /* SubHeadLineUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C6205325B07C2A0071E4FF /* SubHeadLineUI.swift */; };
 		10C6205625B07C720071E4FF /* GenerateAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C6205525B07C720071E4FF /* GenerateAttribute.swift */; };
+		10C6205925B091D10071E4FF /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 10C6205825B091D10071E4FF /* Realm */; };
+		10C6205B25B091D10071E4FF /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 10C6205A25B091D10071E4FF /* RealmSwift */; };
+		10C6205E25B093B70071E4FF /* GameLocaleDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C6205D25B093B70071E4FF /* GameLocaleDataSource.swift */; };
+		10E0EB0525B0A5E1006044D6 /* MovieLocaleDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E0EB0425B0A5E1006044D6 /* MovieLocaleDataSource.swift */; };
+		10E0EB0725B0A632006044D6 /* TravelLocaleDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E0EB0625B0A632006044D6 /* TravelLocaleDataSource.swift */; };
+		10E0EB0925B0A8D2006044D6 /* SportLocaleDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E0EB0825B0A8D2006044D6 /* SportLocaleDataSource.swift */; };
 		10E0EB0B25B0ADAE006044D6 /* TabFavoriteViewUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E0EB0A25B0ADAE006044D6 /* TabFavoriteViewUI.swift */; };
 		10E0EB0D25B0B7ED006044D6 /* GameFavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E0EB0C25B0B7ED006044D6 /* GameFavoriteView.swift */; };
 		10E0EB0F25B0BCBE006044D6 /* MovieFavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E0EB0E25B0BCBE006044D6 /* MovieFavoriteView.swift */; };
@@ -206,6 +212,10 @@
 		10C6205125B07B550071E4FF /* MapViewUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewUI.swift; sourceTree = "<group>"; };
 		10C6205325B07C2A0071E4FF /* SubHeadLineUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubHeadLineUI.swift; sourceTree = "<group>"; };
 		10C6205525B07C720071E4FF /* GenerateAttribute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateAttribute.swift; sourceTree = "<group>"; };
+		10C6205D25B093B70071E4FF /* GameLocaleDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLocaleDataSource.swift; sourceTree = "<group>"; };
+		10E0EB0425B0A5E1006044D6 /* MovieLocaleDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieLocaleDataSource.swift; sourceTree = "<group>"; };
+		10E0EB0625B0A632006044D6 /* TravelLocaleDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelLocaleDataSource.swift; sourceTree = "<group>"; };
+		10E0EB0825B0A8D2006044D6 /* SportLocaleDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportLocaleDataSource.swift; sourceTree = "<group>"; };
 		10E0EB0A25B0ADAE006044D6 /* TabFavoriteViewUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabFavoriteViewUI.swift; sourceTree = "<group>"; };
 		10E0EB0C25B0B7ED006044D6 /* GameFavoriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameFavoriteView.swift; sourceTree = "<group>"; };
 		10E0EB0E25B0BCBE006044D6 /* MovieFavoriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieFavoriteView.swift; sourceTree = "<group>"; };
@@ -218,6 +228,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10C6205B25B091D10071E4FF /* RealmSwift in Frameworks */,
+				10C6205925B091D10071E4FF /* Realm in Frameworks */,
 				1042526B2581D198007C29D4 /* SDWebImageSwiftUI in Frameworks */,
 				10C6204625B06CAB0071E4FF /* Alamofire in Frameworks */,
 			);
@@ -262,6 +274,7 @@
 				100F37F325715B7F005EC043 /* SportView.swift */,
 				100F37F525715B94005EC043 /* GameView.swift */,
 				100F37F725715BDD005EC043 /* TravelView.swift */,
+				100F37F925715BF1005EC043 /* ProfileView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -303,6 +316,7 @@
 		104252522580CCD0007C29D4 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				10C6205C25B093910071E4FF /* Db */,
 				1066420425828BD500624EF9 /* DataSource */,
 				106642032582896D00624EF9 /* Api */,
 				1042525E2580DBEB007C29D4 /* ProfileEntity.swift */,
@@ -652,6 +666,17 @@
 			path = Sports;
 			sourceTree = "<group>";
 		};
+		10C6205C25B093910071E4FF /* Db */ = {
+			isa = PBXGroup;
+			children = (
+				10C6205D25B093B70071E4FF /* GameLocaleDataSource.swift */,
+				10E0EB0425B0A5E1006044D6 /* MovieLocaleDataSource.swift */,
+				10E0EB0625B0A632006044D6 /* TravelLocaleDataSource.swift */,
+				10E0EB0825B0A8D2006044D6 /* SportLocaleDataSource.swift */,
+			);
+			path = Db;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -672,6 +697,8 @@
 			packageProductDependencies = (
 				1042526A2581D198007C29D4 /* SDWebImageSwiftUI */,
 				105B844725AE1684009FB8E3 /* Alamofire */,
+				10C6205825B091D10071E4FF /* Realm */,
+				10C6205A25B091D10071E4FF /* RealmSwift */,
 			);
 			productName = capStoneApps;
 			productReference = 108029542551A603004069BB /* CapStoneApps.app */;
@@ -748,6 +775,7 @@
 			packageReferences = (
 				104252692581D198007C29D4 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 				105B844625AE1684009FB8E3 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				10C6205725B091D10071E4FF /* XCRemoteSwiftPackageReference "realm-cocoa" */,
 			);
 			productRefGroup = 108029552551A603004069BB /* Products */;
 			projectDirPath = "";
@@ -829,10 +857,12 @@
 				10AED9902592547000A6E0B1 /* TravelInteractor.swift in Sources */,
 				100F37F225715B59005EC043 /* MovieView.swift in Sources */,
 				105B844325ADF945009FB8E3 /* TravelDetailView.swift in Sources */,
+				10E0EB0725B0A632006044D6 /* TravelLocaleDataSource.swift in Sources */,
 				10AED9972592560700A6E0B1 /* TravelRepository.swift in Sources */,
 				100F37FD25715CF8005EC043 /* ConstantVal.swift in Sources */,
 				105B843B25ADE1F4009FB8E3 /* TravelRowsView.swift in Sources */,
 				10C6204A25B06E720071E4FF /* DescriptionViewUI.swift in Sources */,
+				10E0EB0925B0A8D2006044D6 /* SportLocaleDataSource.swift in Sources */,
 				10683D192587DFD20006CB02 /* MoviePresenter.swift in Sources */,
 				10683D152587DD140006CB02 /* APIMovie.swift in Sources */,
 				1063C74025A8692200B0483A /* SportsDetailProtocol.swift in Sources */,
@@ -847,6 +877,11 @@
 				105B842925AD5E08009FB8E3 /* GameDetailView.swift in Sources */,
 				10C6204E25B073110071E4FF /* ImageViewUI.swift in Sources */,
 				10683D1D2587DFFA0006CB02 /* MovieRepository.swift in Sources */,
+				10E0EB0525B0A5E1006044D6 /* MovieLocaleDataSource.swift in Sources */,
+				100F37F425715B7F005EC043 /* SportView.swift in Sources */,
+				100F37F825715BDD005EC043 /* TravelView.swift in Sources */,
+				10AED9AB2592642B00A6E0B1 /* APITravel.swift in Sources */,
+				105B844525ADF9A4009FB8E3 /* TravelDetailPresenter.swift in Sources */,
 				100F37F425715B7F005EC043 /* SportView.swift in Sources */,
 				10E0EB1125B0BCD9006044D6 /* TravelFavoriteView.swift in Sources */,
 				100F37F825715BDD005EC043 /* TravelView.swift in Sources */,
@@ -878,6 +913,9 @@
 				10AED9A32592584A00A6E0B1 /* SportsPresenter.swift in Sources */,
 				106642022582890D00624EF9 /* GameInteractor.swift in Sources */,
 				10AED9A725925C8F00A6E0B1 /* SportsRepository.swift in Sources */,
+				10AED9A525925C7800A6E0B1 /* SportsEntity.swift in Sources */,
+				10683D1F2587E00A0006CB02 /* MovieDataSource.swift in Sources */,
+				10C6205E25B093B70071E4FF /* GameLocaleDataSource.swift in Sources */,
 				10E0EB1325B0BD38006044D6 /* SportFavoriteView.swift in Sources */,
 				10AED9A525925C7800A6E0B1 /* SportsEntity.swift in Sources */,
 				10683D1F2587E00A0006CB02 /* MovieDataSource.swift in Sources */,
@@ -1231,6 +1269,14 @@
 				minimumVersion = 5.4.1;
 			};
 		};
+		10C6205725B091D10071E4FF /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.5.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1243,6 +1289,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 105B844625AE1684009FB8E3 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		10C6205825B091D10071E4FF /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 10C6205725B091D10071E4FF /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = Realm;
+		};
+		10C6205A25B091D10071E4FF /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 10C6205725B091D10071E4FF /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 

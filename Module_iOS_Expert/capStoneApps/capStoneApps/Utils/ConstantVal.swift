@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import RealmSwift
 
 struct ConstantVal {
     struct ProfileUser {
@@ -26,5 +27,16 @@ struct ConstantVal {
         static let gameTabBar = "Game"
         static let travelTabBar = "Travel"
         static let profileTabBar = "Profile"
+    }
+}
+extension Results {
+    func toArray<T>(ofType: T.Type) -> [T] {
+        var array = [T]()
+        for index in 0 ..< count {
+            if let result = self[index] as? T {
+                array.append(result)
+            }
+        }
+        return array
     }
 }

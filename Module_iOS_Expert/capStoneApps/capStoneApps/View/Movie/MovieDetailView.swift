@@ -26,7 +26,7 @@ struct MovieDetailView: View {
                             subtitle: self.presenter.category.released
                         ).padding(.top)
 
-                        DescriptionViewUI(description: self.presenter.category.description)
+                        DescriptionViewUI(description: self.presenter.category.descript)
                             .padding()
 
                         Spacer()
