@@ -10,4 +10,5 @@ import Foundation
 
 protocol GameDetailProtocol {
     func getDetailGame() -> GameModel
+    func addGameFavorite(game: GameEntity)
 }

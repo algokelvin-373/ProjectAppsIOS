@@ -10,6 +10,7 @@ import Foundation
 
 protocol GameLocaleRepositoryProtocol {
     func getLocaleGame(result: @escaping (Result<[GameModel], Error>) -> Void)
+    func addLocaleGame(from categories: GameEntity, result: @escaping (Result<Bool, DatabaseError>) -> Void)
 }
 
 final class GameLocaleRepository: NSObject {
@@ -27,11 +28,24 @@ final class GameLocaleRepository: NSObject {
 }
 
 extension GameLocaleRepository: GameLocaleRepositoryProtocol {
+    func addLocaleGame(from categories: GameEntity, result: @escaping (Result<Bool, DatabaseError>) -> Void) {
+        locale.addGameLocale(from: categories) { addFavorite in
+            switch addFavorite {
+            case .success(let resultAdd):
+                print("Success Add Game Favorite")
+                result(.success(resultAdd))
+            case .failure(let error):
+                print("Failed Add Game Favorite")
+                result(.failure(error))
+            }
+        }
+    }
+
     func getLocaleGame(result: @escaping (Result<[GameModel], Error>) -> Void) {
         locale.getGameLocale { localeResponses in
             switch localeResponses {
             case .success(let localeGame):
-                let categoryList = DataLocaleMapper.mapGameToEntity(input: localeGame)
+                let categoryList = DataLocaleMapper.mapGameToModel(input: localeGame)
                 if categoryList.isEmpty {
                     print("Database Game Favorite is Empty")
                 } else {

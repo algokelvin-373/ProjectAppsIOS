@@ -19,4 +19,8 @@ class GameDetailPresenter: ObservableObject {
         self.detailUseCase = detailUseCase
         category = detailUseCase.getDetailGame()
     }
+
+    func addFavorite(game: GameEntity) {
+        detailUseCase.addGameFavorite(game: game)
+    }
 }

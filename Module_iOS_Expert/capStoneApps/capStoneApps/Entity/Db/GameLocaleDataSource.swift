@@ -11,7 +11,7 @@ import RealmSwift
 
 protocol GameLocaleDataSourceProtocol: class {
     func getGameLocale(result: @escaping (Result<[GameEntity], DatabaseError>) -> Void)
-    func addGameLocale(from categories: [GameEntity], result: @escaping (Result<Bool, DatabaseError>) -> Void)
+    func addGameLocale(from categories: GameEntity, result: @escaping (Result<Bool, DatabaseError>) -> Void)
 }
 
 final class GameLocaleDataSource: NSObject {
@@ -36,13 +36,11 @@ extension GameLocaleDataSource: GameLocaleDataSourceProtocol {
             result(.failure(.invalidInstance))
         }
     }
-    func addGameLocale(from categories: [GameEntity], result: @escaping (Result<Bool, DatabaseError>) -> Void) {
+    func addGameLocale(from categories: GameEntity, result: @escaping (Result<Bool, DatabaseError>) -> Void) {
         if let realmGame = realmGame {
             do {
                 try realmGame.write {
-                    for localeGame in categories {
-                        realmGame.add(localeGame, update: .all)
-                    }
+                    realmGame.add(categories, update: .all)
                     result(.success(true))
                 }
             } catch {

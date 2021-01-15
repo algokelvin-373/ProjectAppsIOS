@@ -47,9 +47,11 @@ final class Injection: NSObject {
 
     func provideGameDetail(category: GameModel) -> GameDetailProtocol {
         let repositoryGame = provideGameRepository()
-        return GameDetailInteractor(repository: repositoryGame, category: category)
+        let repositoryLocaleGame = provideGameLocaleRepository()
+        return GameDetailInteractor(repository: repositoryGame,
+                                    repositoryLocale: repositoryLocaleGame, category: category)
     }
-    
+
     func provideGameFavorite() -> GameFavoriteProtocol {
         let repositoryGameLocale = provideGameLocaleRepository()
         return GameFavoriteInteractor(repository: repositoryGameLocale)

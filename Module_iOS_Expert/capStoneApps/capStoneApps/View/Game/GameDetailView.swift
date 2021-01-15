@@ -30,7 +30,9 @@ struct GameDetailView: View {
         }.navigationBarTitle(Text(self.presenter.category.name), displayMode: .inline)
         .navigationBarItems(trailing:
             Button(action: {
-                print("User icon pressed...")
+                print("Process....")
+                self.presenter.addFavorite(game: DataLocaleMapper.mapGameToEntity(input: self.presenter.category))
+                print("Success....")
             }) {
                 Image(systemName: "person.circle").imageScale(.large)
             }
