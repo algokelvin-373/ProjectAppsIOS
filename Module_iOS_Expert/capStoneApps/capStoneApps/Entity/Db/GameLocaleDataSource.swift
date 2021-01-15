@@ -29,7 +29,7 @@ extension GameLocaleDataSource: GameLocaleDataSourceProtocol {
         if let realmGame = realmGame {
             let categories: Results<GameEntity> = {
               realmGame.objects(GameEntity.self)
-                .sorted(byKeyPath: "title", ascending: true)
+                .sorted(byKeyPath: "name", ascending: true)
             }()
             result(.success(categories.toArray(ofType: GameEntity.self)))
         } else {
