@@ -7,8 +7,10 @@
 //
 
 import Foundation
+import SwiftUI
 
 class GameFavoritePresenter: ObservableObject {
+    private let gameRouter = GameRouter()
     private let gameFavoriteUseCase: GameFavoriteProtocol
 
     @Published var game: [GameModel] = []
@@ -35,5 +37,12 @@ class GameFavoritePresenter: ObservableObject {
                 }
             }
         }
+    }
+
+    func linkBuilder<Content: View>(
+        for category: GameModel,
+        @ViewBuilder content: () -> Content
+    ) -> some View {
+        NavigationLink(destination: gameRouter.goToGameDetailView(for: category)) { content() }
     }
 }
