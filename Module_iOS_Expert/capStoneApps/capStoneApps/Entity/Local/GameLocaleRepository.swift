@@ -11,6 +11,7 @@ import Foundation
 protocol GameLocaleRepositoryProtocol {
     func getLocaleGame(result: @escaping (Result<[GameModel], Error>) -> Void)
     func addLocaleGame(from categories: GameEntity, result: @escaping (Result<Bool, DatabaseError>) -> Void)
+    func deleteLocaleGame(from categories: GameEntity, result: @escaping (Result<Bool, DatabaseError>) -> Void)
 }
 
 final class GameLocaleRepository: NSObject {
@@ -28,6 +29,19 @@ final class GameLocaleRepository: NSObject {
 }
 
 extension GameLocaleRepository: GameLocaleRepositoryProtocol {
+    func deleteLocaleGame(from categories: GameEntity, result: @escaping (Result<Bool, DatabaseError>) -> Void) {
+        locale.deleteGameLocale(from: categories) { deleteFavorite in
+            switch deleteFavorite {
+            case .success(let resultAdd):
+                print("Success Delete Game Favorite")
+                result(.success(resultAdd))
+            case .failure(let error):
+                print("Failed Delete Game Favorite")
+                result(.failure(error))
+            }
+        }
+    }
+    
     func addLocaleGame(from categories: GameEntity, result: @escaping (Result<Bool, DatabaseError>) -> Void) {
         locale.addGameLocale(from: categories) { addFavorite in
             switch addFavorite {
