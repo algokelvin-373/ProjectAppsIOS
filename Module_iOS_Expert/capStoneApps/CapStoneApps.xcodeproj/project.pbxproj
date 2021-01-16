@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1000EE0D25B3A42C009662C7 /* MovieLocaleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1000EE0C25B3A42C009662C7 /* MovieLocaleRepository.swift */; };
+		1000EE0F25B3A8C8009662C7 /* MovieFavoriteProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1000EE0E25B3A8C8009662C7 /* MovieFavoriteProtocol.swift */; };
+		1000EE1125B3A906009662C7 /* MovieFavoriteInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1000EE1025B3A906009662C7 /* MovieFavoriteInteractor.swift */; };
+		1000EE1325B3AA33009662C7 /* MovieFavoritePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1000EE1225B3AA33009662C7 /* MovieFavoritePresenter.swift */; };
 		100F37F225715B59005EC043 /* MovieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100F37F125715B59005EC043 /* MovieView.swift */; };
 		100F37F425715B7F005EC043 /* SportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100F37F325715B7F005EC043 /* SportView.swift */; };
 		100F37F625715B94005EC043 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100F37F525715B94005EC043 /* GameView.swift */; };
@@ -128,7 +132,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		100F37F125715B59005EC043 /* MovieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieView.swift; sourceTree = "<group>"; };
+		1000EE0C25B3A42C009662C7 /* MovieLocaleRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieLocaleRepository.swift; sourceTree = "<group>"; };
+		1000EE0E25B3A8C8009662C7 /* MovieFavoriteProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieFavoriteProtocol.swift; sourceTree = "<group>"; };
+		1000EE1025B3A906009662C7 /* MovieFavoriteInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieFavoriteInteractor.swift; sourceTree = "<group>"; };
+		1000EE1225B3AA33009662C7 /* MovieFavoritePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieFavoritePresenter.swift; sourceTree = "<group>"; };
+		100F37F125715B59005EC043 /* MovieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MovieView.swift; path = capStoneApps/View/MovieView.swift; sourceTree = SOURCE_ROOT; };
 		100F37F325715B7F005EC043 /* SportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportView.swift; sourceTree = "<group>"; };
 		100F37F525715B94005EC043 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GameView.swift; path = capStoneApps/View/GameView.swift; sourceTree = SOURCE_ROOT; };
 		100F37F725715BDD005EC043 /* TravelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelView.swift; sourceTree = "<group>"; };
@@ -280,7 +288,6 @@
 				10683D162587DD820006CB02 /* Movie */,
 				1042526425810746007C29D4 /* Game */,
 				1042525D2580D91C007C29D4 /* Profile */,
-				100F37F125715B59005EC043 /* MovieView.swift */,
 				100F37F325715B7F005EC043 /* SportView.swift */,
 				100F37F725715BDD005EC043 /* TravelView.swift */,
 				100F37F925715BF1005EC043 /* ProfileView.swift */,
@@ -420,6 +427,7 @@
 			isa = PBXGroup;
 			children = (
 				104D893325B1A1D200E7C80A /* GameLocaleRepository.swift */,
+				1000EE0C25B3A42C009662C7 /* MovieLocaleRepository.swift */,
 			);
 			path = Local;
 			sourceTree = "<group>";
@@ -515,6 +523,7 @@
 		10683D162587DD820006CB02 /* Movie */ = {
 			isa = PBXGroup;
 			children = (
+				100F37F125715B59005EC043 /* MovieView.swift */,
 				10E0EB0E25B0BCBE006044D6 /* MovieFavoriteView.swift */,
 				105B843625ADD4B3009FB8E3 /* MovieRowsView.swift */,
 				105B843825ADD52E009FB8E3 /* MovieDetailView.swift */,
@@ -527,6 +536,7 @@
 			children = (
 				10683D182587DFD20006CB02 /* MoviePresenter.swift */,
 				105B843025ADD356009FB8E3 /* MovieDetailPresenter.swift */,
+				1000EE1225B3AA33009662C7 /* MovieFavoritePresenter.swift */,
 			);
 			path = Movie;
 			sourceTree = "<group>";
@@ -536,6 +546,7 @@
 			children = (
 				10683D212587E03B0006CB02 /* MovieProtocol.swift */,
 				105B843225ADD3D1009FB8E3 /* MovieDetailProtocol.swift */,
+				1000EE0E25B3A8C8009662C7 /* MovieFavoriteProtocol.swift */,
 			);
 			path = Movie;
 			sourceTree = "<group>";
@@ -545,6 +556,7 @@
 			children = (
 				10683D242587E0510006CB02 /* MovieInteractor.swift */,
 				105B843425ADD426009FB8E3 /* MovieDetailInteractor.swift */,
+				1000EE1025B3A906009662C7 /* MovieFavoriteInteractor.swift */,
 			);
 			path = Movie;
 			sourceTree = "<group>";
@@ -873,6 +885,8 @@
 				1042526D2581D3F0007C29D4 /* GamePresenter.swift in Sources */,
 				1066420825828C4F00624EF9 /* GameDataSource.swift in Sources */,
 				104252562580CDBE007C29D4 /* ProfilePresenter.swift in Sources */,
+				1000EE1325B3AA33009662C7 /* MovieFavoritePresenter.swift in Sources */,
+				1000EE1125B3A906009662C7 /* MovieFavoriteInteractor.swift in Sources */,
 				10E0EB0B25B0ADAE006044D6 /* TabFavoriteViewUI.swift in Sources */,
 				10C6205625B07C720071E4FF /* GenerateAttribute.swift in Sources */,
 				10683D222587E03B0006CB02 /* MovieProtocol.swift in Sources */,
@@ -893,6 +907,7 @@
 				104D893425B1A1D200E7C80A /* GameLocaleRepository.swift in Sources */,
 				10E0EB0F25B0BCBE006044D6 /* MovieFavoriteView.swift in Sources */,
 				1063C74825AA103000B0483A /* SportRowsView.swift in Sources */,
+				1000EE0D25B3A42C009662C7 /* MovieLocaleRepository.swift in Sources */,
 				105B843925ADD52E009FB8E3 /* MovieDetailView.swift in Sources */,
 				108029582551A603004069BB /* AppDelegate.swift in Sources */,
 				1080295A2551A603004069BB /* SceneDelegate.swift in Sources */,
@@ -933,6 +948,7 @@
 				100F37F625715B94005EC043 /* GameView.swift in Sources */,
 				1042526825810BE3007C29D4 /* GameRowsView.swift in Sources */,
 				104D893625B1A54700E7C80A /* DataLocaleMapper.swift in Sources */,
+				1000EE0F25B3A8C8009662C7 /* MovieFavoriteProtocol.swift in Sources */,
 				105B843325ADD3D1009FB8E3 /* MovieDetailProtocol.swift in Sources */,
 				10AED9A02592581100A6E0B1 /* SportsProtocol.swift in Sources */,
 				104D893825B1B59700E7C80A /* GameFavoritePresenter.swift in Sources */,

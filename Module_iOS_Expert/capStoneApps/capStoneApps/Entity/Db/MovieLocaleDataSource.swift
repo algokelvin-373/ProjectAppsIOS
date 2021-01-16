@@ -8,10 +8,13 @@
 
 import Foundation
 import RealmSwift
+import Combine
 
 protocol MovieLocaleDataSourceProtocol: class {
-    func getMovieLocale(result: @escaping (Result<[MovieEntity], DatabaseError>) -> Void)
-    func addMovieLocale(from categories: [MovieEntity], result: @escaping (Result<Bool, DatabaseError>) -> Void)
+    func getMovieLocale() -> AnyPublisher<[MovieEntity], Error>
+    func addMovieLocale(from categories: MovieEntity) -> AnyPublisher<Bool, Error>
+    func deleteMovieLocale(from categories: MovieEntity, result: @escaping (Result<Bool, DatabaseError>) -> Void)
+    func checkMovieLocale(from categories: MovieEntity) -> Bool
 }
 
 final class MovieLocaleDataSource: NSObject {
@@ -25,24 +28,40 @@ final class MovieLocaleDataSource: NSObject {
 }
 
 extension MovieLocaleDataSource: MovieLocaleDataSourceProtocol {
-    func getMovieLocale(result: @escaping (Result<[MovieEntity], DatabaseError>) -> Void) {
-        if let realmMovie = realmMovie {
-            let categories: Results<MovieEntity> = {
-              realmMovie.objects(MovieEntity.self)
-                .sorted(byKeyPath: "title", ascending: true)
-            }()
-            result(.success(categories.toArray(ofType: MovieEntity.self)))
-        } else {
-            result(.failure(.invalidInstance))
-        }
+    func getMovieLocale() -> AnyPublisher<[MovieEntity], Error> {
+        return Future<[MovieEntity], Error> { completion in
+            if let realmMovie = self.realmMovie {
+                let categories: Results<MovieEntity> = {
+                  realmMovie.objects(MovieEntity.self)
+                    .sorted(byKeyPath: "name", ascending: true)
+                }()
+                completion(.success(categories.toArray(ofType: MovieEntity.self)))
+            } else {
+                completion(.failure(DatabaseError.invalidInstance))
+            }
+        }.eraseToAnyPublisher()
     }
-    func addMovieLocale(from categories: [MovieEntity], result: @escaping (Result<Bool, DatabaseError>) -> Void) {
+    func addMovieLocale(from categories: MovieEntity) -> AnyPublisher<Bool, Error> {
+        return Future<Bool, Error> { completion in
+            if let realm = self.realmMovie {
+                do {
+                    try realm.write {
+                        realm.add(categories, update: .all)
+                        completion(.success(true))
+                    }
+                } catch {
+                    completion(.failure(DatabaseError.requestFailed))
+                }
+            } else {
+                completion(.failure(DatabaseError.invalidInstance))
+            }
+        }.eraseToAnyPublisher()
+    }
+    func deleteMovieLocale(from categories: MovieEntity, result: @escaping (Result<Bool, DatabaseError>) -> Void) {
         if let realmMovie = realmMovie {
             do {
                 try realmMovie.write {
-                    for localeMovie in categories {
-                        realmMovie.add(localeMovie, update: .all)
-                    }
+                    realmMovie.delete((realmMovie.object(ofType: MovieEntity.self, forPrimaryKey: categories.id) ?? nil)!)
                     result(.success(true))
                 }
             } catch {
@@ -50,6 +69,20 @@ extension MovieLocaleDataSource: MovieLocaleDataSourceProtocol {
             }
         } else {
             result(.failure(.invalidInstance))
+        }
+    }
+    func checkMovieLocale(from categories: MovieEntity) -> Bool {
+        if let realmMovie = realmMovie {
+            let movie: MovieEntity? = {
+                realmMovie.object(ofType: MovieEntity.self, forPrimaryKey: categories.id)
+            }()
+            if movie?.id == categories.id {
+                return true
+            } else {
+                return false
+            }
+        } else {
+            return false
         }
     }
 }
