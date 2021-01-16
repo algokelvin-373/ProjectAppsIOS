@@ -19,4 +19,17 @@ class GameDetailPresenter: ObservableObject {
         self.detailUseCase = detailUseCase
         category = detailUseCase.getDetailGame()
     }
+
+    func addFavorite(game: GameEntity) {
+        let statusAddFavorite = detailUseCase.addGameFavorite(game: game)
+        print("Status Add Favorite = \(statusAddFavorite.description)")
+    }
+
+    func checkFavorite(game: GameEntity) -> Bool {
+        return detailUseCase.checkFavoriteGame(game: game)
+    }
+
+    func deleteFavorite(game: GameEntity) {
+        detailUseCase.deleteGameFavorite(game: game)
+    }
 }

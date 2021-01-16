@@ -9,15 +9,28 @@
 import SwiftUI
 
 struct GameFavoriteView: View {
-    var body: some View {
-        VStack {
-            Text("Welcome in Game Favorite")
-        }.navigationBarTitle(Text("Game Favorite"), displayMode: .inline)
-    }
-}
+    @ObservedObject var presenterGameFavorite: GameFavoritePresenter
 
-struct GameFavoriteView_Previews: PreviewProvider {
-    static var previews: some View {
-        GameFavoriteView()
+    var body: some View {
+        ZStack {
+            if self.presenterGameFavorite.game.isEmpty {
+                VStack {
+                    Text("No Game Favorite")
+                }
+            } else {
+                ScrollView(.vertical, showsIndicators: false) {
+                    ForEach(self.presenterGameFavorite.game, id: \.id) { game in
+                        ZStack {
+                            self.presenterGameFavorite.linkBuilder(for: game) {
+                                GameRowsView(dataGames: game)
+                            }.buttonStyle(PlainButtonStyle())
+                        }.padding(8)
+                    }
+                }
+            }
+        }.navigationBarTitle(Text("Game Favorite"), displayMode: .inline)
+        .onAppear {
+            self.presenterGameFavorite.getLocaleGames()
+        }
     }
 }

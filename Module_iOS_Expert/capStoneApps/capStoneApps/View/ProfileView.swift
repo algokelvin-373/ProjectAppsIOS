@@ -11,6 +11,7 @@ import SwiftUI
 struct ProfileView: View {
 
     @ObservedObject var profilePresenter: ProfilePresenter
+    @EnvironmentObject var presenterGameFavorite: GameFavoritePresenter
 
     var body: some View {
         NavigationView {
@@ -48,7 +49,7 @@ struct ProfileView: View {
                     NavigationLink(destination: MovieFavoriteView()) {
                         TabFavoriteViewUI(title: "MOVIE", image: ConstantVal.TabBarImage.movieTabBar)
                     }
-                    NavigationLink(destination: GameFavoriteView()) {
+                    NavigationLink(destination: GameFavoriteView(presenterGameFavorite: presenterGameFavorite)) {
                         TabFavoriteViewUI(title: "GAME", image: ConstantVal.TabBarImage.gameTabBar)
                     }
                     NavigationLink(destination: SportFavoriteView()) {

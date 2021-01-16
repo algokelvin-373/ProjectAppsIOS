@@ -6,8 +6,11 @@
 //  Copyright © 2021 Kelvin HT. All rights reserved.
 //
 
-import Foundation
+import Combine
 
 protocol GameDetailProtocol {
     func getDetailGame() -> GameModel
+    func addGameFavorite(game: GameEntity) -> AnyPublisher<Bool, Error>
+    func checkFavoriteGame(game: GameEntity) -> Bool
+    func deleteGameFavorite(game: GameEntity)
 }
