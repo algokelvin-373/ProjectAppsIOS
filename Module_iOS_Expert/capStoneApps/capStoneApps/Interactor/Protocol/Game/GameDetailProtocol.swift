@@ -12,4 +12,5 @@ protocol GameDetailProtocol {
     func getDetailGame() -> GameModel
     func addGameFavorite(game: GameEntity)
     func checkFavoriteGame(game: GameEntity) -> Bool
+    func deleteGameFavorite(game: GameEntity)
 }

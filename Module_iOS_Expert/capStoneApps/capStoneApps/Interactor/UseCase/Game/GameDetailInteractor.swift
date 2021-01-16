@@ -33,6 +33,12 @@ class GameDetailInteractor: GameDetailProtocol {
         }
     }
 
+    func deleteGameFavorite(game: GameEntity) {
+        gameLocaleRepository.deleteLocaleGame(from: game) { _ in
+            print("Delete Game Favorite")
+        }
+    }
+
     func checkFavoriteGame(game: GameEntity) -> Bool {
         return gameLocaleRepository.checkLocaleGame(from: game)
     }

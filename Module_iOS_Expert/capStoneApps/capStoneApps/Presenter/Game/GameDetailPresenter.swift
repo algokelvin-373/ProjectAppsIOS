@@ -27,4 +27,8 @@ class GameDetailPresenter: ObservableObject {
     func checkFavorite(game: GameEntity) -> Bool {
         return detailUseCase.checkFavoriteGame(game: game)
     }
+
+    func deleteFavorite(game: GameEntity) {
+        detailUseCase.deleteGameFavorite(game: game)
+    }
 }

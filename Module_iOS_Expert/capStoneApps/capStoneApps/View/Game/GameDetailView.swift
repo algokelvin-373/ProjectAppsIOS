@@ -32,9 +32,13 @@ struct GameDetailView: View {
         }.navigationBarTitle(Text(self.presenter.category.name), displayMode: .inline)
         .navigationBarItems(trailing:
             Button(action: {
-                print("Process....")
-                self.presenter.addFavorite(game: DataLocaleMapper.mapGameToEntity(input: self.presenter.category))
-                print("Success....")
+                if self.onLove == false {
+                    self.onLove = true
+                    self.presenter.addFavorite(game: DataLocaleMapper.mapGameToEntity(input: self.presenter.category))
+                } else {
+                    self.onLove = false
+                    self.presenter.deleteFavorite(game: DataLocaleMapper.mapGameToEntity(input: self.presenter.category))
+                }
             }) {
                 Image(onLove ? "ic-love-on" : "ic-love-off").imageScale(.large)
             }

@@ -56,7 +56,7 @@ extension GameLocaleDataSource: GameLocaleDataSourceProtocol {
         if let realmGame = realmGame {
             do {
                 try realmGame.write {
-                    realmGame.delete(categories)
+                    realmGame.delete((realmGame.object(ofType: GameEntity.self, forPrimaryKey: categories.id) ?? nil)!)
                     result(.success(true))
                 }
             } catch {
