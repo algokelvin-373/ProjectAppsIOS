@@ -8,8 +8,10 @@
 
 import Foundation
 import SwiftUI
+import Combine
 
 class GameFavoritePresenter: ObservableObject {
+    private var cancellables: Set<AnyCancellable> = []
     private let gameRouter = GameRouter()
     private let gameFavoriteUseCase: GameFavoriteProtocol
 
@@ -23,20 +25,18 @@ class GameFavoritePresenter: ObservableObject {
 
     func getLocaleGames() {
         loadingState = true
-        gameFavoriteUseCase.getGameFavorite { result in
-            switch result {
-            case .success(let categories):
-                DispatchQueue.main.async {
+        gameFavoriteUseCase.getGameFavorite()
+            .receive(on: RunLoop.main)
+            .sink(receiveCompletion: { completion in
+                switch completion {
+                case .finished:
                     self.loadingState = false
-                    self.game = categories
+                case .failure:
+                    self.errorMessage = String(describing: completion)
                 }
-            case .failure(let error):
-                DispatchQueue.main.async {
-                    self.loadingState = false
-                    self.errorMessage = error.localizedDescription
-                }
-            }
-        }
+            }, receiveValue: { games in
+                self.game = games
+        }).store(in: &cancellables)
     }
 
     func linkBuilder<Content: View>(

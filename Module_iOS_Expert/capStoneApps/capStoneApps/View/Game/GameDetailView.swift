@@ -37,7 +37,8 @@ struct GameDetailView: View {
                     self.presenter.addFavorite(game: DataLocaleMapper.mapGameToEntity(input: self.presenter.category))
                 } else {
                     self.onLove = false
-                    self.presenter.deleteFavorite(game: DataLocaleMapper.mapGameToEntity(input: self.presenter.category))
+                    self.presenter
+                        .deleteFavorite(game: DataLocaleMapper.mapGameToEntity(input: self.presenter.category))
                 }
             }) {
                 Image(onLove ? "ic-love-on" : "ic-love-off").imageScale(.large)

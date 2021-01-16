@@ -6,7 +6,7 @@
 //  Copyright © 2021 Kelvin HT. All rights reserved.
 //
 
-import Foundation
+import Combine
 
 class GameDetailInteractor: GameDetailProtocol {
     private let gameLocaleRepository: GameLocaleRepositoryProtocol
@@ -27,10 +27,8 @@ class GameDetailInteractor: GameDetailProtocol {
         return category
     }
 
-    func addGameFavorite(game: GameEntity) {
-        gameLocaleRepository.addLocaleGame(from: game) { _ in
-            print("Add Game Favorite")
-        }
+    func addGameFavorite(game: GameEntity) -> AnyPublisher<Bool, Error> {
+        return gameLocaleRepository.addLocaleGame(from: game)
     }
 
     func deleteGameFavorite(game: GameEntity) {

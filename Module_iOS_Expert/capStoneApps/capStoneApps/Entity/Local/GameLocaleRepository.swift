@@ -7,10 +7,11 @@
 //
 
 import Foundation
+import Combine
 
 protocol GameLocaleRepositoryProtocol {
-    func getLocaleGame(result: @escaping (Result<[GameModel], Error>) -> Void)
-    func addLocaleGame(from categories: GameEntity, result: @escaping (Result<Bool, DatabaseError>) -> Void)
+    func getLocaleGame() -> AnyPublisher<[GameModel], Error>
+    func addLocaleGame(from categories: GameEntity) -> AnyPublisher<Bool, Error>
     func deleteLocaleGame(from categories: GameEntity, result: @escaping (Result<Bool, DatabaseError>) -> Void)
     func checkLocaleGame(from categories: GameEntity) -> Bool
 }
@@ -45,32 +46,15 @@ extension GameLocaleRepository: GameLocaleRepositoryProtocol {
             }
         }
     }
-    func addLocaleGame(from categories: GameEntity, result: @escaping (Result<Bool, DatabaseError>) -> Void) {
-        locale.addGameLocale(from: categories) { addFavorite in
-            switch addFavorite {
-            case .success(let resultAdd):
-                print("Success Add Game Favorite")
-                result(.success(resultAdd))
-            case .failure(let error):
-                print("Failed Add Game Favorite")
-                result(.failure(error))
-            }
-        }
+    func addLocaleGame(from categories: GameEntity) -> AnyPublisher<Bool, Error> {
+        return self.locale.addGameLocale(from: categories)
+            .map { $0 }
+            .eraseToAnyPublisher()
     }
 
-    func getLocaleGame(result: @escaping (Result<[GameModel], Error>) -> Void) {
-        locale.getGameLocale { localeResponses in
-            switch localeResponses {
-            case .success(let localeGame):
-                let categoryList = DataLocaleMapper.mapGameToModel(input: localeGame)
-                if categoryList.isEmpty {
-                    print("Database Game Favorite is Empty")
-                } else {
-                    result(.success(categoryList))
-                }
-            case .failure(let errorLocale):
-                result(.failure(errorLocale))
-            }
-        }
+    func getLocaleGame() -> AnyPublisher<[GameModel], Error> {
+        return self.locale.getGameLocale()
+            .map { DataLocaleMapper.mapGameToModel(input: $0) }
+            .eraseToAnyPublisher()
     }
 }

@@ -6,8 +6,8 @@
 //  Copyright © 2021 Kelvin HT. All rights reserved.
 //
 
-import Foundation
+import Combine
 
 protocol GameFavoriteProtocol {
-    func getGameFavorite(completion: @escaping (Result<[GameModel], Error>) -> Void)
+    func getGameFavorite() -> AnyPublisher<[GameModel], Error>
 }

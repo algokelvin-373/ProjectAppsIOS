@@ -6,7 +6,7 @@
 //  Copyright © 2021 Kelvin HT. All rights reserved.
 //
 
-import Foundation
+import Combine
 
 class GameFavoriteInteractor: GameFavoriteProtocol {
     private let gameLocaleRepository: GameLocaleRepositoryProtocol
@@ -15,9 +15,7 @@ class GameFavoriteInteractor: GameFavoriteProtocol {
       self.gameLocaleRepository = repository
     }
 
-    func getGameFavorite(completion: @escaping (Result<[GameModel], Error>) -> Void) {
-        gameLocaleRepository.getLocaleGame { result in
-            completion(result)
-        }
+    func getGameFavorite() -> AnyPublisher<[GameModel], Error> {
+        return gameLocaleRepository.getLocaleGame()
     }
 }
