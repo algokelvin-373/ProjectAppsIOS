@@ -11,7 +11,10 @@ import RealmSwift
 
 struct ConstantVal {
     struct ProfileUser {
-        static let aboutMe = "My name is Kelvin Herwanda Tandrio. I graduated from the Department of Informatics at Universitas Sebelas Maret, Surakarta."
+        static let aboutMe = """
+            My name is Kelvin Herwanda Tandrio. \
+            I graduated from the Department of Informatics at Universitas Sebelas Maret, Surakarta.
+            """
     }
     struct TabBarImage {
         static let movieTabBar = "baseline_movie_black_36pt"

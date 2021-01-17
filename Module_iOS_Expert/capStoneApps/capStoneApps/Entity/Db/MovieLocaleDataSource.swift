@@ -22,8 +22,8 @@ final class MovieLocaleDataSource: NSObject {
     private init(realm: Realm?) {
         self.realmMovie = realm
     }
-    static let sharedInstance: (Realm?) -> MovieLocaleDataSource = {
-        realmDbMovie in return MovieLocaleDataSource(realm: realmDbMovie)
+    static let sharedInstance: (Realm?) -> MovieLocaleDataSource = { realmDbMovie in
+        return MovieLocaleDataSource(realm: realmDbMovie)
     }
 }
 
@@ -61,7 +61,9 @@ extension MovieLocaleDataSource: MovieLocaleDataSourceProtocol {
         if let realmMovie = realmMovie {
             do {
                 try realmMovie.write {
-                    realmMovie.delete((realmMovie.object(ofType: MovieEntity.self, forPrimaryKey: categories.id) ?? nil)!)
+                    realmMovie.delete((realmMovie.object(
+                        ofType: MovieEntity.self,
+                        forPrimaryKey: categories.id) ?? nil)!)
                     result(.success(true))
                 }
             } catch {

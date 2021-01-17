@@ -22,8 +22,8 @@ final class TravelLocaleDataSource: NSObject {
     private init(realm: Realm?) {
         self.realmTravel = realm
     }
-    static let sharedInstance: (Realm?) -> TravelLocaleDataSource = {
-        realmDbTravel in return TravelLocaleDataSource(realm: realmDbTravel)
+    static let sharedInstance: (Realm?) -> TravelLocaleDataSource = { realmDbTravel in
+        return TravelLocaleDataSource(realm: realmDbTravel)
     }
 }
 
@@ -61,7 +61,9 @@ extension TravelLocaleDataSource: TravelLocaleDataSourceProtocol {
         if let realmTravel = realmTravel {
             do {
                 try realmTravel.write {
-                    realmTravel.delete((realmTravel.object(ofType: TravelEntity.self, forPrimaryKey: categories.id) ?? nil)!)
+                    realmTravel.delete((realmTravel.object(
+                        ofType: TravelEntity.self,
+                        forPrimaryKey: categories.id) ?? nil)!)
                     result(.success(true))
                 }
             } catch {

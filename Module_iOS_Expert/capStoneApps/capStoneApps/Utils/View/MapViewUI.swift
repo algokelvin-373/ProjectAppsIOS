@@ -12,7 +12,7 @@ import MapKit
 struct MapViewUI: UIViewRepresentable {
     @State var latitude: Double = 0.0
     @State var longitude: Double = 0.0
-    
+
     func makeUIView(context: Context) -> MKMapView {
          MKMapView(frame: .zero)
     }

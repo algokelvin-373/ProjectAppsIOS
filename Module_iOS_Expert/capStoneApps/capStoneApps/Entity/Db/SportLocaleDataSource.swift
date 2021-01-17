@@ -22,8 +22,8 @@ final class SportLocaleDataSource: NSObject {
     private init(realm: Realm?) {
         self.realmSport = realm
     }
-    static let sharedInstance: (Realm?) -> SportLocaleDataSource = {
-        realmDbSport in return SportLocaleDataSource(realm: realmDbSport)
+    static let sharedInstance: (Realm?) -> SportLocaleDataSource = { realmDbSport in
+        return SportLocaleDataSource(realm: realmDbSport)
     }
 }
 
@@ -61,7 +61,9 @@ extension SportLocaleDataSource: SportLocaleDataSourceProtocol {
         if let realmSport = realmSport {
             do {
                 try realmSport.write {
-                    realmSport.delete((realmSport.object(ofType: SportEntity.self, forPrimaryKey: categories.id) ?? nil)!)
+                    realmSport.delete((realmSport.object(
+                        ofType: SportEntity.self,
+                        forPrimaryKey: categories.id) ?? nil)!)
                     result(.success(true))
                 }
             } catch {

@@ -22,8 +22,8 @@ final class GameLocaleDataSource: NSObject {
     private init(realm: Realm?) {
         self.realmGame = realm
     }
-    static let sharedInstance: (Realm?) -> GameLocaleDataSource = {
-        realmDbGame in return GameLocaleDataSource(realm: realmDbGame)
+    static let sharedInstance: (Realm?) -> GameLocaleDataSource = { realmDbGame in
+        return GameLocaleDataSource(realm: realmDbGame)
     }
 }
 

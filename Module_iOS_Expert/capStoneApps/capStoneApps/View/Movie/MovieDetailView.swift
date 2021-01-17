@@ -12,7 +12,6 @@ import SDWebImageSwiftUI
 struct MovieDetailView: View {
 
     @ObservedObject var presenter: MovieDetailPresenter
-    
     @State var onLove = false
 
     var body: some View {
