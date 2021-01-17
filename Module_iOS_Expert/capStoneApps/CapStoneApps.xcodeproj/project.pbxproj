@@ -19,6 +19,7 @@
 		1000EE1F25B432AC009662C7 /* SportsFavoriteProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1000EE1E25B432AC009662C7 /* SportsFavoriteProtocol.swift */; };
 		1000EE2125B432EF009662C7 /* SportsFavoriteInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1000EE2025B432EF009662C7 /* SportsFavoriteInteractor.swift */; };
 		1000EE2325B433C4009662C7 /* SportsFavoritePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1000EE2225B433C4009662C7 /* SportsFavoritePresenter.swift */; };
+		1000EE2B25B48B23009662C7 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 1000EE2A25B48B23009662C7 /* .swiftlint.yml */; };
 		100F37F225715B59005EC043 /* MovieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100F37F125715B59005EC043 /* MovieView.swift */; };
 		100F37F425715B7F005EC043 /* SportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100F37F325715B7F005EC043 /* SportView.swift */; };
 		100F37F625715B94005EC043 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100F37F525715B94005EC043 /* GameView.swift */; };
@@ -152,6 +153,7 @@
 		1000EE1E25B432AC009662C7 /* SportsFavoriteProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsFavoriteProtocol.swift; sourceTree = "<group>"; };
 		1000EE2025B432EF009662C7 /* SportsFavoriteInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsFavoriteInteractor.swift; sourceTree = "<group>"; };
 		1000EE2225B433C4009662C7 /* SportsFavoritePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsFavoritePresenter.swift; sourceTree = "<group>"; };
+		1000EE2A25B48B23009662C7 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		100F37F125715B59005EC043 /* MovieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MovieView.swift; path = capStoneApps/View/MovieView.swift; sourceTree = SOURCE_ROOT; };
 		100F37F325715B7F005EC043 /* SportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SportView.swift; path = ../SportView.swift; sourceTree = "<group>"; };
 		100F37F525715B94005EC043 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GameView.swift; path = capStoneApps/View/GameView.swift; sourceTree = SOURCE_ROOT; };
@@ -580,6 +582,7 @@
 		1080294B2551A603004069BB = {
 			isa = PBXGroup;
 			children = (
+				1000EE2A25B48B23009662C7 /* .swiftlint.yml */,
 				108029562551A603004069BB /* capStoneApps */,
 				108029702551A604004069BB /* capStoneAppsTests */,
 				1080297B2551A604004069BB /* capStoneAppsUITests */,
@@ -851,6 +854,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1000EE2B25B48B23009662C7 /* .swiftlint.yml in Resources */,
 				108029672551A604004069BB /* LaunchScreen.storyboard in Resources */,
 				108029642551A604004069BB /* Preview Assets.xcassets in Resources */,
 				108029612551A604004069BB /* Assets.xcassets in Resources */,
