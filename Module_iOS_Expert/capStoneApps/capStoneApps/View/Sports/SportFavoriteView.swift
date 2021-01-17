@@ -9,15 +9,28 @@
 import SwiftUI
 
 struct SportFavoriteView: View {
-    var body: some View {
-        VStack {
-            Text("Welcome in Sport Favorite")
-        }.navigationBarTitle(Text("Sport Favorite"), displayMode: .inline)
-    }
-}
+    @ObservedObject var presenterSportFavorite: SportFavoritePresenter
 
-struct SportFavoriteView_Previews: PreviewProvider {
-    static var previews: some View {
-        SportFavoriteView()
+    var body: some View {
+        ZStack {
+            if self.presenterSportFavorite.sport.isEmpty {
+                VStack {
+                    Text("No Sport Favorite")
+                }
+            } else {
+                ScrollView(.vertical, showsIndicators: false) {
+                    ForEach(self.presenterSportFavorite.sport, id: \.id) { sport in
+                        ZStack {
+                            self.presenterSportFavorite.linkBuilder(for: sport) {
+                                SportRowsView(dataSports: sport)
+                            }.buttonStyle(PlainButtonStyle())
+                        }.padding(8)
+                    }
+                }
+            }
+        }.navigationBarTitle(Text("Sport Favorite"), displayMode: .inline)
+        .onAppear {
+            self.presenterSportFavorite.getLocaleSports()
+        }
     }
 }

@@ -11,6 +11,7 @@ import SDWebImageSwiftUI
 
 struct SportDetailView: View {
     @ObservedObject var presenter: SportsDetailPresenter
+    @State var onLove = false
 
     var body: some View {
         ZStack {
@@ -34,10 +35,26 @@ struct SportDetailView: View {
         }.navigationBarTitle(Text(self.presenter.category.name), displayMode: .inline)
         .navigationBarItems(trailing:
             Button(action: {
-                print("User icon pressed...")
+                if self.onLove == false {
+                    self.onLove = true
+                    self.presenter.addFavorite(
+                        sport: DataLocaleMapper.mapSportToEntity(input: self.presenter.category))
+                } else {
+                    self.onLove = false
+                    self.presenter
+                        .deleteFavorite(sport: DataLocaleMapper.mapSportToEntity(input: self.presenter.category))
+                }
             }) {
-                Image(systemName: "person.circle").imageScale(.large)
+                Image(onLove ? "ic-love-on" : "ic-love-off").imageScale(.large)
             }
         )
+        .onAppear {
+            self.checkDataTravelFavorite()
+        }
+    }
+
+    func checkDataTravelFavorite() {
+        onLove = self.presenter.checkFavorite(
+            sport: DataLocaleMapper.mapSportToEntity(input: self.presenter.category))
     }
 }

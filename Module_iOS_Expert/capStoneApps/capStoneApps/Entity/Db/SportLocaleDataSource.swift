@@ -8,10 +8,13 @@
 
 import Foundation
 import RealmSwift
+import Combine
 
 protocol SportLocaleDataSourceProtocol: class {
-    func getSportLocale(result: @escaping (Result<[SportEntity], DatabaseError>) -> Void)
-    func addSportLocale(from categories: [SportEntity], result: @escaping (Result<Bool, DatabaseError>) -> Void)
+    func getSportLocale() -> AnyPublisher<[SportEntity], Error>
+    func addSportLocale(from categories: SportEntity) -> AnyPublisher<Bool, Error>
+    func deleteSportLocale(from categories: SportEntity, result: @escaping (Result<Bool, DatabaseError>) -> Void)
+    func checkSportLocale(from categories: SportEntity) -> Bool
 }
 
 final class SportLocaleDataSource: NSObject {
@@ -25,24 +28,40 @@ final class SportLocaleDataSource: NSObject {
 }
 
 extension SportLocaleDataSource: SportLocaleDataSourceProtocol {
-    func getSportLocale(result: @escaping (Result<[SportEntity], DatabaseError>) -> Void) {
-        if let realmSport = realmSport {
-            let categories: Results<SportEntity> = {
-              realmSport.objects(SportEntity.self)
-                .sorted(byKeyPath: "title", ascending: true)
-            }()
-            result(.success(categories.toArray(ofType: SportEntity.self)))
-        } else {
-            result(.failure(.invalidInstance))
-        }
+    func getSportLocale() -> AnyPublisher<[SportEntity], Error> {
+        return Future<[SportEntity], Error> { completion in
+            if let realmSport = self.realmSport {
+                let categories: Results<SportEntity> = {
+                  realmSport.objects(SportEntity.self)
+                    .sorted(byKeyPath: "name", ascending: true)
+                }()
+                completion(.success(categories.toArray(ofType: SportEntity.self)))
+            } else {
+                completion(.failure(DatabaseError.invalidInstance))
+            }
+        }.eraseToAnyPublisher()
     }
-    func addSportLocale(from categories: [SportEntity], result: @escaping (Result<Bool, DatabaseError>) -> Void) {
+    func addSportLocale(from categories: SportEntity) -> AnyPublisher<Bool, Error> {
+        return Future<Bool, Error> { completion in
+            if let realm = self.realmSport {
+                do {
+                    try realm.write {
+                        realm.add(categories, update: .all)
+                        completion(.success(true))
+                    }
+                } catch {
+                    completion(.failure(DatabaseError.requestFailed))
+                }
+            } else {
+                completion(.failure(DatabaseError.invalidInstance))
+            }
+        }.eraseToAnyPublisher()
+    }
+    func deleteSportLocale(from categories: SportEntity, result: @escaping (Result<Bool, DatabaseError>) -> Void) {
         if let realmSport = realmSport {
             do {
                 try realmSport.write {
-                    for localeSport in categories {
-                        realmSport.add(localeSport, update: .all)
-                    }
+                    realmSport.delete((realmSport.object(ofType: SportEntity.self, forPrimaryKey: categories.id) ?? nil)!)
                     result(.success(true))
                 }
             } catch {
@@ -50,6 +69,20 @@ extension SportLocaleDataSource: SportLocaleDataSourceProtocol {
             }
         } else {
             result(.failure(.invalidInstance))
+        }
+    }
+    func checkSportLocale(from categories: SportEntity) -> Bool {
+        if let realmSport = realmSport {
+            let sport: SportEntity? = {
+                realmSport.object(ofType: SportEntity.self, forPrimaryKey: categories.id)
+            }()
+            if sport?.id == categories.id {
+                return true
+            } else {
+                return false
+            }
+        } else {
+            return false
         }
     }
 }

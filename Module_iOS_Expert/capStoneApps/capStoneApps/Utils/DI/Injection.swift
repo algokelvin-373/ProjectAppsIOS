@@ -104,6 +104,13 @@ final class Injection: NSObject {
     }
     /**Movie Injection - End**/
 
+    /**Sport Injection - Start**/
+    func provideSportLocaleRepository() -> SportLocaleRepositoryProtocol {
+        let realm = try? Realm()
+        let localeSport = SportLocaleDataSource.sharedInstance(realm)
+        return SportLocaleRepository.sharedInstance(localeSport)
+    }
+
     func provideSportRepository() -> SportRepositoryProtocol {
         let remoteSport = SportDataSource.sharedInstance
         return SportRepository.sharedInstance(remoteSport)
@@ -115,7 +122,15 @@ final class Injection: NSObject {
     }
 
     func provideSportDetail(category: SportModel) -> SportsDetailProtocol {
-      let repositorySport = provideSportRepository()
-      return SportsDetailInteractor(repository: repositorySport, category: category)
+        let repositorySport = provideSportRepository()
+        let repositoryLocaleSport = provideSportLocaleRepository()
+        return SportDetailInteractor(repository: repositorySport,
+                                      repositoryLocale: repositoryLocaleSport, category: category)
     }
+
+    func provideSportFavorite() -> SportFavoriteProtocol {
+        let repositorySportLocale = provideSportLocaleRepository()
+        return SportFavoriteInteractor(repository: repositorySportLocale)
+    }
+    /**Sport Injection - End**/
 }
