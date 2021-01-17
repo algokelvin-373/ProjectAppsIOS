@@ -45,9 +45,9 @@ struct MovieDetailView: View {
                     self.presenter
                         .deleteFavorite(movie: DataLocaleMapper.mapMovieToEntity(input: self.presenter.category))
                 }
-            }) {
+            }, label: {
                 Image(onLove ? "ic-love-on" : "ic-love-off").imageScale(.large)
-            }
+            })
         )
         .onAppear {
             self.checkDataMovieFavorite()

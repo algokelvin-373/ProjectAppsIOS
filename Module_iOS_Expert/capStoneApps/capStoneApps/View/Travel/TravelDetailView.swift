@@ -52,9 +52,9 @@ struct TravelDetailView: View {
                     self.presenter
                         .deleteFavorite(travel: DataLocaleMapper.mapTravelToEntity(input: self.presenter.category))
                 }
-            }) {
+            }, label: {
                 Image(onLove ? "ic-love-on" : "ic-love-off").imageScale(.large)
-            }
+            })
         )
         .onAppear {
             self.checkDataTravelFavorite()

@@ -40,9 +40,9 @@ struct GameDetailView: View {
                     self.presenter
                         .deleteFavorite(game: DataLocaleMapper.mapGameToEntity(input: self.presenter.category))
                 }
-            }) {
+            }, label: {
                 Image(onLove ? "ic-love-on" : "ic-love-off").imageScale(.large)
-            }
+            })
         )
         .onAppear {
             self.checkDataGameFavorite()
@@ -51,6 +51,5 @@ struct GameDetailView: View {
 
     func checkDataGameFavorite() {
         onLove = self.presenter.checkFavorite(game: DataLocaleMapper.mapGameToEntity(input: self.presenter.category))
-        print(onLove)
     }
 }

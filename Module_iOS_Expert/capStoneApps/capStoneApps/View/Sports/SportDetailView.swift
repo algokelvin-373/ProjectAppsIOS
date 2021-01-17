@@ -44,9 +44,9 @@ struct SportDetailView: View {
                     self.presenter
                         .deleteFavorite(sport: DataLocaleMapper.mapSportToEntity(input: self.presenter.category))
                 }
-            }) {
+            }, label: {
                 Image(onLove ? "ic-love-on" : "ic-love-off").imageScale(.large)
-            }
+            })
         )
         .onAppear {
             self.checkDataTravelFavorite()
