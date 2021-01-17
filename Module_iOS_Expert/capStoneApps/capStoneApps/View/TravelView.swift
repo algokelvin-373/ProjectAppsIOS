@@ -25,8 +25,8 @@ struct TravelView: View {
                                 }.buttonStyle(PlainButtonStyle())
                             }.padding(8)
                         }
-                    }
-                }.navigationBarTitle(Text("Travel"), displayMode: .automatic)
+                    }.navigationBarTitle(Text("Travel"), displayMode: .inline)
+                }
             }
         }.onAppear {
             if self.presenterTravel.travels.count == 0 {

@@ -25,8 +25,8 @@ struct SportView: View {
                                     }.buttonStyle(PlainButtonStyle())
                                 }.padding(8)
                             }
-                        }
-                    }.navigationBarTitle(Text("Sport"), displayMode: .automatic)
+                        }.navigationBarTitle(Text("Sport"), displayMode: .inline)
+                    }
                 }
             }.onAppear {
                 if self.presenterSport.sports.count == 0 {

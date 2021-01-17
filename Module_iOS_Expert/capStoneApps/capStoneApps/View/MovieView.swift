@@ -25,8 +25,8 @@ struct MovieView: View {
                                 }.buttonStyle(PlainButtonStyle())
                             }.padding(8)
                         }
-                    }
-                }.navigationBarTitle(Text("Game"), displayMode: .automatic)
+                    }.navigationBarTitle(Text("Movie"), displayMode: .inline)
+                }
             }
         }.onAppear {
             if self.presenterMovie.movies.count == 0 {

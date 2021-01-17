@@ -26,8 +26,8 @@ struct GameView: View {
                                 }.buttonStyle(PlainButtonStyle())
                             }.padding(8)
                         }
-                    }
-                }.navigationBarTitle(Text("Game"), displayMode: .automatic)
+                    }.navigationBarTitle(Text("Game"), displayMode: .inline)
+                }
             }
         }.onAppear {
             if self.presenterGame.games.count == 0 {
