@@ -19,7 +19,7 @@ class MovieDetailPresenter: ObservableObject {
         self.detailUseCase = detailUseCase
         category = detailUseCase.getDetailMovie()
     }
-    
+
     func addFavorite(movie: MovieEntity) {
         let statusAddFavorite = detailUseCase.addMovieFavorite(movie: movie)
         print("Status Add Favorite = \(statusAddFavorite.description)")

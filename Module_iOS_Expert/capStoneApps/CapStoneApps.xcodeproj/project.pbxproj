@@ -11,6 +11,10 @@
 		1000EE0F25B3A8C8009662C7 /* MovieFavoriteProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1000EE0E25B3A8C8009662C7 /* MovieFavoriteProtocol.swift */; };
 		1000EE1125B3A906009662C7 /* MovieFavoriteInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1000EE1025B3A906009662C7 /* MovieFavoriteInteractor.swift */; };
 		1000EE1325B3AA33009662C7 /* MovieFavoritePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1000EE1225B3AA33009662C7 /* MovieFavoritePresenter.swift */; };
+		1000EE1525B3B263009662C7 /* TravelLocaleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1000EE1425B3B263009662C7 /* TravelLocaleRepository.swift */; };
+		1000EE1725B3B44A009662C7 /* TravelFavoriteProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1000EE1625B3B44A009662C7 /* TravelFavoriteProtocol.swift */; };
+		1000EE1925B3B477009662C7 /* TravelFavoriteInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1000EE1825B3B477009662C7 /* TravelFavoriteInteractor.swift */; };
+		1000EE1B25B3B76B009662C7 /* TravelFavoritePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1000EE1A25B3B76B009662C7 /* TravelFavoritePresenter.swift */; };
 		100F37F225715B59005EC043 /* MovieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100F37F125715B59005EC043 /* MovieView.swift */; };
 		100F37F425715B7F005EC043 /* SportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100F37F325715B7F005EC043 /* SportView.swift */; };
 		100F37F625715B94005EC043 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100F37F525715B94005EC043 /* GameView.swift */; };
@@ -136,10 +140,14 @@
 		1000EE0E25B3A8C8009662C7 /* MovieFavoriteProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieFavoriteProtocol.swift; sourceTree = "<group>"; };
 		1000EE1025B3A906009662C7 /* MovieFavoriteInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieFavoriteInteractor.swift; sourceTree = "<group>"; };
 		1000EE1225B3AA33009662C7 /* MovieFavoritePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieFavoritePresenter.swift; sourceTree = "<group>"; };
+		1000EE1425B3B263009662C7 /* TravelLocaleRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelLocaleRepository.swift; sourceTree = "<group>"; };
+		1000EE1625B3B44A009662C7 /* TravelFavoriteProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelFavoriteProtocol.swift; sourceTree = "<group>"; };
+		1000EE1825B3B477009662C7 /* TravelFavoriteInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelFavoriteInteractor.swift; sourceTree = "<group>"; };
+		1000EE1A25B3B76B009662C7 /* TravelFavoritePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelFavoritePresenter.swift; sourceTree = "<group>"; };
 		100F37F125715B59005EC043 /* MovieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MovieView.swift; path = capStoneApps/View/MovieView.swift; sourceTree = SOURCE_ROOT; };
 		100F37F325715B7F005EC043 /* SportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportView.swift; sourceTree = "<group>"; };
 		100F37F525715B94005EC043 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GameView.swift; path = capStoneApps/View/GameView.swift; sourceTree = SOURCE_ROOT; };
-		100F37F725715BDD005EC043 /* TravelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelView.swift; sourceTree = "<group>"; };
+		100F37F725715BDD005EC043 /* TravelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TravelView.swift; path = capStoneApps/View/TravelView.swift; sourceTree = SOURCE_ROOT; };
 		100F37F925715BF1005EC043 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileView.swift; path = capStoneApps/View/ProfileView.swift; sourceTree = SOURCE_ROOT; };
 		100F37FC25715CF8005EC043 /* ConstantVal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantVal.swift; sourceTree = "<group>"; };
 		104252552580CDBE007C29D4 /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
@@ -289,7 +297,6 @@
 				1042526425810746007C29D4 /* Game */,
 				1042525D2580D91C007C29D4 /* Profile */,
 				100F37F325715B7F005EC043 /* SportView.swift */,
-				100F37F725715BDD005EC043 /* TravelView.swift */,
 				100F37F925715BF1005EC043 /* ProfileView.swift */,
 			);
 			path = View;
@@ -428,6 +435,7 @@
 			children = (
 				104D893325B1A1D200E7C80A /* GameLocaleRepository.swift */,
 				1000EE0C25B3A42C009662C7 /* MovieLocaleRepository.swift */,
+				1000EE1425B3B263009662C7 /* TravelLocaleRepository.swift */,
 			);
 			path = Local;
 			sourceTree = "<group>";
@@ -629,6 +637,7 @@
 		10AED98A259253DB00A6E0B1 /* Travel */ = {
 			isa = PBXGroup;
 			children = (
+				100F37F725715BDD005EC043 /* TravelView.swift */,
 				10E0EB1025B0BCD9006044D6 /* TravelFavoriteView.swift */,
 				105B843A25ADE1F4009FB8E3 /* TravelRowsView.swift */,
 				105B844225ADF945009FB8E3 /* TravelDetailView.swift */,
@@ -641,6 +650,7 @@
 			children = (
 				10AED98C2592543D00A6E0B1 /* TravelPresenter.swift */,
 				105B844425ADF9A4009FB8E3 /* TravelDetailPresenter.swift */,
+				1000EE1A25B3B76B009662C7 /* TravelFavoritePresenter.swift */,
 			);
 			path = Travel;
 			sourceTree = "<group>";
@@ -650,6 +660,7 @@
 			children = (
 				10AED98F2592547000A6E0B1 /* TravelInteractor.swift */,
 				105B844025ADF8A2009FB8E3 /* TravelDetailInteractor.swift */,
+				1000EE1825B3B477009662C7 /* TravelFavoriteInteractor.swift */,
 			);
 			path = Travel;
 			sourceTree = "<group>";
@@ -659,6 +670,7 @@
 			children = (
 				10AED9922592548A00A6E0B1 /* TravelProtocol.swift */,
 				105B843E25ADE31F009FB8E3 /* TravelDetailProtocol.swift */,
+				1000EE1625B3B44A009662C7 /* TravelFavoriteProtocol.swift */,
 			);
 			path = Travel;
 			sourceTree = "<group>";
@@ -896,7 +908,9 @@
 				105B844325ADF945009FB8E3 /* TravelDetailView.swift in Sources */,
 				10E0EB0725B0A632006044D6 /* TravelLocaleDataSource.swift in Sources */,
 				10AED9972592560700A6E0B1 /* TravelRepository.swift in Sources */,
+				1000EE1B25B3B76B009662C7 /* TravelFavoritePresenter.swift in Sources */,
 				100F37FD25715CF8005EC043 /* ConstantVal.swift in Sources */,
+				1000EE1725B3B44A009662C7 /* TravelFavoriteProtocol.swift in Sources */,
 				105B843B25ADE1F4009FB8E3 /* TravelRowsView.swift in Sources */,
 				10C6204A25B06E720071E4FF /* DescriptionViewUI.swift in Sources */,
 				10E0EB0925B0A8D2006044D6 /* SportLocaleDataSource.swift in Sources */,
@@ -911,6 +925,7 @@
 				105B843925ADD52E009FB8E3 /* MovieDetailView.swift in Sources */,
 				108029582551A603004069BB /* AppDelegate.swift in Sources */,
 				1080295A2551A603004069BB /* SceneDelegate.swift in Sources */,
+				1000EE1925B3B477009662C7 /* TravelFavoriteInteractor.swift in Sources */,
 				106641FF2582873900624EF9 /* GameEntity.swift in Sources */,
 				105B843F25ADE31F009FB8E3 /* TravelDetailProtocol.swift in Sources */,
 				105B842925AD5E08009FB8E3 /* GameDetailView.swift in Sources */,
@@ -948,6 +963,7 @@
 				100F37F625715B94005EC043 /* GameView.swift in Sources */,
 				1042526825810BE3007C29D4 /* GameRowsView.swift in Sources */,
 				104D893625B1A54700E7C80A /* DataLocaleMapper.swift in Sources */,
+				1000EE1525B3B263009662C7 /* TravelLocaleRepository.swift in Sources */,
 				1000EE0F25B3A8C8009662C7 /* MovieFavoriteProtocol.swift in Sources */,
 				105B843325ADD3D1009FB8E3 /* MovieDetailProtocol.swift in Sources */,
 				10AED9A02592581100A6E0B1 /* SportsProtocol.swift in Sources */,

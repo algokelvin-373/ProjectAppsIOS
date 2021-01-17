@@ -8,10 +8,13 @@
 
 import Foundation
 import RealmSwift
+import Combine
 
 protocol TravelLocaleDataSourceProtocol: class {
-    func getTravelLocale(result: @escaping (Result<[TravelEntity], DatabaseError>) -> Void)
-    func addTravelLocale(from categories: [TravelEntity], result: @escaping (Result<Bool, DatabaseError>) -> Void)
+    func getTravelLocale() -> AnyPublisher<[TravelEntity], Error>
+    func addTravelLocale(from categories: TravelEntity) -> AnyPublisher<Bool, Error>
+    func deleteTravelLocale(from categories: TravelEntity, result: @escaping (Result<Bool, DatabaseError>) -> Void)
+    func checkTravelLocale(from categories: TravelEntity) -> Bool
 }
 
 final class TravelLocaleDataSource: NSObject {
@@ -25,24 +28,40 @@ final class TravelLocaleDataSource: NSObject {
 }
 
 extension TravelLocaleDataSource: TravelLocaleDataSourceProtocol {
-    func getTravelLocale(result: @escaping (Result<[TravelEntity], DatabaseError>) -> Void) {
-        if let realmTravel = realmTravel {
-            let categories: Results<TravelEntity> = {
-              realmTravel.objects(TravelEntity.self)
-                .sorted(byKeyPath: "title", ascending: true)
-            }()
-            result(.success(categories.toArray(ofType: TravelEntity.self)))
-        } else {
-            result(.failure(.invalidInstance))
-        }
+    func getTravelLocale() -> AnyPublisher<[TravelEntity], Error> {
+        return Future<[TravelEntity], Error> { completion in
+            if let realmTravel = self.realmTravel {
+                let categories: Results<TravelEntity> = {
+                  realmTravel.objects(TravelEntity.self)
+                    .sorted(byKeyPath: "name", ascending: true)
+                }()
+                completion(.success(categories.toArray(ofType: TravelEntity.self)))
+            } else {
+                completion(.failure(DatabaseError.invalidInstance))
+            }
+        }.eraseToAnyPublisher()
     }
-    func addTravelLocale(from categories: [TravelEntity], result: @escaping (Result<Bool, DatabaseError>) -> Void) {
+    func addTravelLocale(from categories: TravelEntity) -> AnyPublisher<Bool, Error> {
+        return Future<Bool, Error> { completion in
+            if let realm = self.realmTravel {
+                do {
+                    try realm.write {
+                        realm.add(categories, update: .all)
+                        completion(.success(true))
+                    }
+                } catch {
+                    completion(.failure(DatabaseError.requestFailed))
+                }
+            } else {
+                completion(.failure(DatabaseError.invalidInstance))
+            }
+        }.eraseToAnyPublisher()
+    }
+    func deleteTravelLocale(from categories: TravelEntity, result: @escaping (Result<Bool, DatabaseError>) -> Void) {
         if let realmTravel = realmTravel {
             do {
                 try realmTravel.write {
-                    for localeTravel in categories {
-                        realmTravel.add(localeTravel, update: .all)
-                    }
+                    realmTravel.delete((realmTravel.object(ofType: TravelEntity.self, forPrimaryKey: categories.id) ?? nil)!)
                     result(.success(true))
                 }
             } catch {
@@ -50,6 +69,20 @@ extension TravelLocaleDataSource: TravelLocaleDataSourceProtocol {
             }
         } else {
             result(.failure(.invalidInstance))
+        }
+    }
+    func checkTravelLocale(from categories: TravelEntity) -> Bool {
+        if let realmTravel = realmTravel {
+            let travel: TravelEntity? = {
+                realmTravel.object(ofType: TravelEntity.self, forPrimaryKey: categories.id)
+            }()
+            if travel?.id == categories.id {
+                return true
+            } else {
+                return false
+            }
+        } else {
+            return false
         }
     }
 }

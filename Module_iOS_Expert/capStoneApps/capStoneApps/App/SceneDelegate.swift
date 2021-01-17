@@ -25,6 +25,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         let gameFavoriteUseCase = Injection.init().provideGameFavorite()
         let movieFavoriteUseCase = Injection.init().provideMovieFavorite()
+        let travelFavoriteUseCase = Injection.init().provideTravelFavorite()
 
         let profilePresenter = ProfilePresenter(profileProtocol: profileUseCase)
         let gamePresenter = GamePresenter(gameUseCase: gameUseCase)
@@ -34,9 +35,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         let gameFavoritePresenter = GameFavoritePresenter(gameFavoriteUseCase: gameFavoriteUseCase)
         let movieFavoritePresenter = MovieFavoritePresenter(movieFavoriteUseCase: movieFavoriteUseCase)
+        let travelFavoritePresenter = TravelFavoritePresenter(travelFavoriteUseCase: travelFavoriteUseCase)
 
         let contentView = ContentView()
             .environmentObject(travelPresenter)
+            .environmentObject(travelFavoritePresenter)
             .environmentObject(profilePresenter)
             .environmentObject(gamePresenter)
             .environmentObject(gameFavoritePresenter)

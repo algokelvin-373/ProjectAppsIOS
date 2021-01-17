@@ -13,6 +13,7 @@ struct ProfileView: View {
     @ObservedObject var profilePresenter: ProfilePresenter
     @EnvironmentObject var presenterGameFavorite: GameFavoritePresenter
     @EnvironmentObject var presenterMovieFavorite: MovieFavoritePresenter
+    @EnvironmentObject var presenterTravelFavorite: TravelFavoritePresenter
 
     var body: some View {
         NavigationView {
@@ -56,7 +57,7 @@ struct ProfileView: View {
                     NavigationLink(destination: SportFavoriteView()) {
                         TabFavoriteViewUI(title: "SPORT", image: ConstantVal.TabBarImage.sportTabBar)
                     }
-                    NavigationLink(destination: TravelFavoriteView()) {
+                    NavigationLink(destination: TravelFavoriteView(presenterTravelFavorite: presenterTravelFavorite)) {
                         TabFavoriteViewUI(title: "TRAVEL", image: ConstantVal.TabBarImage.travelTabBar)
                     }
                 }.padding(.bottom)
