@@ -14,9 +14,16 @@ final class Injection: NSObject {
       return ProfileInteractor()
     }
 
+    /**Travel Injection - Start**/
     func provideTravelRepository() -> TravelRepositoryProtocol {
         let remoteTravel = TravelDataSource.sharedInstance
         return TravelRepository.sharedInstance(remoteTravel)
+    }
+
+    func provideTravelLocaleRepository() -> TravelLocaleRepositoryProtocol {
+        let realm = try? Realm()
+        let localeTravel = TravelLocaleDataSource.sharedInstance(realm)
+        return TravelLocaleRepository.sharedInstance(localeTravel)
     }
 
     func provideTravel() -> TravelProtocol {
@@ -26,9 +33,18 @@ final class Injection: NSObject {
 
     func provideTravelDetail(category: TravelModel) -> TravelDetailProtocol {
         let repositoryTravel = provideTravelRepository()
-        return TravelDetailInteractor(repository: repositoryTravel, category: category)
+        let repositoryLocaleTravel = provideTravelLocaleRepository()
+        return TravelDetailInteractor(repository: repositoryTravel,
+                                      repositoryLocale: repositoryLocaleTravel, category: category)
     }
 
+    func provideTravelFavorite() -> TravelFavoriteProtocol {
+        let repositoryTravelLocale = provideTravelLocaleRepository()
+        return TravelFavoriteInteractor(repository: repositoryTravelLocale)
+    }
+    /**Travel Injection - End**/
+
+    /**Game Injection - Start**/
     func provideGameRepository() -> GameRepositoryProtocol {
         let remoteGame = GameDataSource.sharedInstance
         return GameRepository.sharedInstance(remoteGame)
@@ -56,10 +72,18 @@ final class Injection: NSObject {
         let repositoryGameLocale = provideGameLocaleRepository()
         return GameFavoriteInteractor(repository: repositoryGameLocale)
     }
+    /**Game Injection - End**/
 
+    /**Movie Injection - Start**/
     func provideMovieRepository() -> MovieRepositoryProtocol {
         let remoteMovie = MovieDataSource.sharedInstance
         return MovieRepository.sharedInstance(remoteMovie)
+    }
+
+    func provideMovieLocaleRepository() -> MovieLocaleRepositoryProtocol {
+        let realm = try? Realm()
+        let localeMovie = MovieLocaleDataSource.sharedInstance(realm)
+        return MovieLocaleRepository.sharedInstance(localeMovie)
     }
 
     func provideMovie() -> MovieProtocol {
@@ -69,7 +93,22 @@ final class Injection: NSObject {
 
     func provideMovieDetail(category: MovieModel) -> MovieDetailProtocol {
         let repositoryMovie = provideMovieRepository()
-        return MovieDetailInteractor(repository: repositoryMovie, category: category)
+        let repositoryLocaleMovie = provideMovieLocaleRepository()
+        return MovieDetailInteractor(repository: repositoryMovie,
+        repositoryLocale: repositoryLocaleMovie, category: category)
+    }
+
+    func provideMovieFavorite() -> MovieFavoriteProtocol {
+        let repositoryMovieLocale = provideMovieLocaleRepository()
+        return MovieFavoriteInteractor(repository: repositoryMovieLocale)
+    }
+    /**Movie Injection - End**/
+
+    /**Sport Injection - Start**/
+    func provideSportLocaleRepository() -> SportLocaleRepositoryProtocol {
+        let realm = try? Realm()
+        let localeSport = SportLocaleDataSource.sharedInstance(realm)
+        return SportLocaleRepository.sharedInstance(localeSport)
     }
 
     func provideSportRepository() -> SportRepositoryProtocol {
@@ -83,7 +122,15 @@ final class Injection: NSObject {
     }
 
     func provideSportDetail(category: SportModel) -> SportsDetailProtocol {
-      let repositorySport = provideSportRepository()
-      return SportsDetailInteractor(repository: repositorySport, category: category)
+        let repositorySport = provideSportRepository()
+        let repositoryLocaleSport = provideSportLocaleRepository()
+        return SportDetailInteractor(repository: repositorySport,
+                                      repositoryLocale: repositoryLocaleSport, category: category)
     }
+
+    func provideSportFavorite() -> SportFavoriteProtocol {
+        let repositorySportLocale = provideSportLocaleRepository()
+        return SportFavoriteInteractor(repository: repositorySportLocale)
+    }
+    /**Sport Injection - End**/
 }

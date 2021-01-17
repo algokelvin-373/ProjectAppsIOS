@@ -9,15 +9,28 @@
 import SwiftUI
 
 struct MovieFavoriteView: View {
-    var body: some View {
-        VStack {
-            Text("Welcome in Movie Favorite")
-        }.navigationBarTitle(Text("Movie Favorite"), displayMode: .inline)
-    }
-}
+    @ObservedObject var presenterMovieFavorite: MovieFavoritePresenter
 
-struct MovieFavoriteView_Previews: PreviewProvider {
-    static var previews: some View {
-        MovieFavoriteView()
+    var body: some View {
+        ZStack {
+            if self.presenterMovieFavorite.movie.isEmpty {
+                VStack {
+                    Text("No Movie Favorite")
+                }
+            } else {
+                ScrollView(.vertical, showsIndicators: false) {
+                    ForEach(self.presenterMovieFavorite.movie, id: \.id) { movie in
+                        ZStack {
+                            self.presenterMovieFavorite.linkBuilder(for: movie) {
+                                MovieRowsView(dataMovies: movie)
+                            }.buttonStyle(PlainButtonStyle())
+                        }.padding(8)
+                    }
+                }
+            }
+        }.navigationBarTitle(Text("Movie Favorite"), displayMode: .inline)
+        .onAppear {
+            self.presenterMovieFavorite.getLocaleMovies()
+        }
     }
 }

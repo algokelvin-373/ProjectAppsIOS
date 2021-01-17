@@ -12,6 +12,9 @@ struct ProfileView: View {
 
     @ObservedObject var profilePresenter: ProfilePresenter
     @EnvironmentObject var presenterGameFavorite: GameFavoritePresenter
+    @EnvironmentObject var presenterMovieFavorite: MovieFavoritePresenter
+    @EnvironmentObject var presenterTravelFavorite: TravelFavoritePresenter
+    @EnvironmentObject var presenterSportFavorite: SportFavoritePresenter
 
     var body: some View {
         NavigationView {
@@ -46,16 +49,16 @@ struct ProfileView: View {
                         .fontWeight(.semibold)
                         .padding(.top)
 
-                    NavigationLink(destination: MovieFavoriteView()) {
+                    NavigationLink(destination: MovieFavoriteView(presenterMovieFavorite: presenterMovieFavorite)) {
                         TabFavoriteViewUI(title: "MOVIE", image: ConstantVal.TabBarImage.movieTabBar)
                     }
                     NavigationLink(destination: GameFavoriteView(presenterGameFavorite: presenterGameFavorite)) {
                         TabFavoriteViewUI(title: "GAME", image: ConstantVal.TabBarImage.gameTabBar)
                     }
-                    NavigationLink(destination: SportFavoriteView()) {
+                    NavigationLink(destination: SportFavoriteView(presenterSportFavorite: presenterSportFavorite)) {
                         TabFavoriteViewUI(title: "SPORT", image: ConstantVal.TabBarImage.sportTabBar)
                     }
-                    NavigationLink(destination: TravelFavoriteView()) {
+                    NavigationLink(destination: TravelFavoriteView(presenterTravelFavorite: presenterTravelFavorite)) {
                         TabFavoriteViewUI(title: "TRAVEL", image: ConstantVal.TabBarImage.travelTabBar)
                     }
                 }.padding(.bottom)

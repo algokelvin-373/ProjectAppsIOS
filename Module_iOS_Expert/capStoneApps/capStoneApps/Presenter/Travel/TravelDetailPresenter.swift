@@ -19,4 +19,17 @@ class TravelDetailPresenter: ObservableObject {
         self.detailUseCase = detailUseCase
         category = detailUseCase.getDetailTravel()
     }
+
+    func addFavorite(travel: TravelEntity) {
+        let statusAddFavorite = detailUseCase.addTravelFavorite(travel: travel)
+        print("Status Add Favorite = \(statusAddFavorite.description)")
+    }
+
+    func checkFavorite(travel: TravelEntity) -> Bool {
+        return detailUseCase.checkFavoriteTravel(travel: travel)
+    }
+
+    func deleteFavorite(travel: TravelEntity) {
+        detailUseCase.deleteTravelFavorite(travel: travel)
+    }
 }

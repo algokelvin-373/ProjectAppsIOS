@@ -9,15 +9,28 @@
 import SwiftUI
 
 struct TravelFavoriteView: View {
-    var body: some View {
-        VStack {
-            Text("Welcome in Travel Favorite")
-        }.navigationBarTitle(Text("Travel Favorite"), displayMode: .inline)
-    }
-}
+    @ObservedObject var presenterTravelFavorite: TravelFavoritePresenter
 
-struct TravelFavoriteView_Previews: PreviewProvider {
-    static var previews: some View {
-        TravelFavoriteView()
+    var body: some View {
+        ZStack {
+            if self.presenterTravelFavorite.travel.isEmpty {
+                VStack {
+                    Text("No Travel Favorite")
+                }
+            } else {
+                ScrollView(.vertical, showsIndicators: false) {
+                    ForEach(self.presenterTravelFavorite.travel, id: \.id) { travel in
+                        ZStack {
+                            self.presenterTravelFavorite.linkBuilder(for: travel) {
+                                TravelRowsView(dataTravels: travel)
+                            }.buttonStyle(PlainButtonStyle())
+                        }.padding(8)
+                    }
+                }
+            }
+        }.navigationBarTitle(Text("Travel Favorite"), displayMode: .inline)
+        .onAppear {
+            self.presenterTravelFavorite.getLocaleTravels()
+        }
     }
 }
