@@ -306,7 +306,6 @@
 				10683D162587DD820006CB02 /* Movie */,
 				1042526425810746007C29D4 /* Game */,
 				1042525D2580D91C007C29D4 /* Profile */,
-				100F37F925715BF1005EC043 /* ProfileView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -396,6 +395,7 @@
 		1042525D2580D91C007C29D4 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				100F37F925715BF1005EC043 /* ProfileView.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
