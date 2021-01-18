@@ -16,7 +16,8 @@ final class DataLocaleMapper {
                 name: result.name,
                 image: result.image,
                 released: result.released,
-                rating: result.rating
+                rating: result.rating,
+                description: result.description
             )
         }
     }

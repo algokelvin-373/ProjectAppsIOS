@@ -10,6 +10,7 @@ import Combine
 
 protocol GameDetailProtocol {
     func getDetailGame() -> GameModel
+    func getGameDescription(id: String) -> AnyPublisher<String, URLError>
     func addGameFavorite(game: GameEntity) -> AnyPublisher<Bool, Error>
     func checkFavoriteGame(game: GameEntity) -> Bool
     func deleteGameFavorite(game: GameEntity)

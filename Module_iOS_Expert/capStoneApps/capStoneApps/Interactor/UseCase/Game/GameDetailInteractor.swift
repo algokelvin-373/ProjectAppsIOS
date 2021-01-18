@@ -40,4 +40,8 @@ class GameDetailInteractor: GameDetailProtocol {
     func checkFavoriteGame(game: GameEntity) -> Bool {
         return gameLocaleRepository.checkLocaleGame(from: game)
     }
+
+    func getGameDescription(id: String) -> AnyPublisher<String, URLError> {
+        return repository.getGameDescription(id: id)
+    }
 }

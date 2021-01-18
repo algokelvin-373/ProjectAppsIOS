@@ -26,6 +26,13 @@ struct GameDetailView: View {
                             title: self.presenter.category.name,
                             subtitle: self.presenter.category.released
                         ).padding(.top)
+
+//                        DescriptionViewUI(description: self.presenter.detailGame)
+//                            .padding()
+                        Text(self.presenter.detailGame)
+                            .padding()
+
+                        Spacer()
                     }
                 }
             }
@@ -46,6 +53,7 @@ struct GameDetailView: View {
         )
         .onAppear {
             self.checkDataGameFavorite()
+            self.presenter.getGameDescription(id: String(self.presenter.category.id))
         }
     }
 

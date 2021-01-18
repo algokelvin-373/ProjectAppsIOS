@@ -16,7 +16,8 @@ final class DataMapper {
                 name: result.nameGame ?? "Unknow",
                 image: result.backgroundImageGame ?? "Unknow",
                 released: result.releasedGame ?? "Unknow",
-                rating: result.ratingGame ?? 0.0
+                rating: result.ratingGame ?? 0.0,
+                description: result.descriptionGame ?? ""
             )
         }
     }

@@ -11,6 +11,7 @@ import Combine
 
 protocol GameRepositoryProtocol {
     func getGame() -> AnyPublisher<[GameModel], URLError>
+    func getGameDescription(id: String) -> AnyPublisher<String, URLError>
 }
 
 final class GameRepository: NSObject {
@@ -31,6 +32,11 @@ extension GameRepository: GameRepositoryProtocol {
     func getGame() -> AnyPublisher<[GameModel], URLError> {
         return self.remote.getGame()
             .map { DataMapper.mapGameResponsesToDomains(input: $0) }
+            .eraseToAnyPublisher()
+    }
+    func getGameDescription(id: String) -> AnyPublisher<String, URLError> {
+        return self.remote.getGameDescription(id: id)
+            .map { $0 }
             .eraseToAnyPublisher()
     }
 }

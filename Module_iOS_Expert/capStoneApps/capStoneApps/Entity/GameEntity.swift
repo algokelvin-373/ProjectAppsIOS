@@ -12,6 +12,9 @@ import RealmSwift
 struct DataGame: Decodable {
     let results: [Games]
 }
+struct Game: Decodable {
+    let description_raw: String
+}
 
 struct Games: Decodable {
     private enum CodingKeys: String, CodingKey {
@@ -20,6 +23,7 @@ struct Games: Decodable {
         case backgroundImageGame = "background_image"
         case releasedGame = "released"
         case ratingGame = "rating"
+        case descriptionGame = "description_raw"
     }
 
     let idGame: Int?
@@ -27,6 +31,7 @@ struct Games: Decodable {
     let backgroundImageGame: String?
     let releasedGame: String?
     let ratingGame: Float?
+    let descriptionGame: String?
 }
 
 struct GameModel: Equatable, Identifiable, GeneralAttribute {
@@ -36,6 +41,7 @@ struct GameModel: Equatable, Identifiable, GeneralAttribute {
 
     let released: String
     let rating: Float
+    let description: String
 }
 
 class GameEntity: Object {
