@@ -19,13 +19,17 @@ struct MovieView: View {
                     ActivityIndicator()
                 }
             } else {
-                ScrollView(.vertical, showsIndicators: false) {
-                    ForEach(self.presenterMovie.movies, id: \.id) { movie in
-                        VStack {
-                            Text(movie.name)
+                NavigationView {
+                    ScrollView(.vertical, showsIndicators: false) {
+                        ForEach(self.presenterMovie.movies, id: \.id) { movie in
+                            ZStack {
+                                self.presenterMovie.linkBuilder(for: movie) {
+                                    MovieRowsView(dataMovies: movie)
+                                }.buttonStyle(PlainButtonStyle())
+                            }.padding(8)
                         }
                     }
-                }
+                }.navigationBarTitle(Text("Game"), displayMode: .automatic)
             }
         }.onAppear {
             if self.presenterMovie.movies.count == 0 {

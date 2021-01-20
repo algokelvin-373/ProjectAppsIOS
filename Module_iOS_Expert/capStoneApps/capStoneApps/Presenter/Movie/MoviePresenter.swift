@@ -6,9 +6,12 @@
 //  Copyright © 2020 Kelvin HT. All rights reserved.
 //
 
-import Foundation
+import SwiftUI
+import Combine
 
 class MoviePresenter: ObservableObject {
+    private var cancellables: Set<AnyCancellable> = []
+    private let movieRouter = MovieRouter()
     private let movieUseCase: MovieProtocol
 
     @Published var movies: [MovieModel] = []
@@ -21,19 +24,24 @@ class MoviePresenter: ObservableObject {
 
     func getMovies() {
         loadingState = true
-        movieUseCase.getMovie { result in
-            switch result {
-            case .success(let dataMovie):
-                DispatchQueue.main.async {
+        movieUseCase.getMovie()
+            .receive(on: RunLoop.main)
+            .sink(receiveCompletion: { completion in
+                switch completion {
+                case .finished:
                     self.loadingState = false
-                    self.movies = dataMovie
+                case .failure:
+                    self.errorMessage = String(describing: completion)
                 }
-            case .failure(let error):
-                DispatchQueue.main.async {
-                    self.loadingState = false
-                    self.errorMessage = error.localizedDescription
-                }
-            }
-        }
+            }, receiveValue: { movies in
+                self.movies = movies
+        }).store(in: &cancellables)
+    }
+
+    func linkBuilder<Content: View>(
+        for category: MovieModel,
+        @ViewBuilder content: () -> Content
+    ) -> some View {
+        NavigationLink(destination: movieRouter.goToMovieDetailView(for: category)) { content() }
     }
 }

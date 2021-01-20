@@ -7,9 +7,10 @@
 //
 
 import Foundation
+import Combine
 
 protocol SportRepositoryProtocol {
-    func getSport(result: @escaping (Result<[SportModel], Error>) -> Void)
+    func getSport() -> AnyPublisher<[SportModel], URLError>
 }
 
 final class SportRepository: NSObject {
@@ -27,15 +28,9 @@ final class SportRepository: NSObject {
 }
 
 extension SportRepository: SportRepositoryProtocol {
-    func getSport(result: @escaping (Result<[SportModel], Error>) -> Void) {
-        self.remote.getSport { remoteResponses in
-            switch remoteResponses {
-            case .success(let sportResponses):
-                let resultList = DataMapper.mapSportResponsesToDomains(input: sportResponses)
-              result(.success(resultList))
-            case .failure(let error):
-              result(.failure(error))
-            }
-        }
+    func getSport() -> AnyPublisher<[SportModel], URLError> {
+        return self.remote.getSport()
+            .map { DataMapper.mapSportResponsesToDomains(input: $0) }
+            .eraseToAnyPublisher()
     }
 }

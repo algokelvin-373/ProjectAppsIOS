@@ -9,13 +9,30 @@
 import SwiftUI
 
 struct GameView: View {
-    var body: some View {
-        Text("Game Page")
-    }
-}
 
-struct GameView_Previews: PreviewProvider {
-    static var previews: some View {
-        GameView()
+    @ObservedObject var presenterGame: GamePresenter
+
+    var body: some View {
+        ZStack {
+            if presenterGame.loadingState {
+                LoadingViewUI()
+            } else {
+                NavigationView {
+                    ScrollView(.vertical, showsIndicators: false) {
+                        ForEach(self.presenterGame.games, id: \.id) { game in
+                            ZStack {
+                                self.presenterGame.linkBuilder(for: game) {
+                                    GameRowsView(dataGames: game)
+                                }.buttonStyle(PlainButtonStyle())
+                            }.padding(8)
+                        }
+                    }.navigationBarTitle(Text("Game"), displayMode: .inline)
+                }
+            }
+        }.onAppear {
+            if self.presenterGame.games.count == 0 {
+                self.presenterGame.getGames()
+            }
+        }
     }
 }

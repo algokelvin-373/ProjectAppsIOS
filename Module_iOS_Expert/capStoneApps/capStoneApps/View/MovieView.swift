@@ -9,13 +9,29 @@
 import SwiftUI
 
 struct MovieView: View {
-    var body: some View {
-        Text("Movie Page")
-    }
-}
+    @ObservedObject var presenterMovie: MoviePresenter
 
-struct MovieView_Previews: PreviewProvider {
-    static var previews: some View {
-        MovieView()
+    var body: some View {
+        ZStack {
+            if presenterMovie.loadingState {
+                LoadingViewUI()
+            } else {
+                NavigationView {
+                    ScrollView(.vertical, showsIndicators: false) {
+                        ForEach(self.presenterMovie.movies, id: \.id) { movie in
+                            ZStack {
+                                self.presenterMovie.linkBuilder(for: movie) {
+                                    MovieRowsView(dataMovies: movie)
+                                }.buttonStyle(PlainButtonStyle())
+                            }.padding(8)
+                        }
+                    }.navigationBarTitle(Text("Movie"), displayMode: .inline)
+                }
+            }
+        }.onAppear {
+            if self.presenterMovie.movies.count == 0 {
+                self.presenterMovie.getMovies()
+            }
+        }
     }
 }

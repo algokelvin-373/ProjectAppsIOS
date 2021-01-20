@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import RealmSwift
 
 struct DataSports: Decodable {
     let sports: [Sports]
@@ -26,9 +27,22 @@ struct Sports: Decodable {
     let descriptionSport: String?
 }
 
-struct SportModel: Equatable, Identifiable {
-    let id: String
+struct SportModel: Equatable, Identifiable, GeneralAttribute {
+    let id: Int
     let name: String
-    let backgroundImage: String
-    let description: String
+    let image: String
+
+    let descript: String
+}
+
+class SportEntity: Object {
+    @objc dynamic var id: Int = 0
+    @objc dynamic var name: String = ""
+    @objc dynamic var image: String = ""
+
+    @objc dynamic var descript: String = ""
+
+    override static func primaryKey() -> String? {
+        return "id"
+    }
 }

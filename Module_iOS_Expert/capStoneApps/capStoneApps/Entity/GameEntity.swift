@@ -7,9 +7,13 @@
 //
 
 import Foundation
+import RealmSwift
 
 struct DataGame: Decodable {
     let results: [Games]
+}
+struct Game: Decodable {
+    let description_raw: String
 }
 
 struct Games: Decodable {
@@ -19,6 +23,7 @@ struct Games: Decodable {
         case backgroundImageGame = "background_image"
         case releasedGame = "released"
         case ratingGame = "rating"
+        case descriptionGame = "description_raw"
     }
 
     let idGame: Int?
@@ -26,12 +31,28 @@ struct Games: Decodable {
     let backgroundImageGame: String?
     let releasedGame: String?
     let ratingGame: Float?
+    let descriptionGame: String?
 }
 
-struct GameModel: Equatable, Identifiable {
+struct GameModel: Equatable, Identifiable, GeneralAttribute {
     let id: Int
     let name: String
-    let backgroundImage: String
+    let image: String
+
     let released: String
     let rating: Float
+    let description: String
+}
+
+class GameEntity: Object {
+    @objc dynamic var id: Int = 0
+    @objc dynamic var name: String = ""
+    @objc dynamic var image: String = ""
+
+    @objc dynamic var released: String = ""
+    @objc dynamic var rating: Float = 0.0
+
+    override static func primaryKey() -> String? {
+        return "id"
+    }
 }

@@ -6,9 +6,12 @@
 //  Copyright © 2020 Kelvin HT. All rights reserved.
 //
 
-import Foundation
+import SwiftUI
+import Combine
 
 class GamePresenter: ObservableObject {
+    private var cancellables: Set<AnyCancellable> = []
+    private let gameRouter = GameRouter()
     private let gameUseCase: GameProtocol
 
     @Published var games: [GameModel] = []
@@ -21,19 +24,24 @@ class GamePresenter: ObservableObject {
 
     func getGames() {
         loadingState = true
-        gameUseCase.getGame { result in
-            switch result {
-            case .success(let dataGames):
-                DispatchQueue.main.async {
+        gameUseCase.getGame()
+            .receive(on: RunLoop.main)
+            .sink(receiveCompletion: { completion in
+                switch completion {
+                case .finished:
                     self.loadingState = false
-                    self.games = dataGames
+                case .failure:
+                    self.errorMessage = String(describing: completion)
                 }
-            case .failure(let error):
-                DispatchQueue.main.async {
-                    self.loadingState = false
-                    self.errorMessage = error.localizedDescription
-                }
-            }
-        }
+            }, receiveValue: { games in
+                self.games = games
+            }).store(in: &cancellables)
+    }
+
+    func linkBuilder<Content: View>(
+        for category: GameModel,
+        @ViewBuilder content: () -> Content
+    ) -> some View {
+        NavigationLink(destination: gameRouter.goToGameDetailView(for: category)) { content() }
     }
 }

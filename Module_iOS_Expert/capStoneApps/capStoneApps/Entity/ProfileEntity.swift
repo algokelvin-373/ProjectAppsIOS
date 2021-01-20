@@ -9,7 +9,7 @@
 import Foundation
 
 struct Profile: Decodable {
-    let name = "Kelvin HTT"
+    let name = "Kelvin Herwanda Tandrio"
     let job = "Android Developer"
     let company = "TSM Technology"
 }

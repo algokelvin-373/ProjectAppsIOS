@@ -9,13 +9,29 @@
 import SwiftUI
 
 struct SportView: View {
-    var body: some View {
-        Text("Sport Page")
-    }
-}
+    @ObservedObject var presenterSport: SportsPresenter
 
-struct SportView_Previews: PreviewProvider {
-    static var previews: some View {
-        SportView()
+    var body: some View {
+        ZStack {
+            if presenterSport.loadingState {
+                    LoadingViewUI()
+                } else {
+                    NavigationView {
+                        ScrollView(.vertical, showsIndicators: false) {
+                            ForEach(self.presenterSport.sports, id: \.id) { category in
+                                ZStack {
+                                    self.presenterSport.linkBuilder(for: category) {
+                                        SportRowsView(dataSports: category)
+                                    }.buttonStyle(PlainButtonStyle())
+                                }.padding(8)
+                            }
+                        }.navigationBarTitle(Text("Sport"), displayMode: .inline)
+                    }
+                }
+            }.onAppear {
+                if self.presenterSport.sports.count == 0 {
+                    self.presenterSport.getSports()
+                }
+            }
     }
 }

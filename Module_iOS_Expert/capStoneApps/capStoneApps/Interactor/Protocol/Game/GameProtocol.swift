@@ -6,8 +6,8 @@
 //  Copyright © 2020 Kelvin HT. All rights reserved.
 //
 
-import Foundation
+import Combine
 
 protocol GameProtocol {
-  func getGame(completion: @escaping (Result<[GameModel], Error>) -> Void)
+    func getGame() -> AnyPublisher<[GameModel], URLError>
 }

@@ -9,13 +9,29 @@
 import SwiftUI
 
 struct TravelView: View {
-    var body: some View {
-        Text("Travel Page")
-    }
-}
+    @ObservedObject var presenterTravel: TravelPresenter
 
-struct TravelView_Previews: PreviewProvider {
-    static var previews: some View {
-        TravelView()
+    var body: some View {
+        ZStack {
+            if presenterTravel.loadingState {
+                LoadingViewUI()
+            } else {
+                NavigationView {
+                    ScrollView(.vertical, showsIndicators: false) {
+                        ForEach(self.presenterTravel.travels, id: \.id) { travel in
+                            ZStack {
+                                self.presenterTravel.linkBuilder(for: travel) {
+                                    TravelRowsView(dataTravels: travel)
+                                }.buttonStyle(PlainButtonStyle())
+                            }.padding(8)
+                        }
+                    }.navigationBarTitle(Text("Travel"), displayMode: .inline)
+                }
+            }
+        }.onAppear {
+            if self.presenterTravel.travels.count == 0 {
+                self.presenterTravel.getTravels()
+            }
+        }
     }
 }

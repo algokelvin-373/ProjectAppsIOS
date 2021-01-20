@@ -7,9 +7,10 @@
 //
 
 import Foundation
+import Combine
 
 protocol TravelRepositoryProtocol {
-    func getTravel(result: @escaping (Result<[TravelModel], Error>) -> Void)
+    func getTravel() -> AnyPublisher<[TravelModel], URLError>
 }
 
 final class TravelRepository: NSObject {
@@ -27,15 +28,9 @@ final class TravelRepository: NSObject {
 }
 
 extension TravelRepository: TravelRepositoryProtocol {
-    func getTravel(result: @escaping (Result<[TravelModel], Error>) -> Void) {
-        self.remote.getTravel { remoteResponses in
-            switch remoteResponses {
-            case .success(let travelResponses):
-                let resultList = DataMapper.mapTravelResponsesToDomains(input: travelResponses)
-              result(.success(resultList))
-            case .failure(let error):
-              result(.failure(error))
-            }
-        }
+    func getTravel() -> AnyPublisher<[TravelModel], URLError> {
+        return self.remote.getTravel()
+            .map { DataMapper.mapTravelResponsesToDomains(input: $0) }
+            .eraseToAnyPublisher()
     }
 }

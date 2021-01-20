@@ -6,9 +6,12 @@
 //  Copyright © 2020 Kelvin HT. All rights reserved.
 //
 
-import Foundation
+import SwiftUI
+import Combine
 
 class TravelPresenter: ObservableObject {
+    private var cancellables: Set<AnyCancellable> = []
+    private let travelRouter = TravelRouter()
     private let travelUseCase: TravelProtocol
 
     @Published var travels: [TravelModel] = []
@@ -21,19 +24,24 @@ class TravelPresenter: ObservableObject {
 
     func getTravels() {
         loadingState = true
-        travelUseCase.getTravel { result in
-            switch result {
-            case .success(let dataTravel):
-                DispatchQueue.main.async {
+        travelUseCase.getTravel()
+            .receive(on: RunLoop.main)
+            .sink(receiveCompletion: { completion in
+                switch completion {
+                case .finished:
                     self.loadingState = false
-                    self.travels = dataTravel
+                case .failure:
+                    self.errorMessage = String(describing: completion)
                 }
-            case .failure(let error):
-                DispatchQueue.main.async {
-                    self.loadingState = false
-                    self.errorMessage = error.localizedDescription
-                }
-            }
-        }
+            }, receiveValue: { travels in
+                self.travels = travels
+        }).store(in: &cancellables)
+    }
+
+    func linkBuilder<Content: View>(
+        for category: TravelModel,
+        @ViewBuilder content: () -> Content
+    ) -> some View {
+        NavigationLink(destination: travelRouter.goToTravelDetailView(for: category)) { content() }
     }
 }
