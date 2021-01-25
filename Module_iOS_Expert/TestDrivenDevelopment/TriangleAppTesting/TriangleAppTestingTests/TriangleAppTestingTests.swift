@@ -12,14 +12,16 @@ import XCTest
 class TriangleAppTestingTests: XCTestCase {
 
     func testInvalidInputSides() {
-        XCTAssertThrowsError(try detectTriangle(-1, 2, 3)) { error in
+        XCTAssertThrowsError(try detectTriangle(-1, -2, -3)) { error in
             XCTAssertEqual(error as? TriangleError, TriangleError.invalidInput)
         }
     }
     
     func detectTriangle(_ A: Int,_ B: Int,_ C: Int) throws {
-        if A < 1 {
-            throw TriangleError.invalidInput
+        for side in [A, B, C] {
+            if side < 1 {
+                throw TriangleError.invalidInput
+            }
         }
     }
 }
