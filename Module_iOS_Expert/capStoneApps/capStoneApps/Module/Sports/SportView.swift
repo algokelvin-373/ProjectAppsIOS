@@ -2,8 +2,8 @@
 //  SportView.swift
 //  CapStoneApps
 //
-//  Created by Kelvin HT on 11/27/20.
-//  Copyright © 2020 Kelvin HT. All rights reserved.
+//  Created by Kelvin HT on 1/26/21.
+//  Copyright © 2021 Kelvin HT. All rights reserved.
 //
 
 import SwiftUI
@@ -14,10 +14,7 @@ struct SportView: View {
     var body: some View {
         ZStack {
             if presenterSport.loadingState {
-                    VStack {
-                        Text("Loading...")
-                        ActivityIndicator()
-                    }
+                    LoadingViewUI()
                 } else {
                     NavigationView {
                         ScrollView(.vertical, showsIndicators: false) {
@@ -28,7 +25,7 @@ struct SportView: View {
                                     }.buttonStyle(PlainButtonStyle())
                                 }.padding(8)
                             }
-                        }
+                        }.navigationBarTitle(Text("Sport"), displayMode: .inline)
                     }
                 }
             }.onAppear {
@@ -36,6 +33,5 @@ struct SportView: View {
                     self.presenterSport.getSports()
                 }
             }
-            .navigationBarTitle(Text("Sport"), displayMode: .automatic)
     }
 }
