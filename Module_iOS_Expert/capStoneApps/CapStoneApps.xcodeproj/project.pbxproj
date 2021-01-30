@@ -21,7 +21,6 @@
 		1000EE2325B433C4009662C7 /* SportsFavoritePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1000EE2225B433C4009662C7 /* SportsFavoritePresenter.swift */; };
 		1000EE2B25B48B23009662C7 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 1000EE2A25B48B23009662C7 /* .swiftlint.yml */; };
 		100F37F225715B59005EC043 /* MovieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100F37F125715B59005EC043 /* MovieView.swift */; };
-		100F37F425715B7F005EC043 /* SportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100F37F325715B7F005EC043 /* SportView.swift */; };
 		100F37F625715B94005EC043 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100F37F525715B94005EC043 /* GameView.swift */; };
 		100F37F825715BDD005EC043 /* TravelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100F37F725715BDD005EC043 /* TravelView.swift */; };
 		100F37FA25715BF1005EC043 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100F37F925715BF1005EC043 /* ProfileView.swift */; };
@@ -79,6 +78,7 @@
 		10683D1F2587E00A0006CB02 /* MovieDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10683D1E2587E00A0006CB02 /* MovieDataSource.swift */; };
 		10683D222587E03B0006CB02 /* MovieProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10683D212587E03B0006CB02 /* MovieProtocol.swift */; };
 		10683D252587E0510006CB02 /* MovieInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10683D242587E0510006CB02 /* MovieInteractor.swift */; };
+		106E2BA925BF74EF0083ED1D /* SportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106E2BA825BF74EF0083ED1D /* SportView.swift */; };
 		108029582551A603004069BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108029572551A603004069BB /* AppDelegate.swift */; };
 		1080295A2551A603004069BB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108029592551A603004069BB /* SceneDelegate.swift */; };
 		1080295D2551A603004069BB /* capStoneApps.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1080295B2551A603004069BB /* capStoneApps.xcdatamodeld */; };
@@ -155,7 +155,6 @@
 		1000EE2225B433C4009662C7 /* SportsFavoritePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsFavoritePresenter.swift; sourceTree = "<group>"; };
 		1000EE2A25B48B23009662C7 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		100F37F125715B59005EC043 /* MovieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MovieView.swift; path = capStoneApps/View/MovieView.swift; sourceTree = SOURCE_ROOT; };
-		100F37F325715B7F005EC043 /* SportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SportView.swift; path = ../SportView.swift; sourceTree = "<group>"; };
 		100F37F525715B94005EC043 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GameView.swift; path = capStoneApps/View/GameView.swift; sourceTree = SOURCE_ROOT; };
 		100F37F725715BDD005EC043 /* TravelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TravelView.swift; path = capStoneApps/View/TravelView.swift; sourceTree = SOURCE_ROOT; };
 		100F37F925715BF1005EC043 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileView.swift; path = capStoneApps/View/ProfileView.swift; sourceTree = SOURCE_ROOT; };
@@ -212,6 +211,7 @@
 		10683D1E2587E00A0006CB02 /* MovieDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDataSource.swift; sourceTree = "<group>"; };
 		10683D212587E03B0006CB02 /* MovieProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieProtocol.swift; sourceTree = "<group>"; };
 		10683D242587E0510006CB02 /* MovieInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieInteractor.swift; sourceTree = "<group>"; };
+		106E2BA825BF74EF0083ED1D /* SportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportView.swift; sourceTree = "<group>"; };
 		108029542551A603004069BB /* CapStoneApps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CapStoneApps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		108029572551A603004069BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		108029592551A603004069BB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -298,18 +298,6 @@
 			path = App;
 			sourceTree = "<group>";
 		};
-		100F37F0257159E3005EC043 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				10AED99A2592573200A6E0B1 /* Sports */,
-				10AED98A259253DB00A6E0B1 /* Travel */,
-				10683D162587DD820006CB02 /* Movie */,
-				1042526425810746007C29D4 /* Game */,
-				1042525D2580D91C007C29D4 /* Profile */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		100F37FB25715CE4005EC043 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -317,84 +305,27 @@
 				106642112582945800624EF9 /* Mapper */,
 				1066420E258290D200624EF9 /* Extension */,
 				1066420925828CDF00624EF9 /* Network */,
-				104252612580E756007C29D4 /* DI */,
 				100F37FC25715CF8005EC043 /* ConstantVal.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		104252502580CC8A007C29D4 /* Interactor */ = {
-			isa = PBXGroup;
-			children = (
-				104252582580CE7A007C29D4 /* Protocol */,
-				104252572580CE72007C29D4 /* UseCase */,
-			);
-			path = Interactor;
-			sourceTree = "<group>";
-		};
-		104252512580CCC5007C29D4 /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				10AED9A12592583200A6E0B1 /* Sports */,
-				10AED98B2592542800A6E0B1 /* Travel */,
-				10683D172587DDAA0006CB02 /* Movie */,
-				1042526525810B16007C29D4 /* Game */,
-				104252542580CDAA007C29D4 /* Profile */,
-			);
-			path = Presenter;
-			sourceTree = "<group>";
-		};
-		104252522580CCD0007C29D4 /* Entity */ = {
-			isa = PBXGroup;
-			children = (
-				104D893225B1A19800E7C80A /* Local */,
-				10C6205C25B093910071E4FF /* Db */,
-				1066420425828BD500624EF9 /* DataSource */,
-				106642032582896D00624EF9 /* Api */,
-				1042525E2580DBEB007C29D4 /* ProfileEntity.swift */,
-				106641FE2582873900624EF9 /* GameEntity.swift */,
-				10683D1A2587DFE80006CB02 /* MovieEntity.swift */,
-				10AED994259255CE00A6E0B1 /* TravelEntity.swift */,
-				10AED9A425925C7800A6E0B1 /* SportsEntity.swift */,
-			);
-			path = Entity;
-			sourceTree = "<group>";
-		};
-		104252542580CDAA007C29D4 /* Profile */ = {
-			isa = PBXGroup;
-			children = (
-				104252552580CDBE007C29D4 /* ProfilePresenter.swift */,
-			);
-			path = Profile;
-			sourceTree = "<group>";
-		};
 		104252572580CE72007C29D4 /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
+				106E2BA225BF722B0083ED1D /* Profile */,
 				10AED99B259257CA00A6E0B1 /* Sports */,
 				10AED98E2592546000A6E0B1 /* Travel */,
 				10683D232587E0430006CB02 /* Movie */,
 				10664200258288D600624EF9 /* Game */,
-				104252592580CE9B007C29D4 /* ProfileInteractor.swift */,
 			);
 			path = UseCase;
-			sourceTree = "<group>";
-		};
-		104252582580CE7A007C29D4 /* Protocol */ = {
-			isa = PBXGroup;
-			children = (
-				10AED99E2592580000A6E0B1 /* Sports */,
-				10AED9912592547C00A6E0B1 /* Travel */,
-				10683D202587E02A0006CB02 /* Movie */,
-				1042526E2581D502007C29D4 /* Game */,
-				1042525B2580CEC7007C29D4 /* ProfileProtocol.swift */,
-			);
-			path = Protocol;
 			sourceTree = "<group>";
 		};
 		1042525D2580D91C007C29D4 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				104252552580CDBE007C29D4 /* ProfilePresenter.swift */,
 				100F37F925715BF1005EC043 /* ProfileView.swift */,
 			);
 			path = Profile;
@@ -411,6 +342,10 @@
 		1042526425810746007C29D4 /* Game */ = {
 			isa = PBXGroup;
 			children = (
+				10C2CE8F25AC7A4F00638558 /* GameRouter.swift */,
+				1042526C2581D3F0007C29D4 /* GamePresenter.swift */,
+				105B842A25AD5E24009FB8E3 /* GameDetailPresenter.swift */,
+				104D893725B1B59700E7C80A /* GameFavoritePresenter.swift */,
 				100F37F525715B94005EC043 /* GameView.swift */,
 				10E0EB0C25B0B7ED006044D6 /* GameFavoriteView.swift */,
 				1042526725810BE3007C29D4 /* GameRowsView.swift */,
@@ -419,78 +354,17 @@
 			path = Game;
 			sourceTree = "<group>";
 		};
-		1042526525810B16007C29D4 /* Game */ = {
-			isa = PBXGroup;
-			children = (
-				1042526C2581D3F0007C29D4 /* GamePresenter.swift */,
-				105B842A25AD5E24009FB8E3 /* GameDetailPresenter.swift */,
-				104D893725B1B59700E7C80A /* GameFavoritePresenter.swift */,
-			);
-			path = Game;
-			sourceTree = "<group>";
-		};
-		1042526E2581D502007C29D4 /* Game */ = {
+		10664200258288D600624EF9 /* Game */ = {
 			isa = PBXGroup;
 			children = (
 				1042526F2581D51E007C29D4 /* GameProtocol.swift */,
 				105B842425AD5BB2009FB8E3 /* GameDetailProtocol.swift */,
 				104D893925B1B75F00E7C80A /* GameFavoriteProtocol.swift */,
-			);
-			path = Game;
-			sourceTree = "<group>";
-		};
-		104D893225B1A19800E7C80A /* Local */ = {
-			isa = PBXGroup;
-			children = (
-				104D893325B1A1D200E7C80A /* GameLocaleRepository.swift */,
-				1000EE0C25B3A42C009662C7 /* MovieLocaleRepository.swift */,
-				1000EE1425B3B263009662C7 /* TravelLocaleRepository.swift */,
-				1000EE1C25B431A3009662C7 /* SportLocaleRepository.swift */,
-			);
-			path = Local;
-			sourceTree = "<group>";
-		};
-		1063C73C25A8686C00B0483A /* Router */ = {
-			isa = PBXGroup;
-			children = (
-				1063C73D25A8688D00B0483A /* SportRouter.swift */,
-				10C2CE8F25AC7A4F00638558 /* GameRouter.swift */,
-				105B843C25ADE27D009FB8E3 /* TravelRouter.swift */,
-				105B842E25ADD303009FB8E3 /* MovieRouter.swift */,
-			);
-			path = Router;
-			sourceTree = "<group>";
-		};
-		10664200258288D600624EF9 /* Game */ = {
-			isa = PBXGroup;
-			children = (
 				106642012582890D00624EF9 /* GameInteractor.swift */,
 				105B842625AD5BF9009FB8E3 /* GameDetailInteractor.swift */,
 				104D893B25B1B95500E7C80A /* GameFavoriteInteractor.swift */,
 			);
 			path = Game;
-			sourceTree = "<group>";
-		};
-		106642032582896D00624EF9 /* Api */ = {
-			isa = PBXGroup;
-			children = (
-				1066420525828C1900624EF9 /* GameRepository.swift */,
-				10683D1C2587DFFA0006CB02 /* MovieRepository.swift */,
-				10AED9962592560700A6E0B1 /* TravelRepository.swift */,
-				10AED9A625925C8F00A6E0B1 /* SportsRepository.swift */,
-			);
-			path = Api;
-			sourceTree = "<group>";
-		};
-		1066420425828BD500624EF9 /* DataSource */ = {
-			isa = PBXGroup;
-			children = (
-				1066420725828C4F00624EF9 /* GameDataSource.swift */,
-				10683D1E2587E00A0006CB02 /* MovieDataSource.swift */,
-				10AED9982592561400A6E0B1 /* TravelDataSource.swift */,
-				10AED9A825925C9D00A6E0B1 /* SportsDataSource.swift */,
-			);
-			path = DataSource;
 			sourceTree = "<group>";
 		};
 		1066420925828CDF00624EF9 /* Network */ = {
@@ -541,6 +415,10 @@
 		10683D162587DD820006CB02 /* Movie */ = {
 			isa = PBXGroup;
 			children = (
+				105B842E25ADD303009FB8E3 /* MovieRouter.swift */,
+				10683D182587DFD20006CB02 /* MoviePresenter.swift */,
+				105B843025ADD356009FB8E3 /* MovieDetailPresenter.swift */,
+				1000EE1225B3AA33009662C7 /* MovieFavoritePresenter.swift */,
 				100F37F125715B59005EC043 /* MovieView.swift */,
 				10E0EB0E25B0BCBE006044D6 /* MovieFavoriteView.swift */,
 				105B843625ADD4B3009FB8E3 /* MovieRowsView.swift */,
@@ -549,34 +427,125 @@
 			path = Movie;
 			sourceTree = "<group>";
 		};
-		10683D172587DDAA0006CB02 /* Movie */ = {
-			isa = PBXGroup;
-			children = (
-				10683D182587DFD20006CB02 /* MoviePresenter.swift */,
-				105B843025ADD356009FB8E3 /* MovieDetailPresenter.swift */,
-				1000EE1225B3AA33009662C7 /* MovieFavoritePresenter.swift */,
-			);
-			path = Movie;
-			sourceTree = "<group>";
-		};
-		10683D202587E02A0006CB02 /* Movie */ = {
+		10683D232587E0430006CB02 /* Movie */ = {
 			isa = PBXGroup;
 			children = (
 				10683D212587E03B0006CB02 /* MovieProtocol.swift */,
 				105B843225ADD3D1009FB8E3 /* MovieDetailProtocol.swift */,
 				1000EE0E25B3A8C8009662C7 /* MovieFavoriteProtocol.swift */,
-			);
-			path = Movie;
-			sourceTree = "<group>";
-		};
-		10683D232587E0430006CB02 /* Movie */ = {
-			isa = PBXGroup;
-			children = (
 				10683D242587E0510006CB02 /* MovieInteractor.swift */,
 				105B843425ADD426009FB8E3 /* MovieDetailInteractor.swift */,
 				1000EE1025B3A906009662C7 /* MovieFavoriteInteractor.swift */,
 			);
 			path = Movie;
+			sourceTree = "<group>";
+		};
+		106E2B9E25BF673D0083ED1D /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				10AED99A2592573200A6E0B1 /* Sports */,
+				10AED98A259253DB00A6E0B1 /* Travel */,
+				10683D162587DD820006CB02 /* Movie */,
+				1042526425810746007C29D4 /* Game */,
+				1042525D2580D91C007C29D4 /* Profile */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		106E2B9F25BF675E0083ED1D /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				100F37FB25715CE4005EC043 /* Utils */,
+				106E2BA125BF68990083ED1D /* Domain */,
+				104252612580E756007C29D4 /* DI */,
+				106E2BA025BF68790083ED1D /* Data */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		106E2BA025BF68790083ED1D /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				106E2BA525BF72C80083ED1D /* Remote */,
+				106E2BA425BF72BF0083ED1D /* Local */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		106E2BA125BF68990083ED1D /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				106E2BA325BF727E0083ED1D /* Model */,
+				104252572580CE72007C29D4 /* UseCase */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		106E2BA225BF722B0083ED1D /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				1042525B2580CEC7007C29D4 /* ProfileProtocol.swift */,
+				104252592580CE9B007C29D4 /* ProfileInteractor.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		106E2BA325BF727E0083ED1D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1042525E2580DBEB007C29D4 /* ProfileEntity.swift */,
+				106641FE2582873900624EF9 /* GameEntity.swift */,
+				10683D1A2587DFE80006CB02 /* MovieEntity.swift */,
+				10AED994259255CE00A6E0B1 /* TravelEntity.swift */,
+				10AED9A425925C7800A6E0B1 /* SportsEntity.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		106E2BA425BF72BF0083ED1D /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				106E2BA725BF73780083ED1D /* Entity */,
+				10C6205D25B093B70071E4FF /* GameLocaleDataSource.swift */,
+				10E0EB0425B0A5E1006044D6 /* MovieLocaleDataSource.swift */,
+				10E0EB0625B0A632006044D6 /* TravelLocaleDataSource.swift */,
+				10E0EB0825B0A8D2006044D6 /* SportLocaleDataSource.swift */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		106E2BA525BF72C80083ED1D /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				106E2BA625BF73400083ED1D /* Response */,
+				10683D1E2587E00A0006CB02 /* MovieDataSource.swift */,
+				10AED9982592561400A6E0B1 /* TravelDataSource.swift */,
+				10AED9A825925C9D00A6E0B1 /* SportsDataSource.swift */,
+				1066420725828C4F00624EF9 /* GameDataSource.swift */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		106E2BA625BF73400083ED1D /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				1066420525828C1900624EF9 /* GameRepository.swift */,
+				10683D1C2587DFFA0006CB02 /* MovieRepository.swift */,
+				10AED9962592560700A6E0B1 /* TravelRepository.swift */,
+				10AED9A625925C8F00A6E0B1 /* SportsRepository.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		106E2BA725BF73780083ED1D /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				104D893325B1A1D200E7C80A /* GameLocaleRepository.swift */,
+				1000EE0C25B3A42C009662C7 /* MovieLocaleRepository.swift */,
+				1000EE1425B3B263009662C7 /* TravelLocaleRepository.swift */,
+				1000EE1C25B431A3009662C7 /* SportLocaleRepository.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 		1080294B2551A603004069BB = {
@@ -603,12 +572,8 @@
 		108029562551A603004069BB /* capStoneApps */ = {
 			isa = PBXGroup;
 			children = (
-				1063C73C25A8686C00B0483A /* Router */,
-				104252522580CCD0007C29D4 /* Entity */,
-				104252512580CCC5007C29D4 /* Presenter */,
-				104252502580CC8A007C29D4 /* Interactor */,
-				100F37FB25715CE4005EC043 /* Utils */,
-				100F37F0257159E3005EC043 /* View */,
+				106E2B9F25BF675E0083ED1D /* Core */,
+				106E2B9E25BF673D0083ED1D /* Module */,
 				100F37EE256F6C08005EC043 /* App */,
 				108029602551A604004069BB /* Assets.xcassets */,
 				108029652551A604004069BB /* LaunchScreen.storyboard */,
@@ -648,6 +613,10 @@
 		10AED98A259253DB00A6E0B1 /* Travel */ = {
 			isa = PBXGroup;
 			children = (
+				105B843C25ADE27D009FB8E3 /* TravelRouter.swift */,
+				10AED98C2592543D00A6E0B1 /* TravelPresenter.swift */,
+				105B844425ADF9A4009FB8E3 /* TravelDetailPresenter.swift */,
+				1000EE1A25B3B76B009662C7 /* TravelFavoritePresenter.swift */,
 				100F37F725715BDD005EC043 /* TravelView.swift */,
 				10E0EB1025B0BCD9006044D6 /* TravelFavoriteView.swift */,
 				105B843A25ADE1F4009FB8E3 /* TravelRowsView.swift */,
@@ -656,19 +625,12 @@
 			path = Travel;
 			sourceTree = "<group>";
 		};
-		10AED98B2592542800A6E0B1 /* Travel */ = {
-			isa = PBXGroup;
-			children = (
-				10AED98C2592543D00A6E0B1 /* TravelPresenter.swift */,
-				105B844425ADF9A4009FB8E3 /* TravelDetailPresenter.swift */,
-				1000EE1A25B3B76B009662C7 /* TravelFavoritePresenter.swift */,
-			);
-			path = Travel;
-			sourceTree = "<group>";
-		};
 		10AED98E2592546000A6E0B1 /* Travel */ = {
 			isa = PBXGroup;
 			children = (
+				10AED9922592548A00A6E0B1 /* TravelProtocol.swift */,
+				105B843E25ADE31F009FB8E3 /* TravelDetailProtocol.swift */,
+				1000EE1625B3B44A009662C7 /* TravelFavoriteProtocol.swift */,
 				10AED98F2592547000A6E0B1 /* TravelInteractor.swift */,
 				105B844025ADF8A2009FB8E3 /* TravelDetailInteractor.swift */,
 				1000EE1825B3B477009662C7 /* TravelFavoriteInteractor.swift */,
@@ -676,23 +638,17 @@
 			path = Travel;
 			sourceTree = "<group>";
 		};
-		10AED9912592547C00A6E0B1 /* Travel */ = {
-			isa = PBXGroup;
-			children = (
-				10AED9922592548A00A6E0B1 /* TravelProtocol.swift */,
-				105B843E25ADE31F009FB8E3 /* TravelDetailProtocol.swift */,
-				1000EE1625B3B44A009662C7 /* TravelFavoriteProtocol.swift */,
-			);
-			path = Travel;
-			sourceTree = "<group>";
-		};
 		10AED99A2592573200A6E0B1 /* Sports */ = {
 			isa = PBXGroup;
 			children = (
-				100F37F325715B7F005EC043 /* SportView.swift */,
+				1063C73D25A8688D00B0483A /* SportRouter.swift */,
+				10AED9A22592584A00A6E0B1 /* SportsPresenter.swift */,
+				1063C74525A86D1D00B0483A /* SportsDetailPresenter.swift */,
+				1000EE2225B433C4009662C7 /* SportsFavoritePresenter.swift */,
 				10E0EB1225B0BD38006044D6 /* SportFavoriteView.swift */,
 				1063C74325A86B1900B0483A /* SportDetailView.swift */,
 				1063C74725AA103000B0483A /* SportRowsView.swift */,
+				106E2BA825BF74EF0083ED1D /* SportView.swift */,
 			);
 			path = Sports;
 			sourceTree = "<group>";
@@ -700,42 +656,14 @@
 		10AED99B259257CA00A6E0B1 /* Sports */ = {
 			isa = PBXGroup;
 			children = (
+				10AED99F2592581100A6E0B1 /* SportsProtocol.swift */,
+				1063C73F25A8692200B0483A /* SportsDetailProtocol.swift */,
+				1000EE1E25B432AC009662C7 /* SportsFavoriteProtocol.swift */,
 				10AED99C259257E500A6E0B1 /* SportsInteractor.swift */,
 				1063C74125A86A2D00B0483A /* SportsDetailInteractor.swift */,
 				1000EE2025B432EF009662C7 /* SportsFavoriteInteractor.swift */,
 			);
 			path = Sports;
-			sourceTree = "<group>";
-		};
-		10AED99E2592580000A6E0B1 /* Sports */ = {
-			isa = PBXGroup;
-			children = (
-				10AED99F2592581100A6E0B1 /* SportsProtocol.swift */,
-				1063C73F25A8692200B0483A /* SportsDetailProtocol.swift */,
-				1000EE1E25B432AC009662C7 /* SportsFavoriteProtocol.swift */,
-			);
-			path = Sports;
-			sourceTree = "<group>";
-		};
-		10AED9A12592583200A6E0B1 /* Sports */ = {
-			isa = PBXGroup;
-			children = (
-				10AED9A22592584A00A6E0B1 /* SportsPresenter.swift */,
-				1063C74525A86D1D00B0483A /* SportsDetailPresenter.swift */,
-				1000EE2225B433C4009662C7 /* SportsFavoritePresenter.swift */,
-			);
-			path = Sports;
-			sourceTree = "<group>";
-		};
-		10C6205C25B093910071E4FF /* Db */ = {
-			isa = PBXGroup;
-			children = (
-				10C6205D25B093B70071E4FF /* GameLocaleDataSource.swift */,
-				10E0EB0425B0A5E1006044D6 /* MovieLocaleDataSource.swift */,
-				10E0EB0625B0A632006044D6 /* TravelLocaleDataSource.swift */,
-				10E0EB0825B0A8D2006044D6 /* SportLocaleDataSource.swift */,
-			);
-			path = Db;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -951,7 +879,6 @@
 				10C6204E25B073110071E4FF /* ImageViewUI.swift in Sources */,
 				10683D1D2587DFFA0006CB02 /* MovieRepository.swift in Sources */,
 				10E0EB0525B0A5E1006044D6 /* MovieLocaleDataSource.swift in Sources */,
-				100F37F425715B7F005EC043 /* SportView.swift in Sources */,
 				100F37F825715BDD005EC043 /* TravelView.swift in Sources */,
 				10AED9AB2592642B00A6E0B1 /* APITravel.swift in Sources */,
 				105B844525ADF9A4009FB8E3 /* TravelDetailPresenter.swift in Sources */,
@@ -964,6 +891,7 @@
 				10AED99D259257E500A6E0B1 /* SportsInteractor.swift in Sources */,
 				105B843525ADD426009FB8E3 /* MovieDetailInteractor.swift in Sources */,
 				1066420625828C1900624EF9 /* GameRepository.swift in Sources */,
+				106E2BA925BF74EF0083ED1D /* SportView.swift in Sources */,
 				1080295D2551A603004069BB /* capStoneApps.xcdatamodeld in Sources */,
 				106642162582A2BF00624EF9 /* ActivityIndicator.swift in Sources */,
 				10AED9A925925C9D00A6E0B1 /* SportsDataSource.swift in Sources */,
