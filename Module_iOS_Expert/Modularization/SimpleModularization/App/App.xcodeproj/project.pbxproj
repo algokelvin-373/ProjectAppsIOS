@@ -13,8 +13,24 @@
 		105FAE3C25C142F400D649BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 105FAE3B25C142F400D649BD /* Assets.xcassets */; };
 		105FAE3F25C142F500D649BD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 105FAE3E25C142F500D649BD /* Preview Assets.xcassets */; };
 		105FAE4225C142F500D649BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 105FAE4025C142F500D649BD /* LaunchScreen.storyboard */; };
+		109FEC9025C5C3C700C8D3FB /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 109FEC8F25C5C3C700C8D3FB /* Common.framework */; };
+		109FEC9125C5C3C700C8D3FB /* Common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 109FEC8F25C5C3C700C8D3FB /* Common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6B83755A9F3967E71EB9438F /* Pods_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4462A462B219981E04FA0973 /* Pods_App.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		109FEC9225C5C3C700C8D3FB /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				109FEC9125C5C3C700C8D3FB /* Common.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		105FAE3225C142F300D649BD /* App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = App.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -25,6 +41,7 @@
 		105FAE3E25C142F500D649BD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		105FAE4125C142F500D649BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		105FAE4325C142F500D649BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		109FEC8F25C5C3C700C8D3FB /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		250A2A98206DA45F8B31C871 /* Pods-App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App.release.xcconfig"; path = "Target Support Files/Pods-App/Pods-App.release.xcconfig"; sourceTree = "<group>"; };
 		3CC58C90C79C624D1E6D5CFB /* Pods-App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App.debug.xcconfig"; path = "Target Support Files/Pods-App/Pods-App.debug.xcconfig"; sourceTree = "<group>"; };
 		4462A462B219981E04FA0973 /* Pods_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -36,6 +53,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B83755A9F3967E71EB9438F /* Pods_App.framework in Frameworks */,
+				109FEC9025C5C3C700C8D3FB /* Common.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,13 +106,13 @@
 				3CC58C90C79C624D1E6D5CFB /* Pods-App.debug.xcconfig */,
 				250A2A98206DA45F8B31C871 /* Pods-App.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
 		D9FCB1F4C3A968A6EFC1149F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				109FEC8F25C5C3C700C8D3FB /* Common.framework */,
 				4462A462B219981E04FA0973 /* Pods_App.framework */,
 			);
 			name = Frameworks;
@@ -111,6 +129,7 @@
 				105FAE2E25C142F300D649BD /* Sources */,
 				105FAE2F25C142F300D649BD /* Frameworks */,
 				105FAE3025C142F300D649BD /* Resources */,
+				109FEC9225C5C3C700C8D3FB /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
