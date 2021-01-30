@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		109FEC8525C5A97600C8D3FB /* Common.h in Headers */ = {isa = PBXBuildFile; fileRef = 109FEC8325C5A97600C8D3FB /* Common.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		109FEC8C25C5B01600C8D3FB /* Hello.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109FEC8B25C5B01600C8D3FB /* Hello.swift */; };
+		109FEC8E25C5B12E00C8D3FB /* HelloModularization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109FEC8D25C5B12E00C8D3FB /* HelloModularization.swift */; };
 		7CE9BFF90A2AFD6E7D53238E /* Pods_Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B6B6FE3F3322EF32B92222B /* Pods_Common.framework */; };
 /* End PBXBuildFile section */
 
@@ -16,7 +16,7 @@
 		109FEC8025C5A97600C8D3FB /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		109FEC8325C5A97600C8D3FB /* Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 		109FEC8425C5A97600C8D3FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		109FEC8B25C5B01600C8D3FB /* Hello.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hello.swift; sourceTree = "<group>"; };
+		109FEC8D25C5B12E00C8D3FB /* HelloModularization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloModularization.swift; sourceTree = "<group>"; };
 		2B6B6FE3F3322EF32B92222B /* Pods_Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DAE17DD4C293F05081C4A17 /* Pods-Common.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Common.debug.xcconfig"; path = "Target Support Files/Pods-Common/Pods-Common.debug.xcconfig"; sourceTree = "<group>"; };
 		E7E168D7A39E4018BDC6B6E7 /* Pods-Common.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Common.release.xcconfig"; path = "Target Support Files/Pods-Common/Pods-Common.release.xcconfig"; sourceTree = "<group>"; };
@@ -37,7 +37,7 @@
 		109FEC7625C5A97600C8D3FB = {
 			isa = PBXGroup;
 			children = (
-				109FEC8B25C5B01600C8D3FB /* Hello.swift */,
+				109FEC8D25C5B12E00C8D3FB /* HelloModularization.swift */,
 				109FEC8225C5A97600C8D3FB /* Common */,
 				109FEC8125C5A97600C8D3FB /* Products */,
 				6B6BF380178F8F921199FC87 /* Pods */,
@@ -186,7 +186,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				109FEC8C25C5B01600C8D3FB /* Hello.swift in Sources */,
+				109FEC8E25C5B12E00C8D3FB /* HelloModularization.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

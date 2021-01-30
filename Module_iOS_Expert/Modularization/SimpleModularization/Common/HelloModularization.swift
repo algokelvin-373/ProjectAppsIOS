@@ -1,5 +1,5 @@
 //
-//  Hello.swift
+//  HelloModularization.swift
 //  Common
 //
 //  Created by Kelvin HT on 1/30/21.
@@ -7,3 +7,7 @@
 //
 
 import Foundation
+
+public var hello: String {
+    "Hello from Common\nI'm learn Modularization iOS Expert"
+}
